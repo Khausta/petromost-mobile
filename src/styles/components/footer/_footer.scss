@@ -1,0 +1,14 @@
+.footer_fixed {
+    position: fixed;
+    bottom: 0;
+}
+
+.footer {
+    height: 30px;
+    border-top: 1px solid $beige-color;
+    &__items {
+        width: 100%;
+        height: auto;
+        display: flex;
+    }
+}
