@@ -15,6 +15,7 @@ li {
 }
 
 
+
 .mobile-wrapper {
     margin: auto;
     max-width: 768px; 
@@ -27,8 +28,7 @@ li {
 
 .container {
     margin: auto;
-    padding: 0 2.6vw 0 2.6vw ;
-     
+    padding: 0  min(2.6vw, 20px);
 }
 
 .flex-box{
@@ -48,6 +48,17 @@ li {
     width: 100%;
     height: 100%;
 }
+
+.input {
+    border: none;
+}
+
+.button {
+    border: none;
+    background: none;
+}
+
+
 
 @import 'components/head-inner/head-inner';
 @import 'components/header/header';

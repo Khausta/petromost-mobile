@@ -1,12 +1,45 @@
 .header {
-    height: 12vw;
+    
     width: 100%;
     position: sticky;
     top: 0px;
     border-bottom: 1px solid $beige-color;
 
     &__items {
-        padding: 2.6vw 0 2.6vw;
+        padding: min(2.6vw, 20px) 0;
     }
+
+    &__main-logo {
+        width: min(42vw, 323px);
+        // height: min(8.2vw, 62px);
+        img {
+            vertical-align: middle;
+        }
+    }
+
+    &__search {
+        padding: 0 min(2.5vw, 17px) 0 min(3vw, 20px);
+        width: min(40vw, 308px);
+        height: min(8.2vw, 62px);
+        border: 1px solid $beige-color;
+        border-top-left-radius: 2vw;
+        border-bottom-left-radius: 2vw; 
+        border-top-right-radius: 6vw;
+        border-bottom-right-radius: 6vw;
+    }
+
+    &__input {
+        width: min(28.2vw, 207px);
+    }
+
+    &__search-btn {
+        width: min(3.3vw, 25px);
+        height: min(3.3vw, 25px);
+    }
+
+    &__menu-btn {
+        height: min(8.2vw, 62px);
+    }
+    
 
 }
