@@ -33,7 +33,7 @@ button:focus {
 }
 
 .main {
-    height: 500px;
+    height: 1500px;
 }
 
 .container {
@@ -71,11 +71,30 @@ button:focus {
     background: none;
 }
 
+.hr {
+    margin: auto;
+    width: 96%;
+    height: 2px;
+    border: none;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23F5E6D6FF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.title {
+    padding: min(3.8vw, 30px) $size-19-point-5-px;
+    font-family: 'Gilroy';
+    font-weight: bold;
+    font-style: normal;
+    font-size: min(7.5vw, 58px);
+    color: $black-color;
+}
+
+
 
 
 @import 'components/head-inner/head-inner';
 @import 'blocks/menu-panel/menu-panel';
 @import 'components/header/header';
 @import 'blocks/info/info';
+@import 'blocks/actual/actual';
 @import 'components/footer/footer';
 

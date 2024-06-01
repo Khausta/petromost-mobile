@@ -33,7 +33,7 @@
         font-family: 'Gilroy', Arial, Helvetica, sans-serif;
         font-weight: 600;
         font-style: normal;
-        font-size: min(3.3vw, 25px);
+        font-size: $fz-13px;
         color: $beige-color;
 
         &::placeholder {

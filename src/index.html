@@ -45,6 +45,8 @@
         </header>
       
         <main class="main">
+
+            <!-- Inner with info buttons -->
             <section class="info">
                 <div class="info__inner flex-box">
                     <div class="info__item">
@@ -62,20 +64,49 @@
                             Отзывы&nbsp;и&nbsp;предложения
                         </a>
                     </div>
-                   
+                </div>  
+            </section>
+
+            <section class="banner">
+                <div class="banner__slider">
+                    <div class="banner__slide">
+                        <img src="./img/banners/banner-1.png" alt="">
+                    </div>
                 </div>
-                
+            </section>
+            <!-- разделительная штрих-пунктирная бежевая черта  -->
+            <hr class="hr">
+
+            <section class="actual">
+                <h2 class="title">Актуальное</h2>
+                <div class="container">
+                    <div class="actual__wrapper flex-box">
+                        <div class="actual-card">
+                            <h3 class="actual-card__title">
+                                Заготовки,<br> соленья
+                            </h3>
+                            <a class="actual-card__btn" href="#">
+                                Выбрать
+                            </a>
+                            <img class="actual-card__img" src="./img/actual-card-img-1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="footer">
+                <ul class="footer__items">
+                    <li class="footer__item">Каталог</li>
+                    <li class="footer__item">Акции</li>
+                    <li class="footer__item">Заказы</li>
+                    <li class="footer__item">Любимое</li>
+                    <li class="footer__item">Войти</li>
+                </ul>
             </section>
         </main>
-        <footer class="footer">
-            <ul class="footer__items">
-                <li class="footer__item">Каталог</li>
-                <li class="footer__item">Акции</li>
-                <li class="footer__item">Заказы</li>
-                <li class="footer__item">Любимое</li>
-                <li class="footer__item">Войти</li>
-            </ul>
-        </footer>
+       
+
+        <!-- Bottom menu panel -->
         <div class="menu-panel">
             <div class="container ">
                 <ul class="menu-panel__items flex-box">
@@ -84,7 +115,7 @@
                             <div class="menu-panel__icon">
                                 <img class="object-fit-contain" src="./img/icons/menu-panel-catalog.svg" alt="Иконка каталога">
                             </div>
-                            <p>Каталог</p>
+                            <p class="menu-panel__name">Каталог</p>
                         </a>
                     </li>
                     <li class="menu-panel__item">
@@ -92,7 +123,7 @@
                             <div class="menu-panel__icon">
                                 <img class="object-fit-contain" src="./img/icons/menu-panel-discount.svg" alt="Иконка скидок">
                             </div>
-                            <p>Акции</p>
+                            <p class="menu-panel__name">Акции</p>
                         </a>
                     </li>
                     <li class="menu-panel__item">
@@ -100,26 +131,29 @@
                             <div class="menu-panel__icon">
                                 <img class="object-fit-contain" src="./img/icons/menu-panel-orders.svg" alt="Иконка заказов">
                             </div>
-                            <p>Заказы</p>
+                            <p class="menu-panel__name">Заказы</p>
                         </a>
                     </li>
                     <li class="menu-panel__item">
                         <a class="menu-panel__link flex-box" href="#">
-                            <div class="menu-panel__icon">
-                                <img class="object-fit-contain" src="./img/icons/menu-panel-like.svg" alt="Иконка избранного">
+                            <div class="menu-panel__icon-block flex-box">
+                                <div class="menu-panel__icon">
+                                    <img class="object-fit-contain" src="./img/icons/menu-panel-like.svg" alt="Иконка избранного">
+                                </div>
+                                <span class="menu-panel__circle menu-panel__favorites-total" id="favorites-total">4</span>
                             </div>
-                            <p>Любимое</p>
+                            <p class="menu-panel__name">Любимое</p>
                         </a>
                     </li>
                     <li class="menu-panel__item">
                         <a class="menu-panel__link flex-box" href="#">
-                            <div class="menu-panel__cart flex-box">
+                            <div class="menu-panel__icon-block flex-box">
                                 <div class="menu-panel__icon">
                                     <img class="object-fit-contain" src="./img/icons/menu-panel-cart.svg" alt="Иконка корзины">
                                 </div>
-                                <span id="cart-total">3</span>
+                                <span class="menu-panel__circle menu-panel__cart-total" id="cart-total">3</span>
                             </div>
-                            <p>Корзина</p>
+                            <p class="menu-panel__name">Корзина</p>
                         </a>
                     </li>
                 </ul>

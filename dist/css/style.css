@@ -15,7 +15,7 @@
 @font-face {
   font-family: "Gilroy";
   src: url("Gilroy-Bold.eot");
-  src: local("../../fonts/Gilroy Bold"), local("../../fonts/Gilroy-Bold"), url("../../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/Gilroy-Bold.woff2") format("woff2"), url("../../fonts/Gilroy-Bold.woff") format("woff"), url("../../fonts/Gilroy-Bold.ttf") format("truetype");
+  src: local("../../Gilroy/Gilroy Bold"), local("../../Gilroy/Gilroy-Bold"), url("../fonts/Gilroy/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -167,7 +167,7 @@ button:focus {
 }
 
 .main {
-  height: 500px;
+  height: 1500px;
 }
 
 .container {
@@ -205,6 +205,23 @@ button:focus {
   background: none;
 }
 
+.hr {
+  margin: auto;
+  width: 96%;
+  height: 2px;
+  border: none;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23F5E6D6FF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.title {
+  padding: min(3.8vw, 30px) min(5vw, 38px);
+  font-family: "Gilroy";
+  font-weight: bold;
+  font-style: normal;
+  font-size: min(7.5vw, 58px);
+  color: #240405;
+}
+
 .head-inner {
   width: 100%;
   background-color: #FFFAF5;
@@ -235,14 +252,35 @@ button:focus {
   border-top: 1px solid #F5E6D6;
   background-color: #FEFEFE;
 }
+.menu-panel__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(5vw, 38px);
+  height: min(5vw, 38px);
+  color: #FFFFFF;
+  border-radius: 100%;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: min(3.3vw, 25px);
+}
 .menu-panel__link {
   gap: min(2.5vw, 19px);
   flex-direction: column;
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-style: normal;
-  line-height: 1.84;
   color: #240405;
+}
+.menu-panel__icon-block {
+  gap: min(0.83vw, 6.4px);
+}
+.menu-panel__cart-total {
+  background-color: #DE1C23;
+}
+.menu-panel__favorites-total {
+  background-color: #BE957D;
 }
 .menu-panel__icon {
   width: min(5vw, 38px);
@@ -317,12 +355,47 @@ button:focus {
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-style: normal;
+  font-size: min(3.6vw, 28px);
   color: #240405;
 }
 
-.footer {
-  border-top: 1px solid #F5E6D6;
+.actual-card {
+  position: relative;
+  padding: min(5vw, 38px);
+  width: min(45vw, 346px);
+  height: min(26.6vw, 205px);
+  background-image: url("../../../img/actual-card-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: min(4.2vw, 32px);
+  overflow: hidden;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #240405;
 }
+.actual-card__img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  z-index: 0;
+}
+.actual-card__title {
+  position: relative;
+  z-index: 1;
+  font-size: min(3.7vw, 28px);
+}
+.actual-card__btn {
+  padding: min(1.8vw, 14px) min(4.1vw, 31px);
+  font-size: min(2.5vw, 19px);
+  background-color: #FFFFFF;
+  border-radius: min(3.3vw, 25px);
+  color: #240405;
+}
+
 .footer__items {
   width: 100%;
   height: auto;

@@ -7,7 +7,19 @@
     border-top: 1px solid $beige-color;
     background-color: #FEFEFE;
 
-   
+   &__circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $size-19-point-5-px;
+        height: $size-19-point-5-px;
+        color: $white-bg-color;
+        border-radius: 100%;
+        font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        font-size: $fz-13px;
+   }
 
     &__link {
         gap: min(2.5vw, 19px);
@@ -15,19 +27,24 @@
         font-family: 'Gilroy', Arial, Helvetica, sans-serif;
         font-weight: bold;
         font-style: normal;
-        line-height: 1.84;
         color: $black-color;
-        
-
     }
 
-    &__cart {
-        
+    &__icon-block {
+        gap: min(0.83vw, 6.4px);
+    }
+
+    &__cart-total {
+        background-color: $red-indicatior-color;
+    }
+
+    &__favorites-total {
+        background-color: #BE957D;
     }
 
     &__icon {  
-        width: min(5vw, 38px);
-        height: min(5vw, 38px);
+        width: $size-19-point-5-px;
+        height: $size-19-point-5-px;
     }
   
 }

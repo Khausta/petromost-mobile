@@ -1,0 +1,41 @@
+.actual-card {
+    position: relative;
+    padding: $size-19-point-5-px;
+   
+    width: min(45vw, 346px);
+    height: min(26.6vw, 205px);
+    background-image: url('../../../img/actual-card-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: min(4.2vw, 32px);
+    overflow: hidden;
+    font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: $black-color;
+
+    &__img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        object-fit: contain;
+        height: 100%;
+        z-index: 0;
+    }
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        font-size: min(3.7vw, 28px);
+    }
+
+    &__btn {
+        margin-top: auto;
+        padding: min(1.8vw, 14px) min(4.1vw, 31px);
+        font-size: $gap-10;
+        background-color: $white-bg-color;
+        border-radius: $size-13px;
+        color: $black-color;
+    }
+}
+
