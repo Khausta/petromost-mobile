@@ -1,0 +1,33 @@
+.menu-panel {
+    padding: min(3.2vw, 24px) 0 min(2.6vw, 20px);
+    max-width: 768px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid $beige-color;
+    background-color: #FEFEFE;
+
+   
+
+    &__link {
+        gap: min(2.5vw, 19px);
+        flex-direction: column;
+        font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        line-height: 1.84;
+        color: $black-color;
+        
+
+    }
+
+    &__cart {
+        
+    }
+
+    &__icon {  
+        width: min(5vw, 38px);
+        height: min(5vw, 38px);
+    }
+  
+}

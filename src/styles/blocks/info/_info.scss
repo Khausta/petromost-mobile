@@ -1,0 +1,31 @@
+.info {
+    padding: min(2.6vw, 20px) 0;
+    border-bottom: 1px solid $beige-color;
+    background-color: $head-bg-color;
+    overflow: hidden;
+
+    &__inner {
+        gap: min(2.5vw, 19px);
+    }
+   
+    &__item {
+        padding: 0 min(4.2vw, 32px);
+        height: min(8.2vw, 62px);
+        border: 1px solid $beige-color;
+        border-radius: min(2vw, 15px);
+
+        a {
+            height: 100%;
+            font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-style: normal;
+           
+            color: $black-color;
+
+        }
+        
+    }
+}
+
+
+

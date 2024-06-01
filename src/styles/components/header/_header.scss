@@ -1,9 +1,9 @@
 .header {
-    
     width: 100%;
     position: sticky;
     top: 0px;
     border-bottom: 1px solid $beige-color;
+    background-color: $white-bg-color;
 
     &__items {
         padding: min(2.6vw, 20px) 0;
@@ -22,14 +22,23 @@
         width: min(40vw, 308px);
         height: min(8.2vw, 62px);
         border: 1px solid $beige-color;
-        border-top-left-radius: 2vw;
-        border-bottom-left-radius: 2vw; 
-        border-top-right-radius: 6vw;
-        border-bottom-right-radius: 6vw;
+        border-top-left-radius: min(2vw, 15px);
+        border-bottom-left-radius: min(2vw, 15px); 
+        border-top-right-radius: min(6vw, 46px);
+        border-bottom-right-radius: min(6vw, 46px);
     }
 
     &__input {
         width: min(28.2vw, 207px);
+        font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: min(3.3vw, 25px);
+        color: $beige-color;
+
+        &::placeholder {
+            color: #BE967D;
+        }
     }
 
     &__search-btn {
