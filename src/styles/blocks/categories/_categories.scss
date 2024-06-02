@@ -1,0 +1,9 @@
+.categories {
+    &__wrapper {
+        padding: $size-13px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: $gap-10;
+    }
+}

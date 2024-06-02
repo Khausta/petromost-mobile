@@ -1,0 +1,20 @@
+.category {
+    padding: $gap-10 $size-13px;
+    width: min(45vw, 346px);
+    height: min(45vw, 346px);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: min(4.2vw, 32px);
+    overflow: hidden;
+    
+    &__name {
+        font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        color: $black-color;
+        line-height: 1.26;
+        font-size: min(3.6vw, 27px);
+
+    }
+}

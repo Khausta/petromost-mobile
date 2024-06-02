@@ -6,6 +6,7 @@
     bottom: 0;
     border-top: 1px solid $beige-color;
     background-color: #FEFEFE;
+    z-index: 10;
 
    &__circle {
         display: flex;

@@ -251,6 +251,7 @@ button:focus {
   bottom: 0;
   border-top: 1px solid #F5E6D6;
   background-color: #FEFEFE;
+  z-index: 10;
 }
 .menu-panel__circle {
   display: flex;
@@ -293,6 +294,7 @@ button:focus {
   top: 0px;
   border-bottom: 1px solid #F5E6D6;
   background-color: #FFFFFF;
+  z-index: 10;
 }
 .header__items {
   padding: min(2.6vw, 20px) 0;
@@ -359,9 +361,16 @@ button:focus {
   color: #240405;
 }
 
+.actual {
+  padding: min(3.3vw, 25px) 0;
+}
+
 .actual-card {
   position: relative;
-  padding: min(5vw, 38px);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: min(2.5vw, 19px);
   width: min(45vw, 346px);
   height: min(26.6vw, 205px);
   background-image: url("../../../img/actual-card-bg.png");
@@ -373,6 +382,7 @@ button:focus {
   font-weight: bold;
   font-style: normal;
   color: #240405;
+  line-height: 1.26;
 }
 .actual-card__img {
   position: absolute;
@@ -385,19 +395,66 @@ button:focus {
 }
 .actual-card__title {
   position: relative;
-  z-index: 1;
+  max-width: 60%;
+  padding-left: min(0.83vw, 6px);
+  position: relative;
   font-size: min(3.7vw, 28px);
+  z-index: 1;
 }
 .actual-card__btn {
+  position: relative;
+  margin-top: auto;
   padding: min(1.8vw, 14px) min(4.1vw, 31px);
   font-size: min(2.5vw, 19px);
   background-color: #FFFFFF;
   border-radius: min(3.3vw, 25px);
   color: #240405;
+  z-index: 1;
 }
 
 .footer__items {
   width: 100%;
   height: auto;
   display: flex;
+}
+
+.categories__wrapper {
+  padding: min(3.3vw, 25px) 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: min(2.5vw, 19px);
+}
+
+.category {
+  padding: min(2.5vw, 19px) min(3.3vw, 25px);
+  width: min(45vw, 346px);
+  height: min(45vw, 346px);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: min(4.2vw, 32px);
+  overflow: hidden;
+}
+.category__name {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #240405;
+  line-height: 1.26;
+  font-size: min(3.6vw, 27px);
+}
+
+.chance {
+  position: relative;
+}
+.chance__slider {
+  padding: min(3.3vw, 25px) 0;
+}
+.chance__card {
+  display: block;
+  width: min(45vw, 346px);
+  height: min(51.6vw, 397px);
+  border-radius: min(5vw, 38px);
+  overflow: hidden;
 }

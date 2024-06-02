@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Петромост</title>
     <link rel="stylesheet" href="./css/style.css">
-  
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="./js/main.js" defer></script>
 </head>
 <body>
@@ -46,7 +51,7 @@
       
         <main class="main">
 
-            <!-- Inner with info buttons -->
+            <!-- Лента ссылок на доставку, поддержку и т.д. -->
             <section class="info">
                 <div class="info__inner flex-box">
                     <div class="info__item">
@@ -67,6 +72,7 @@
                 </div>  
             </section>
 
+            <!-- баннер -->
             <section class="banner">
                 <div class="banner__slider">
                     <div class="banner__slide">
@@ -74,26 +80,97 @@
                     </div>
                 </div>
             </section>
+
             <!-- разделительная штрих-пунктирная бежевая черта  -->
             <hr class="hr">
-
             <section class="actual">
                 <h2 class="title">Актуальное</h2>
                 <div class="container">
+
+                    <!-- флекс контейнер для карточек актуального -->
                     <div class="actual__wrapper flex-box">
-                        <div class="actual-card">
+                        <div class="actual-card flex-box">
                             <h3 class="actual-card__title">
-                                Заготовки,<br> соленья
+                                Заготовки, соленья
                             </h3>
                             <a class="actual-card__btn" href="#">
                                 Выбрать
                             </a>
                             <img class="actual-card__img" src="./img/actual-card-img-1.png" alt="">
                         </div>
+                        <div class="actual-card flex-box">
+                            <h3 class="actual-card__title">
+                                Дача, сад,
+                                огород
+                            </h3>
+                            <a class="actual-card__btn" href="#">
+                                Выбрать
+                            </a>
+                            <img class="actual-card__img" src="./img/actual-card-img-2.png" alt="">
+                        </div>
                     </div>
                 </div>
             </section>
 
+            <section class="categories">
+                <h2 class="title">Все категории</h2>
+                <div class="container">
+                    <div class="categories__wrapper">
+                        <!-- у первой карточки цвет отличается, значит добавим возможность задавать цвет инлайново -->
+                        <!-- background-image карточек задается инлацново, для возможности менять с админки -->
+                        <a href="#" class="category" style="color: #ffffff; background-image: url('./img/category/1.png')">
+                            <h3 class="category__name">Акции %</h3>
+                        </a>
+                        <a href="#" class="category" style="background-image: url('./img/category/2.png');">
+                            <h3 class="category__name">Выгодная <br> корзина</h3>
+                        </a>
+                        <a href="#" class="category" style="background-image: url('./img/category/3.png');">
+                            <h3 class="category__name">Хлеб и изделия хлебобулочные </h3>
+                        </a>
+                        <a href="#" class="category" style="background-image: url('./img/category/4.png');">
+                            <h3 class="category__name">Молочные продукты, сыры, яйцо</h3>
+                        </a>
+                        <a href="#" class="category" style="background-image: url('./img/category/5.png');">
+                            <h3 class="category__name">Фрукты, овощи</h3>
+                        </a>
+                        <a href="#" class="category" style="background-image: url('./img/category/6.png');">
+                            <h3 class="category__name">Готовые блюда</h3>
+                        </a>
+                        <a href="#" class="category" style="background-image: url('./img/category/7.png');">
+                            <h3 class="category__name">Рыба, морепродукты, икра</h3>
+                        </a>
+                        <a href="#" class="category" style="background-image: url('./img/category/8.png');">
+                            <h3 class="category__name">Мясо, птица, колбасы</h3>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="chance">
+                <h2 class="title">Все категории</h2>
+                <div class="container">
+                   
+                    <div class="chance-swiper">
+                        <div class="chance__slider swiper-wrapper">
+                            <a href="" class="chance__card swiper-slide">
+                                <img class="object-fit-cover" src="./img/chance/1.png" alt="">
+                            </a>
+                            <a href="" class="chance__card swiper-slide">
+                                <img class="object-fit-cover" src="./img/chance/2.png" alt="">
+                            </a>
+                            <a href="" class="chance__card swiper-slide">
+                                <img class="object-fit-cover" src="./img/chance/3.png" alt="">
+                            </a>
+                            <a href="" class="chance__card swiper-slide">
+                                <img class="object-fit-cover" src="./img/chance/4.png" alt="">
+                            </a>
+                        </div>
+                        <div class="chance-button-next">
+                            <img src="./img/chance/arror-right.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="footer">
                 <ul class="footer__items">
                     <li class="footer__item">Каталог</li>

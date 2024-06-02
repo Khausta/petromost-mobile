@@ -91,10 +91,13 @@ button:focus {
 
 
 
-@import 'components/head-inner/head-inner';
+@import 'blocks/head-inner/head-inner';
 @import 'blocks/menu-panel/menu-panel';
-@import 'components/header/header';
+@import 'blocks/header/header';
 @import 'blocks/info/info';
 @import 'blocks/actual/actual';
-@import 'components/footer/footer';
-
+@import 'blocks/footer/footer';
+@import 'blocks/categories/categories';
+@import 'components/category';
+@import 'blocks/chance/chance';
+    

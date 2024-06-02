@@ -1,0 +1,14 @@
+.chance {
+    position: relative;
+    &__slider {
+        padding: $size-13px 0;
+    }
+
+    &__card {
+        display: block;
+        width: min(45vw, 346px) ;
+        height: min(51.6vw, 397px) ;
+        border-radius: $size-19-point-5-px;
+        overflow: hidden;
+    }
+}
