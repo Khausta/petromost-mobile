@@ -9,10 +9,12 @@
     }
    
     &__item {
-        padding: 0 min(4.2vw, 32px);
+        padding: min(1.98vw, 15px) min(4.2vw, 32px);
         height: min(8.2vw, 62px);
         border: 1px solid $beige-color;
         border-radius: min(2vw, 15px);
+        width: min-content !important;
+        background-color: $white-bg-color;
 
         a {
             height: 100%;

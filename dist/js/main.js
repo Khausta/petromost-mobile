@@ -1,23 +1,26 @@
 "use strict";
 
-var chanceSwiper = new Swiper('.chance-swiper', {
-  // Optional parameters
-  // direction: 'vertical',
+var bannerSwiper = new Swiper('.banner-swiper', {
+  spaceBetween: '2%',
+  slidesPerView: 'auto',
   loop: true,
-  // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  // },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.cahance-button-next'
-    //   prevEl: '.swiper-button-prev',
+  pagination: {
+    el: ".banner-pagination",
+    clickable: true
   }
-
-  // And if we need scrollbar
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
+});
+var infoSwiper = new Swiper('.info-swiper', {
+  spaceBetween: '2%',
+  slidesPerView: 'auto',
+  loop: true,
+  loopFillGroupWithBlank: true
+});
+var chanceSwiper = new Swiper('.chance-swiper', {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: '6%',
+  navigation: {
+    nextEl: '.chance-button-next'
+  }
 });
 //# sourceMappingURL=main.js.map

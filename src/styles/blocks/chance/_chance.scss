@@ -1,5 +1,11 @@
 .chance {
     position: relative;
+    overflow: hidden;
+
+    &__title-block {
+        padding-right: min(6.2vw, 47px);
+    }
+
     &__slider {
         padding: $size-13px 0;
     }

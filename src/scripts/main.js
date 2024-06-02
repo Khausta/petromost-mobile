@@ -1,21 +1,26 @@
+const bannerSwiper = new Swiper('.banner-swiper', {
+  spaceBetween: '2%',
+  slidesPerView: 'auto',
+  loop: true,
+  pagination: {
+    el: ".banner-pagination",
+    clickable: true,
+  },
+});
+
+const infoSwiper = new Swiper('.info-swiper', {
+  spaceBetween: '2%',
+  slidesPerView: 'auto',
+  loop: true,
+  loopFillGroupWithBlank: true,
+});
+
+
 const chanceSwiper = new Swiper('.chance-swiper', {
-    // Optional parameters
-    // direction: 'vertical',
     loop: true,
-  
-    // If we need pagination
-    // pagination: {
-    //   el: '.swiper-pagination',
-    // },
-  
-    // Navigation arrows
+    slidesPerView: 2,
+    spaceBetween: '6%',  
     navigation: {
-      nextEl: '.cahance-button-next',
-    //   prevEl: '.swiper-button-prev',
+      nextEl: '.chance-button-next',
     },
-  
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
   });

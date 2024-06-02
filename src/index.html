@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Петромост</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -52,37 +52,75 @@
         <main class="main">
 
             <!-- Лента ссылок на доставку, поддержку и т.д. -->
-            <section class="info">
-                <div class="info__inner flex-box">
-                    <div class="info__item">
-                        <a class="flex-box" href="#">
-                            Доставка&nbsp;и&nbsp;оплата
-                        </a>
+            <section class="info ">
+                <div class="container">
+                    <div class="info-swiper">
+                        <div class="info__inner flex-box swiper-wrapper">
+                            <div class="info__item swiper-slide">
+                                <a class="" href="#">
+                                    Доставка&nbsp;и&nbsp;оплата
+                                </a>
+                            </div>
+                            <div class="info__item swiper-slide">
+                                <a class="" href="#">
+                                    Поддержка
+                                </a>
+                            </div>
+                            <div class="info__item swiper-slide">
+                                <a class="flex-box" href="#">
+                                    Отзывы&nbsp;и&nbsp;предложения
+                                </a>
+                            </div>
+                            <div class="info__item swiper-slide">
+                                <a class="" href="#">
+                                    Доставка&nbsp;и&nbsp;оплата
+                                </a>
+                            </div>
+                            <div class="info__item swiper-slide">
+                                <a class="" href="#">
+                                    Поддержка
+                                </a>
+                            </div>
+                            <div class="info__item swiper-slide">
+                                <a class="flex-box" href="#">
+                                    Отзывы&nbsp;и&nbsp;предложения
+                                </a>
+                            </div>
+                        </div>  
                     </div>
-                    <div class="info__item">
-                        <a class="flex-box" href="#">
-                            Поддержка
-                        </a>
-                    </div>
-                    <div class="info__item">
-                        <a class="flex-box" href="#">
-                            Отзывы&nbsp;и&nbsp;предложения
-                        </a>
-                    </div>
-                </div>  
+                </div>
+              
             </section>
 
             <!-- баннер -->
             <section class="banner">
-                <div class="banner__slider">
-                    <div class="banner__slide">
-                        <img src="./img/banners/banner-1.png" alt="">
+                <div class="banner-swiper">
+                    <div class="banner__slider swiper-wrapper">
+                        <div class="banner__slide swiper-slide">
+                            <img class="object-fit-cover" src="./img/banners/banner-1.png" alt="">
+                        </div>
+                        <div class="banner__slide swiper-slide">
+                            <img class="object-fit-cover" src="./img/banners/banner-1.png" alt="">
+                        </div>
+                        <div class="banner__slide swiper-slide">
+                            <img class="object-fit-cover" src="./img/banners/banner-1.png" alt="">
+                        </div>
+                        <div class="banner__slide swiper-slide">
+                            <img class="object-fit-cover" src="./img/banners/banner-1.png" alt="">
+                        </div>
+                        <div class="banner__slide swiper-slide">
+                            <img class="object-fit-cover" src="./img/banners/banner-1.png" alt="">
+                        </div>
+                        <div class="banner__slide swiper-slide">
+                            <img class="object-fit-cover" src="./img/banners/banner-1.png" alt="">
+                        </div>
                     </div>
+                    <div class="banner-pagination"></div>  
                 </div>
             </section>
 
             <!-- разделительная штрих-пунктирная бежевая черта  -->
-            <hr class="hr">
+            <!-- <hr class="hr"> -->
             <section class="actual">
                 <h2 class="title">Актуальное</h2>
                 <div class="container">
@@ -116,10 +154,10 @@
                 <h2 class="title">Все категории</h2>
                 <div class="container">
                     <div class="categories__wrapper">
-                        <!-- у первой карточки цвет отличается, значит добавим возможность задавать цвет инлайново -->
                         <!-- background-image карточек задается инлацново, для возможности менять с админки -->
-                        <a href="#" class="category" style="color: #ffffff; background-image: url('./img/category/1.png')">
-                            <h3 class="category__name">Акции %</h3>
+                        <a href="#" class="category" style="background-image: url('./img/category/1.png')">
+                            <!-- у первой карточки цвет текста отличается, значит добавим возможность задавать цвет инлайново -->
+                            <h3 class="category__name" style="color: #ffffff;"">Акции %</h3>
                         </a>
                         <a href="#" class="category" style="background-image: url('./img/category/2.png');">
                             <h3 class="category__name">Выгодная <br> корзина</h3>
@@ -147,7 +185,12 @@
             </section>
 
             <section class="chance">
-                <h2 class="title">Все категории</h2>
+                <div class="chance__title-block flex-box">
+                    <h2 class="title">Все категории</h2>
+                    <div class="chance-button-next">
+                        <img class="object-fit-contain" src="./img/chance/arror-right.svg" alt="">
+                    </div>
+                </div>
                 <div class="container">
                    
                     <div class="chance-swiper">
@@ -165,20 +208,65 @@
                                 <img class="object-fit-cover" src="./img/chance/4.png" alt="">
                             </a>
                         </div>
-                        <div class="chance-button-next">
+                        <!-- <div class="chance-button-next">
                             <img src="./img/chance/arror-right.svg" alt="">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
             <section class="footer">
-                <ul class="footer__items">
-                    <li class="footer__item">Каталог</li>
-                    <li class="footer__item">Акции</li>
-                    <li class="footer__item">Заказы</li>
-                    <li class="footer__item">Любимое</li>
-                    <li class="footer__item">Войти</li>
-                </ul>
+                <div class="container">
+                    <!-- меню футера -->
+                    <div class="footer__wrapper flex-box">
+                        <div class="footer__list">
+                            <h4 class="footer__title">Покупателям</h4>
+                            <ul>
+                                <li class="footer__li">
+                                    <a href="#" class="footer__link">Доставка и оплата</a>
+                                </li>
+                                <li class="footer__li">
+                                    <a href="#" class="footer__link">Отзывы</a>
+                                </li>
+                                <li class="footer__li">
+                                    <a href="#" class="footer__link">Поддержка</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__list">
+                            <h4 class="footer__title">О Компании</h4>
+                            <ul>
+                                <li class="footer__li">
+                                    <a href="#" class="footer__link">Контакты</a>
+                                </li>
+                                <li class="footer__li">
+                                    <a href="#" class="footer__link">Реквизиты</a>
+                                </li>
+                                <li class="footer__li">
+                                    <a href="#" class="footer__link">Оптовым покупателям</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- блок ссылок на соц.сети -->
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <img class="object-fit-contain" src="img/icons/social-vk.svg" alt="Иконка Vkontakte">
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <img class="object-fit-contain" src="img/icons/social-tg.svg" alt="Иконка Телеграм">
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <img class="object-fit-contain" src="img/icons/social-youtube.svg" alt="Иконка YouTube">
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <img class="object-fit-contain" src="img/icons/social-mail.svg" alt="Иконка электронной почты">
+                        </a>
+                    </div>
+                
+
+                </div>
+                
             </section>
         </main>
        
@@ -203,7 +291,7 @@
                             <p class="menu-panel__name">Акции</p>
                         </a>
                     </li>
-                    <li class="menu-panel__item">
+                    <li class="menu-panel__item menu-panel_active">
                         <a class="menu-panel__link flex-box" href="#">
                             <div class="menu-panel__icon">
                                 <img class="object-fit-contain" src="./img/icons/menu-panel-orders.svg" alt="Иконка заказов">

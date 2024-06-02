@@ -52,12 +52,16 @@ button:focus {
     object-fit: contain;
     width: 100%;
     height: 100%;
+    object-position: center;
+    vertical-align: middle;
 }
 
 .object-fit-cover {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    object-position: center;
+    vertical-align: middle;
 }
 
 .input {
@@ -91,13 +95,5 @@ button:focus {
 
 
 
-@import 'blocks/head-inner/head-inner';
-@import 'blocks/menu-panel/menu-panel';
-@import 'blocks/header/header';
-@import 'blocks/info/info';
-@import 'blocks/actual/actual';
-@import 'blocks/footer/footer';
-@import 'blocks/categories/categories';
-@import 'components/category';
-@import 'blocks/chance/chance';
+
     
