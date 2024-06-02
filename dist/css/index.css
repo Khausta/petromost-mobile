@@ -260,10 +260,9 @@ button:focus {
   z-index: 11;
 }
 .menu-panel__item {
-  width: 20%;
   padding: 1.6vw, 12px 0 min(1.3vw, 10px);
-  padding: 2%;
-  border-radius: min(4vw, 30px);
+  padding: 1% 2%;
+  border-radius: min(3vw, 30px);
 }
 .menu-panel_active {
   border: 1px solid #F5E6D6;
@@ -392,7 +391,7 @@ button:focus {
   padding: min(2.5vw, 19px);
   width: min(45vw, 346px);
   height: min(26.6vw, 205px);
-  background-image: url("../../../img/actual-card-bg.png");
+  background-image: url("../img/actual-card-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: min(4.2vw, 32px);
