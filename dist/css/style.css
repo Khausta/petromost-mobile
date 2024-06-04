@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Gilroy";
   src: url("Gilroy-Regular.eot");
@@ -226,4 +227,61 @@ button:focus {
   font-style: normal;
   font-size: min(7.5vw, 58px);
   color: #240405;
+}
+
+.overlay {
+  left: -300px;
+  z-index: -100;
+  /* фон затемнения */
+  background-color: rgba(0, 0, 0, 0.65);
+  position: fixed; /* фиксированное поцизионирование */
+  cursor: default; /* тип курсара */
+}
+
+/* стили модального окна */
+.popup {
+  top: -100%;
+  right: 0;
+  left: 50%;
+  font-size: 14px;
+  z-index: 11;
+  margin: 0;
+  width: 100%;
+  min-width: 320px;
+  max-width: 768px;
+  height: 100vh;
+  width: 100vw;
+  /* фиксированное позиционирование, окно стабильно при прокрутке */
+  position: fixed;
+  padding: 15px;
+  border: 1px solid #383838;
+  background: #fefefe;
+  transition: transform 0.4s ease-out;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.overlay.__js-active {
+  z-index: 10;
+  inset: 0;
+}
+.overlay.__js-active .popup {
+  position: relative;
+  transform: translate(-50%, 0);
+  top: min(13vw, 102px);
+  padding-bottom: min(50vw, 384px);
+  height: calc(100vh - 13vw - 13vw);
+}
+
+#search-popup {
+  background-color: #FFFAF5;
+}
+#search-popup .search-img {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(41vw, 317px);
+  height: min(41vw, 317px);
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Gilroy";
   src: url("Gilroy-Regular.eot");
@@ -228,6 +229,63 @@ button:focus {
   color: #240405;
 }
 
+.overlay {
+  left: -300px;
+  z-index: -100;
+  /* фон затемнения */
+  background-color: rgba(0, 0, 0, 0.65);
+  position: fixed; /* фиксированное поцизионирование */
+  cursor: default; /* тип курсара */
+}
+
+/* стили модального окна */
+.popup {
+  top: -100%;
+  right: 0;
+  left: 50%;
+  font-size: 14px;
+  z-index: 11;
+  margin: 0;
+  width: 100%;
+  min-width: 320px;
+  max-width: 768px;
+  height: 100vh;
+  width: 100vw;
+  /* фиксированное позиционирование, окно стабильно при прокрутке */
+  position: fixed;
+  padding: 15px;
+  border: 1px solid #383838;
+  background: #fefefe;
+  transition: transform 0.4s ease-out;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.overlay.__js-active {
+  z-index: 10;
+  inset: 0;
+}
+.overlay.__js-active .popup {
+  position: relative;
+  transform: translate(-50%, 0);
+  top: min(13vw, 102px);
+  padding-bottom: min(50vw, 384px);
+  height: calc(100vh - 13vw - 13vw);
+}
+
+#search-popup {
+  background-color: #FFFAF5;
+}
+#search-popup .search-img {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(41vw, 317px);
+  height: min(41vw, 317px);
+}
+
 .head-inner {
   width: 100%;
   background-color: #FFFAF5;
@@ -309,13 +367,15 @@ button:focus {
   top: 0px;
   border-bottom: 1px solid #F5E6D6;
   background-color: #FFFFFF;
-  z-index: 10;
+  z-index: 11;
+  transition: all 0.3s ease;
 }
 .header__items {
   padding: min(2.6vw, 20px) 0;
 }
 .header__main-logo {
   width: min(42vw, 323px);
+  transition: all 0.3s;
 }
 .header__main-logo img {
   vertical-align: middle;
@@ -352,6 +412,22 @@ button:focus {
   display: block;
   width: min(8.2vw, 62px);
   height: min(8.2vw, 62px);
+}
+
+.header.__js-fixed {
+  position: fixed;
+}
+
+.__js-logo_none {
+  width: 0;
+}
+
+.__js-searchInput_active {
+  width: min(73vw, 610px);
+}
+
+.__js-headerSearch_active {
+  width: min(84vw, 644px);
 }
 
 .info {

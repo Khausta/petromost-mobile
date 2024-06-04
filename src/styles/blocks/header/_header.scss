@@ -4,7 +4,8 @@
     top: 0px;
     border-bottom: 1px solid $beige-color;
     background-color: $white-bg-color;
-    z-index: 10;
+    z-index: 11;
+    transition: all .3s ease;
 
     &__items {
         padding: min(2.6vw, 20px) 0;
@@ -12,6 +13,7 @@
 
     &__main-logo {
         width: min(42vw, 323px);
+        transition: all .3s;
         // height: min(8.2vw, 62px);
         img {
             vertical-align: middle;
@@ -54,4 +56,20 @@
     }
     
 
+}
+
+.header.__js-fixed {
+    position: fixed;
+}
+
+.__js-logo_none {
+    width: 0;
+}
+
+.__js-searchInput_active {
+    width: min(73vw, 610px);
+}
+
+.__js-headerSearch_active {
+    width: min(84vw, 644px);
 }
