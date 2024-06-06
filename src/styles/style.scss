@@ -125,7 +125,6 @@ button:focus {
     width: 100vw;
 /* фиксированное позиционирование, окно стабильно при прокрутке */
     position: fixed;
-    padding: 15px;
     border: 1px solid #383838;
     background: #fefefe;
     transition: transform .4s ease-out;
@@ -161,6 +160,10 @@ button:focus {
         
     }
 }
+
+// #menu-popup {
+
+// }
 
 
 

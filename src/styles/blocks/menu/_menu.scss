@@ -1,0 +1,31 @@
+.menu {
+    .title {
+        border-bottom: 1px solid $beige-color;
+    }
+
+    &__notification {
+        position: relative;
+        padding: $size-13px;
+        background-image: url('../img/menu/bg-notification.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: $gap-10;
+        h4 {
+            margin-bottom: $size-13px;
+            width: 70%;
+            font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            font-size: $size-19-point-5-px;
+            color: $black-color;
+        }
+        p {
+            width: 70%;
+            font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            font-size: min(3.6vw, 28px);
+            color: $black-color;
+        }
+    }
+}

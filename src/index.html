@@ -33,8 +33,10 @@
         <header class="header">
             <div class="container">
                 <div class="header__items flex-box">
-                    <div class="header__main-logo __js-logo ">
-                        <img class="object-fit-contain" src="./img/logo-petromost.svg" alt="Знак хорошего выбора">
+                    <div class="header__main-logo __js-logo " >
+                        <img class="object-fit-contain header__main-logo-img header__base-logo-img" src="./img/logotype/logo-petromost-start.svg" alt="Логотип Петромост">
+                        <!-- витрина, доставка, самовывоз -->
+                        <img class="object-fit-contain header__main-logo-img  header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
                     </div>
                     <div class="header__search flex-box ">
                         <input class="input header__input __js-searchInput " type="text" placeholder="Найти арбуз...">
@@ -42,8 +44,13 @@
                             <img class="object-fit-contain" src="./img/icons/search.svg" alt="Иконка поиска">
                         </button>
                     </div>
-                    <button class="button header__menu-btn">
-                        <img class="object-fit-contain" src="./img/icons/menu-burger.svg" alt="Орнамент">
+                    <button class="button header__menu-btn menu-btn ">
+
+                        <span class="menu-btn__line menu-btn__line_1"></span>
+                        <span class="menu-btn__line menu-btn__line_2"></span>
+                        <span class="menu-btn__line menu-btn__line_3"></span>
+
+                        <!-- <img class="object-fit-contain" src="./img/icons/menu-burger.svg" alt="Орнамент"> -->
                     </button> 
                 </div>
             </div>
@@ -326,12 +333,31 @@
         </div>
 
         <!-- для попапов -->
-        <div class="overlay " id="search-overlay">
+        <!-- поис -->
+        <div class="overlay" id="search-overlay">
             <div class="popup" id="search-popup">
                 <div class="container">
                 </div>
                 <img class="search-img" src="./img/icons/search.svg" alt="Иконка лупы">
 
+            </div>
+        </div>
+
+        <!-- меню -->
+        <div class="overlay" id="menu-overlay">
+            <div class="popup menu" id="menu-popup">
+                <h2 class="title">Меню</h2>
+                <div class="container">
+                    <div class="menu__notification">
+                        <h4>
+                            Выберите способ 
+                            получения заказа
+                        </h4>
+                        <p>
+                            Выберите тип доставки, адрес доставки или получения заказа, для корректного отображения каталога, остатков товаров и цен
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

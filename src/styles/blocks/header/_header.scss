@@ -12,13 +12,71 @@
     }
 
     &__main-logo {
-        width: min(42vw, 323px);
+        position: relative;
+        width: min(41.6vw, 323px);
         transition: all .3s;
-        // height: min(8.2vw, 62px);
-        img {
-            vertical-align: middle;
+        height: min(8.33vw, 62px);
+
+        .header__current-logo-img {
+            display: none;
         }
     }
+
+    
+    &__main-logo-img {
+        vertical-align: middle;
+    } 
+
+
+    &__main-logo {
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 2vw;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            bottom: -7%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &_delivery, &_selfdelivery,  &_storefront {
+        .header__base-logo-img {
+            display: none;
+        }
+        .header__current-logo-img {
+            display: inline;
+        }
+    } 
+
+    &_delivery {
+        &::after {
+            width: min(19.48vw, 150px);
+            height: min(3.1vw, 24px);
+            background-image: url('../img/logotype/delivery.svg');
+        }
+    }
+
+    &_selfdelivery {
+        &::after { 
+            width: min(21vw, 161px);
+            height: min(3.1vw, 24px);
+            background-image: url('../img/logotype/selfdelivery.svg'); 
+        }
+    }
+
+    &_storefront {
+        &::after { 
+            width: min(15.4vw, 118px);
+            height: min(3.1vw, 24px);
+            background-image: url('../img/logotype/storefront.svg'); 
+        }
+    }
+
+
 
     &__search {
         padding: 0 min(2.5vw, 17px) 0 min(3vw, 20px);
@@ -49,20 +107,71 @@
         height: min(3.3vw, 25px);
     }
 
-    &__menu-btn {
-        display: block;
-        width: min(8.2vw, 62px);
-        height: min(8.2vw, 62px);
-    }
+   
     
 
 }
+
+.header {
+    &__menu-btn {
+        display: block;
+        width: min(8.2vw, 62px) !important;
+        height: min(8.2vw, 62px) !important;
+        border-radius: $gap-10;
+        background-color: #DC1E1E;
+    }
+}
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: min(1.1vw, 9px);
+
+    &__line {
+        background-color: $white-bg-color;
+        border-radius: 1vw;
+        height: min(0.5vw, 4px);
+        transition: all .3s ease-in-out;
+
+        &_1, &_3 {
+            width: min(4.2vw, 32px);
+        }
+
+        &_2 {
+            width: min(2.8vw, 21px);
+        }
+    }  
+}
+
+.menu-btn.__js_active {
+    .menu-btn__line {
+        position: absolute;
+
+        &_1 {
+            transform: rotate(45deg);
+        }
+
+        &_2 {
+            opacity: 0;
+        }
+
+        &_3 {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+
 
 .header.__js-fixed {
     position: fixed;
 }
 
 .__js-logo_none {
+    opacity: 0;
     width: 0;
 }
 
