@@ -171,10 +171,16 @@ button:focus {
   height: 1500px;
 }
 
-.container {
+.container-header {
   position: relative;
   margin: auto;
   padding: 0 min(2.6vw, 20px);
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  padding: 0 min(3.33vw, 26px);
 }
 
 .flex-box {

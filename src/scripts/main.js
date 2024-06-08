@@ -40,12 +40,14 @@ const popups = {
     open: function() {
       popups.openedPopups.search = true;
       popups.search.overlay.classList.add('__js-active');
-      
+      headerElements.logo.classList.add('__js-logo_none');
   
     },
     close: function() {
       popups.search.overlay.classList.remove('__js-active');
-      
+      headerElements.logo.classList.remove('__js-logo_none');
+      popups.search.input.classList.remove('__js-searchInput_active');
+      popups.search.input.parentElement.classList.remove('__js-headerSearch_active');
     }
   },
   menu: {
@@ -60,18 +62,11 @@ const popups = {
   
 }
 
-
-
-// popups 
-// const searchInput = document.querySelector('.__js-searchInput');
-// const searchOverlay = document.querySelector('#search-overlay');
-// const header = document.querySelector('.header');
-// const logo = document.querySelector('.__js-logo');
-// const menuBtn = document.querySelector('.menu-btn');
-
+//собитие на фокус инпута поиска
 popups.search.input.addEventListener('focus', () => {
   openSearchPopup();
 })
+
 
 function openSearchPopup () {
   popups.search.open();
@@ -83,27 +78,23 @@ function openSearchPopup () {
   } 
 
   popups.search.input.classList.add('__js-searchInput_active');
-      popups.search.input.parentElement.classList.add('__js-headerSearch_active');
+  popups.search.input.parentElement.classList.add('__js-headerSearch_active');
   
   headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
-  headerElements.logo.classList.add('__js-logo_none');
   headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
 }
 
+// закрытие попапов
 function closePopup() {
   document.body.style.overflow = 'auto';
   headerElements.header.classList.remove('__js-fixed');
-  headerElements.logo.classList.remove('__js-logo_none');
-  popups.search.input.classList.remove('__js-searchInput_active');
-  popups.search.input.parentElement.classList.remove('__js-headerSearch_active');
+  
   if (popups.openedPopups.search) {
     popups.search.close();
   }
 
   if (popups.openedPopups.menu) {
-    popups.menu.overlay.classList.remove('__js-active');
-    // popups.menu.menuContent.classList.remove('__js-active');
-    
+    popups.menu.overlay.classList.remove('__js-active');    
   }
   
   headerElements.openMenuOrCloseAllBtn.classList.remove('__js_active');
@@ -112,6 +103,7 @@ function closePopup() {
   popups.openedPopups.menu = false;
 }
 
+// собитие на клик по кнопке меню
 headerElements.openMenuOrCloseAllBtn.addEventListener('click', () => {
   if (popups.openedPopups.search) {
     return;
@@ -124,10 +116,8 @@ headerElements.openMenuOrCloseAllBtn.addEventListener('click', () => {
   if (document.body.style.overflow !== 'hidden') {
     document.body.style.overflow = 'hidden';
   } 
-  popups.search.input.classList.add('__js-searchInput_active');
-  popups.search.input.parentElement.classList.add('__js-headerSearch_active');
+
   popups.menu.overlay.classList.add('__js-active');
   headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
-  headerElements.logo.classList.add('__js-logo_none');
   headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
 })

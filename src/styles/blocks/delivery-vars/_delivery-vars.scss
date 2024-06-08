@@ -1,0 +1,58 @@
+.delivery-variants {
+    padding: $size-13px 0;
+    border-bottom: 1px solid $beige-color;
+    border-top: 1px solid $beige-color;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: $fz-13px;
+    }
+
+    &__banner {
+        position: relative;
+        padding: min(3.75vw, 29px) $size-19-point-5-px min(5.42vw, 42px) $size-19-point-5-px;
+        background-image: url('../img/menu/bg-notification.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+        border-radius: $size-19-point-5-px;
+        border: 1px solid $beige-color;
+
+
+        h4 {
+            margin-bottom: $size-13px;
+            width: 74%;
+            @include gilroy-bold;
+            font-size: $size-19-point-5-px;
+            color: $brown-color;
+        }
+        p {
+            width: 66%;
+            font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            font-size: $fz-13px;
+            color: $brown-color;
+        }
+    }
+
+    &__choosen {
+        gap: $size-13px;
+    }
+
+    &__var {
+        width: 48%;
+        background-color: $beige-color;
+        height: min(8.33vw, 64px);
+        border-radius: $gap-10;
+        @include gilroy-bold;
+        color: $brown-color;
+        text-transform: uppercase;
+    }
+ 
+    .__js-active {
+        background-color: $red-color;
+        color: $white-bg-color;
+    }
+   
+}

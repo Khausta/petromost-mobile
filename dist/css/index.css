@@ -171,10 +171,16 @@ button:focus {
   height: 1500px;
 }
 
-.container {
+.container-header {
   position: relative;
   margin: auto;
   padding: 0 min(2.6vw, 20px);
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  padding: 0 min(3.33vw, 26px);
 }
 
 .flex-box {
@@ -722,31 +728,89 @@ button:focus {
   background-color: #F5E6D6;
 }
 
-.menu .title {
+.delivery-variants {
+  padding: min(3.3vw, 25px) 0;
   border-bottom: 1px solid #F5E6D6;
+  border-top: 1px solid #F5E6D6;
 }
-.menu__notification {
+.delivery-variants__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: min(3.3vw, 25px);
+}
+.delivery-variants__banner {
   position: relative;
-  padding: min(3.3vw, 25px);
-  background-image: url("../img/menu/bg-notification.png");
+  padding: min(3.75vw, 29px) min(5vw, 38px) min(5.42vw, 42px) min(5vw, 38px);
+  background-image: url("../img/menu/bg-notification.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: min(2.5vw, 19px);
+  background-size: contain;
+  background-position: right;
+  border-radius: min(5vw, 38px);
+  border: 1px solid #F5E6D6;
 }
-.menu__notification h4 {
+.delivery-variants__banner h4 {
   margin-bottom: min(3.3vw, 25px);
-  width: 70%;
+  width: 74%;
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-style: normal;
+  line-height: normal;
   font-size: min(5vw, 38px);
-  color: #240405;
+  color: #BE957D;
 }
-.menu__notification p {
-  width: 70%;
+.delivery-variants__banner p {
+  width: 66%;
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-style: normal;
-  font-size: min(3.6vw, 28px);
+  font-size: min(3.3vw, 25px);
+  color: #BE957D;
+}
+.delivery-variants__choosen {
+  gap: min(3.3vw, 25px);
+}
+.delivery-variants__var {
+  width: 48%;
+  background-color: #F5E6D6;
+  height: min(8.33vw, 64px);
+  border-radius: min(2.5vw, 19px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  line-height: normal;
+  color: #BE957D;
+  text-transform: uppercase;
+}
+.delivery-variants .__js-active {
+  background-color: #DC1E1E;
+  color: #FFFFFF;
+}
+
+.menu__notification {
+  color: #000;
+}
+
+.menu-link {
+  padding: min(3.75vw, 29px) min(4.17vw, 32px) min(3.75vw, 29px) min(5vw, 38px);
+  border-bottom: 1px solid #F5E6D6;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  line-height: normal;
   color: #240405;
+  font-size: min(5vw, 38px);
+}
+.menu-link h5 {
+  display: inline-flex;
+}
+.menu-link__prefix {
+  margin-right: min(4.17vw, 32px);
+  display: inline-block;
+  width: min(5vw, 38px);
+  height: min(5vw, 38px);
+}
+.menu-link__icon {
+  display: inline-flex;
+  width: min(5vw, 38px);
+  height: min(5vw, 38px);
 }

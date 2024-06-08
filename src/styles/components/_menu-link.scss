@@ -1,0 +1,26 @@
+.menu-link {
+    padding: $size-14px min(4.17vw, 32px) $size-14px $size-19-point-5-px;
+
+    border-bottom: 1px solid $beige-color;
+    @include gilroy-bold;
+    color: $black-color;
+    font-size: $size-19-point-5-px;
+    // width: 100%;
+
+   h5 {
+    display: inline-flex;
+   }
+
+    &__prefix {
+        margin-right: min(4.17vw, 32px);
+        display: inline-block;
+        width: $size-19-point-5-px;
+        height: $size-19-point-5-px;
+    }
+
+    &__icon {
+        display: inline-flex;
+        width: $size-19-point-5-px;
+        height: $size-19-point-5-px;
+    }
+}
