@@ -490,6 +490,147 @@
             
             </div>
         </div>
+
+        <!-- личный кабинет -->
+        <div class="overlay" id="profile-overlay">
+            <div class="popup profile" id="profile-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Личный кабинет</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+             
+                <!-- меню личного профиля-->
+                <ul class="menu__list">
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box" id="profile-data">
+                            <div class="menu-link__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/profile/note.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Данные профиля</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/profile/watch.svg" alt="Иконка записи">
+                                </div>
+                                <h5>История покупок</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/profile/card.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Моя карта «Снегири»</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li"> 
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/profile/address.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Адреса доставки</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/profile/flag.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Мои акции</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+            
+            </ul></div>
+        </div>
+
+          <!-- Данные профиля -->
+          <div class="overlay" id="profile-data-overlay">
+            <div class="popup profile-data" id="profile-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Данные профиля</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+             
+                <!-- меню личного профиля-->
+                <ul class="menu__list">
+                    <li class="menu__li menu__li-with-content">
+                        <a href="#" class="menu-link flex-box" id="profile-data">
+                            <div class="menu-link__title">
+                                <h5>Персональные данные</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                        <div class="menu__content">
+                            <div class="menu__container">
+                                <input class="profile-data__input" type="text" name="user-name" placeholder="Имя">
+                                <input class="profile-data__input" type="text" name="user-last-name" placeholder="Фамилия">
+                                <input class="profile-data__input" type="text" name="user-faather-name" placeholder="Отчество">
+                                <input class="profile-data__input" type="tel" name="user-phone" id="user-phone" placeholder="Телефон">
+                                <input class="profile-data__input" type="email" name="user-email" id="user-email" placeholder="E-mail">
+
+
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title">
+                                <h5>Уведомления</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title">
+                                <h5>Безопасность</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    
+            
+            </ul></div>
+        </div>
     </div>
 </body>
 </html>

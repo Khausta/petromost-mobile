@@ -138,6 +138,7 @@ button:focus {
     transition: transform .4s ease-out;
     overflow-x: hidden;
     overflow-y: auto;
+
 }
 
 .overlay.__js-active {
@@ -169,6 +170,30 @@ button:focus {
     }
 }
 
+.return-btn {
+    margin-right: $gap-10;
+    padding: min(1.25vw, 10px) $size-13px;
+    @include gilroy-bold;
+    color: $brown-color;
+    font-size: min(4vw, 31px);
+    text-align: center;
+    border-radius: $gap-10;
+    border: 1px solid $beige-color;
+    background-color: $head-bg-color;
+
+    &::after {
+        content: '';
+        margin-left: $gap-10;
+        display: block;
+        width: $fz-13px;
+        height: $fz-13px;
+        background-image: url('../img/menu/arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transform: rotate(180deg);
+    }
+}
 
 
 

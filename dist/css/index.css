@@ -291,6 +291,32 @@ button:focus {
   height: min(41vw, 317px);
 }
 
+.return-btn {
+  margin-right: min(2.5vw, 19px);
+  padding: min(1.25vw, 10px) min(3.3vw, 25px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  color: #BE957D;
+  font-size: min(4vw, 31px);
+  text-align: center;
+  border-radius: min(2.5vw, 19px);
+  border: 1px solid #F5E6D6;
+  background-color: #FFFAF5;
+}
+.return-btn::after {
+  content: "";
+  margin-left: min(2.5vw, 19px);
+  display: block;
+  width: min(3.3vw, 25px);
+  height: min(3.3vw, 25px);
+  background-image: url("../img/menu/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(180deg);
+}
+
 .head-inner {
   width: 100%;
   background-color: #FFFAF5;
@@ -921,4 +947,17 @@ button:focus {
 }
 .message__active {
   background-color: #FFFFFF;
+}
+
+.profile-data__input {
+  padding: min(3.3vw, 25px) min(4.2vw, 32px) min(3.75vw, 29px) min(4.2vw, 32px);
+  width: 100%;
+  border-radius: min(5vw, 38px);
+  border: 1px solid #F5E6D6;
+  background-color: #FFFFFF;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: min(3.3vw, 25px);
+  color: #BE957D;
 }

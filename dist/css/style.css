@@ -290,3 +290,29 @@ button:focus {
   width: min(41vw, 317px);
   height: min(41vw, 317px);
 }
+
+.return-btn {
+  margin-right: min(2.5vw, 19px);
+  padding: min(1.25vw, 10px) min(3.3vw, 25px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  color: #BE957D;
+  font-size: min(4vw, 31px);
+  text-align: center;
+  border-radius: min(2.5vw, 19px);
+  border: 1px solid #F5E6D6;
+  background-color: #FFFAF5;
+}
+.return-btn::after {
+  content: "";
+  margin-left: min(2.5vw, 19px);
+  display: block;
+  width: min(3.3vw, 25px);
+  height: min(3.3vw, 25px);
+  background-image: url("../img/menu/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(180deg);
+}

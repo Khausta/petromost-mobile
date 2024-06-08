@@ -59,9 +59,21 @@ var popups = {
     overlay: document.querySelector('#menu-overlay'),
     menuContent: document.querySelector('#menu-popup')
   },
+  profile: {
+    trigger: document.querySelector('.menu__profile'),
+    overlay: document.querySelector('#profile-overlay'),
+    content: document.querySelector('#profile-popup')
+  },
+  profileData: {
+    trigger: document.querySelector('#profile-data'),
+    overlay: document.querySelector('#profile-data-overlay'),
+    content: document.querySelector('#profile-data-popup')
+  },
   openedPopups: {
     search: false,
-    menu: false
+    menu: false,
+    profile: false,
+    profileData: false
   }
 };
 
@@ -113,6 +125,16 @@ headerElements.openMenuOrCloseAllBtn.addEventListener('click', function () {
   popups.menu.overlay.classList.add('__js-active');
   headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
   headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
+});
+popups.profile.trigger.addEventListener('click', function () {
+  popups.closeAllPopups();
+  popups.openedPopups.profile = true;
+  popups.profile.overlay.classList.add('__js-active');
+});
+popups.profileData.trigger.addEventListener('click', function () {
+  popups.closeAllPopups();
+  popups.openedPopups.profileData = true;
+  popups.profileData.overlay.classList.add('__js-active');
 });
 
 //открытие Центра уведомлений
