@@ -379,7 +379,7 @@
                 </div>
                 <!-- список меню -->
                 <ul class="menu__list">
-                    <li class="menu__li ">
+                    <li class="menu__li menu__li-with-content">
                         <a href="#" class="menu-link flex-box menu__message __js-active">
                             <div class="menu-link__title">
                                 <div class="menu-link__prefix">
@@ -391,6 +391,33 @@
                                 <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                             </span>
                         </a>
+                        <div class="menu__content ">
+                            <div class="menu__messages">
+                                <!-- активное сообщение -->
+                                <div class="message message__active">
+                                    <div class="message__header flex-box">
+                                        <span class="message__sender">Петровский</span>
+                                        <span class="message__time">9:00</span>
+                                    </div>
+                                    <div class="message__text">
+                                        Вам доступен кэшбэк на новые категории товаров в этом месяце, успейте выбрать!
+                                        <br>
+                                        Ознакомиться с категориями в личном кабинете на сайте: карта-снегири.рф
+                                    </div>
+                                </div>
+    
+                                <!-- неактивное сообщение -->
+                                <div class="message">
+                                    <div class="message__header flex-box">
+                                        <span class="message__sender">Петровский</span>
+                                        <span class="message__time">Пн, 09:00</span>
+                                    </div>
+                                    <div class="message__text">
+                                        Летнее предложение: -300 рублей на доставку продуктов по промокоду “Жара”
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="menu__li">
                         <a href="#" class="menu-link flex-box menu__message">
@@ -402,7 +429,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="menu__li">
+                    <li class="menu__li menu__li-with-content">
                         <a href="#" class="menu-link flex-box menu__message">
                             <div class="menu-link__title">
                                 <h5>О компании</h5>
@@ -411,6 +438,13 @@
                                 <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                             </span>
                         </a>
+
+                        <div class="menu__content">
+                            <div class="menu__container">
+                                Example
+                            </div>
+                        </div>
+
                     </li>
                     <li class="menu__li"> 
                         <a href="#" class="menu-link flex-box menu__message">

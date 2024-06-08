@@ -1,0 +1,33 @@
+.message {
+    margin-bottom: $size-13px;
+    padding: $size-13px $size-16and25;
+    border-radius: $size-16and25;
+    border: 1px solid $beige-color;
+
+    &__header {
+        margin-bottom: $size-16and25;
+    }
+
+    &__sender {
+        @include gilroy-bold;
+        font-size: $size-16and25;
+        color: $black-color;
+    }
+
+    &__time {
+        @include gilroy-bold;
+        font-size: $size-16and25; 
+        color: $brown-color;
+    }
+
+    &__text {
+        @include gilroy-semibold;
+        font-size: $size-16and25; 
+        color: $black-color;
+    }
+
+    &__active {
+        background-color: $white-bg-color;
+    }
+}
+

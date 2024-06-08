@@ -29,10 +29,21 @@ var headerElements = {
   openMenuOrCloseAllBtn: document.querySelector('.menu-btn')
 };
 var popups = {
+  path: [],
+  allPopups: document.querySelectorAll('.overlay'),
+  closeAllPopups: function closeAllPopups() {
+    popups.allPopups.forEach(function (el) {
+      el.classList.remove('__js-active');
+    });
+    for (var el in popups.openedPopups) {
+      popups.openedPopups[el] = false;
+    }
+  },
   search: {
     overlay: document.querySelector('#search-overlay'),
     input: document.querySelector('.__js-searchInput'),
     open: function open() {
+      popups.closeAllPopups();
       popups.openedPopups.search = true;
       popups.search.overlay.classList.add('__js-active');
       headerElements.logo.classList.add('__js-logo_none');
@@ -58,6 +69,8 @@ var popups = {
 popups.search.input.addEventListener('focus', function () {
   openSearchPopup();
 });
+
+//логика открытия поиска отличчается, поэтому создана отдельная функция
 function openSearchPopup() {
   popups.search.open();
   if (!headerElements.header.classList.contains('__js-fixed')) {
@@ -78,14 +91,11 @@ function closePopup() {
   headerElements.header.classList.remove('__js-fixed');
   if (popups.openedPopups.search) {
     popups.search.close();
+    popups.openedPopups.search = false;
   }
-  if (popups.openedPopups.menu) {
-    popups.menu.overlay.classList.remove('__js-active');
-  }
+  popups.closeAllPopups();
   headerElements.openMenuOrCloseAllBtn.classList.remove('__js_active');
   headerElements.openMenuOrCloseAllBtn.removeEventListener('click', closePopup);
-  popups.openedPopups.search = false;
-  popups.openedPopups.menu = false;
 }
 
 // собитие на клик по кнопке меню
@@ -103,5 +113,33 @@ headerElements.openMenuOrCloseAllBtn.addEventListener('click', function () {
   popups.menu.overlay.classList.add('__js-active');
   headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
   headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
+});
+
+//открытие Центра уведомлений
+document.querySelectorAll('.menu__li-with-content').forEach(function (el) {
+  el.addEventListener('click', function () {
+    var arrow = el.querySelector('.menu-link__icon');
+    var content = el.querySelector('.menu__content');
+    if (content.style.maxHeight) {
+      document.querySelectorAll('.menu__content').forEach(function (item) {
+        item.style.maxHeight = null;
+        item.style.opacity = null;
+      });
+      document.querySelectorAll('.menu-link__icon').forEach(function (item) {
+        item.classList.remove('__js-opened');
+      });
+    } else {
+      document.querySelectorAll('.menu__content').forEach(function (item) {
+        item.style.maxHeight = null;
+        item.style.opacity = null;
+      });
+      content.style.maxHeight = content.scrollHeight + 'px';
+      content.style.opacity = 1;
+      document.querySelectorAll('.menu-link__icon').forEach(function (item) {
+        item.classList.remove('__js-opened');
+      });
+      arrow.classList.add('__js-opened');
+    }
+  });
 });
 //# sourceMappingURL=main.js.map

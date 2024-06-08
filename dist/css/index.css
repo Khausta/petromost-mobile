@@ -351,6 +351,7 @@ button:focus {
   font-weight: bold;
   font-style: normal;
   color: #240405;
+  font-size: min(3.3vw, 25px);
 }
 .menu-panel__icon-block {
   gap: min(0.83vw, 6.4px);
@@ -753,7 +754,6 @@ button:focus {
   width: 74%;
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-style: normal;
   line-height: normal;
   font-size: min(5vw, 38px);
   color: #BE957D;
@@ -776,7 +776,6 @@ button:focus {
   border-radius: min(2.5vw, 19px);
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-style: normal;
   line-height: normal;
   color: #BE957D;
   text-transform: uppercase;
@@ -794,7 +793,6 @@ button:focus {
   border-radius: min(2.5vw, 19px);
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-style: normal;
   line-height: normal;
   color: #FFFFFF;
   font-size: min(4vw, 31px);
@@ -840,7 +838,6 @@ button:focus {
   padding: min(1.25vw, 10px) 0;
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-style: normal;
   line-height: normal;
   color: #BE957D;
   font-size: min(3.3vw, 25px);
@@ -849,13 +846,26 @@ button:focus {
   border: 1px solid #F5E6D6;
   background-color: #FFFAF5;
 }
+.menu__content {
+  background-color: #FFFAF5;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.menu__messages {
+  padding: min(2.5vw, 19px) min(2.5vw, 19px) 0 min(2.5vw, 19px);
+  border-bottom: 1px solid #F5E6D6;
+}
+.menu__container {
+  padding: min(3.3vw, 25px);
+}
 
 .menu-link {
   padding: min(3.75vw, 29px) min(4.17vw, 32px) min(3.75vw, 29px) min(5vw, 38px);
   border-bottom: 1px solid #F5E6D6;
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-style: normal;
   line-height: normal;
   color: #240405;
   font-size: min(5vw, 38px);
@@ -873,4 +883,42 @@ button:focus {
   display: inline-flex;
   width: min(5vw, 38px);
   height: min(5vw, 38px);
+  transition: all 0.3s ease-in-out;
+}
+.menu-link__icon.__js-opened {
+  transform: rotate(90deg);
+}
+
+.message {
+  margin-bottom: min(3.3vw, 25px);
+  padding: min(3.3vw, 25px) min(4.2vw, 32px);
+  border-radius: min(4.2vw, 32px);
+  border: 1px solid #F5E6D6;
+}
+.message__header {
+  margin-bottom: min(4.2vw, 32px);
+}
+.message__sender {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(4.2vw, 32px);
+  color: #240405;
+}
+.message__time {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(4.2vw, 32px);
+  color: #BE957D;
+}
+.message__text {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: min(4.2vw, 32px);
+  color: #240405;
+}
+.message__active {
+  background-color: #FFFFFF;
 }

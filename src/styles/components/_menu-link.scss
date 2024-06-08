@@ -22,5 +22,10 @@
         display: inline-flex;
         width: $size-19-point-5-px;
         height: $size-19-point-5-px;
+        transition: all .3s ease-in-out;
+    }
+
+    &__icon.__js-opened {
+        transform: rotate(90deg);
     }
 }

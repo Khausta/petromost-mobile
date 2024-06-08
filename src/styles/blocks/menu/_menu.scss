@@ -3,6 +3,7 @@
 
 .menu {
 
+   
     &__profile {
         
         margin-right: $gap-10;
@@ -73,6 +74,25 @@
         border: 1px solid $beige-color;
         background-color: $head-bg-color;
     }
+
+    &__content {
+        
+        background-color: $head-bg-color;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .3s ease-in-out;
+    }
+
+    &__messages {
+        padding: $gap-10 $gap-10 0 $gap-10;
+        border-bottom: 1px solid $beige-color;
+    }
+
+    &__container {
+        padding: $size-13px;
+    }
 }
 
 @import '../../components/menu-link';
+@import '../../components/message';
