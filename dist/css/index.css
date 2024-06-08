@@ -786,8 +786,68 @@ button:focus {
   color: #FFFFFF;
 }
 
-.menu__notification {
-  color: #000;
+.menu__profile {
+  margin-right: min(2.5vw, 19px);
+  padding: 0 min(3.3vw, 25px);
+  height: min(8.33vw, 64px);
+  background-color: #DC1E1E;
+  border-radius: min(2.5vw, 19px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  line-height: normal;
+  color: #FFFFFF;
+  font-size: min(4vw, 31px);
+}
+.menu__profile::before {
+  content: "";
+  margin-right: min(3.3vw, 25px);
+  display: block;
+  width: min(3.3vw, 25px);
+  height: min(3.3vw, 25px);
+  background-image: url("../img/menu/profile-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.menu__profile::after {
+  content: "";
+  margin-left: min(5.8vw, 45px);
+  display: block;
+  width: min(3.3vw, 25px);
+  height: min(3.3vw, 25px);
+  background-image: url("../img/menu/white-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.menu__list {
+  margin-bottom: min(3.3vw, 25px);
+}
+.menu__massage {
+  position: relative;
+}
+.menu__message.__js-active h5::after {
+  content: "";
+  margin-left: min(1.67vw, 13px);
+  width: min(1.67vw, 13px);
+  height: min(1.67vw, 13px);
+  background-color: #5EA636;
+  border-radius: 100%;
+}
+.menu__help-info {
+  display: block;
+  padding: min(1.25vw, 10px) 0;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  line-height: normal;
+  color: #BE957D;
+  font-size: min(3.3vw, 25px);
+  text-align: center;
+  border-radius: min(2.5vw, 19px);
+  border: 1px solid #F5E6D6;
+  background-color: #FFFAF5;
 }
 
 .menu-link {

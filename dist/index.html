@@ -330,7 +330,7 @@
         </div>
 
         <!-- для попапов -->
-        <!-- поис -->
+        <!-- поиск -->
         <div class="overlay" id="search-overlay">
             <div class="popup" id="search-popup">
                 <div class="container">
@@ -343,7 +343,13 @@
         <!-- меню -->
         <div class="overlay" id="menu-overlay">
             <div class="popup menu" id="menu-popup">
-                <h2 class="title">Меню</h2>
+                <div class="menu__header flex-box">
+                    <h2 class="title">Меню</h2>
+                    <button class="button menu__profile flex-box">
+                        Личный кабинет
+                    </button>
+                </div>
+                <!-- выбор вариантов доставки -->
                 <div class="delivery-variants">
                     <div class="container">
                         <div class="delivery-variants__wrapper">
@@ -368,59 +374,86 @@
                         </div>
                     </div>
                 </div>
+                <!-- список меню -->
                 <ul class="menu__list">
                     <li class="menu__li">
-                        <a href="#" class="menu__link menu-link flex-box">
+                        <a href="#" class="menu-link flex-box menu__message __js-active">
                             <div class="menu-link__title">
                                 <div class="menu-link__prefix">
                                     <img class="object-fit-contain" src="./img/menu/bell.svg" alt="Иконка колокольчика">
                                 </div>
                                 <h5>Центр уведомлений</h5>
-
                             </div>
                             <span class="menu-link__icon">
-                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка колокольчика">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                             </span>
                         </a>
                     </li>
                     <li class="menu__li">
-                        <a href="#" class="menu__link menu-link">
-                            <h5 class="menu__link-name">Доставка и оплата</h5>
-                            <span class="span menu__li-icon"></span>
+                        <a href="#" class="menu-link flex-box menu__message">
+                            <div class="menu-link__title">
+                                <h5>Доставка и оплата</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
                         </a>
                     </li>
                     <li class="menu__li">
-                        <a href="#" class="menu__link menu-link">
-                            <h5 class="menu__link-name">О компании</h5>
-                            <span class="span menu__li-icon"></span>
+                        <a href="#" class="menu-link flex-box menu__message">
+                            <div class="menu-link__title">
+                                <h5>О компании</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
                         </a>
                     </li>
                     <li class="menu__li"> 
-                        <a href="#" class="menu__link menu-link">
-                            <h5 class="menu__link-name">Поддержка</h5>
-                            <span class="span menu__li-icon"></span>
+                        <a href="#" class="menu-link flex-box menu__message">
+                            <div class="menu-link__title">
+                                <h5>Поддержка</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
                         </a>
                     </li>
                     <li class="menu__li">
-                        <a href="#" class="menu__link menu-link">
-                            <h5 class="menu__link-name">Оптовым покупателям</h5>
-                            <span class="span menu__li-icon"></span>
+                        <a href="#" class="menu-link flex-box menu__message">
+                            <div class="menu-link__title">
+                                <h5>Оптовым покупателям</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
                         </a>
                     </li>
                     <li class="menu__li">
-                        <a href="#" class="menu__link menu-link">
-                            <h5 class="menu__link-name">Отзывы</h5>
-                            <span class="span menu__li-icon"></span>
+                        <a href="#" class="menu-link flex-box menu__message">
+                            <div class="menu-link__title">
+                                <h5>Отзывы</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/menu-vk-icon.svg" alt="Иконка Вконтакте">
+                            </span>
                         </a>
                     </li>
                     <li class="menu__li">
-                        <a href="#" class="menu__link menu-link">
-                            <h5 class="menu__link-name">Выйти</h5>
-                            <span class="span menu__li-icon"></span>
+                        <a href="#" class="menu-link flex-box menu__message">
+                            <div class="menu-link__title">
+                                <h5>Выйти</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/exit-icon.svg" alt="Иконка выхода">
+                            </span>
                         </a>
                     </li>
                 </ul>
-                
+                <div class="container">
+                    <a class="menu__help-info" href="tel:203018">Справочная информация: 20-30-18</a>
+                </div>
+            
             </div>
         </div>
     </div>
