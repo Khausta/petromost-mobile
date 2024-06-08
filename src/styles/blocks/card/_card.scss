@@ -1,4 +1,5 @@
 .card {
+    margin-top: $size-13px;
     padding: $size-13px 0;
     border-radius: $size-19-point-5-px;
     color: $white-bg-color;
@@ -56,6 +57,10 @@
         text-align: end;
         @include gilroy-semibold;
         color: $beige-color;
+
+        &.__js-blur {
+            filter: blur(3px);
+        }
     }
 
     &__to-hide {

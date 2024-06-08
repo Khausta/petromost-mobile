@@ -139,6 +139,11 @@ button:focus {
     overflow-x: hidden;
     overflow-y: auto;
 
+    &__total-header {
+        background-color: $white-bg-color;
+        border-bottom: 1px solid $beige-color;
+    }
+
 }
 
 .overlay.__js-active {

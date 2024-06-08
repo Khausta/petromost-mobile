@@ -265,6 +265,10 @@ button:focus {
   overflow-x: hidden;
   overflow-y: auto;
 }
+.popup__total-header {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #F5E6D6;
+}
 
 .overlay.__js-active {
   z-index: 10;

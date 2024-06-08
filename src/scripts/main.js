@@ -237,3 +237,7 @@ document.querySelectorAll('.profile-data__input').forEach(input => {
   })
 });
 
+document.querySelector('.card__bonus').addEventListener('click', () => {
+  document.querySelector('.card__bonus-count').classList.toggle('__js-blur');
+})
+

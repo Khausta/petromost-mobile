@@ -265,6 +265,10 @@ button:focus {
   overflow-x: hidden;
   overflow-y: auto;
 }
+.popup__total-header {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #F5E6D6;
+}
 
 .overlay.__js-active {
   z-index: 10;
@@ -1010,6 +1014,7 @@ button:focus {
 }
 
 .card {
+  margin-top: min(3.3vw, 25px);
   padding: min(3.3vw, 25px) 0;
   border-radius: min(5vw, 38px);
   color: #FFFFFF;
@@ -1064,6 +1069,9 @@ button:focus {
   font-weight: 600;
   line-height: normal;
   color: #F5E6D6;
+}
+.card__bonus-count.__js-blur {
+  filter: blur(3px);
 }
 .card__to-hide {
   width: min(4.2vw, 32px);

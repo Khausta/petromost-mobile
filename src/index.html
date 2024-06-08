@@ -548,7 +548,7 @@
                         </a>
                     </li>
                     <li class="menu__li"> 
-                        <a href="#" class="menu-link flex-box">
+                        <a href="#" class="menu-link flex-box" id="address">
                             <div class="menu-link__title">
                                 <div class="menu-link__prefix">
                                     <img class="object-fit-contain" src="./img/profile/address.svg" alt="Иконка записи">
@@ -730,6 +730,91 @@
                     <a class="menu__help-info" href="#">
                         <span class="flex-box">Перейти в управление картой</span></a>
                 </div>               
+            </div>
+        </div>
+
+
+          <!-- Адреса доставки -->
+          <div class="overlay" id="address-overlay">
+            <div class="popup address" id="address-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Адреса доставки</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+                
+                <!-- меню Данных профиля-->
+                <ul class="menu__list">
+                    <li class="menu__li ">
+                        <a href="#" class="menu__li-with-content menu-link flex-box" id="profile-data">
+                            <div class="menu-link__title">
+                                <h5>Персональные данные</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                        <div class="menu__content">
+                            <div class="menu__container">
+                                <div class="profile-data__input-box">
+                                    <input class="profile-data__input" type="text" name="user-name" placeholder="Имя" value>
+                                    <div class="profile-data__input-cross">
+                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+                                <div class="profile-data__input-box">
+                                    <input class="profile-data__input" type="text" name="user-last-name" placeholder="Фамилия" value>
+                                    <div class="profile-data__input-cross">
+                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+                                <div class="profile-data__input-box">
+                                    <input class="profile-data__input" type="text" name="user-faather-name" placeholder="Отчество" value>
+                                    <div class="profile-data__input-cross">
+                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+                                <div class="profile-data__input-box">
+                                    <input class="profile-data__input" type="tel" name="user-phone" id="user-phone" placeholder="Телефон" value>
+                                    <div class="profile-data__input-cross">
+                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+                                <div class="profile-data__input-box">
+                                    <input class="profile-data__input" type="email" name="user-email" id="user-email" placeholder="E-mail" value>
+                                    <div class="profile-data__input-cross">
+                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title">
+                                <h5>Уведомления</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title">
+                                <h5>Безопасность</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="button profile-data__save-btn">Сохранить изменения</button>
             </div>
         </div>
     </div>
