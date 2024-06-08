@@ -274,7 +274,7 @@ button:focus {
   position: relative;
   transform: translate(-50%, 0);
   top: min(13vw, 102px);
-  padding-bottom: min(50vw, 384px);
+  padding-bottom: min(6vw, 154px);
   height: calc(100vh - 13vw - 13vw);
 }
 
@@ -949,8 +949,18 @@ button:focus {
   background-color: #FFFFFF;
 }
 
+.profile-data {
+  padding-bottom: 0;
+}
+.profile-data__input-box {
+  position: relative;
+}
+.profile-data__input-box:not(:last-child) {
+  margin-bottom: min(3.3vw, 25px);
+}
 .profile-data__input {
-  padding: min(3.3vw, 25px) min(4.2vw, 32px) min(3.75vw, 29px) min(4.2vw, 32px);
+  position: relative;
+  padding: min(3.3vw, 25px) min(10vw, 77px) min(3.75vw, 29px) min(4.2vw, 32px);
   width: 100%;
   border-radius: min(5vw, 38px);
   border: 1px solid #F5E6D6;
@@ -958,6 +968,154 @@ button:focus {
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: 600;
   line-height: normal;
+  font-size: min(5vw, 38px);
+  color: #240405;
+}
+.profile-data__input::-moz-placeholder {
+  color: #BE957D;
+}
+.profile-data__input::placeholder {
+  color: #BE957D;
+}
+.profile-data__input#user-phone, .profile-data__input#user-email {
+  background: none;
+}
+.profile-data__input-cross {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: min(4.2vw, 32px);
+  height: min(4.2vw, 32px);
+  transition: all 0.3s ease-in-out;
+}
+.profile-data__input-cross.__js-active {
+  transform: translateY(-50%) rotate3d(0, 0, 2, 45deg);
+}
+.profile-data__save-btn {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  padding: min(1.25vw, 10px) 0;
+  height: min(10vw, 77px);
+  width: 96%;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  color: #FFFFFF;
+  font-size: min(3.3vw, 25px);
+  text-align: center;
+  border-radius: min(2.5vw, 19px);
+  background-color: #DC1E1E;
+}
+
+.card {
+  padding: min(3.3vw, 25px) 0;
+  border-radius: min(5vw, 38px);
+  color: #FFFFFF;
+  background-image: url("../img/card/bird.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-position: 0 0;
+}
+.card__header {
+  padding-left: min(5vw, 38px);
+  margin-bottom: min(3.3vw, 25px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(5.5vw, 42px);
+}
+.card__number {
+  margin-left: min(5vw, 38px);
+  display: inline-block;
+  margin-bottom: min(5vw, 38px);
+  padding: min(2.1vw, 16px) min(3vw, 22px);
+  background-color: #DC1E1E;
+  border-radius: min(2.5vw, 19px);
+}
+.card__scanner {
+  padding: min(3.3vw, 25px);
+  border-radius: min(5vw, 38px);
+  background-color: #DC1E1E;
+}
+.card__info {
+  margin-bottom: min(3.3vw, 25px);
+}
+.card__welcome {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(3.75vw, 29px);
+}
+.card__bonus {
+  padding: min(2.1vw, 16px) min(2.5vw, 19px);
+  border-top-left-radius: min(5vw, 38px);
+  border-bottom-left-radius: min(5vw, 38px);
+  border-top-right-radius: min(1.67vw, 13px);
+  border-bottom-right-radius: min(1.67vw, 13px);
+  border: 1px dashed #F5E6D6;
+}
+.card__bonus-count {
+  width: min(28.3vw, 217px);
+  text-align: end;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  color: #F5E6D6;
+}
+.card__to-hide {
+  width: min(4.2vw, 32px);
+  height: min(4.2vw, 32px);
+}
+.card__scanner-img {
+  background-color: #FFFFFF;
+  border-radius: min(2.5vw, 19px);
+}
+
+.my-card__info {
+  margin-bottom: min(1.67vw, 13px);
+  padding: min(1.67vw, 13px) min(5.83vw, 45px);
+}
+.my-card__light-text {
+  margin-bottom: min(5vw, 38px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
   font-size: min(3.3vw, 25px);
   color: #BE957D;
+}
+.my-card__dark-text {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: min(3.3vw, 25px);
+  color: #240405;
+}
+.my-card .menu__help-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: min(1.25vw, 10px) 0;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  color: #240405;
+  font-size: min(3.3vw, 25px);
+  text-align: center;
+  border-radius: min(2.5vw, 19px);
+  border: 1px solid #F5E6D6;
+  background-color: #FFFAF5;
+}
+.my-card .menu__help-info span::before {
+  content: "";
+  display: inline-block;
+  margin-right: min(1.67vw, 13px);
+  width: min(3.3vw, 25px);
+  height: min(3.3vw, 25px);
+  background-image: url("../img/card/net.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }

@@ -349,6 +349,7 @@
                         Личный кабинет
                     </button>
                 </div>
+
                 <!-- выбор вариантов доставки -->
                 <div class="delivery-variants">
                     <div class="container">
@@ -376,8 +377,8 @@
                 </div>
                 <!-- список меню -->
                 <ul class="menu__list">
-                    <li class="menu__li menu__li-with-content">
-                        <a href="#" class="menu-link flex-box menu__message __js-active">
+                    <li class="menu__li">
+                        <a href="#" class="menu__li-with-content menu-link flex-box menu__message __js-active">
                             <div class="menu-link__title">
                                 <div class="menu-link__prefix">
                                     <img class="object-fit-contain" src="./img/menu/bell.svg" alt="Иконка колокольчика">
@@ -426,8 +427,8 @@
                             </span>
                         </a>
                     </li>
-                    <li class="menu__li menu__li-with-content">
-                        <a href="#" class="menu-link flex-box menu__message">
+                    <li class="menu__li">
+                        <a href="#" class="menu__li-with-content menu-link flex-box menu__message">
                             <div class="menu-link__title">
                                 <h5>О компании</h5>
                             </div>
@@ -531,7 +532,7 @@
                         </a>
                     </li>
                     <li class="menu__li">
-                        <a href="#" class="menu-link flex-box">
+                        <a href="#" class="menu-link flex-box" id="my-card">
                             <div class="menu-link__title">
                                 <div class="menu-link__prefix">
                                     <img class="object-fit-contain" src="./img/profile/card.svg" alt="Иконка записи">
@@ -573,20 +574,20 @@
             </ul></div>
         </div>
 
-          <!-- Данные профиля -->
-          <div class="overlay" id="profile-data-overlay">
-            <div class="popup profile-data" id="profile-popup">
+        <!-- Данные профиля -->
+        <div class="overlay" id="profile-data-overlay">
+            <div class="popup profile-data" id="profile-data-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Данные профиля</h2>
                     <button class="button flex-box return-btn">
                         Назад
                     </button>
                 </div>
-             
-                <!-- меню личного профиля-->
+                
+                <!-- меню Данных профиля-->
                 <ul class="menu__list">
-                    <li class="menu__li menu__li-with-content">
-                        <a href="#" class="menu-link flex-box" id="profile-data">
+                    <li class="menu__li">
+                        <a href="#" class="menu__li-with-content menu-link flex-box" id="profile-data">
                             <div class="menu-link__title">
                                 <h5>Персональные данные</h5>
                             </div>
@@ -596,11 +597,36 @@
                         </a>
                         <div class="menu__content">
                             <div class="menu__container">
-                                <input class="profile-data__input" type="text" name="user-name" placeholder="Имя">
-                                <input class="profile-data__input" type="text" name="user-last-name" placeholder="Фамилия">
-                                <input class="profile-data__input" type="text" name="user-faather-name" placeholder="Отчество">
-                                <input class="profile-data__input" type="tel" name="user-phone" id="user-phone" placeholder="Телефон">
-                                <input class="profile-data__input" type="email" name="user-email" id="user-email" placeholder="E-mail">
+                                <div class="profile-data__input-box">
+                                    <input class="profile-data__input" type="text" name="user-name" placeholder="Имя" value>
+                                    <div class="profile-data__input-cross">
+                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+                                <div class="profile-data__input-box">
+                                    <input class="profile-data__input" type="text" name="user-last-name" placeholder="Фамилия" value>
+                                    <div class="profile-data__input-cross">
+                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+                                <div class="profile-data__input-box">
+                                    <input class="profile-data__input" type="text" name="user-faather-name" placeholder="Отчество" value>
+                                    <div class="profile-data__input-cross">
+                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+                                <div class="profile-data__input-box">
+                                    <input class="profile-data__input" type="tel" name="user-phone" id="user-phone" placeholder="Телефон" value>
+                                    <div class="profile-data__input-cross">
+                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+                                <div class="profile-data__input-box">
+                                    <input class="profile-data__input" type="email" name="user-email" id="user-email" placeholder="E-mail" value>
+                                    <div class="profile-data__input-cross">
+                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
 
 
                             </div>
@@ -627,9 +653,81 @@
                             </span>
                         </a>
                     </li>
-                    
-            
-            </ul></div>
+                </ul>
+                <button class="button profile-data__save-btn">Сохранить изменения</button>
+            </div>
+        </div>
+
+         <!-- Моя карта "Снигери" -->
+         <div class="overlay" id="my-card-overlay">
+            <div class="popup my-card" id="my-card-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Моя карта</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+
+                <div class="my-card__card">
+                    <div class="container">
+                        <div class="card">
+                           <p class="card__header">Карта «Снегири»</p> 
+                           <p class="card__number">********4095</p>
+                           <div class="card__scanner">
+                                <div class="card__info flex-box">
+                                    <p class="card__welcome">
+                                        <span class="card__user-name">Максим</span>, на Вашей карте «Снегири»  
+                                    </p>
+                                    <div class="card__bonus flex-box">
+                                        <div class="card__to-hide">
+                                            <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain">
+                                        </div>
+                                        <div class="card__bonus-count">
+                                            567,01 б
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__scanner-img">
+                                    <img class="object-fit-contain" src="./img/card/scan.svg" alt="Штрихкод">
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-card__info">
+                    <p class="my-card__light-text">
+                        Мы автоматически получили номер Вашей карты из системы лояльности «Снегири» для Вашей безопасности. Управлять Вашей картой лояльности вы можете на сайте карта-снегири.рф
+
+                    </p>
+                    <p class="my-card__dark-text">
+                        Карта «Снегири» это:
+                        <br>
+                        <br>
+                        › Участвовать в акциях для владельцев карт «Снегири»
+                        <br>
+                        <br>
+                        › Накапливать бонусы
+                        <br>
+                        <br>
+                        › Получать Персональные предложения! (скидки или
+                        › боунсы)
+                        <br>
+                        <br>
+                        › Получать Персональные скидки на любимые Вами    
+                        › товары
+                        <br>
+                        <br>
+                        › Контролировать свои покупки
+                        <br>
+                        <br>
+                        › Подробная информация на сайте карта-снегири.рф
+                    </p>
+                </div>
+                <div class="container">
+                    <a class="menu__help-info" href="#">
+                        <span class="flex-box">Перейти в управление картой</span></a>
+                </div>               
+            </div>
         </div>
     </div>
 </body>

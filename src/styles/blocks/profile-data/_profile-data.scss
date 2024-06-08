@@ -1,12 +1,64 @@
 .profile-data {
+    padding-bottom: 0;
+    &__input-box {
+        position: relative;
+        
+        &:not(:last-child) {
+            margin-bottom: $size-13px;
+        }
+    }
     &__input {
-        padding: $size-13px $size-16and25 $size-14px $size-16and25;
+        position: relative;
+        padding: $size-13px min(10vw, 77px) $size-14px $size-16and25;
         width: 100%;
         border-radius: $size-19-point-5-px;
         border: 1px solid $beige-color;
         background-color: $white-bg-color;
         @include gilroy-semibold;
-        font-size: $size-13px;
-        color: $brown-color;
+        font-size: $size-19-point-5-px;
+        color: $black-color;
+
+        &::placeholder {
+            color: $brown-color;
+        }
+
+        &#user-phone, &#user-email {
+            background: none;
+        }
+
+
+
+      
     }
+
+    &__input-cross {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        width: $size-16and25;
+        height: $size-16and25;
+        transition: all .3s ease-in-out;
+
+        &.__js-active {
+            transform: translateY(-50%) rotate3d(0, 0, 2, 45deg);
+        }
+    }
+
+    &__save-btn {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        padding: min(1.25vw, 10px) 0;
+        height: min(10vw, 77px);
+        width: 96%;
+        @include gilroy-bold;
+        color: $white-bg-color;
+        font-size: $size-13px;
+        text-align: center;
+        border-radius: $gap-10;
+        background-color: $red-color;
+    }
+
+
 }

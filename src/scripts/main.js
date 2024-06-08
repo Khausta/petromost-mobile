@@ -26,7 +26,16 @@ const chanceSwiper = new Swiper('.chance-swiper', {
   });
 
 
-
+const state = {
+  path: [],
+  openedPopups: {
+    search: false,
+    menu: false,
+    profile: false,
+    profileData: false,
+    myCard: false,
+  }
+}
 const headerElements = {
   header: document.querySelector('.header'),
   logo: document.querySelector('.__js-logo'),
@@ -34,22 +43,24 @@ const headerElements = {
 }
 
 const popups = {
-  path: [],
+  
   allPopups: document.querySelectorAll('.overlay'),
   closeAllPopups() {
     popups.allPopups.forEach(el => {
       el.classList.remove('__js-active');
     });
-    for (let el in popups.openedPopups) {
-      popups.openedPopups[el] = false;
-    }  
+    for (let el in state.openedPopups) {
+      state.openedPopups[el] = false;
+    } 
+  
   },
-  search: {
+  returnBtns: document.querySelectorAll('.return-btn'),
+  'search': {
     overlay: document.querySelector('#search-overlay'),
     input: document.querySelector('.__js-searchInput'),
     open: function() {
       popups.closeAllPopups();
-      popups.openedPopups.search = true;
+      state.openedPopups.search = true;
       popups.search.overlay.classList.add('__js-active');
       headerElements.logo.classList.add('__js-logo_none');
   
@@ -61,27 +72,27 @@ const popups = {
       popups.search.input.parentElement.classList.remove('__js-headerSearch_active');
     }
   },
-  menu: {
+  'menu': {
     overlay: document.querySelector('#menu-overlay'),
     menuContent: document.querySelector('#menu-popup'),
   },
-  profile: {
+  'profile': {
     trigger: document.querySelector('.menu__profile'),
     overlay: document.querySelector('#profile-overlay'),
     content: document.querySelector('#profile-popup'),
   },
-  profileData: {
+  'profileData': {
     trigger: document.querySelector('#profile-data'),
     overlay: document.querySelector('#profile-data-overlay'),
     content: document.querySelector('#profile-data-popup'),
   },
-  
-  openedPopups: {
-    search: false,
-    menu: false,
-    profile: false,
-    profileData: false,
+  'myCard': {
+    trigger: document.querySelector('#my-card'),
+    overlay: document.querySelector('#my-card-overlay'),
+    content: document.querySelector('#my-card-popup'),
   }
+  
+ 
   
 }
 
@@ -109,21 +120,27 @@ function openSearchPopup () {
 function closePopup() {
   document.body.style.overflow = 'auto';
   headerElements.header.classList.remove('__js-fixed');
-  if (popups.openedPopups.search) {
+  if (state.openedPopups.search) {
     popups.search.close();
-    popups.openedPopups.search = false;
+    state.openedPopups.search = false;
   }
   popups.closeAllPopups();
+  state.path = []; 
   headerElements.openMenuOrCloseAllBtn.classList.remove('__js_active');
   headerElements.openMenuOrCloseAllBtn.removeEventListener('click', closePopup);
 }
 
 // собитие на клик по кнопке меню
 headerElements.openMenuOrCloseAllBtn.addEventListener('click', () => {
-  if (popups.openedPopups.search) {
+  if (state.openedPopups.search) {
     return;
   }
-  popups.openedPopups.menu = true;
+  if (!state.path.find(el => el == 'menu')) {
+    console.log(true);
+    state.path.push('menu');
+  }
+
+  state.openedPopups.menu = true;
   if (!headerElements.header.classList.contains('__js-fixed')) {
     headerElements.header.classList.add('__js-fixed');
   }
@@ -135,28 +152,52 @@ headerElements.openMenuOrCloseAllBtn.addEventListener('click', () => {
   headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
 });
 
-popups.profile.trigger.addEventListener('click', () => {
+function openAnyPopup(popupName) {
   popups.closeAllPopups();
-  popups.openedPopups.profile = true;
-  popups.profile.overlay.classList.add('__js-active');
+  state.openedPopups[popupName] = true;
+  popups[popupName].overlay.classList.add('__js-active');
+  popups.returnBtns.forEach(btn => {
+    btn.addEventListener('click', openPreviousPopup);
+  })
+  if(popupName != 'search' && popupName != 'menu' && state.path[state.path.length - 1] != popupName) {
+    console.log('check');
+  state.path.push(`${popupName}`);
+ 
+  }
+  console.log(state.path)
+}
+
+popups.profile.trigger.addEventListener('click', () => {
+  openAnyPopup('profile');
 
 });
 
 popups.profileData.trigger.addEventListener('click', () => {
-  popups.closeAllPopups();
-  popups.openedPopups.profileData = true;
-  popups.profileData.overlay.classList.add('__js-active');
+  openAnyPopup('profileData');
+});
 
+popups.myCard.trigger.addEventListener('click', () => {
+  openAnyPopup('myCard');
 });
 
 
+ 
+   
 
 
-//открытие Центра уведомлений
+
+function openPreviousPopup() {
+  state.path.pop();
+  openAnyPopup(state.path[state.path.length - 1]);
+}
+
+
+
+//открытие скрытого контента, если есть
 document.querySelectorAll('.menu__li-with-content').forEach(el => {
   el.addEventListener('click', () => {
     const arrow = el.querySelector('.menu-link__icon');
-    const content = el.querySelector('.menu__content');
+    const content = el.nextElementSibling;
 
     if (content.style.maxHeight) {
       document.querySelectorAll('.menu__content').forEach( item => {
@@ -180,5 +221,19 @@ document.querySelectorAll('.menu__li-with-content').forEach(el => {
       arrow.classList.add('__js-opened');
     }
   })
-})
+});
+
+// для инпутов Данных профиля
+document.querySelectorAll('.profile-data__input').forEach(input => {
+  input.addEventListener('input', () => {
+    console.log(input.value);
+    if (input.value) {
+      input.nextElementSibling.classList.add('__js-active');
+      input.nextElementSibling.addEventListener('click', () => {
+        input.value = "";
+        input.nextElementSibling.classList.remove('__js-active');
+      })
+    }
+  })
+});
 
