@@ -20,3 +20,8 @@
     font-size: $size-19-point-5-px;
     color: $black-color;
 }
+
+@mixin bg-style {
+    background-repeat: no-repeat;
+    background-size: contain;
+}

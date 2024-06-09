@@ -238,4 +238,7 @@ document.querySelectorAll('.profile-data__input').forEach(function (input) {
 document.querySelector('.card__bonus').addEventListener('click', function () {
   document.querySelector('.card__bonus-count').classList.toggle('__js-blur');
 });
+document.querySelector('.main-card__to-hide').addEventListener('click', function () {
+  document.querySelector('.main-card__bonus-count').classList.toggle('__js-blur');
+});
 //# sourceMappingURL=main.js.map

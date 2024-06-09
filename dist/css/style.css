@@ -179,6 +179,7 @@ button:focus {
 
 .container {
   position: relative;
+  width: 100%;
   margin: auto;
   padding: 0 min(3.33vw, 26px);
 }

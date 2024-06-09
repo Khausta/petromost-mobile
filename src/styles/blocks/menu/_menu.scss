@@ -65,6 +65,7 @@
     &__help-info {
         display: block;
         padding: min(1.25vw, 10px) 0;
+        width: 100%;
         @include gilroy-bold;
         color: $brown-color;
         font-size: $size-13px;

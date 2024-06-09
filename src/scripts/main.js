@@ -272,3 +272,7 @@ document.querySelector('.card__bonus').addEventListener('click', () => {
   document.querySelector('.card__bonus-count').classList.toggle('__js-blur');
 })
 
+document.querySelector('.main-card__to-hide').addEventListener('click', () => {
+  document.querySelector('.main-card__bonus-count').classList.toggle('__js-blur');
+})
+

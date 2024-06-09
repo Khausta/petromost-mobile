@@ -1,0 +1,29 @@
+.delivery {
+    margin-bottom: $size-14px;
+    .actual-card {
+        background-color: $red-color;
+        @include bg-style;
+        background-size: cover;
+
+        &:first-child {
+            background-image: url('../../../img/splash/delivery-card-1.png');
+        }
+        &:last-child {
+            background-image: url('../../../img/splash/delivery-card-2.png');
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        border-radius: $size-5px;
+        border: 1px solid #E8827A;
+        background-color: #E14F4B;
+        width: $size-18px;
+        height: $size-18px;
+
+        img {
+            display: flex;
+        }
+    }
+}

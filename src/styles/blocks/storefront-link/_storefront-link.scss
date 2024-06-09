@@ -1,0 +1,24 @@
+.storefront {
+    &__content {
+        margin-bottom: $size-14px;
+        position: relative;
+        padding: $size-12px 0 $size-14px $size-16and25;
+        border-radius: $size-19-point-5-px;
+        background-image: url('../img/splash/sorefront-bg.png');
+        @include bg-style;
+    }
+
+    &__head {
+        margin-bottom: $size-12px;
+        @include gilroy-bold;
+        font-size: $size-20px;
+        color: $black-color;
+    }
+
+    &__text {
+        width: 50%;
+        @include gilroy-bold;
+        font-size: $size-11px;
+        color: $brown-color;
+    }
+}

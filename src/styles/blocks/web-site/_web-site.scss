@@ -1,0 +1,19 @@
+.web-site {
+
+    &__info {
+        padding: $size-66px 0;
+        border-radius: $size-19-point-5-px;
+        background-color: $beige-color;
+        color: $brown-color;
+        @include gilroy-bold;
+        font-size: $size-30px;
+       
+
+        p {
+            margin: auto;
+            text-align: center;
+            width: 60%;
+        }
+
+    }
+}

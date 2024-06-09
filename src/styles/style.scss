@@ -39,6 +39,7 @@ button:focus {
 }
 
 .container-header {
+
     position: relative;
     margin: auto;
     padding: 0  min(2.6vw, 20px);
@@ -46,6 +47,7 @@ button:focus {
 
 .container {
     position: relative;
+    width: 100%;
     margin: auto;
     padding: 0  min(3.33vw, 26px);
 }
