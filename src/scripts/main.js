@@ -49,11 +49,11 @@ const headerElements = {
 
 // определение высота попапа в зависимости 
 // отвысоты нижней панели меню и хедера
-console.log('Высота хедера: ' + headerElements.header.offsetHeight);
-console.log('Высота хедера: ' + document.querySelector('.menu-panel').offsetTop);
-document.querySelectorAll('.popup').forEach(el => {
-  el.style.height = document.querySelector('.menu-panel').offsetTop - headerElements.header.offsetHeight + "px";
-})
+// console.log('Высота хедера: ' + headerElements.header.offsetHeight);
+// console.log('Высота хедера: ' + document.querySelector('.menu-panel').offsetTop);
+// document.querySelectorAll('.popup').forEach(el => {
+//   el.style.height = document.querySelector('.menu-panel').offsetTop - headerElements.header.offsetHeight + "px";
+// });
 
 const popups = {
   
@@ -174,6 +174,10 @@ function openAnyPopup(popupName) {
   popups.closeAllPopups();
   state.openedPopups[popupName] = true;
   popups[popupName].overlay.classList.add('__js-active');
+  popups[popupName].content.addEventListener('scroll', () => {
+    popups[popupName].content.style.height = document.querySelector('.menu-panel').offsetTop - headerElements.header.offsetHeight + "px"
+    // console.log('works');
+  });
   popups.returnBtns.forEach(btn => {
     btn.addEventListener('click', openPreviousPopup);
   })
@@ -182,7 +186,7 @@ function openAnyPopup(popupName) {
   state.path.push(`${popupName}`);
  
   }
-  console.log(state.path)
+  console.log(state.path);
 }
 
 popups.profile.trigger.addEventListener('click', () => {
