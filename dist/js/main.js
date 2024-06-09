@@ -57,6 +57,7 @@ var popups = {
     for (var el in state.openedPopups) {
       state.openedPopups[el] = false;
     }
+    document.body.style.overflow = 'auto';
   },
   returnBtns: document.querySelectorAll('.return-btn'),
   'search': {
@@ -160,6 +161,9 @@ headerElements.openMenuOrCloseAllBtn.addEventListener('click', function () {
 function openAnyPopup(popupName) {
   popups.closeAllPopups();
   state.openedPopups[popupName] = true;
+  if (document.body.style.overflow !== 'hidden') {
+    document.body.style.overflow = 'hidden';
+  }
   popups[popupName].overlay.classList.add('__js-active');
   popups[popupName].content.addEventListener('scroll', function () {
     popups[popupName].content.style.height = document.querySelector('.menu-panel').offsetTop - headerElements.header.offsetHeight + 5 + "px";

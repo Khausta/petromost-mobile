@@ -65,6 +65,9 @@ const popups = {
     for (let el in state.openedPopups) {
       state.openedPopups[el] = false;
     } 
+
+    document.body.style.overflow = 'auto';
+
   
   },
   returnBtns: document.querySelectorAll('.return-btn'),
@@ -173,6 +176,9 @@ headerElements.openMenuOrCloseAllBtn.addEventListener('click', () => {
 function openAnyPopup(popupName) {
   popups.closeAllPopups();
   state.openedPopups[popupName] = true;
+    if (document.body.style.overflow !== 'hidden') {
+      document.body.style.overflow = 'hidden';
+    } 
   popups[popupName].overlay.classList.add('__js-active');
   popups[popupName].content.addEventListener('scroll', () => {
     popups[popupName].content.style.height = document.querySelector('.menu-panel').offsetTop - headerElements.header.offsetHeight + 5 + "px";
