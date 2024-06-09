@@ -162,8 +162,7 @@ function openAnyPopup(popupName) {
   state.openedPopups[popupName] = true;
   popups[popupName].overlay.classList.add('__js-active');
   popups[popupName].content.addEventListener('scroll', function () {
-    popups[popupName].content.style.height = document.querySelector('.menu-panel').offsetTop - headerElements.header.offsetHeight + "px";
-    // console.log('works');
+    popups[popupName].content.style.height = document.querySelector('.menu-panel').offsetTop - headerElements.header.offsetHeight + 5 + "px";
   });
   popups.returnBtns.forEach(function (btn) {
     btn.addEventListener('click', openPreviousPopup);

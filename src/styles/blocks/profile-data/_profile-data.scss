@@ -1,9 +1,6 @@
 .profile-data {
     padding-bottom: 0;
 
-    .menu__list {
-        min-height: calc(100% - 13vw - 16vw - 13vw);
-    }
     &__input-box {
         position: relative;
         
@@ -50,11 +47,10 @@
     }
 
     &__save-btn {
-        margin-top: auto;
-        margin-bottom: $size-13px;
+        margin: auto auto 0 auto;
         position: relative;
-        margin: auto;
         display: block;
+        flex-shrink: 0;
         padding: min(1.25vw, 10px) 0;
         height: min(10vw, 77px);
         width: 96%;

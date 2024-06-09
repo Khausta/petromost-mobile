@@ -542,8 +542,9 @@ button:focus {
 
 .header__menu-btn {
   display: block;
-  width: min(8.2vw, 62px) !important;
-  height: min(8.2vw, 62px) !important;
+  flex-shrink: 0;
+  width: min(8.2vw, 62px);
+  height: min(8.2vw, 62px);
   border-radius: min(2.5vw, 19px);
   background-color: #DC1E1E;
 }
@@ -1013,9 +1014,6 @@ button:focus {
 .profile-data {
   padding-bottom: 0;
 }
-.profile-data .menu__list {
-  min-height: calc(100% - 13vw - 16vw - 13vw);
-}
 .profile-data__input-box {
   position: relative;
 }
@@ -1057,11 +1055,10 @@ button:focus {
   transform: translateY(-50%) rotate3d(0, 0, 2, 45deg);
 }
 .profile-data__save-btn {
-  margin-top: auto;
-  margin-bottom: min(3.3vw, 25px);
+  margin: auto auto 0 auto;
   position: relative;
-  margin: auto;
   display: block;
+  flex-shrink: 0;
   padding: min(1.25vw, 10px) 0;
   height: min(10vw, 77px);
   width: 96%;

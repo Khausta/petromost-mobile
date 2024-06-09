@@ -115,8 +115,9 @@
 .header {
     &__menu-btn {
         display: block;
-        width: min(8.2vw, 62px) !important;
-        height: min(8.2vw, 62px) !important;
+        flex-shrink: 0;
+        width: min(8.2vw, 62px);
+        height: min(8.2vw, 62px);
         border-radius: $gap-10;
         background-color: $red-color;
     }
