@@ -246,6 +246,8 @@ button:focus {
 
 /* стили модального окна */
 .popup {
+  display: flex;
+  flex-direction: column;
   top: -100%;
   right: 0;
   left: 50%;

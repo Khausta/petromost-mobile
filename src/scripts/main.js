@@ -26,6 +26,10 @@ const chanceSwiper = new Swiper('.chance-swiper', {
   });
 
 
+
+
+
+
 const state = {
   path: [],
   openedPopups: {
@@ -42,6 +46,14 @@ const headerElements = {
   logo: document.querySelector('.__js-logo'),
   openMenuOrCloseAllBtn: document.querySelector('.menu-btn')
 }
+
+// определение высота попапа в зависимости 
+// отвысоты нижней панели меню и хедера
+console.log('Высота хедера: ' + headerElements.header.offsetHeight);
+console.log('Высота хедера: ' + document.querySelector('.menu-panel').offsetTop);
+document.querySelectorAll('.popup').forEach(el => {
+  el.style.height = document.querySelector('.menu-panel').offsetTop - headerElements.header.offsetHeight + "px";
+})
 
 const popups = {
   

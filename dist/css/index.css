@@ -246,6 +246,8 @@ button:focus {
 
 /* стили модального окна */
 .popup {
+  display: flex;
+  flex-direction: column;
   top: -100%;
   right: 0;
   left: 50%;
@@ -1055,6 +1057,8 @@ button:focus {
   transform: translateY(-50%) rotate3d(0, 0, 2, 45deg);
 }
 .profile-data__save-btn {
+  margin-top: auto;
+  margin-bottom: min(3.3vw, 25px);
   position: relative;
   margin: auto;
   display: block;
