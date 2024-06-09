@@ -956,6 +956,9 @@ button:focus {
 .profile-data {
   padding-bottom: 0;
 }
+.profile-data .menu__list {
+  height: 100%;
+}
 .profile-data__input-box {
   position: relative;
 }
@@ -997,8 +1000,8 @@ button:focus {
   transform: translateY(-50%) rotate3d(0, 0, 2, 45deg);
 }
 .profile-data__save-btn {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  margin: auto;
   display: block;
   padding: min(1.25vw, 10px) 0;
   height: min(10vw, 77px);

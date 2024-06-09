@@ -1,5 +1,9 @@
 .profile-data {
     padding-bottom: 0;
+
+    .menu__list {
+        height: 100%;
+    }
     &__input-box {
         position: relative;
         
@@ -46,8 +50,8 @@
     }
 
     &__save-btn {
-        position: absolute;
-        bottom: 0;
+        position: relative;
+        margin: auto;
         display: block;
         padding: min(1.25vw, 10px) 0;
         height: min(10vw, 77px);
