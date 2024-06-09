@@ -743,78 +743,36 @@
                         Назад
                     </button>
                 </div>
-                
-                <!-- меню Данных профиля-->
-                <ul class="menu__list">
-                    <li class="menu__li ">
-                        <a href="#" class="menu__li-with-content menu-link flex-box" id="profile-data">
-                            <div class="menu-link__title">
-                                <h5>Персональные данные</h5>
-                            </div>
-                            <span class="menu-link__icon">
-                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
-                            </span>
-                        </a>
-                        <div class="menu__content">
-                            <div class="menu__container">
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="text" name="user-name" placeholder="Имя" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
-                                    </div>
-                                </div>
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="text" name="user-last-name" placeholder="Фамилия" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
-                                    </div>
-                                </div>
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="text" name="user-faather-name" placeholder="Отчество" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
-                                    </div>
-                                </div>
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="tel" name="user-phone" id="user-phone" placeholder="Телефон" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
-                                    </div>
-                                </div>
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="email" name="user-email" id="user-email" placeholder="E-mail" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
-                                    </div>
-                                </div>
 
 
+                <div class="address__variants">
+                    <!-- адрес, который выбран -->
+                     <div class="address__option">
+                        <label class="radio">
+                            <input class="radio__input" type="radio" name="address">
+                            <div class="radio__block">
+                                <p class="address__choosed">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
+                                <p class="address__note">Выбран как основной</p>
                             </div>
-                        </div>
-                    </li>
-                    
-                    <li class="menu__li">
-                        <a href="#" class="menu-link flex-box">
-                            <div class="menu-link__title">
-                                <h5>Уведомления</h5>
+                        </label>
+                     </div>
+                  
+                    <!-- адрес на выбор  -->
+                    <div class="address__option">
+                        <label class="radio__dates radio">
+                            <input class="radio__input" type="radio" name="address">
+                            <div class="radio__block">
+                              <p class="address__for-choosing">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
                             </div>
-                            <span class="menu-link__icon">
-                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
-                            </span>
-                        </a>
-                    </li>
-                    <li class="menu__li">
-                        <a href="#" class="menu-link flex-box">
-                            <div class="menu-link__title">
-                                <h5>Безопасность</h5>
-                            </div>
-                            <span class="menu-link__icon">
-                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-                <button class="button profile-data__save-btn">Сохранить изменения</button>
+                        </label>
+                    </div>
+
+                    <button type="button" class="address__add-btn">
+                        Новый адрес
+                    </button>
+                </div>
+              
+              
             </div>
         </div>
     </div>

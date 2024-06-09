@@ -34,6 +34,7 @@ const state = {
     profile: false,
     profileData: false,
     myCard: false,
+    address: false,
   }
 }
 const headerElements = {
@@ -90,6 +91,11 @@ const popups = {
     trigger: document.querySelector('#my-card'),
     overlay: document.querySelector('#my-card-overlay'),
     content: document.querySelector('#my-card-popup'),
+  },
+  'address': {
+    trigger: document.querySelector('#address'),
+    overlay: document.querySelector('#address-overlay'),
+    content: document.querySelector('#address-popup'),
   }
   
  
@@ -178,6 +184,10 @@ popups.profileData.trigger.addEventListener('click', () => {
 
 popups.myCard.trigger.addEventListener('click', () => {
   openAnyPopup('myCard');
+});
+
+popups.address.trigger.addEventListener('click', () => {
+  openAnyPopup('address');
 });
 
 

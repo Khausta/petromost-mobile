@@ -129,7 +129,7 @@ button:focus {
     width: 100%;
     min-width: 320px;
     max-width: 768px;
-    height: 100vh;
+    height: calc(100vh - 30vw);
     width: 100vw;
 /* фиксированное позиционирование, окно стабильно при прокрутке */
     position: fixed;
@@ -156,7 +156,7 @@ button:focus {
         transform: translate(-50%, 0);
         top: min(13vw, 102px);
         padding-bottom: min(6vw, 154px);
-        height: calc(100vh - 13vw - 13vw);
+        // height: calc(100vh - 13vw - 13vw);
     }
 }
 
@@ -199,6 +199,67 @@ button:focus {
         transform: rotate(180deg);
     }
 }
+
+//стилизация инпутов
+
+.radio {
+
+    &__input {
+        display: none;
+    }
+
+    &__block {
+        position: relative;
+        min-height: min(12vw, 90px);
+        width: 100%;
+        display: inline-block;
+        @include white-blocks;
+        padding-left: min(13.3vw, 102px);
+        padding-top: min(2.92vw, 22px);
+        transition: all .3s ease-in-out;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: min(3.3vw, 25px);
+            left: min(4.2vw, 32px);
+            display: block;
+            width: $size-19-point-5-px;
+            height: $size-19-point-5-px;
+            transition: all .3s ease-in-out;
+            background-image: url('../img/radio/beige-radio.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &::after { 
+            content: '';
+            position: absolute;
+            top: min(3.3vw, 25px);
+            left: min(4.2vw, 32px);
+            display: none;
+            width: $size-19-point-5-px;
+            height: $size-19-point-5-px;
+            background-image: url('../img/radio/red-radio.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: all .3s ease-in-out;
+        }
+    }
+
+    &__input:checked + &__block::before {
+        display: none;
+      
+    }
+
+    &__input:checked + &__block::after {
+        opacity: 1;
+        display: block;
+    }
+
+
+}
+
 
 
 

@@ -9,3 +9,14 @@
     font-weight: 600;
     line-height: normal;
 }
+
+@mixin white-blocks {
+    padding: $size-13px min(10vw, 77px) $size-14px $size-16and25;
+    width: 100%;
+    border-radius: $size-19-point-5-px;
+    border: 1px solid $beige-color;
+    background-color: $white-bg-color;
+    @include gilroy-semibold;
+    font-size: $size-19-point-5-px;
+    color: $black-color;
+}

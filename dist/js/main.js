@@ -30,7 +30,8 @@ var state = {
     menu: false,
     profile: false,
     profileData: false,
-    myCard: false
+    myCard: false,
+    address: false
   }
 };
 var headerElements = {
@@ -83,6 +84,11 @@ var popups = {
     trigger: document.querySelector('#my-card'),
     overlay: document.querySelector('#my-card-overlay'),
     content: document.querySelector('#my-card-popup')
+  },
+  'address': {
+    trigger: document.querySelector('#address'),
+    overlay: document.querySelector('#address-overlay'),
+    content: document.querySelector('#address-popup')
   }
 };
 
@@ -163,6 +169,9 @@ popups.profileData.trigger.addEventListener('click', function () {
 });
 popups.myCard.trigger.addEventListener('click', function () {
   openAnyPopup('myCard');
+});
+popups.address.trigger.addEventListener('click', function () {
+  openAnyPopup('address');
 });
 function openPreviousPopup() {
   state.path.pop();
