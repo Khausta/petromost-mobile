@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Петромост</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/delivery.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer="defer"></script>
@@ -30,11 +30,13 @@
         <header class="header">
             <div class="container-header">
                 <div class="header__items flex-box">
-                    <div class="header__main-logo __js-logo">
-                        <img class="object-fit-contain header__main-logo-img header__base-logo-img" src="./img/logotype/logo-petromost-start.svg" alt="Логотип Петромост">
-                        <!-- витрина, доставка, самовывоз -->
-                        <img class="object-fit-contain header__main-logo-img header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
-                    </div>
+                    <a href="index.html">
+                        <div class="header__main-logo __js-logo header_delivery">
+                            <img class="object-fit-contain header__main-logo-img header__base-logo-img" src="./img/logotype/logo-petromost-start.svg" alt="Логотип Петромост">
+                            <!-- витрина, доставка, самовывоз -->
+                            <img class="object-fit-contain header__main-logo-img header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
+                        </div>
+                    </a>
                     <div class="header__search flex-box">
                         <input class="input header__input __js-searchInput" type="text" placeholder="Найти арбуз...">
                         <button class="button header__search-btn">
@@ -126,7 +128,10 @@
             <!-- разделительная штрих-пунктирная бежевая черта  -->
             <!-- <hr class="hr"> -->
             <section class="actual">
-                <h2 class="title">Актуальное</h2>
+                <div class="flex-box">
+                    <h2 class="title">Актуальное</h2>
+                    <img class="actual__title-img" src="./img/actual-title.png" alt="Автомобиль дотавки">
+                </div>
                 <div class="container">
 
                     <!-- флекс контейнер для карточек актуального -->

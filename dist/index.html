@@ -53,76 +53,7 @@
             </div>
         </header>
       
-        <main class="main">
-
-            <!-- Лента ссылок на доставку, поддержку и т.д. -->
-            <!-- <section class="info ">
-                <div class="container">
-                    <div class="info-swiper">
-                        <div class="info__inner flex-box swiper-wrapper">
-                            <div class="info__item swiper-slide">
-                                <a class="" href="#">
-                                    Доставка&nbsp;и&nbsp;оплата
-                                </a>
-                            </div>
-                            <div class="info__item swiper-slide">
-                                <a class="" href="#">
-                                    Поддержка
-                                </a>
-                            </div>
-                            <div class="info__item swiper-slide">
-                                <a class="flex-box" href="#">
-                                    Отзывы&nbsp;и&nbsp;предложения
-                                </a>
-                            </div>
-                            <div class="info__item swiper-slide">
-                                <a class="" href="#">
-                                    Доставка&nbsp;и&nbsp;оплата
-                                </a>
-                            </div>
-                            <div class="info__item swiper-slide">
-                                <a class="" href="#">
-                                    Поддержка
-                                </a>
-                            </div>
-                            <div class="info__item swiper-slide">
-                                <a class="flex-box" href="#">
-                                    Отзывы&nbsp;и&nbsp;предложения
-                                </a>
-                            </div>
-                        </div>  
-                    </div>
-                </div>
-              
-            </section> -->
-
-            <!-- баннер -->
-            <!-- <section class="banner">
-                <div class="banner-swiper">
-                    <div class="banner__slider swiper-wrapper">
-                        <div class="banner__slide swiper-slide">
-                            <img class="object-fit-cover" src="./img/banners/banner-1.png" alt="">
-                        </div>
-                        <div class="banner__slide swiper-slide">
-                            <img class="object-fit-cover" src="./img/banners/banner-1.png" alt="">
-                        </div>
-                        <div class="banner__slide swiper-slide">
-                            <img class="object-fit-cover" src="./img/banners/banner-1.png" alt="">
-                        </div>
-                        <div class="banner__slide swiper-slide">
-                            <img class="object-fit-cover" src="./img/banners/banner-1.png" alt="">
-                        </div>
-                        <div class="banner__slide swiper-slide">
-                            <img class="object-fit-cover" src="./img/banners/banner-1.png" alt="">
-                        </div>
-                        <div class="banner__slide swiper-slide">
-                            <img class="object-fit-cover" src="./img/banners/banner-1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="banner-pagination"></div>  
-                </div>
-            </section> -->
-           
+        <main class="main">            
             <section class="main-card">
                 <div class="container">
                     <div class="main-card__banner">
@@ -140,7 +71,7 @@
                                     <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain">
                                 </div>
                             </div>
-                            <div class="main-card__box">
+                            <div class="main-card__box" id="card-magnifier">
                                 <div class="main-card__scanner-img">
                                     <img class="object-fit-contain" src="./img/card/main-scan.svg" alt="Штрихкод">
                                 </div>
@@ -157,37 +88,42 @@
             <!-- Витрина -->
            <section class="storefront">
                 <div class="container">
-                    <div class="storefront__content">
+                    <a href="./storefront.html" class="storefront__content">
                         <h2 class="storefront__head">
                             Витрина
                         </h2>
                         <p class="storefront__text">
                             Ознакомиться с&nbsp;ассортиментом&nbsp;выбранного магазина
                         </p>
-                    </div>
+                    </a>
                 </div>
            </section>
 
            <section class="delivery">
                 <div class="container">
                     <div class="actual__wrapper flex-box">
-                        <div class="actual-card flex-box">
-                            <h3 class="delivery__title">
-                                Доставка
-                            </h3>
-                            <a class="delivery__btn" href="#">
-                                <img class="object-fit-contain" src="./img/white-arrow.svg" alt="Иконка стрелки">
-                            </a>
-                            
-                        </div>
-                        <div class="actual-card flex-box">
-                            <h3 class="delivery__title">
-                                Самовывоз
-                            </h3>
-                            <a class="delivery__btn" href="#">
-                                <img class="object-fit-contain" src="./img/white-arrow.svg" alt="Иконка стрелки">
-                            </a>
-                        </div>
+                        <a href="./delivery.html">
+                            <div class="actual-card flex-box">
+                                <h3 class="delivery__title">
+                                    Доставка
+                                </h3>
+                                <div class="delivery__btn" href="#">
+                                    <img class="object-fit-contain" src="./img/white-arrow.svg" alt="Иконка стрелки">
+                                </div>
+                                
+                            </div>
+                        </a>
+                        <a href="./selfdedlivery.html">
+                            <div class="actual-card flex-box">
+                                <h3 class="delivery__title">
+                                    Самовывоз
+                                </h3>
+                                <div class="delivery__btn" href="#">
+                                    <img class="object-fit-contain" src="./img/white-arrow.svg" alt="Иконка стрелки">
+                                </div>
+                            </div>
+                        </a>
+                        
                     </div>
                 </div> 
             </section>
@@ -199,11 +135,6 @@
                     </div>
                 </div>
             </section>
-       
-
-
-            
-           
         </main>
        
 
@@ -263,6 +194,31 @@
 
         <!-- для попапов -->
       
+           <!-- карта для показа кассиру -->
+        <div class="overlay" id="show-card-overlay">
+            <div class="container">
+                <div class="show-card" id="show-card-popup">
+                
+                    <div class="main-card">
+                        <div class="show-card__box">
+                            <p class="main-card__header">Карта «Снегири»</p> 
+                            <p class="main-card__welcome">
+                                <span class="main-card__user-name">Покажите 
+                                    ее&nbsp;кассиру
+                            </span></p>
+                            <div class="show-card__scaner">
+                                <div class="show-card__scaner-img">
+                                    <img class="object-fit-contain" src="./img/card/big-scanner-example.png" alt="Штрихкод">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+               
+
+        </div>
 
         <!-- поиск -->
         <div class="overlay" id="search-overlay">

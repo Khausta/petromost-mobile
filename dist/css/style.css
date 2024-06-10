@@ -168,7 +168,7 @@ button:focus {
 }
 
 .main {
-  height: 1500px;
+  height: 800px;
 }
 
 .container-header {
@@ -377,4 +377,8 @@ button:focus {
 .radio__input:checked + .radio__block::after {
   opacity: 1;
   display: block;
+}
+
+#show-card-overlay.__js-active {
+  z-index: 101;
 }

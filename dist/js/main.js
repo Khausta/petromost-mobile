@@ -99,6 +99,11 @@ var popups = {
     trigger: document.querySelector('#address'),
     overlay: document.querySelector('#address-overlay'),
     content: document.querySelector('#address-popup')
+  },
+  'card': {
+    trigger: document.querySelector('#card-magnifier'),
+    overlay: document.querySelector('#show-card-overlay'),
+    content: document.querySelector('#show-card-popup')
   }
 };
 
@@ -189,6 +194,20 @@ popups.myCard.trigger.addEventListener('click', function () {
 popups.address.trigger.addEventListener('click', function () {
   openAnyPopup('address');
 });
+function closeCard() {
+  document.body.style.overflow = 'auto';
+  popups.card.overlay.classList.remove('__js-active');
+  popups.card.overlay.removeEventListener('click', closeCard);
+}
+if (popups.card.trigger) {
+  popups.card.trigger.addEventListener('click', function () {
+    if (document.body.style.overflow !== 'hidden') {
+      document.body.style.overflow = 'hidden';
+    }
+    popups.card.overlay.classList.add('__js-active');
+    popups.card.overlay.addEventListener('click', closeCard);
+  });
+}
 function openPreviousPopup() {
   state.path.pop();
   openAnyPopup(state.path[state.path.length - 1]);
@@ -238,7 +257,12 @@ document.querySelectorAll('.profile-data__input').forEach(function (input) {
 document.querySelector('.card__bonus').addEventListener('click', function () {
   document.querySelector('.card__bonus-count').classList.toggle('__js-blur');
 });
-document.querySelector('.main-card__to-hide').addEventListener('click', function () {
-  document.querySelector('.main-card__bonus-count').classList.toggle('__js-blur');
-});
+
+// const hideBonusCard = document.querySelector('.main-card__to-hide');
+
+// if(hideBonusCard) {
+//   hideBonusCard.addEventListener('click', () => {
+//     document.querySelector('.main-card__bonus-count').classList.toggle('__js-blur');
+//   });  
+// }
 //# sourceMappingURL=main.js.map

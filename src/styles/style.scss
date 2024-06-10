@@ -35,7 +35,7 @@ button:focus {
 }
 
 .main {
-    height: 1500px;
+    height: 800px;
 }
 
 .container-header {
@@ -262,6 +262,10 @@ button:focus {
     }
 
 
+}
+
+#show-card-overlay.__js-active {
+    z-index: 101;
 }
 
 

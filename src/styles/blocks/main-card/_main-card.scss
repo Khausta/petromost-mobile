@@ -77,8 +77,49 @@
         width: min(8.7vw, 67px);
     }
 
-
+    
 
   
 
+}
+
+#show-card-overlay {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.show-card {
+    display: block;
+    margin: auto;
+    border-radius: $size-16and25;
+    border: 2px solid $white-bg-color;
+    overflow: hidden;
+
+    &__box {
+    
+        color: $white-bg-color;
+        background-image: url('../img/card/bird.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        background-position: 0 0;
+    }
+    &__scaner {
+        width: 100%;
+        padding: $size-13px;
+        background-color: $red-color;
+    }
+
+    &__scaner-img {
+        padding: $gap-10;
+        border-radius: $gap-10;
+        background-color: $white-bg-color;
+    }
+
+    .main-card {
+        margin-bottom: 0;
+    }
+
+    
 }

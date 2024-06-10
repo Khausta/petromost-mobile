@@ -168,7 +168,7 @@ button:focus {
 }
 
 .main {
-  height: 1500px;
+  height: 800px;
 }
 
 .container-header {
@@ -377,6 +377,10 @@ button:focus {
 .radio__input:checked + .radio__block::after {
   opacity: 1;
   display: block;
+}
+
+#show-card-overlay.__js-active {
+  z-index: 101;
 }
 
 .head-inner {
@@ -601,84 +605,6 @@ button:focus {
   width: min(84vw, 644px);
 }
 
-.info {
-  padding: min(2.6vw, 20px) 0;
-  border-bottom: 1px solid #F5E6D6;
-  background-color: #FFFAF5;
-  overflow: hidden;
-}
-.info__inner {
-  gap: min(2.5vw, 19px);
-}
-.info__item {
-  padding: min(1.98vw, 15px) min(4.2vw, 32px);
-  height: min(8.2vw, 62px);
-  border: 1px solid #F5E6D6;
-  border-radius: min(2vw, 15px);
-  width: -moz-min-content !important;
-  width: min-content !important;
-  background-color: #FFFFFF;
-}
-.info__item a {
-  height: 100%;
-  font-family: "Gilroy", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  font-size: min(3.6vw, 28px);
-  color: #240405;
-}
-
-.actual {
-  padding: 0 0 min(3.3vw, 25px) 0;
-}
-
-.actual-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  padding: min(2.5vw, 19px);
-  width: min(45vw, 346px);
-  height: min(26.6vw, 205px);
-  background-image: url("../img/actual-card-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: min(4.2vw, 32px);
-  overflow: hidden;
-  font-family: "Gilroy", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  color: #240405;
-  line-height: 1.26;
-}
-.actual-card__img {
-  position: absolute;
-  right: 0;
-  top: 0;
-  -o-object-fit: contain;
-     object-fit: contain;
-  height: 100%;
-  z-index: 0;
-}
-.actual-card__title {
-  position: relative;
-  max-width: 60%;
-  padding-left: min(0.83vw, 6px);
-  position: relative;
-  font-size: min(3.7vw, 28px);
-  z-index: 1;
-}
-.actual-card__btn {
-  position: relative;
-  margin-top: auto;
-  padding: min(1.8vw, 14px) min(4.1vw, 31px);
-  font-size: min(2.5vw, 19px);
-  background-color: #FFFFFF;
-  border-radius: min(3.3vw, 25px);
-  color: #240405;
-  z-index: 1;
-}
-
 .footer {
   padding-bottom: min(29vw, 220px);
   height: 500px;
@@ -771,51 +697,6 @@ button:focus {
   height: min(51.6vw, 397px);
   border-radius: min(5vw, 38px);
   overflow: hidden;
-}
-
-.banner {
-  position: relative;
-  padding: min(3.3vw, 25px) min(3.3vw, 25px) 0 min(3.3vw, 25px);
-  height: min(60vw, 500px);
-  overflow: hidden;
-}
-.banner__slide {
-  width: min(93vw, 717px);
-  height: min(52vw, 396px);
-  border-radius: min(5vw, 38px);
-}
-.banner .banner-pagination {
-  position: relative;
-  margin-top: min(5vw, 38px);
-  display: flex;
-  justify-content: space-between;
-}
-.banner .banner-pagination::before {
-  content: "";
-  position: absolute;
-  width: 98%;
-  height: 1px;
-  background-color: #F5E6D6;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.banner .swiper-pagination-bullet {
-  width: min(22.8vw, 175px);
-  height: min(1vw, 8px);
-  border-radius: 1vw;
-  opacity: 0;
-  background-color: #F5E6D6;
-}
-.banner .swiper-pagination-bullet-active {
-  opacity: 1;
-}
-.banner .banner-pagination-custom-line {
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  top: 50%;
-  background-color: #F5E6D6;
 }
 
 .delivery-variants {

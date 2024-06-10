@@ -111,6 +111,11 @@ const popups = {
     trigger: document.querySelector('#address'),
     overlay: document.querySelector('#address-overlay'),
     content: document.querySelector('#address-popup'),
+  },
+  'card': {
+    trigger: document.querySelector('#card-magnifier'),
+    overlay: document.querySelector('#show-card-overlay'),
+    content: document.querySelector('#show-card-popup'),
   }
   
  
@@ -179,8 +184,8 @@ function openAnyPopup(popupName) {
     if (document.body.style.overflow !== 'hidden') {
       document.body.style.overflow = 'hidden';
     } 
-  popups[popupName].overlay.classList.add('__js-active');
-  popups[popupName].content.addEventListener('scroll', () => {
+    popups[popupName].overlay.classList.add('__js-active');
+    popups[popupName].content.addEventListener('scroll', () => {
     popups[popupName].content.style.height = document.querySelector('.menu-panel').offsetTop - headerElements.header.offsetHeight + 5 + "px";
   });
   popups.returnBtns.forEach(btn => {
@@ -210,6 +215,26 @@ popups.myCard.trigger.addEventListener('click', () => {
 popups.address.trigger.addEventListener('click', () => {
   openAnyPopup('address');
 });
+
+
+function closeCard() {
+  document.body.style.overflow = 'auto';
+  popups.card.overlay.classList.remove('__js-active');
+  popups.card.overlay.removeEventListener('click', closeCard);
+}
+
+if (popups.card.trigger) {
+  popups.card.trigger.addEventListener('click', () => {
+    if (document.body.style.overflow !== 'hidden') {
+      document.body.style.overflow = 'hidden';
+    }
+  
+    popups.card.overlay.classList.add('__js-active');
+   
+    popups.card.overlay.addEventListener('click', closeCard);
+  });
+}
+
 
 
  
@@ -272,7 +297,10 @@ document.querySelector('.card__bonus').addEventListener('click', () => {
   document.querySelector('.card__bonus-count').classList.toggle('__js-blur');
 })
 
-document.querySelector('.main-card__to-hide').addEventListener('click', () => {
-  document.querySelector('.main-card__bonus-count').classList.toggle('__js-blur');
-})
+// const hideBonusCard = document.querySelector('.main-card__to-hide');
 
+// if(hideBonusCard) {
+//   hideBonusCard.addEventListener('click', () => {
+//     document.querySelector('.main-card__bonus-count').classList.toggle('__js-blur');
+//   });  
+// }

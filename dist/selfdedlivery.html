@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Петромост</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/selfdelivery.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer="defer"></script>
@@ -30,11 +30,14 @@
         <header class="header">
             <div class="container-header">
                 <div class="header__items flex-box">
-                    <div class="header__main-logo __js-logo">
-                        <img class="object-fit-contain header__main-logo-img header__base-logo-img" src="./img/logotype/logo-petromost-start.svg" alt="Логотип Петромост">
-                        <!-- витрина, доставка, самовывоз -->
-                        <img class="object-fit-contain header__main-logo-img header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
-                    </div>
+                    <a href="./index.html">
+                        <div class="header__main-logo __js-logo header_selfdelivery">
+                            <img class="object-fit-contain header__main-logo-img header__base-logo-img" src="./img/logotype/logo-petromost-start.svg" alt="Логотип Петромост">
+                            <!-- витрина, доставка, самовывоз -->
+                            <img class="object-fit-contain header__main-logo-img header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
+                        </div>
+                    </a>
+                  
                     <div class="header__search flex-box">
                         <input class="input header__input __js-searchInput" type="text" placeholder="Найти арбуз...">
                         <button class="button header__search-btn">
@@ -123,36 +126,7 @@
                 </div>
             </section>
 
-            <!-- разделительная штрих-пунктирная бежевая черта  -->
-            <!-- <hr class="hr"> -->
-            <section class="actual">
-                <h2 class="title">Актуальное</h2>
-                <div class="container">
-
-                    <!-- флекс контейнер для карточек актуального -->
-                    <div class="actual__wrapper flex-box">
-                        <div class="actual-card flex-box">
-                            <h3 class="actual-card__title">
-                                Заготовки, соленья
-                            </h3>
-                            <a class="actual-card__btn" href="#">
-                                Выбрать
-                            </a>
-                            <img class="actual-card__img" src="./img/actual-card-img-1.png" alt="">
-                        </div>
-                        <div class="actual-card flex-box">
-                            <h3 class="actual-card__title">
-                                Дача, сад,
-                                огород
-                            </h3>
-                            <a class="actual-card__btn" href="#">
-                                Выбрать
-                            </a>
-                            <img class="actual-card__img" src="./img/actual-card-img-2.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </section>
+           
 
             <section class="categories">
                 <h2 class="title">Все категории</h2>

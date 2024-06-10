@@ -1,5 +1,12 @@
 .actual {
     padding: 0 0 $size-13px 0;
+
+    &__title-img {
+        margin-right: min(6.8vw, 52px);
+        display: block;
+        width: min(32.8vw, 252px);
+        height: min(7.6vw, 59px);
+    }
 }
 
 .actual-card {
