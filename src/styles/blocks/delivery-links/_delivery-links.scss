@@ -1,14 +1,20 @@
 .delivery {
     margin-bottom: $size-14px;
+
+  
     .actual-card {
         background-color: $red-color;
         @include bg-style;
         background-size: cover;
 
-        &:first-child {
+      
+    }
+
+    &__card {
+        &_1 {
             background-image: url('../img/splash/delivery-card-1.png');
         }
-        &:last-child {
+        &_2 {
             background-image: url('../img/splash/delivery-card-2.png');
         }
     }

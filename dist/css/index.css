@@ -1239,11 +1239,11 @@ button:focus {
   background-size: contain;
   background-size: cover;
 }
-.delivery .actual-card:first-child {
-  background-image: url("../../../img/splash/delivery-card-1.png");
+.delivery__card_1 {
+  background-image: url("../img/splash/delivery-card-1.png");
 }
-.delivery .actual-card:last-child {
-  background-image: url("../../../img/splash/delivery-card-2.png");
+.delivery__card_2 {
+  background-image: url("../img/splash/delivery-card-2.png");
 }
 .delivery__btn {
   display: flex;
