@@ -6,6 +6,7 @@
         background-color: $red-color;
         @include bg-style;
         background-size: cover;
+        color: $white-bg-color;
 
       
     }

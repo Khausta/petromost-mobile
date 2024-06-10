@@ -1238,6 +1238,7 @@ button:focus {
   background-repeat: no-repeat;
   background-size: contain;
   background-size: cover;
+  color: #FFFFFF;
 }
 .delivery__card_1 {
   background-image: url("../img/splash/delivery-card-1.png");
