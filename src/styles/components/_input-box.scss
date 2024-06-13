@@ -1,8 +1,13 @@
 .input-box {
     position: relative;
+    width: 100%;
     
     &:not(:last-child) {
         margin-bottom: $size-13px;
+    }
+
+    &_w48 {
+        width: 48%;
     }
 
     &__input {
@@ -32,7 +37,7 @@
     &__cross {
         position: absolute;
         top: 50%;
-        right: 5%;
+        right: $size-19-point-5-px;
         transform: translateY(-50%);
         width: $size-16and25;
         height: $size-16and25;

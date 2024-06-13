@@ -10,6 +10,11 @@
 
     
     }
+
+    &__option {
+        position: relative;
+    }
+
     &__option:not(:last-child) {
         padding-bottom: $size-13px;
     }
@@ -29,8 +34,22 @@
     &__for-choosing {
         @include gilroy-bold;
         font-size: $size-13px;
-        color: $beige-color;
+        color: $brown-color;
     }
+
+    &__city {
+        @include gilroy-semibold;
+        font-size: $size-19-point-5-px;
+        color: $black-color;
+    }
+
+    &__saved-city {
+        @include gilroy-semibold;
+        font-size: $size-13px;
+        color: $brown-color;
+    }
+
+
 
     &__add-btn {
         position: relative;
@@ -85,6 +104,7 @@
 
     &__add-btn_map {
         background-color: $head-bg-color;
+        font-size: $size-19-point-5-px;
         &::before {
             background-image: url('../img/icons/navigation.svg');
         }
@@ -93,13 +113,29 @@
     
 
     &__notes-block {
-        padding-left: $fz-13px;
+        background-color: $white-bg-color;
+        padding-left: min(10.4vw, 80px);
+        padding-top: $size-19-point-5-px;
+        padding-right: $size-14px;
+        padding-bottom: min(13vw, 102px);
     }
 
     &__note-text {
+        padding-bottom: $size-19-point-5-px;
+        @include gilroy-bold;
+        font-size: $size-13px;
         list-style-type: disc;
     &::marker {
         color: $red-color;
     }
     }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $size-13px;
+
+    }
+
+  
 }
