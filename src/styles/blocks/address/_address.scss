@@ -1,6 +1,6 @@
 .address {
     &.popup {
-        background-color: $head-bg-color;;
+        background-color: $head-bg-color;
 
     }
     &__variants {
@@ -35,9 +35,10 @@
     &__add-btn {
         position: relative;
         padding-left: min(13.3vw, 102px);
-        display: block;
+        margin-bottom: $size-13px;
         width: 100%;
-        padding: $size-13px  min(13.3vw, 102px);
+        flex-shrink: 0;
+        padding: $size-13px  $size-19-point-5-px $size-13px min(13.3vw, 102px);
         @include gilroy-semibold;
         color: $brown-color;
         font-size: $size-16and25;
@@ -55,9 +56,50 @@
             width: $size-19-point-5-px;
             height: $size-19-point-5-px;
             transition: all .3s ease-in-out;
-            background-image: url('../img/profile/cross.svg');
             background-repeat: no-repeat;
             background-size: contain;
         }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: min(3.3vw, 25px);
+            left: min(4.2vw, 32px);
+            display: block;
+            width: $size-19-point-5-px;
+            height: $size-19-point-5-px;
+            transition: all .3s ease-in-out;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+       
+
+       
+    }
+
+    &__add-btn_with-plus::before {
+        background-image: url('../img/profile/cross.svg');
+
+    }
+
+    &__add-btn_map {
+        background-color: $head-bg-color;
+        &::before {
+            background-image: url('../img/icons/navigation.svg');
+        }
+    }
+    
+    
+
+    &__notes-block {
+        padding-left: $fz-13px;
+    }
+
+    &__note-text {
+        list-style-type: disc;
+    &::marker {
+        color: $red-color;
+    }
     }
 }

@@ -1,28 +1,5 @@
 "use strict";
 
-var bannerSwiper = new Swiper('.banner-swiper', {
-  spaceBetween: '2%',
-  slidesPerView: 'auto',
-  loop: true,
-  pagination: {
-    el: ".banner-pagination",
-    clickable: true
-  }
-});
-var infoSwiper = new Swiper('.info-swiper', {
-  spaceBetween: '2%',
-  slidesPerView: 'auto',
-  loop: true,
-  loopFillGroupWithBlank: true
-});
-var chanceSwiper = new Swiper('.chance-swiper', {
-  loop: true,
-  slidesPerView: 2,
-  spaceBetween: '6%',
-  navigation: {
-    nextEl: '.chance-button-next'
-  }
-});
 var state = {
   path: [],
   openedPopups: {
@@ -31,7 +8,9 @@ var state = {
     profile: false,
     profileData: false,
     myCard: false,
-    address: false
+    address: false,
+    delivertAddress: false,
+    selfdeliveryAddress: false
   }
 };
 var headerElements = {
@@ -39,15 +18,6 @@ var headerElements = {
   logo: document.querySelector('.__js-logo'),
   openMenuOrCloseAllBtn: document.querySelector('.menu-btn')
 };
-
-// определение высота попапа в зависимости 
-// отвысоты нижней панели меню и хедера
-// console.log('Высота хедера: ' + headerElements.header.offsetHeight);
-// console.log('Высота хедера: ' + document.querySelector('.menu-panel').offsetTop);
-// document.querySelectorAll('.popup').forEach(el => {
-//   el.style.height = document.querySelector('.menu-panel').offsetTop - headerElements.header.offsetHeight + "px";
-// });
-
 var popups = {
   allPopups: document.querySelectorAll('.overlay'),
   closeAllPopups: function closeAllPopups() {
@@ -104,6 +74,16 @@ var popups = {
     trigger: document.querySelector('#card-magnifier'),
     overlay: document.querySelector('#show-card-overlay'),
     content: document.querySelector('#show-card-popup')
+  },
+  'deliveryAddress': {
+    trigger: document.querySelector('#delivery-address'),
+    overlay: document.querySelector('#delivery-address-overlay'),
+    content: document.querySelector('#delivery-address-popup')
+  },
+  'selfdeliveryAddress': {
+    trigger: document.querySelector('#selfdelivery-address'),
+    overlay: document.querySelector('#selfdelivery-address-overlay'),
+    content: document.querySelector('#selfdelivery-address-popup')
   }
 };
 
@@ -194,6 +174,12 @@ popups.myCard.trigger.addEventListener('click', function () {
 popups.address.trigger.addEventListener('click', function () {
   openAnyPopup('address');
 });
+popups.deliveryAddress.trigger.addEventListener('click', function () {
+  openAnyPopup('deliveryAddress');
+});
+popups.selfdeliveryAddress.trigger.addEventListener('click', function () {
+  openAnyPopup('selfdeliveryAddress');
+});
 function closeCard() {
   document.body.style.overflow = 'auto';
   popups.card.overlay.classList.remove('__js-active');
@@ -242,7 +228,7 @@ document.querySelectorAll('.menu__li-with-content').forEach(function (el) {
 });
 
 // для инпутов Данных профиля
-document.querySelectorAll('.profile-data__input').forEach(function (input) {
+document.querySelectorAll('.input-box__input').forEach(function (input) {
   input.addEventListener('input', function () {
     console.log(input.value);
     if (input.value) {
@@ -251,6 +237,8 @@ document.querySelectorAll('.profile-data__input').forEach(function (input) {
         input.value = "";
         input.nextElementSibling.classList.remove('__js-active');
       });
+    } else {
+      input.nextElementSibling.classList.remove('__js-active');
     }
   });
 });

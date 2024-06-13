@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Петромост</title>
     <link rel="stylesheet" href="./css/index.css">
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="./js/main.js" defer></script>
 </head>
 <body>
@@ -257,10 +251,10 @@
                                 </p>
                             </div>
                             <div class="delivery-variants__choosen flex-box">
-                                <button type="button" class="button delivery-variants__var __js-active">
+                                <button type="button" class="button delivery-variants__var __js-active" id="delivery-address">
                                     Доставка
                                 </button>
-                                <button type="button" class="button delivery-variants__var ">
+                                <button type="button" class="button delivery-variants__var " id="selfdelivery-address">
                                     Самовывоз
                                 </button>
                             </div>
@@ -490,34 +484,34 @@
                         </a>
                         <div class="menu__content">
                             <div class="menu__container">
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="text" name="user-name" placeholder="Имя" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                <div class="input-box">
+                                    <input class="input-box__input" type="text" name="user-name" placeholder="Имя" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
                                     </div>
                                 </div>
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="text" name="user-last-name" placeholder="Фамилия" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                <div class="input-box">
+                                    <input class="input-box__input" type="text" name="user-last-name" placeholder="Фамилия" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
                                     </div>
                                 </div>
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="text" name="user-faather-name" placeholder="Отчество" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                <div class="input-box">
+                                    <input class="input-box__input" type="text" name="user-faather-name" placeholder="Отчество" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
                                     </div>
                                 </div>
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="tel" name="user-phone" id="user-phone" placeholder="Телефон" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                <div class="input-box">
+                                    <input class="input-box__input" type="tel" name="user-phone" id="user-phone" placeholder="Телефон" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
                                     </div>
                                 </div>
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="email" name="user-email" id="user-email" placeholder="E-mail" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                <div class="input-box">
+                                    <input class="input-box__input" type="email" name="user-email" id="user-email" placeholder="E-mail" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
                                     </div>
                                 </div>
 
@@ -547,7 +541,7 @@
                         </a>
                     </li>
                 </ul>
-                <button class="button profile-data__save-btn">Сохранить изменения</button>
+                <button class="button save-btn">Сохранить изменения</button>
             </div>
         </div>
 
@@ -624,8 +618,8 @@
         </div>
 
 
-          <!-- Адреса доставки -->
-          <div class="overlay" id="address-overlay">
+        <!-- Адреса доставки -->
+        <div class="overlay" id="address-overlay">
             <div class="popup address" id="address-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Адреса доставки</h2>
@@ -634,10 +628,9 @@
                     </button>
                 </div>
 
-
                 <div class="address__variants">
                     <!-- адрес, который выбран -->
-                     <div class="address__option">
+                    <div class="address__option">
                         <label class="radio">
                             <input class="radio__input" type="radio" name="address">
                             <div class="radio__block">
@@ -645,26 +638,253 @@
                                 <p class="address__note">Выбран как основной</p>
                             </div>
                         </label>
-                     </div>
-                  
+                    </div>
+                
                     <!-- адрес на выбор  -->
                     <div class="address__option">
                         <label class="radio__dates radio">
                             <input class="radio__input" type="radio" name="address">
                             <div class="radio__block">
-                              <p class="address__for-choosing">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
+                            <p class="address__for-choosing">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <button type="button" class="address__add-btn address__add-btn_with-plus">
+                        Новый адрес
+                    </button>
+                </div>
+            </div>
+        </div>
+
+         <!-- Адреса для доставки -->
+         <div class="overlay" id="delivery-address-overlay">
+            <div class="popup address" id="delivery-address-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Доставка</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+                
+                <div class="menu">
+                    <!-- список меню -->
+                    <ul class="menu__list">
+                        <li class="menu__li ">
+                            <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
+                                <div class="menu-link__title">
+                                    <h5>Указать адрес</h5>
+                                </div>
+                                <span class="menu-link__icon">
+                                    <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                </span>
+                            </a>
+                            <div class="menu__content ">
+                                <div class="address__variants">
+                                    <!-- адрес, который выбран -->
+                                    <div class="address__option">
+                                        <label class="radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                                <p class="address__choosed">г. Архангельск</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                
+                                    <!-- адрес на выбор  -->
+                                    <div class="address__option">
+                                        <label class="radio__dates radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                            <p class="address__for-choosing">г. Свердловск</p>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                     <!-- адрес на выбор  -->
+                                     <div class="address__option">
+                                        <label class="radio__dates radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                            <p class="address__for-choosing">г. Новодвинск</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                
+                                    <button type="button" class="address__add-btn address__add-btn_map flex-box">
+                                        <span>Выбрать адрес на карте</span>
+                                        <span class="cross-icon">
+                                            <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                        </span>
+                                    </button>
+
+                                    <div class="input-box">
+                                        <input class="input-box__input" type="text" name="street" placeholder="Улица" value>
+                                        <div class="input-box__cross">
+                                            <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                        </div>
+                                    </div>
+                                    <div class="input-box">
+                                        <input class="input-box__input" type="text" name="house" placeholder="Дом" value>
+                                        <div class="input-box__cross">
+                                            <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+    
+                        <li class="menu__li ">
+                            <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
+                                <div class="menu-link__title">
+                                    <!-- <div class="menu-link__prefix">
+                                        <img class="object-fit-contain" src="./img/menu/bell.svg" alt="Иконка колокольчика">
+                                    </div> -->
+                                    <h5>Выбрать из сохраненных</h5>
+                                </div>
+                                <span class="menu-link__icon">
+                                    <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                </span>
+                            </a>
+                            <div class="menu__content ">
+                                <div class="address__variants">
+                                    <!-- адрес, который выбран -->
+                                    <div class="address__option">
+                                        <label class="radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                                <p class="address__choosed">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
+                                                <p class="address__note">Выбран как основной</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                
+                                    <!-- адрес на выбор  -->
+                                    <div class="address__option">
+                                        <label class="radio__dates radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                            <p class="address__for-choosing">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                
+                                   
+                                </div>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                </div>
+
+
+                
+                <button class="button save-btn">Сохранить</button>
+            </div>
+        </div>
+
+          <!-- Адреса доставки для самовывоза -->
+          <div class="overlay" id="selfdelivery-address-overlay">
+            <div class="popup address" id="selfdelivery-address-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Доставка</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+
+                
+                
+                <div class="address__variants">
+                     <!-- адрес на выбор  -->
+                    <div class="address__option">
+                        <label class="radio">
+                            <input class="radio__input" type="radio" name="address">
+                            <div class="radio__block">
+                                <p class="address__choosed">г. Архангельск</p>
+                            </div>
+                        </label>
+                    </div>
+                
+                    <!-- адрес на выбор  -->
+                    <div class="address__option">
+                        <label class="radio__dates radio">
+                            <input class="radio__input" type="radio" name="address">
+                            <div class="radio__block">
+                            <p class="address__choosed">г. Свердловск</p>
+                            </div>
+                        </label>
+                    </div>
+
+                     <!-- адрес на выбор  -->
+                     <div class="address__option">
+                        <label class="radio__dates radio">
+                            <input class="radio__input" type="radio" name="address">
+                            <div class="radio__block">
+                            <p class="address__choosed">г. Новодвинск</p>
                             </div>
                         </label>
                     </div>
 
                     <button type="button" class="address__add-btn">
-                        Новый адрес
+                        Выбрать магазин на карте
                     </button>
+
+                    
+                     <!-- адрес на выбор  -->
+                     <div class="address__option">
+                        <label class="address-radio">
+                            <input class="address-radio__input" type="radio" name="selfdelivery-address">
+                            <div class="address-radio__block">
+                                <p class="address__choosed">пр-т. Ленинградский, 2</p>
+                                <p class="address-radio__choosed">Выбрано</p>
+                                <p class="address-radio__for-choosing">Заберу тут</p>
+                            </div>
+                        </label>
+                    </div>
+
+                     <!-- адрес на выбор  -->
+                     <div class="address__option">
+                        <label class="address-radio">
+                            <input class="address-radio__input" type="radio" name="selfdelivery-address">
+                            <div class="address-radio__block">
+                                <p class="address__choosed">пр-т. Ленинградский, 255</p>
+                                <p class="address-radio__choosed">Выбрано</p>
+                                <p class="address-radio__for-choosing">Заберу тут</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- адрес на выбор  -->
+                    <div class="address__option">
+                        <label class="address-radio">
+                            <input class="address-radio__input" type="radio" name="selfdelivery-address">
+                            <div class="address-radio__block">
+                                <p class="address__choosed">ул. Нагонрная, 1</p>
+                                <p class="address-radio__choosed">Выбрано</p>
+                                <p class="address-radio__for-choosing">Заберу тут</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="address__notes-block">
+
+                        
+                        <ul>
+                            <li class="address__note-text">
+                                Заказ можно оформить сегодня
+                            </li>
+                            <li class="address__note-text">
+                                Заказ можно оформить сегодня
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
-              
-              
+
+                <button class="button save-btn">Сохранить</button>
             </div>
         </div>
+        
     </div>
 </body>
 </html>

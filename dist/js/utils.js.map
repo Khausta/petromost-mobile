@@ -1,1 +1,0 @@
-{"version":3,"file":"utils.js","names":["sayHi","name","console","log"],"sources":["utils.js"],"sourcesContent":["export function sayHi(name) {\r\n    console.log('hi! ' + name);\r\n}\r\n\r\n"],"mappings":";;;;;;AAAO,SAASA,KAAKA,CAACC,IAAI,EAAE;EACxBC,OAAO,CAACC,GAAG,CAAC,MAAM,GAAGF,IAAI,CAAC;AAC9B","ignoreList":[]}

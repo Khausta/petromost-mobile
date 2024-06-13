@@ -197,7 +197,6 @@ button:focus {
   height: 100%;
   -o-object-position: center;
      object-position: center;
-  vertical-align: middle;
 }
 
 .object-fit-cover {
@@ -207,7 +206,6 @@ button:focus {
   height: 100%;
   -o-object-position: center;
      object-position: center;
-  vertical-align: middle;
 }
 
 .input {
@@ -381,4 +379,114 @@ button:focus {
 
 #show-card-overlay.__js-active {
   z-index: 101;
+}
+
+.address-radio__input {
+  display: none;
+}
+.address-radio__choosed {
+  display: none;
+  background: #DC1E1E;
+}
+.address-radio__for-choosing {
+  background-color: #FFFAF5;
+  border: 1px solid #F5E6D6;
+}
+.address-radio__block {
+  position: relative;
+  min-height: min(12vw, 90px);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: min(3.3vw, 25px) min(10vw, 77px) min(3.75vw, 29px) min(4.2vw, 32px);
+  width: 100%;
+  border-radius: min(5vw, 38px);
+  border: 1px solid #F5E6D6;
+  background-color: #FFFFFF;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: min(5vw, 38px);
+  color: #240405;
+  padding-left: min(13.3vw, 102px);
+  padding-top: min(2.92vw, 22px);
+  transition: all 0.3s ease-in-out;
+}
+.address-radio__input:checked + .address-radio__block .address-radio__choosed {
+  display: block;
+}
+.address-radio__input:checked + .address-radio__block .address-radio__for-choosing {
+  display: none;
+}
+.address-radio__input:checked + .address-radio__for-choosing {
+  display: none;
+}
+.address-radio__input:checked + .address-radio__choosed {
+  opacity: 1;
+  display: block;
+}
+
+.cross-icon {
+  width: min(4.2vw, 32px);
+  height: min(4.2vw, 32px);
+}
+
+.save-btn {
+  margin: auto auto 0 auto;
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  padding: min(1.25vw, 10px) 0;
+  height: min(10vw, 77px);
+  width: 96%;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  color: #FFFFFF;
+  font-size: min(3.3vw, 25px);
+  text-align: center;
+  border-radius: min(2.5vw, 19px);
+  background-color: #DC1E1E;
+}
+
+.input-box {
+  position: relative;
+}
+.input-box:not(:last-child) {
+  margin-bottom: min(3.3vw, 25px);
+}
+.input-box__input {
+  position: relative;
+  padding: min(3.3vw, 25px) min(10vw, 77px) min(3.75vw, 29px) min(4.2vw, 32px);
+  width: 100%;
+  border-radius: min(5vw, 38px);
+  border: 1px solid #F5E6D6;
+  background-color: #FFFFFF;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: min(5vw, 38px);
+  color: #240405;
+}
+.input-box__input::-moz-placeholder {
+  color: #BE957D;
+}
+.input-box__input::placeholder {
+  color: #BE957D;
+}
+.input-box__input#user-phone, .input-box__input#user-email {
+  background: none;
+}
+.input-box__cross {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: min(4.2vw, 32px);
+  height: min(4.2vw, 32px);
+  transition: all 0.3s ease-in-out;
+}
+.input-box__cross.__js-active {
+  transform: translateY(-50%) rotate3d(0, 0, 2, 45deg);
 }

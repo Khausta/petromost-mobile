@@ -76,7 +76,7 @@
     }
 
     &__content {
-        
+        border-bottom: 1px solid $beige-color;
         background-color: $head-bg-color;
         opacity: 0;
         max-height: 0;
@@ -92,6 +92,13 @@
     &__container {
         padding: $size-13px;
     }
+}
+
+.address {
+    .menu__li, .menu__content {
+        background-color: #fff;
+    }
+ 
 }
 
 @import '../../components/menu-link';

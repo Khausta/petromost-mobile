@@ -1,35 +1,3 @@
-const bannerSwiper = new Swiper('.banner-swiper', {
-  spaceBetween: '2%',
-  slidesPerView: 'auto',
-  loop: true,
-  pagination: {
-    el: ".banner-pagination",
-    clickable: true,
-  },
-});
-
-const infoSwiper = new Swiper('.info-swiper', {
-  spaceBetween: '2%',
-  slidesPerView: 'auto',
-  loop: true,
-  loopFillGroupWithBlank: true,
-});
-
-
-const chanceSwiper = new Swiper('.chance-swiper', {
-    loop: true,
-    slidesPerView: 2,
-    spaceBetween: '6%',  
-    navigation: {
-      nextEl: '.chance-button-next',
-    },
-  });
-
-
-
-
-
-
 const state = {
   path: [],
   openedPopups: {
@@ -39,6 +7,8 @@ const state = {
     profileData: false,
     myCard: false,
     address: false,
+    delivertAddress: false,
+    selfdeliveryAddress: false,
   }
 }
 const headerElements = {
@@ -47,13 +17,6 @@ const headerElements = {
   openMenuOrCloseAllBtn: document.querySelector('.menu-btn')
 }
 
-// определение высота попапа в зависимости 
-// отвысоты нижней панели меню и хедера
-// console.log('Высота хедера: ' + headerElements.header.offsetHeight);
-// console.log('Высота хедера: ' + document.querySelector('.menu-panel').offsetTop);
-// document.querySelectorAll('.popup').forEach(el => {
-//   el.style.height = document.querySelector('.menu-panel').offsetTop - headerElements.header.offsetHeight + "px";
-// });
 
 const popups = {
   
@@ -116,7 +79,17 @@ const popups = {
     trigger: document.querySelector('#card-magnifier'),
     overlay: document.querySelector('#show-card-overlay'),
     content: document.querySelector('#show-card-popup'),
-  }
+  },
+  'deliveryAddress': {
+    trigger: document.querySelector('#delivery-address'),
+    overlay: document.querySelector('#delivery-address-overlay'),
+    content: document.querySelector('#delivery-address-popup'),
+  },
+  'selfdeliveryAddress': {
+    trigger: document.querySelector('#selfdelivery-address'),
+    overlay: document.querySelector('#selfdelivery-address-overlay'),
+    content: document.querySelector('#selfdelivery-address-popup'),
+  },
   
  
   
@@ -216,6 +189,15 @@ popups.address.trigger.addEventListener('click', () => {
   openAnyPopup('address');
 });
 
+popups.deliveryAddress.trigger.addEventListener('click', () => {
+  openAnyPopup('deliveryAddress');
+});
+
+
+popups.selfdeliveryAddress.trigger.addEventListener('click', () => {
+  openAnyPopup('selfdeliveryAddress');
+});
+
 
 function closeCard() {
   document.body.style.overflow = 'auto';
@@ -246,7 +228,6 @@ function openPreviousPopup() {
   state.path.pop();
   openAnyPopup(state.path[state.path.length - 1]);
 }
-
 
 
 //открытие скрытого контента, если есть
@@ -280,7 +261,7 @@ document.querySelectorAll('.menu__li-with-content').forEach(el => {
 });
 
 // для инпутов Данных профиля
-document.querySelectorAll('.profile-data__input').forEach(input => {
+document.querySelectorAll('.input-box__input').forEach(input => {
   input.addEventListener('input', () => {
     console.log(input.value);
     if (input.value) {
@@ -289,6 +270,8 @@ document.querySelectorAll('.profile-data__input').forEach(input => {
         input.value = "";
         input.nextElementSibling.classList.remove('__js-active');
       })
+    } else {
+      input.nextElementSibling.classList.remove('__js-active');
     }
   })
 });
