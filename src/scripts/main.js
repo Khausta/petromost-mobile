@@ -230,35 +230,7 @@ function openPreviousPopup() {
 }
 
 
-//открытие скрытого контента, если есть
-document.querySelectorAll('.menu__li-with-content').forEach(el => {
-  el.addEventListener('click', () => {
-    const arrow = el.querySelector('.menu-link__icon');
-    const content = el.nextElementSibling;
 
-    if (content.style.maxHeight) {
-      document.querySelectorAll('.menu__content').forEach( item => {
-        item.style.maxHeight = null;
-        item.style.opacity = null;
-        }) 
-      document.querySelectorAll('.menu-link__icon').forEach(item => {
-        item.classList.remove('__js-opened');
-      })
-    } else {
-      document.querySelectorAll('.menu__content').forEach( item => {
-        item.style.maxHeight = null;
-        item.style.opacity = null;  
-      })
-      content.style.maxHeight = content.scrollHeight + 'px';
-      content.style.opacity = 1;
-      
-      document.querySelectorAll('.menu-link__icon').forEach(item => {
-        item.classList.remove('__js-opened');
-      })
-      arrow.classList.add('__js-opened');
-    }
-  })
-});
 
 // для инпутов Данных профиля
 document.querySelectorAll('.input-box__input').forEach(input => {
@@ -280,10 +252,79 @@ document.querySelector('.card__bonus').addEventListener('click', () => {
   document.querySelector('.card__bonus-count').classList.toggle('__js-blur');
 })
 
-// const hideBonusCard = document.querySelector('.main-card__to-hide');
 
-// if(hideBonusCard) {
-//   hideBonusCard.addEventListener('click', () => {
-//     document.querySelector('.main-card__bonus-count').classList.toggle('__js-blur');
-//   });  
+
+
+// Обработка открытия контента dropdown способом
+function dnd(triggerElement, animatedIcon, hiddenContent) {
+  document.querySelectorAll(`.${triggerElement}`).forEach(el => {
+    el.addEventListener('click', () => {
+      const arrow = el.querySelector(`.${animatedIcon}`);
+      const content = el.nextElementSibling;
+  
+      if (content.style.maxHeight) {
+        document.querySelectorAll(`.${hiddenContent}`).forEach( item => {
+          item.style.maxHeight = null;
+          item.style.opacity = null;
+          }) 
+        document.querySelectorAll(`.${animatedIcon}`).forEach(item => {
+          item.classList.remove('__js-opened');
+        })
+      } else {
+        document.querySelectorAll(`.${hiddenContent}`).forEach( item => {
+          item.style.maxHeight = null;
+          item.style.opacity = null;  
+        })
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.opacity = 1;
+        
+        document.querySelectorAll(`.${animatedIcon}`).forEach(item => {
+          item.classList.remove('__js-opened');
+        })
+        arrow.classList.add('__js-opened');
+      }
+    })
+  });
+  
+}
+
+// открытие внутреннего списка с возможностью изменения высоты родительского контейнера
+// function dnd(triggerElement, animatedIcon, hiddenContent) {
+//   document.querySelectorAll(`.${triggerElement}`).forEach(el => {
+//     el.addEventListener('click', () => {
+//       const arrow = el.querySelector(`.${animatedIcon}`);
+//       const content = el.nextElementSibling;
+  
+//       if (content.style.maxHeight) {
+//         document.querySelectorAll(`.${hiddenContent}`).forEach( item => {
+//           item.style.maxHeight = null;
+//           item.style.opacity = null;
+//           }) 
+//         document.querySelectorAll(`.${animatedIcon}`).forEach(item => {
+//           item.classList.remove('__js-opened');
+//         })
+//       } else {
+//         document.querySelectorAll(`.${hiddenContent}`).forEach( item => {
+//           item.style.maxHeight = null;
+//           item.style.opacity = null;  
+//         })
+//         content.style.maxHeight = content.scrollHeight + 'px';
+//         content.style.opacity = 1;
+        
+//         document.querySelectorAll(`.${animatedIcon}`).forEach(item => {
+//           item.classList.remove('__js-opened');
+//         })
+//         arrow.classList.add('__js-opened');
+//       }
+//     })
+//   });
+  
 // }
+
+// Открытие скрытого контента меню
+dnd('menu__li-with-content', 'menu-link__icon', 'menu__content');
+// Открытие списка магазинов
+dnd('dnd', 'dnd__icon', 'dnd__content');
+// Открытие внутреннего выпадающего списка для выбора адреса доставки 
+dnd('inner-dnd', 'shops__city-box', 'inner-dnd__content');
+

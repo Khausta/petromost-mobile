@@ -1,0 +1,232 @@
+@import './style';
+@import 'blocks/head-inner/head-inner';
+@import 'blocks/menu-panel/menu-panel';
+@import 'blocks/header/header';
+@import 'blocks/info/info';
+@import 'blocks/footer/footer';
+@import 'blocks/categories/categories';
+@import 'components/category';
+@import 'blocks/chance/chance';
+@import 'blocks/address/address';
+@import 'blocks/menu/menu';
+@import 'blocks/profile-data/profile-data';
+@import 'blocks/card/card';
+@import 'blocks/map/map-container';
+@import 'blocks/dnd/dnd';
+
+.shops {
+    margin-bottom: calc($size-66px + $size-12px);
+
+    &__arrow {
+        transform: rotate(90deg);
+    }
+
+    &__option {
+        border-bottom: 1px solid $beige-color;
+    }
+
+    .dnd__content {
+        background: $head-bg-color;
+    }
+
+    &__city {
+       padding: $size-12px;
+
+    }
+
+    &__city-box {
+        position: relative;
+
+        padding: $size-13px $size-20px $size-14px $size-52px;
+        width: 100%;
+        border-radius: $size-19-point-5-px;
+        border: 1px solid $beige-color;
+        background-color: $white-bg-color;
+        @include gilroy-semibold;
+        font-size: $size-19-point-5-px;
+        color: $black-color;
+    }
+
+    &__city-name {
+       
+       
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: $size-16and25;
+            transform: translateY(-50%);
+            display: block;
+            width: $size-19-point-5-px;
+            height: $size-19-point-5-px;
+            transition: all .3s ease-in-out;
+            background-image: url('../img/radio/beige-radio.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &::after { 
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: $size-16and25;
+            transform: translateY(-50%);
+            display: none;
+            width: $size-19-point-5-px;
+            height: $size-19-point-5-px;
+            background-image: url('../img/radio/red-radio.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: all .3s ease-in-out;
+        }
+    }
+
+    &__city-box.__js-opened {
+        .inner-dnd__icon {
+            transform: rotate(-180deg);
+        }
+
+        .shops__city-name {
+            &::before {
+                display: none;
+            }
+            
+            &::after {
+                display: block;
+            }
+        }
+
+        
+    }
+
+    &__item {
+        padding-left: $size-13px;
+        padding-right: $size-13px;
+        margin-bottom: $size-13px;
+    }
+
+    // &__item:not(:last-child) {
+       
+    // }
+
+
+    &__block {
+        display: flex;
+        justify-content: start;
+        gap: $gap-10;
+        border-radius: $size-20px;
+        border: 1px solid $beige-color;
+        padding: $gap-10;
+        background-color: $white-bg-color;
+    }
+
+    &__logo-block {
+       
+        padding: $size-8px;
+        border-radius: $gap-10;
+        background-color: $beige-color;
+    }
+
+    &__logo {
+        margin-bottom: 6px;
+        border-radius: 6px;
+        width: $size-62px;
+        height: $size-38px;
+        background-color: $white-bg-color;
+    }
+
+    &__element {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        width: $size-62px;
+        height: $size-18px;
+        background-color: $red-color;
+        color: $white-bg-color;
+        @include gilroy-bold;
+        font-size: $size-8px;
+        text-transform: uppercase;
+    }
+
+    &__center-name {
+        margin-bottom: 6px;
+        @include gilroy-bold;
+        color: $black-color;
+        font-size: $size-19-point-5-px;
+
+    }
+
+    &__center-address {
+        margin-bottom: 6px;
+        @include gilroy-semibold;
+        color: $black-color;
+        font-size: $size-14px;
+    }
+
+    &__center-schedule {
+        margin-right: $size-18px;
+    }
+
+    &__center-schedule,  &__center-phone {
+        @include gilroy-semibold;
+        color: $brown-color;
+        font-size: $size-14px;
+    }
+
+    //inputs
+    
+    &__input {
+        display: none;
+    }
+
+    &__input:checked + &__block {
+        border: 2px solid $red-color;
+    }
+
+
+}
+
+.shop-search {
+    padding: $gap-10;
+    &__input-block {
+        padding: 0 min(2.5vw, 17px) 0 min(3vw, 20px);
+        width: 100%;
+        height: min(8.2vw, 62px);
+        border: 1px solid $beige-color;
+        border-radius: min(2vw, 15px);
+     
+    }
+
+    &__input {
+        width: 92%;
+        font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: $fz-13px;
+        color: $black-color;
+
+
+        &::placeholder {
+            color: #BE967D;
+        }
+    }
+
+    &__btn {
+        width: min(3.3vw, 25px);
+        height: min(3.3vw, 25px);
+    }
+}
+
+.home-address {
+    margin-bottom: calc($size-66px + $size-12px);
+}
+
+.time {
+    &__container {
+        border-radius: $size-16and25;
+        border: 1px solid $beige-color;
+        background-color: $white-bg-color;
+
+    }
+}

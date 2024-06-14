@@ -167,10 +167,6 @@ button:focus {
   width: 100%;
 }
 
-.main {
-  height: 800px;
-}
-
 .container-header {
   position: relative;
   margin: auto;
@@ -493,6 +489,10 @@ button:focus {
   height: min(4.2vw, 32px);
 }
 
+.red-bg {
+  background-color: #DC1E1E;
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;
@@ -505,10 +505,15 @@ button:focus {
   font-weight: bold;
   line-height: normal;
   color: #FFFFFF;
-  font-size: min(3.3vw, 25px);
+  font-size: min(5vw, 38px);
   text-align: center;
   border-radius: min(2.5vw, 19px);
   background-color: #DC1E1E;
+}
+
+.save-btn_shop {
+  margin-top: min(2.5vw, 19px);
+  margin-bottom: min(3.1vw, 24px);
 }
 
 .input-box {

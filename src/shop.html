@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Петромост</title>
+    <link rel="stylesheet" href="./css/shop.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./js/sliders.js" defer></script>
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <div class="wrapper mobile-wrapper">
+       
+        <header class="header">
+            <div class="container-header">
+                <div class="header__items flex-box">
+                    <a href="index.html">
+                        <div class="header__main-logo __js-logo header_storefront" >
+                            <img class="object-fit-contain header__main-logo-img header__base-logo-img" src="./img/logotype/logo-petromost-start.svg" alt="Логотип Петромост">
+                            <!-- витрина, доставка, самовывоз -->
+                            <img class="object-fit-contain header__main-logo-img  header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
+                        </div>
+                    </a>
+                  
+                    <div class="header__search flex-box ">
+                        <input class="input header__input __js-searchInput " type="text" placeholder="Найти арбуз...">
+                        <button class="button header__search-btn">
+                            <img class="object-fit-contain" src="./img/icons/search.svg" alt="Иконка поиска">
+                        </button>
+                    </div>
+                    <button class="button header__menu-btn menu-btn ">
+
+                        <span class="menu-btn__line menu-btn__line_1"></span>
+                        <span class="menu-btn__line menu-btn__line_2"></span>
+                        <span class="menu-btn__line menu-btn__line_3"></span>
+
+                        <!-- <img class="object-fit-contain" src="./img/icons/menu-burger.svg" alt="Орнамент"> -->
+                    </button> 
+                </div>
+            </div>
+        </header>
+      
+        <main class="main">
+            <section class="subheader">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Выбор магазина</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+            </section>
+
+             <!-- Лента ссылок на доставку, поддержку и т.д. -->
+             <section class="info info_shop">
+                <div class="container">
+                    <div class="info-swiper">
+                        <div class="info__inner flex-box swiper-wrapper ">
+                            <div class="info__item swiper-slide red-bg">
+                                <a class="" href="#">
+                                    Возможен&nbsp;самовывоз 
+                                </a>
+                            </div>
+                            <div class="info__item swiper-slide red-bg">
+                                <a class="" href="#">
+                                    Петровский
+                                </a>
+                            </div>
+                            <div class="info__item swiper-slide">
+                                <a class="flex-box" href="#">
+                                    Пекарня
+                                </a>
+                            </div>
+                            <div class="info__item swiper-slide red-bg">
+                                <a class="" href="#">
+                                    Возможен&nbsp;самовывоз 
+                                </a>
+                            </div>
+                            <div class="info__item swiper-slide red-bg">
+                                <a class="" href="#">
+                                    Петровский
+                                </a>
+                            </div>
+                            <div class="info__item swiper-slide">
+                                <a class="flex-box" href="#">
+                                    Пекарня
+                                </a>
+                            </div>
+                        </div>  
+                    </div>
+                </div> 
+            </section>
+            
+            <!-- карта -->
+            <section class="map">
+                <div class="map__container">
+                    здеь будет карта
+                </div>
+            </section>
+
+            <section class="shops">
+                <ul class="shops__list">
+                    <li class="shops__li">
+                        <div class="dnd menu-link flex-box">
+                            <div class="menu-link__title">
+                                <h5>Список магазинов</h5>
+                            </div>
+                            <span class="dnd__icon">
+                                <img class="object-fit-contain shops__arrow" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </div>
+
+                        <div class="dnd__content">
+                            <div class="shops__option">
+                                <div class=" inner-dnd shops__city ">
+                                    <div class="shops__city-box flex-box">
+                                        <p class="shops__city-name">г. Архангельск</p>
+                                        <div class="inner-dnd__icon">
+                                            <img class="object-fit-contain shops__arrow" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </div>  
+                                    </div>
+                                  
+                                </div>
+                                <div class="inner-dnd__content">
+                                    <ul class="shops__address">
+                                        <li class="shops__item">
+                                            <label>
+                                                <input class="shops__input" type="radio" name="shop">
+                                                <div class="shops__block">
+                                                    <div class="shops__logo-block">
+                                                        <div class="shops__logo">
+                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                        </div>
+                                                        <p class="shops__element">
+                                                            САМОВЫВОЗ
+                                                        </p>
+                                                    </div>
+                                                    <div class="shops__text-block">
+                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                        <p class="shops__center-contacts">
+                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="shops__item">
+                                            <label>
+                                                <input class="shops__input" type="radio" name="shop">
+                                                <div class="shops__block">
+                                                    <div class="shops__logo-block">
+                                                        <div class="shops__logo">
+                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                        </div>
+                                                        <p class="shops__element">
+                                                            САМОВЫВОЗ
+                                                        </p>
+                                                    </div>
+                                                    <div class="shops__text-block">
+                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                        <p class="shops__center-contacts">
+                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="shops__item">
+                                            <label>
+                                                <input class="shops__input" type="radio" name="shop">
+                                                <div class="shops__block">
+                                                    <div class="shops__logo-block">
+                                                        <div class="shops__logo">
+                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                        </div>
+                                                        <p class="shops__element">
+                                                            САМОВЫВОЗ
+                                                        </p>
+                                                    </div>
+                                                    <div class="shops__text-block">
+                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                        <p class="shops__center-contacts">
+                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="shops__option">
+                                <div class=" inner-dnd shops__city ">
+                                    <div class="shops__city-box flex-box">
+                                        <p class="shops__city-name">г. Северодвинск</p>
+                                        <div class="inner-dnd__icon">
+                                            <img class="object-fit-contain shops__arrow" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </div>  
+                                    </div>
+                                  
+                                </div>
+                                <div class="inner-dnd__content">
+                                    <ul class="shops__address">
+                                        <li class="shops__item">
+                                            <label>
+                                                <input class="shops__input" type="radio" name="shop">
+                                                <div class="shops__block">
+                                                    <div class="shops__logo-block">
+                                                        <div class="shops__logo">
+                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                        </div>
+                                                        <p class="shops__element">
+                                                            САМОВЫВОЗ
+                                                        </p>
+                                                    </div>
+                                                    <div class="shops__text-block">
+                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                        <p class="shops__center-contacts">
+                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="shops__item">
+                                            <label>
+                                                <input class="shops__input" type="radio" name="shop">
+                                                <div class="shops__block">
+                                                    <div class="shops__logo-block">
+                                                        <div class="shops__logo">
+                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                        </div>
+                                                        <p class="shops__element">
+                                                            САМОВЫВОЗ
+                                                        </p>
+                                                    </div>
+                                                    <div class="shops__text-block">
+                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                        <p class="shops__center-contacts">
+                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="shops__item">
+                                            <label>
+                                                <input class="shops__input" type="radio" name="shop">
+                                                <div class="shops__block">
+                                                    <div class="shops__logo-block">
+                                                        <div class="shops__logo">
+                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                        </div>
+                                                        <p class="shops__element">
+                                                            САМОВЫВОЗ
+                                                        </p>
+                                                    </div>
+                                                    <div class="shops__text-block">
+                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                        <p class="shops__center-contacts">
+                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="shops__option">
+                                <div class=" inner-dnd shops__city ">
+                                    <div class="shops__city-box flex-box">
+                                        <p class="shops__city-name">г. Новодвинск</p>
+                                        <div class="inner-dnd__icon">
+                                            <img class="object-fit-contain shops__arrow" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </div>  
+                                    </div>
+                                  
+                                </div>
+                                <div class="inner-dnd__content">
+                                    <ul class="shops__address">
+                                        <li class="shops__item">
+                                            <label>
+                                                <input class="shops__input" type="radio" name="shop">
+                                                <div class="shops__block">
+                                                    <div class="shops__logo-block">
+                                                        <div class="shops__logo">
+                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                        </div>
+                                                        <p class="shops__element">
+                                                            САМОВЫВОЗ
+                                                        </p>
+                                                    </div>
+                                                    <div class="shops__text-block">
+                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                        <p class="shops__center-contacts">
+                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="shops__item">
+                                            <label>
+                                                <input class="shops__input" type="radio" name="shop">
+                                                <div class="shops__block">
+                                                    <div class="shops__logo-block">
+                                                        <div class="shops__logo">
+                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                        </div>
+                                                        <p class="shops__element">
+                                                            САМОВЫВОЗ
+                                                        </p>
+                                                    </div>
+                                                    <div class="shops__text-block">
+                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                        <p class="shops__center-contacts">
+                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="shops__item">
+                                            <label>
+                                                <input class="shops__input" type="radio" name="shop">
+                                                <div class="shops__block">
+                                                    <div class="shops__logo-block">
+                                                        <div class="shops__logo">
+                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                        </div>
+                                                        <p class="shops__element">
+                                                            САМОВЫВОЗ
+                                                        </p>
+                                                    </div>
+                                                    <div class="shops__text-block">
+                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                        <p class="shops__center-contacts">
+                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                          
+                        </div>
+
+                    </li>
+                
+                </ul>
+
+                <button class="button save-btn save-btn_shop">Перейти к покупкам</button>
+            </section>
+            
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+        </main>
+       
+
+        <!-- Bottom menu panel -->
+        <div class="menu-panel">
+            <div class="container ">
+                <ul class="menu-panel__items flex-box">
+                    <li class="menu-panel__item">
+                        <a class="menu-panel__link flex-box" href="#">
+                            <div class="menu-panel__icon">
+                                <img class="object-fit-contain" src="./img/icons/menu-panel-catalog.svg" alt="Иконка каталога">
+                            </div>
+                            <p class="menu-panel__name">Каталог</p>
+                        </a>
+                    </li>
+                    <li class="menu-panel__item">
+                        <a class="menu-panel__link flex-box" href="#">
+                            <div class="menu-panel__icon">
+                                <img class="object-fit-contain" src="./img/icons/menu-panel-scaner.svg" alt="Иконка сканера">
+                            </div>
+                            <p class="menu-panel__name">Сканер</p>
+                        </a>
+                    </li>
+                    <li class="menu-panel__item menu-panel_active">
+                        <a class="menu-panel__link flex-box" href="#">
+                            <div class="menu-panel__icon">
+                                <img class="object-fit-contain" src="./img/icons/menu-panel-orders.svg" alt="Иконка заказов">
+                            </div>
+                            <p class="menu-panel__name">Заказы</p>
+                        </a>
+                    </li>
+                    <li class="menu-panel__item">
+                        <a class="menu-panel__link flex-box" href="#">
+                            <div class="menu-panel__icon-block flex-box">
+                                <div class="menu-panel__icon">
+                                    <img class="object-fit-contain" src="./img/icons/menu-panel-like.svg" alt="Иконка избранного">
+                                </div>
+                                <span class="menu-panel__circle menu-panel__favorites-total" id="favorites-total">4</span>
+                            </div>
+                            <p class="menu-panel__name">Любимое</p>
+                        </a>
+                    </li>
+                    <li class="menu-panel__item">
+                        <a class="menu-panel__link flex-box" href="#">
+                            <div class="menu-panel__icon-block flex-box">
+                                <div class="menu-panel__icon">
+                                    <img class="object-fit-contain" src="./img/icons/menu-panel-cart.svg" alt="Иконка корзины">
+                                </div>
+                                <span class="menu-panel__circle menu-panel__cart-total" id="cart-total">3</span>
+                            </div>
+                            <p class="menu-panel__name">Корзина</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- для попапов -->
+       
+        <!-- поиск -->
+        <div class="overlay" id="search-overlay">
+            <div class="popup" id="search-popup">
+                <div class="container">
+                </div>
+                <img class="search-img" src="./img/icons/search.svg" alt="Иконка лупы">
+
+            </div>
+        </div>
+
+        <!-- меню -->
+        <div class="overlay" id="menu-overlay">
+            <div class="popup menu" id="menu-popup">
+                <div class="menu__header flex-box">
+                    <h2 class="title">Меню</h2>
+                    <button class="button menu__profile flex-box">
+                        Личный кабинет
+                    </button>
+                </div>
+
+                <!-- выбор вариантов доставки -->
+                <div class="delivery-variants">
+                    <div class="container">
+                        <div class="delivery-variants__wrapper">
+                            <div class="delivery-variants__banner">
+                                <h4>
+                                    Выберите способ 
+                                    получения заказа
+                                </h4>
+                                <p>
+                                    Выберите тип доставки, адрес доставки или получения заказа, для корректного отображения каталога, остатков товаров и цен
+                                </p>
+                            </div>
+                            <div class="delivery-variants__choosen flex-box">
+                                <button type="button" class="button delivery-variants__var __js-active" id="delivery-address">
+                                    Доставка
+                                </button>
+                                <button type="button" class="button delivery-variants__var " id="selfdelivery-address">
+                                    Самовывоз
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- список меню -->
+                <ul class="menu__list">
+                    <li class="menu__li ">
+                        <a href="#" class="menu__li-with-content menu-link flex-box menu__message __js-active">
+                            <div class="menu-link__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/menu/bell.svg" alt="Иконка колокольчика">
+                                </div>
+                                <h5>Центр уведомлений</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                        <div class="menu__content ">
+                            <div class="menu__messages">
+                                <!-- активное сообщение -->
+                                <div class="message message__active">
+                                    <div class="message__header flex-box">
+                                        <span class="message__sender">Петровский</span>
+                                        <span class="message__time">9:00</span>
+                                    </div>
+                                    <div class="message__text">
+                                        Вам доступен кэшбэк на новые категории товаров в этом месяце, успейте выбрать!
+                                        <br>
+                                        Ознакомиться с категориями в личном кабинете на сайте: карта-снегири.рф
+                                    </div>
+                                </div>
+    
+                                <!-- неактивное сообщение -->
+                                <div class="message">
+                                    <div class="message__header flex-box">
+                                        <span class="message__sender">Петровский</span>
+                                        <span class="message__time">Пн, 09:00</span>
+                                    </div>
+                                    <div class="message__text">
+                                        Летнее предложение: -300 рублей на доставку продуктов по промокоду “Жара”
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box menu__message">
+                            <div class="menu-link__title">
+                                <h5>Доставка и оплата</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li ">
+                        <a href="#" class="menu__li-with-content menu-link flex-box menu__message">
+                            <div class="menu-link__title">
+                                <h5>О компании</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+
+                        <div class="menu__content">
+                            <div class="menu__container">
+                                Example
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="menu__li"> 
+                        <a href="#" class="menu-link flex-box menu__message">
+                            <div class="menu-link__title">
+                                <h5>Поддержка</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box menu__message">
+                            <div class="menu-link__title">
+                                <h5>Оптовым покупателям</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box menu__message">
+                            <div class="menu-link__title">
+                                <h5>Отзывы</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/menu-vk-icon.svg" alt="Иконка Вконтакте">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box menu__message">
+                            <div class="menu-link__title">
+                                <h5>Выйти</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/exit-icon.svg" alt="Иконка выхода">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="container">
+                    <a class="menu__help-info" href="tel:203018">Справочная информация: 20-30-18</a>
+                </div>
+            
+            </div>
+        </div>
+
+        <!-- личный кабинет -->
+        <div class="overlay" id="profile-overlay">
+            <div class="popup profile" id="profile-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Личный кабинет</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+             
+                <!-- меню личного профиля-->
+                <ul class="menu__list">
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box" id="profile-data">
+                            <div class="menu-link__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/profile/note.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Данные профиля</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/profile/watch.svg" alt="Иконка записи">
+                                </div>
+                                <h5>История покупок</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box" id="my-card">
+                            <div class="menu-link__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/profile/card.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Моя карта «Снегири»</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li"> 
+                        <a href="#" class="menu-link flex-box" id="address">
+                            <div class="menu-link__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/profile/address.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Адреса доставки</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/profile/flag.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Мои акции</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+            
+            </div>
+        </div>
+
+        <!-- Данные профиля -->
+        <div class="overlay" id="profile-data-overlay">
+            <div class="popup profile-data" id="profile-data-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Данные профиля</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+                
+                <!-- меню Данных профиля-->
+                <ul class="menu__list">
+                    <li class="menu__li ">
+                        <a href="#" class="menu__li-with-content menu-link flex-box" id="profile-data">
+                            <div class="menu-link__title">
+                                <h5>Персональные данные</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                        <div class="menu__content">
+                            <div class="menu__container">
+                                <div class="input-box">
+                                    <input class="input-box__input" type="text" name="user-name" placeholder="Имя" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <input class="input-box__input" type="text" name="user-last-name" placeholder="Фамилия" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <input class="input-box__input" type="text" name="user-faather-name" placeholder="Отчество" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <input class="input-box__input" type="tel" name="user-phone" id="user-phone" placeholder="Телефон" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <input class="input-box__input" type="email" name="user-email" id="user-email" placeholder="E-mail" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title">
+                                <h5>Уведомления</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title">
+                                <h5>Безопасность</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="button save-btn">Сохранить изменения</button>
+            </div>
+        </div>
+
+         <!-- Моя карта "Снигери" -->
+         <div class="overlay" id="my-card-overlay">
+            <div class="popup my-card" id="my-card-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Моя карта</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+
+                <div class="my-card__card">
+                    <div class="container">
+                        <div class="card">
+                           <p class="card__header">Карта «Снегири»</p> 
+                           <p class="card__number">********4095</p>
+                           <div class="card__scanner">
+                                <div class="card__info flex-box">
+                                    <p class="card__welcome">
+                                        <span class="card__user-name">Максим</span>, на Вашей карте «Снегири»  
+                                    </p>
+                                    <div class="card__bonus flex-box">
+                                        <div class="card__to-hide">
+                                            <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain">
+                                        </div>
+                                        <div class="card__bonus-count">
+                                            567,01 б
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__scanner-img">
+                                    <img class="object-fit-contain" src="./img/card/scan.svg" alt="Штрихкод">
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-card__info">
+                    <p class="my-card__light-text">
+                        Мы автоматически получили номер Вашей карты из системы лояльности «Снегири» для Вашей безопасности. Управлять Вашей картой лояльности вы можете на сайте карта-снегири.рф
+
+                    </p>
+                    <p class="my-card__dark-text">
+                        Карта «Снегири» это:
+                        <br>
+                        <br>
+                        › Участвовать в акциях для владельцев карт «Снегири»
+                        <br>
+                        <br>
+                        › Накапливать бонусы
+                        <br>
+                        <br>
+                        › Получать Персональные предложения! (скидки или
+                        › боунсы)
+                        <br>
+                        <br>
+                        › Получать Персональные скидки на любимые Вами    
+                        › товары
+                        <br>
+                        <br>
+                        › Контролировать свои покупки
+                        <br>
+                        <br>
+                        › Подробная информация на сайте карта-снегири.рф
+                    </p>
+                </div>
+                <div class="container">
+                    <a class="menu__help-info" href="#">
+                        <span class="flex-box">Перейти в управление картой</span></a>
+                </div>               
+            </div>
+        </div>
+
+
+        <!-- Адреса доставки -->
+        <div class="overlay" id="address-overlay">
+            <div class="popup address" id="address-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Адреса доставки</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+
+                <div class="address__variants">
+                    <!-- адрес, который выбран -->
+                    <div class="address__option">
+                        <label class="radio">
+                            <input class="radio__input" type="radio" name="address">
+                            <div class="radio__block">
+                                <p class="address__choosed">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
+                                <p class="address__note">Выбран как основной</p>
+                            </div>
+                            
+                        </label>
+                    </div>
+                
+                    <!-- адрес на выбор  -->
+                    <div class="address__option">
+                        <label class="radio__dates radio">
+                            <input class="radio__input" type="radio" name="address">
+                            <div class="radio__block">
+                            <p class="address__for-choosing">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <button type="button" class="address__add-btn address__add-btn_with-plus">
+                        Новый адрес
+                    </button>
+                </div>
+            </div>
+        </div>
+
+         <!-- Адреса для доставки -->
+         <div class="overlay" id="delivery-address-overlay">
+            <div class="popup" id="delivery-address-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Доставка</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+                
+                <div class="menu">
+                    <!-- список меню -->
+                    <ul class="menu__list">
+                        <li class="menu__li ">
+                            <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
+                                <div class="menu-link__title">
+                                    <h5>Указать адрес</h5>
+                                </div>
+                                <span class="menu-link__icon">
+                                    <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                </span>
+                            </a>
+                            <div class="menu__content ">
+                                <div class="address__variants">
+                                    <!-- адрес на выбор -->
+                                    <div class="address__option">
+                                        <label class="radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                                <p class="address__city">г. Архангельск</p>
+                                                <div class="radio__delete-address">
+                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                                </div>  
+                                            </div>
+                                           
+                                         
+                                        </label>
+                                       
+                                    </div>
+                                
+                                    <!-- адрес на выбор  -->
+                                    <div class="address__option">
+                                        <label class="radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                                <p class="address__city">г. Свердловск</p>
+                                                <div class="radio__delete-address">
+                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                                </div>  
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                     <!-- адрес на выбор  -->
+                                     <div class="address__option">
+                                        <label class=" radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                                <p class="address__city">г. Новодвинск</p>
+                                                <div class="radio__delete-address">
+                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                                </div> 
+                                            </div>
+                                            
+                                        </label>
+                                       
+                                        
+                                    </div>
+                
+                                    <button type="button" class="address__add-btn address__add-btn_map flex-box">
+                                        <span>Выбрать адрес на карте</span>
+                                        <span class="cross-icon">
+                                            <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                        </span>
+                                    </button>
+
+                                    <div class="address__wrapper">
+                                        <div class="input-box">
+                                            <input class="input-box__input" type="text" name="street" placeholder="Улица" value>
+                                            <div class="input-box__cross">
+                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                            </div>
+                                        </div>
+                                        <div class="input-box input-box_w48">
+                                            <input class="input-box__input" type="text" name="house" placeholder="Дом" value>
+                                            <div class="input-box__cross">
+                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                            </div>
+                                        </div>
+
+                                        <div class="input-box input-box_w48">
+                                            <input class="input-box__input" type="text" name="building" placeholder="Корпус" value>
+                                            <div class="input-box__cross">
+                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                            </div>
+                                        </div>
+
+                                        <div class="input-box input-box_w48">
+                                            <input class="input-box__input" type="text" name="flat" placeholder="Квартира" value>
+                                            <div class="input-box__cross">
+                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                            </div>
+                                        </div>
+
+                                        <div class="input-box input-box_w48">
+                                            <input class="input-box__input" type="text" name="entrance" placeholder="Подъезд" value>
+                                            <div class="input-box__cross">
+                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                            </div>
+                                        </div>
+
+                                        <div class="input-box input-box_w48">
+                                            <input class="input-box__input" type="text" name="floor" placeholder="Этаж" value>
+                                            <div class="input-box__cross">
+                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                  
+                                </div>
+                            </div>
+                        </li>
+    
+                        <li class="menu__li ">
+                            <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
+                                <div class="menu-link__title">
+                                    <h5>Выбрать из сохраненных</h5>
+                                </div>
+                                <span class="menu-link__icon">
+                                    <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                </span>
+                            </a>
+                            <div class="menu__content ">
+                                <div class="address__variants">
+                                    <!-- адрес на выбор  -->
+                                    <div class="address__option">
+                                        <label class="radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                                <p class="address__saved-city">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
+                                                <div class="radio__delete-address">
+                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                                </div>  
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                     <!-- адрес на выбор  -->
+                                     <div class="address__option">
+                                        <label class=" radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                                <p class="address__saved-city">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
+                                                <div class="radio__delete-address">
+                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                                </div> 
+                                            </div>
+                                            
+                                        </label>
+                                       
+                                        
+                                    </div>
+                
+                                   
+                                </div>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                </div>
+
+
+                
+                <button class="button save-btn">Сохранить</button>
+            </div>
+        </div>
+
+          <!-- Адреса доставки для самовывоза -->
+          <div class="overlay" id="selfdelivery-address-overlay">
+            <div class="popup " id="selfdelivery-address-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Доставка</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+
+                
+                <li class="menu__li ">
+                    <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
+                        <div class="menu-link__title">
+                            <h5>Указать адрес</h5>
+                        </div>
+                        <span class="menu-link__icon">
+                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                        </span>
+                    </a>
+                    <div class="menu__content ">
+                        <div class="address__variants">
+                             <!-- адрес на выбор -->
+                             <div class="address__option">
+                                <label class="radio">
+                                    <input class="radio__input" type="radio" name="address">
+                                    <div class="radio__block">
+                                        <p class="address__city">г. Архангельск</p>
+                                        <div class="radio__delete-address">
+                                            <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                        </div>  
+                                    </div>
+                                </label>
+                               
+                            </div>
+
+                              <!-- адрес на выбор  -->
+                              <div class="address__option">
+                                <label class="address-radio">
+                                    <input class="address-radio__input" type="radio" name="selfdelivery-address">
+                                    <div class="address-radio__exact-address">
+                                        <p class="address-radio__text">пр-т. Ленинградский, 2</p>
+                                        <p class="address-radio__choosed">Выбрано</p>
+                                        <p class="address-radio__for-choosing">Заберу тут</p>
+                                    </div>
+                                </label>
+                            </div>
+    
+                            <!-- адрес на выбор  -->
+                            <div class="address__option">
+                                <label class="address-radio">
+                                    <input class="address-radio__input" type="radio" name="selfdelivery-address">
+                                    <div class="address-radio__exact-address">
+                                        <p class="address-radio__text">пр-т. Ленинградский, 255</p>
+                                        <p class="address-radio__choosed">Выбрано</p>
+                                        <p class="address-radio__for-choosing">Заберу тут</p>
+                                    </div>
+                                </label>
+                            </div>
+    
+                            <!-- адрес на выбор  -->
+                            <div class="address__option">
+                                <label class="address-radio">
+                                    <input class="address-radio__input" type="radio" name="selfdelivery-address">
+                                    <div class="address-radio__exact-address">
+                                        <p class="address-radio__text">ул. Нагонрная, 1</p>
+                                        <p class="address-radio__choosed">Выбрано</p>
+                                        <p class="address-radio__for-choosing">Заберу тут</p>
+                                    </div>
+                                </label>
+                            </div>
+                        
+                             <!-- адрес на выбор -->
+                             <div class="address__option">
+                                <label class="radio">
+                                    <input class="radio__input" type="radio" name="address">
+                                    <div class="radio__block">
+                                        <p class="address__city">г. Северодвинск</p>
+                                        <div class="radio__delete-address">
+                                            <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                        </div>  
+                                    </div>
+                                </label>
+                               
+                            </div>
+    
+                             <!-- адрес на выбор -->
+                             <div class="address__option">
+                                <label class="radio">
+                                    <input class="radio__input" type="radio" name="address">
+                                    <div class="radio__block">
+                                        <p class="address__city">г. Новодвинск</p>
+                                        <div class="radio__delete-address">
+                                            <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                        </div>  
+                                    </div>
+                                </label>
+                               
+                            </div>
+    
+                            <button type="button" class="address__add-btn address__add-btn_map flex-box">
+                                <span>Выбрать адрес на карте</span>
+                                <span class="cross-icon">
+                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                </span>
+                            </button>
+                            
+                          
+                          
+                        </div>
+
+                    </div>
+                
+
+                </li>
+
+                <div class="address__notes-block">
+    
+                                
+                    <ul>
+                        <li class="address__note-text">
+                            Заказ можно оформить на сегодня до 17:30, после 17:30 заказ будет отправлен к выдаче на завтра не ранее 10:00
+                        </li>
+                        <li class="address__note-text">
+                            Забрать заказ можно после СМС-оповещения «Заказ собран и готов к выдаче»
+                        </li>
+                        <li class="address__note-text">
+                            Заказ будет хранится в выбраном магазине до 21:00 в день выдачи
+                        </li>
+                        <li class="address__note-text">
+                            Подробнее об услуге «Самовывоз» можно ознакомиться <a href="#" style="color: #DE1C23;">по ссылке</a> 
+                        </li>
+                    </ul>
+                </div>
+
+
+                <button class="button save-btn">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

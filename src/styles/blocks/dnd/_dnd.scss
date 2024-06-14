@@ -1,0 +1,43 @@
+.dnd {
+    &__icon {
+        width: $size-13px;
+        height: $size-13px;
+        transition: all .3s ease-in-out;
+    }
+
+
+    &__content {
+        // padding-top: $size-12px;
+        // padding-bottom: $size-12px;
+        max-height: 0;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        overflow: hidden;
+    }
+
+    &__icon.__js-opened {
+        transform: rotate(-180deg);
+    }
+}
+
+.inner-dnd {
+    &__icon {
+        display: flex;
+        width: $size-13px;
+        height: $size-13px;
+        transition: all .3s ease-in-out;
+    } 
+
+    &__content {
+        // padding-top: $size-12px;
+        // padding-bottom: $size-12px;
+        // padding: $size-12px;
+        max-height: 0;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        overflow: hidden;
+      
+    }
+
+  
+}

@@ -26,6 +26,15 @@
         }
         
     }
+
+    &_shop {
+        .red-bg {
+            background-color: $red-color;
+            a {
+                color: $white-bg-color;
+            }
+        }
+    }
 }
 
 

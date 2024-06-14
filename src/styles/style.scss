@@ -34,9 +34,9 @@ button:focus {
     width: 100%;
 }
 
-.main {
-    height: 800px;
-}
+// .main {
+//     // height: 1800px;
+// }
 
 .container-header {
 
@@ -400,6 +400,11 @@ button:focus {
     width: $size-16and25;
     height: $size-16and25;
 }
+
+.red-bg {
+    background-color: $red-color;
+}
+
 
 @import './components/save-btn';
 @import './components/input-box';
