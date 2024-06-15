@@ -1,0 +1,29 @@
+.notification {
+    &__content {
+        position: relative;
+        margin-top: $size-13px;
+        margin-bottom: $size-19-point-5-px;
+        padding: $size-12px $size-20px $size-12px $s70px;
+        background-color: $head-bg-color;
+        border: 1px solid $beige-color;
+        border-radius: $size-19-point-5-px;
+        @include gilroy-semibold;
+        font-size: $size-13px;
+        color: $black-color;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: $size-20px;
+            transform: translateY(-50%);
+            display: block;
+            width: $size-30px;
+            height: $size-30px;
+            background-image: url('../img/icons/note_red.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            
+        }
+    }
+}

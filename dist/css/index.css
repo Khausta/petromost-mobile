@@ -493,6 +493,32 @@ button:focus {
   background-color: #DC1E1E;
 }
 
+.easy-border {
+  border-radius: min(5vw, 38px);
+  border: 1px solid #F5E6D6;
+}
+
+.counter {
+  width: min(40vw, 307px);
+  margin-bottom: min(1.67vw, 13px);
+  border-radius: min(2vw, 16px);
+  background-color: #FAC71D;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(3.75vw, 29px);
+}
+.counter__btn {
+  background-color: #FFFAF5;
+  border-radius: min(2vw, 16px);
+  width: min(7.7vw, 55px);
+  height: min(7.7vw, 55px);
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;

@@ -400,6 +400,34 @@ button:focus {
     background-color: $red-color;
 }
 
+.easy-border {
+    border-radius: $size-19-point-5-px;
+    border: 1px solid $beige-color;
+}
+
+
+.counter {
+    width: min(40vw, 307px);
+    margin-bottom: $size-6and5;;
+    border-radius: $size-8px;
+    background-color: #FAC71D;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include gilroy-bold;
+    font-size: $size-14px;
+
+    &__btn {
+        background-color: #FFFAF5;
+        border-radius: $size-8px;
+        width: $s28px;
+        height: $s28px;
+
+    }
+}
+
+
 
 @import './components/save-btn';
 @import './components/input-box';

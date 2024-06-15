@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Петромост</title>
-    <link rel="stylesheet" href="./css/shop.css">
+    <link rel="stylesheet" href="./css/cart.css">
    
     <script src="./js/main.js" defer="defer"></script>
 </head>
@@ -43,283 +43,186 @@
         <main class="main">
             <section class="subheader">
                 <div class="popup__total-header flex-box">
-                    <h2 class="title">Адрес доставки</h2>
+                    <h2 class="title">Корзина</h2>
                     <button class="button flex-box return-btn">
                         Назад
                     </button>
                 </div>
             </section>
 
-             <!-- Лента ссылок на доставку, поддержку и т.д. -->
-             <section class="shop-search">
+            <section class="notification">
                 <div class="container">
-                    <div class="shop-search__input-block flex-box">
-                        <input class="input shop-search__input" type="text" value name="shop-address" placeholder="Найти магазин по адресу...">
-                        <button class="button shop-search__btn">
-                            <img class="object-fit-contain" src="./img/icons/search.svg" alt="Иконка поиска">
-                        </button>
-                    </div>
-                </div> 
-            </section>
-            
-            <!-- карта -->
-            <section class="map">
-                <div class="map__container">
-                    здеь будет карта
+                    <p class="notification__content">
+                        Вы можете указать Ваши пожелания по срокам 
+                        годности или особенностям товара раскрыв 
+                        выпадающее меню «показать дополнительные опции»
+                    </p>
                 </div>
             </section>
 
-            <!-- выбор адреса -->
-            <section class="home-address">
-                <div class="menu">
-                    <!-- список меню -->
-                    <ul class="menu__list">
-                        <li class="menu__li">
-                            <div class="menu__li-with-content menu-link flex-box __js-active">
-                                <div class="menu-link__title">
-                                    <h5>Указать адрес</h5>
+            <section class="cart-info">
+                <p class="cart-info__text">
+                    Для бесплатной доставки закажите ещё на 726,45 рублей
+                </p>
+                <p class="white-box__note white-box__note_home">
+                    Минимальная сумма заказа для БЕСПЛАТНОЙ доставки составляет 1000 руб.
+                </p>
+
+            </section>
+
+            <section class="cart">
+                <div class="container">
+                    <div class="cart__wrapper">
+
+                        <!-- товар в корзине -->
+                        <div class="good easy-border">
+                            <div class="good__header">
+                                <div class="good__photo-wrapper">
+                                    <!-- фото -->
                                 </div>
-                                <span class="menu-link__icon">
-                                    <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
-                                </span>
+                                <div class="good__info">
+                                    <p class="good__name">Наименование товара</p>
+                                    <p class="good__weight">1кг</p>
+                                    <div class="good__price-box">
+                                        <span class="good__price">139,98 ₽</span>
+                                        <span class="good__discount">-34%</span>
+                                    </div>
+                                    <p class="good__small-text">
+                                        <img class="good__snegiri" src="./img/icons/snegiri.svg" alt="Акция по карте СНЕГИРИ">
+                                        <span>76,29 ₽ 1 шт./</span>
+                                        <span class="good__small-text_bold">до 28.03.23</span>
+                                    </p>
+                                    <div class="counter">
+                                        <button class="button counter__btn">
+                                            +
+                                        </button>
+                                        <p class="counter__price">
+                                            <span class="counter__sum">1</span>
+                                            / шт.
+                                        </p>
+                                        <button class="button counter__btn">
+                                            -
+                                        </button>
+                                    </div>
+                                    <p class="good__benefit">
+                                        Ваша выгода: 26,39 ₽
+                                    </p>
+                                </div>
+
                             </div>
-                            <div class="menu__content">
-                                <div class="address__variants">
-                                    <!-- адрес на выбор -->
-                                    <div class="address__option">
-                                        <label class="radio">
-                                            <input class="radio__input" type="radio" name="address">
-                                            <div class="radio__block">
-                                                <p class="address__city">г. Архангельск</p>
-                                                <div class="radio__delete-address">
-                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
-                                                </div>  
-                                            </div>
-                                           
-                                         
-                                        </label>
-                                       
-                                    </div>
-                                
-                                    <!-- адрес на выбор  -->
-                                    <div class="address__option">
-                                        <label class="radio">
-                                            <input class="radio__input" type="radio" name="address">
-                                            <div class="radio__block">
-                                                <p class="address__city">г. Свердловск</p>
-                                                <div class="radio__delete-address">
-                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
-                                                </div>  
-                                            </div>
-                                        </label>
-                                    </div>
-    
-                                     <!-- адрес на выбор  -->
-                                     <div class="address__option">
-                                        <label class="radio">
-                                            <input class="radio__input" type="radio" name="address">
-                                            <div class="radio__block">
-                                                <p class="address__city">г. Новодвинск</p>
-                                                <div class="radio__delete-address">
-                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
-                                                </div> 
-                                            </div>
+                            <div class="good__footer">
+                                <div class="good__dnd">
+                                    <div class="dnd">
+                                        <div class="good__dnd-header flex-box">
                                             
-                                        </label>
-                                       
-                                        
-                                    </div>
-                
-                                  
-    
-                                    <div class="address__wrapper">
-                                        <div class="input-box">
-                                            <input class="input-box__input" type="text" name="street" placeholder="Улица" value>
-                                            <div class="input-box__cross">
-                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
-                                            </div>
-                                        </div>
-                                        <div class="input-box input-box_w48">
-                                            <input class="input-box__input" type="text" name="house" placeholder="Дом" value>
-                                            <div class="input-box__cross">
-                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
-                                            </div>
-                                        </div>
-    
-                                        <div class="input-box input-box_w48">
-                                            <input class="input-box__input" type="text" name="building" placeholder="Корпус" value>
-                                            <div class="input-box__cross">
-                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
-                                            </div>
-                                        </div>
-    
-                                        <div class="input-box input-box_w48">
-                                            <input class="input-box__input" type="text" name="flat" placeholder="Квартира" value>
-                                            <div class="input-box__cross">
-                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
-                                            </div>
-                                        </div>
-    
-                                        <div class="input-box input-box_w48">
-                                            <input class="input-box__input" type="text" name="entrance" placeholder="Подъезд" value>
-                                            <div class="input-box__cross">
-                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
-                                            </div>
-                                        </div>
-    
-                                        <div class="input-box input-box_w48">
-                                            <input class="input-box__input" type="text" name="floor" placeholder="Этаж" value>
-                                            <div class="input-box__cross">
-                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                            <p>Показать дополнительную информцию</p>
+                                            <div class="dnd__icon good__dnd-icon">
+                                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                                             </div>
                                         </div>
                                     </div>
-    
-                                  
-                                </div>
-                            </div>
-                        </li>
-    
-                        <li class="menu__li">
-                            <div class="menu__li-with-content menu-link flex-box __js-active">
-                                <div class="menu-link__title">
-                                    <h5>Выбрать из сохраненных</h5>
-                                </div>
-                                <span class="menu-link__icon">
-                                    <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
-                                </span>
-                            </div>
-                            <div class="menu__content">
-                                <div class="address__variants">
-                                    <!-- адрес на выбор  -->
-                                    <div class="address__option">
-                                        <label class="radio">
-                                            <input class="radio__input" type="radio" name="address">
-                                            <div class="radio__block">
-                                                <p class="address__saved-city">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
-                                                <div class="radio__delete-address">
-                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
-                                                </div>  
-                                            </div>
-                                        </label>
+                                    <div class="dnd__content">
+                                       <p style="background-color: blueviolet;"> контент</p>
                                     </div>
-    
-                                     <!-- адрес на выбор  -->
-                                     <div class="address__option">
-                                        <label class="radio">
-                                            <input class="radio__input" type="radio" name="address">
-                                            <div class="radio__block">
-                                                <p class="address__saved-city">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
-                                                <div class="radio__delete-address">
-                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
-                                                </div> 
-                                            </div>
-                                            
-                                        </label>
-                                       
-                                        
-                                    </div>
-                
                                    
                                 </div>
-                            </div>
-                        </li>
-
-                    
-                    </ul>
-                    
-                </div>
-               
-            </section>
-
-            <section class="time">
-                <div class="container">
-                    <div class="time__container">
-                        <div class="white-box">
-                            <div>
-                                <div class="white-box__header">
-                                    <h5>Выбрать время</h5>
-                                    <p>Стоимость доставки: 249 руб.</p>
-                                    <!-- <div class="white-box__icon">
-                                        <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
-                                    </div> -->
+                                <div class="good__comment">
+                                    <input type="text" class="input good__comment-input" placeholder="Написать комментарий к заказу...">
                                 </div>
                             </div>
-                            <div>
-                                <!-- переключатель дней СЕГОДНЯ, ЗАВТРА, ПОСЛЕЗАВТРА -->
-                                <div class="white-box__days">
-                                    <label class="white-box__label">
-                                        <input class="white-box__input" type="radio" name="day">
-                                        <p class="white-box__radio">
-                                            Сегодня
+
+                        </div>
+
+                        <!-- товар в корзине -->
+                        <div class="good easy-border">
+                            <div class="good__header">
+                                <div class="good__photo-wrapper">
+                                    <!-- фото -->
+                                </div>
+                                <div class="good__info">
+                                    <p class="good__name">Наименование товара</p>
+                                    <p class="good__weight">1кг</p>
+                                    <div class="good__price-box">
+                                        <span class="good__price">139,98 ₽</span>
+                                        <span class="good__discount">-34%</span>
+                                    </div>
+                                    <p class="good__small-text">
+                                        <img class="good__snegiri" src="./img/icons/snegiri.svg" alt="Акция по карте СНЕГИРИ">
+                                        <span>76,29 ₽ 1 шт./</span>
+                                        <span class="good__small-text_bold">до 28.03.23</span>
+                                    </p>
+                                    <div class="counter">
+                                        <button class="button counter__btn">
+                                            +
+                                        </button>
+                                        <p class="counter__price">
+                                            <span class="counter__sum">1</span>
+                                            / шт.
                                         </p>
-                                    </label>
-                                    <label class="white-box__label">
-                                        <input class="white-box__input" type="radio" name="day">
-                                        <p class="white-box__radio">
-                                            Завтра
-                                        </p>
-                                    </label>
-                                    <label class="white-box__label">
-                                        <input class="white-box__input" type="radio" name="day">
-                                        <p class="white-box__radio">
-                                            Послезавтра
-                                        </p>
-                                    </label>
+                                        <button class="button counter__btn">
+                                            -
+                                        </button>
+                                    </div>
+                                    <p class="good__benefit">
+                                        Ваша выгода: 26,39 ₽
+                                    </p>
                                 </div>
 
-                                <!-- выбор времени -->
-                                <div class="white-box__times">
-                                    <div class="white-box__item white-box__disabled">
-                                        <label class="white-box__time-label">
-                                            <input class="white-box__input" type="radio" name="time" disabled="true">
-                                            <p class="white-box__time-radio">
-                                                <s>09:00 - 12:00</s>
-                                            </p>
-                                        </label>
-                                    </div>
-                                    <div class="white-box__item">
-                                        <label class="white-box__time-label">
-                                            <input class="white-box__input" type="radio" name="time">
-                                            <p class="white-box__time-radio">
-                                                12:00 - 15:00
-                                            </p>
-                                        </label>
-                                    </div>
-                                    <div class="white-box__item">
-                                        <label class="white-box__time-label">
-                                            <input class="white-box__input" type="radio" name="time">
-                                            <p class="white-box__time-radio">
-                                                15:00 - 18:00
-                                            </p>
-                                        </label>
-                                    </div>
-                                    <div class="white-box__item">
-                                        <label class="white-box__time-label">
-                                            <input class="white-box__input" type="radio" name="time">
-                                            <p class="white-box__time-radio">
-                                                18:00 - 21:00
-                                            </p>
-                                        </label>
-                                    </div>
-                                    <div class="white-box__item">
-                                        <label class="white-box__time-label">
-                                            <input class="white-box__input" type="radio" name="time">
-                                            <p class="white-box__time-radio">
-                                                21:00 - 23:00
-                                            </p>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <p class="white-box__note white-box__note_home">
-                                    Минимальная сумма заказа для БЕСПЛАТНОЙ доставки составляет 1000 руб.
-                                </p>
                             </div>
+                            <div class="good__footer">
+                                <div class="good__dnd">
+                                    <div class="dnd">
+                                        <div class="good__dnd-header flex-box">
+                                            
+                                            <p>Показать дополнительную информцию</p>
+                                            <div class="dnd__icon good__dnd-icon">
+                                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dnd__content">
+                                       <p style="background-color: blueviolet;"> контент</p>
+                                    </div>
+                                   
+                                </div>
+                                <div class="good__comment">
+                                    <input type="text" class="input good__comment-input" placeholder="Написать комментарий к заказу...">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- пакет -->
+                        <div class="good easy-border">
+                            <div class="good__header good__header_puck">
+                                <div class="good__photo-wrapper good__photo-wrapper_puck">
+                                    <!-- фото -->
+                                </div>
+                                <div class="good__info">
+                                    <p class="good__name">Пакет Петровский майка</p>
+                                    <p class="good__weight">40х70 х 1 шт.</p>
+                                    <p class="good__puck-note">
+                                        Количество упаковки  расчитано автоматически
+                                    </p>
+                                    <p class="good__puck-price">
+                                        9,89 ₽
+                                    </p>
+                                    
+                                   
+                                </div>
+
+                            </div>
+                          
+
                         </div>
                     </div>
                 </div>
             </section>
+
+
+          
+
+           
 
             <button class="button save-btn save-btn_shop">Сохранить изменения </button> 
         </main>

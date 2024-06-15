@@ -1,0 +1,153 @@
+.good {
+    padding: $size-8px;
+    &__header {
+        margin-bottom: $size-16and25;
+        display: flex;
+        gap: $size-8px;
+    }
+    &__photo-wrapper {
+        width: min(47vw, 358px);
+        height: min(39vw, 287px);
+        border-radius: $gap-10;
+        border: 1px solid $beige-color;
+        background-image: url('../img/cart/cart-bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+
+       
+    }
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__name, &__weight {
+       
+        @include gilroy-semibold;
+        font-size: $size-13px;
+        color: $black-color;
+    }
+
+    &__weight {
+        margin-bottom: $size-8px;
+    }
+
+    &__price-box {
+        margin-bottom: $size-8px;
+        display: flex;
+        align-items: center;
+
+    }
+    &__price {
+        display: inline-block;
+        margin-right: 1vw;
+        @include gilroy-bold;
+        font-size: $size-19-point-5-px;
+        color: $black-color;
+    }
+
+    &__discount {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc($size-16and25 * 2);
+        height: $size-16and25;
+        background-color: $red-color;
+        border-radius: $size-6and5;
+        @include gilroy-bold;
+        color: $white-bg-color;
+        font-size: $gap-10;
+
+    }
+
+    &__small-text {
+        display: flex;
+        align-items: center;
+        gap: $size-6and5;
+        margin-bottom: $size-6and5;
+        @include gilroy-semibold;
+        color: #BE957D;
+        font-size: $size-8px;
+
+        &_bold {
+            @include gilroy-bold;
+        }
+    }
+
+    &__benefit {
+        padding: 1vw 0;
+        @include gilroy-bold;
+        font-size: $gap-10;
+        text-align: center;
+        border-radius: $gap-10;
+        border: 1px solid $beige-color;
+        background-color: $head-bg-color;
+        color: $black-color;
+    }
+
+    &__dnd {
+        margin-bottom: $size-12px;
+    }
+
+    &__dnd-header {
+        position: relative; 
+        @include gilroy-bold;
+        font-size: $size-14px;
+        color: $black-color;
+        
+    }
+
+    &__dnd-icon {
+        transform: rotate(90deg);
+
+        &.__js-opened {
+            transform: rotate(-90deg);
+        }
+    }
+
+    &__comment-input {
+        width: 100%;
+        padding: $size-8px $size-13px;
+        @include gilroy-bold;
+        font-size: $size-14px;
+        border-radius: $gap-10;
+        border: 1px solid $beige-color;
+        background-color: $head-bg-color;
+        color: $black-color;
+    }
+    &__photo-wrapper_puck {
+        flex-shrink: 0;
+        width: min(47vw, 358px);
+        height: min(31vw, 216px);
+    }
+
+    &__puck-note {
+        padding-top: $size-14px;
+        padding-bottom: $size-8px;
+        @include gilroy-semibold;
+        font-size: $gap-10;
+        color: $brown-color;
+    }
+
+    &__puck-price {
+        @include gilroy-semibold;
+        text-align: center;
+        padding: $size-8px;
+        background-color: #F5E6D6;
+        border-radius: $size-8px;
+        color: $brown-color;
+    }
+
+    &__header_puck {
+        margin-bottom: 0;
+    }
+
+    
+
+
+
+}
