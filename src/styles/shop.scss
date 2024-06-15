@@ -13,6 +13,7 @@
 @import 'blocks/card/card';
 @import 'blocks/map/map-container';
 @import 'blocks/dnd/dnd';
+@import 'blocks/white-box/white-box';
 
 .shops {
     margin-bottom: calc($size-66px + $size-12px);
@@ -218,9 +219,9 @@
     }
 }
 
-.home-address {
-    margin-bottom: calc($size-66px + $size-12px);
-}
+// .home-address {
+//     
+// }
 
 .time {
     &__container {

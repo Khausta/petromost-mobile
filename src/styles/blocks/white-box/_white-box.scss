@@ -1,0 +1,197 @@
+.white-box {
+    position: relative;
+    padding: $size-12px;
+    border-radius: $size-16and25;
+    background-color: $white-bg-color;
+    border: 1px solid $beige-color;
+    @include gilroy-bold;
+    color: $black-color;
+    font-size: $size-14px;
+
+    &_sand-bg {
+        padding: 0;
+        background-color: $head-bg-color;
+    }
+
+    &__header {
+      
+
+        h5 {
+            margin-bottom: $size-5px;
+            font-size: $size-20px;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        width: $size-13px;
+        height: $size-13px;
+        top: $size-23px;
+        right: $size-23px;
+        transform: rotateZ(180deg);
+    }
+
+    &__label {
+        width: 33%;
+        height: 100%;
+    }
+
+    &__days {
+        margin-bottom: $size-11px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: $size-18px;
+        border-radius: $size-13px;
+        border: 1px solid $beige-color;
+        background-color: $head-bg-color;
+        height: $size-32px;
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__radio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // width: 33%;
+        height: 100%;
+        border-radius: $size-13px;
+    }
+
+    &__input:checked + &__radio {
+        background-color: $red-color;
+        color: $white-bg-color;
+    }
+
+    &__times {
+        margin-bottom: $size-11px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__item {
+        margin-bottom: $size-12px;
+        width: 48%; 
+        border-radius: $size-13px;
+        border: 1px solid $beige-color;
+        overflow: hidden;
+    }
+
+    
+
+  
+     
+        &__time-radio {
+            position: relative;
+            padding-left: calc($s55px - 8px);
+            padding-top: $size-8px;
+            padding-bottom: $size-8px;
+            width: 100%; 
+            // min-height: min(12vw, 90px);
+            // width: 100%;
+            // display: inline-block;
+            // @include white-blocks;
+            // padding-left: min(13.3vw, 102px);
+            // padding-top: min(2.92vw, 22px);
+            transition: all .3s ease-in-out;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: $size-8px;
+                transform: translateY(-50%);
+                display: block;
+                width: $size-19-point-5-px;
+                height: $size-19-point-5-px;
+                transition: all .3s ease-in-out;
+                background-image: url('../img/radio/beige-radio.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+    
+            &::after { 
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: $size-8px;
+                transform: translateY(-50%);
+                display: none;
+                width: $size-19-point-5-px;
+                height: $size-19-point-5-px;
+                background-image: url('../img/radio/red-radio.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                transition: all .3s ease-in-out;
+            }
+        }
+
+        &__input:checked + &__time-radio {
+            background-color: $head-bg-color;
+        }
+    
+        &__input:checked + &__time-radio::before {
+            display: none; 
+           
+        }
+    
+        &__input:checked + &__time-radio::after {
+            opacity: 1;
+            display: block;
+        }
+        
+        &__disabled {
+           opacity: 0.5;
+           color: $brown-color;
+        }
+
+        &__note {
+            position: relative;
+            padding-left: $size-32px;
+            @include gilroy-semibold;
+            color: $brown-color;
+            font-size: $size-13px;
+
+            
+        }
+
+        &__note_agreement {
+            padding-top: $size-12px;
+            padding-left: $size-32px;
+            padding-right: $size-12px;
+            padding-bottom: $size-8px;
+            @include gilroy-bold;
+            font-size: $size-14px;
+            border-bottom: 1px solid $beige-color;
+        }
+
+        &__note:before {
+            content: '';
+            position: absolute;
+            top: $size-12px;
+            left: $size-8px;
+            // transform: translateY(-50%);
+            display: block;
+            width: $size-19-point-5-px;
+            height: $size-19-point-5-px;
+            background-image: url('../img/icons/note.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: all .3s ease-in-out;
+        }
+
+        &__note-text {
+            padding: $gap-10 $size-12px;
+            @include gilroy-bold;
+            font-size: $gap-10;
+            color: $brown-color;
+        }
+    
+    
+    
+}
