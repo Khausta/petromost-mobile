@@ -1,4 +1,5 @@
 .white-box {
+    margin-bottom: $gap-10;
     position: relative;
     padding: $size-12px;
     border-radius: $size-16and25;
@@ -8,7 +9,10 @@
     color: $black-color;
     font-size: $size-14px;
 
+
     &_sand-bg {
+        margin-top: $gap-10;
+        margin-bottom: $gap-10;
         padding: 0;
         background-color: $head-bg-color;
     }
@@ -28,7 +32,11 @@
         height: $size-13px;
         top: $size-23px;
         right: $size-23px;
-        transform: rotateZ(180deg);
+        transform: rotateZ(90deg);
+    }
+
+    &__icon.__js-opened {
+        transform: rotateZ(-90deg);
     }
 
     &__label {

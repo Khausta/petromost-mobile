@@ -224,6 +224,12 @@
 // }
 
 .time {
+    margin-top: $gap-10;
+    margin-bottom: $gap-10;
+
+    .white-box {
+        margin-bottom: 0;
+    }
     &__container {
         border-radius: $size-16and25;
         border: 1px solid $beige-color;
