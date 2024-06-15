@@ -1,21 +1,19 @@
 @import './style';
-@import 'blocks/head-inner/head-inner';
+
 @import 'blocks/menu-panel/menu-panel';
 @import 'blocks/header/header';
 @import 'blocks/info/info';
-@import 'blocks/footer/footer';
-@import 'blocks/categories/categories';
-@import 'components/category';
-@import 'blocks/chance/chance';
+
+
 @import 'blocks/address/address';
 @import 'blocks/menu/menu';
 @import 'blocks/profile-data/profile-data';
 @import 'blocks/card/card';
-@import 'blocks/map/map-container';
+
 @import 'blocks/dnd/dnd';
 @import 'blocks/white-box/white-box';
 @import 'blocks/notification-box/notification-box';
-@import 'blocks/good/good';
+// @import 'blocks/good/good';  
 
 .cart-info {
    
