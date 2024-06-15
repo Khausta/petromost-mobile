@@ -1,5 +1,7 @@
 .good {
+    margin-bottom: $size-12px;
     padding: $size-8px;
+    background-color: $white-bg-color;
     &__header {
         margin-bottom: $size-16and25;
         display: flex;
