@@ -14,192 +14,49 @@
 @import 'blocks/white-box/white-box';
 @import 'blocks/notification-box/notification-box';
 // @import 'blocks/good/good';  
+@import 'blocks/order-details/order-details';
+@import 'blocks/schema/schema';
+@import 'blocks/two-btns/two-btns';
 
-.cart-info {
-   
-    padding: 0 $size-23px;
-    
-    &__text {
-        margin-bottom:  $size-19-point-5-px;
-        @include gilroy-bold;
-        font-size: $size-19-point-5-px;
-        color: $black-color;
-    }
-
-    .white-box__note {
-        margin-bottom: $s28px;
-    }
-}
-
-.cart {
-    margin-bottom: $size-12px;
-    padding-top: $size-12px;
+.path {
     background-color: $head-bg-color;
-    border-top: 1px solid $beige-color;
-    border-bottom: 1px solid $beige-color;
-}
+    padding: $size-16and25 0;
+    border: none;
 
-.delivery-question {
-    margin-bottom: $gap-10;
-    &__inputs {
-        display: grid;
-        gap: $size-12px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-    }
-
-    &__input {
-        display: none;
-    }
-
-    &__text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    &__item {
         position: relative;
-        height: $s70px;;
-        padding: $size-6and5 $gap-10 $size-6and5 $size-52px;
-        background-color: $white-bg-color;
-        @include gilroy-bold;
-        font-size: $size-14px; 
+        display: inline-block;
+        padding: 0.6vw $size-20px 0.6vw 1vw;
+        border-radius: $size-6and5;
+        border: 1px solid $beige-color;
+        background-color: $head-bg-color;
 
-       
-        transition: all .3s ease-in-out;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: min(4.2vw, 32px);
-            transform: translateY(-50%);
-            display: block;
-            width: $size-19-point-5-px;
-            height: $size-19-point-5-px;
-            transition: all .3s ease-in-out;
-            background-image: url('../img/radio/beige-radio.svg');
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-
-        &::after { 
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: min(4.2vw, 32px);
-            transform: translateY(-50%);
-            display: none;
-            width: $size-19-point-5-px;
-            height: $size-19-point-5-px;
-            background-image: url('../img/radio/red-radio.svg');
-            background-repeat: no-repeat;
-            background-size: contain;
-            transition: all .3s ease-in-out;
-        }
-        
-    }
-
-    &__input:checked + &__text {
-        color: $red-color;
-    }
-
-    &__input:checked + &__text::before {
-        display: none; 
-    }
-
-   
-  
-
-    &__input:checked + &__text::after {
-        opacity: 1; 
-        display: block; 
-    } 
-
-}
-
-.order-sum {
-    &__header {
-        display: flex;
-       
-        padding: $size-8px $size-16and25;
-        border-bottom: 1px solid $beige-color;
-    }
-
-    &__sum {
-        align-items: center;
-        margin-left: auto;
-        display: flex;
-        gap: $size-8px;
-    }
-
-    &__text {
-        @include gilroy-bold;
-        font-size: $size-20px;
-        color: $brown-color;
-    }
-
-    &__total {
-        @include gilroy-bold;
-        font-size: $size-20px;
-        color: $black-color;
-    }
-
-    &__arrow {
-        transform: rotate(90deg);
-
-        &.__js-opened {
-            
-            transform: rotate(-90deg);
-        }
-    }
-
-    &__content {
-        padding: $size-11px 0 $size-14px $size-16and25;
-    }
-
-    &__info {
-        @include gilroy-bold;
-        font-size: $size-14px;
-        &_1 {
+        a {
+            @include gilroy-bold;
+            font-size: $size-13px;
             color: $brown-color;
         }
-        &_2 {
-            color: $black-color;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: $size-6and5;
+            height: $gap-10;
+            top: 50%;
+            right: $size-8px;
+            transform: translateY(-50%);
+            background-image: url('../img/menu/arrow.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
     }
 
-    
-
-    
-
-    
-}
-
-.two-btns {
-    margin-bottom: $s70px;
-    &__btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: min(45vw, 346px);
-        height: $s40px;
-        @include gilroy-bold;
-        font-size: $size-14px;
-        text-transform: uppercase;
-        border-radius: $size-13px;
-
-        &_beige {
-            background-color: $head-bg-color;
-            border: 1px solid $beige-color;
-            color: $black-color;
-        }
-
-        &_red {
-            background-color: $red-color;
-            color: $white-bg-color;
-        }
+    &__icon {
+        margin-left: $size-8px;
+        display: inline-block;
+        height: $gap-10;
     }
-
-    
-
-    
 }
+

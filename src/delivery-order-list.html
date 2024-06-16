@@ -2,43 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Петромост</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/main.js" defer="defer"></script>
+    <link rel="stylesheet" href="./css/order.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+      <script src="./js/sliders.js" defer></script>
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
     <div class="wrapper mobile-wrapper">
-        <section class="head-inner">
-            <div class="container-header">
-                <div class="head-inner__items flex-box">
-                    <div class="head-inner__good-choice">
-                        <img class="object-fit-contain" src="./img/icons/good-choice.svg" alt="Знак хорошего выбора">
-                    </div>
-                    <a class="head-inner__logo" href="index.html">
-                        <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип">
-                    </a>
-                    <div class="head-inner__horses">
-                        <img class="object-fit-contain" src="./img/head-horses.svg" alt="Орнамент">
-                    </div>
-                </div>
-            </div>
-        </section>
+      
         <header class="header">
             <div class="container-header">
                 <div class="header__items flex-box">
-                    <div class="header__main-logo __js-logo">
+                    <div class="header__main-logo __js-logo header_delivery" >
                         <img class="object-fit-contain header__main-logo-img header__base-logo-img" src="./img/logotype/logo-petromost-start.svg" alt="Логотип Петромост">
                         <!-- витрина, доставка, самовывоз -->
-                        <img class="object-fit-contain header__main-logo-img header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
+                        <img class="object-fit-contain header__main-logo-img  header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
                     </div>
-                    <div class="header__search flex-box">
-                        <input class="input header__input __js-searchInput" type="text" placeholder="Найти арбуз...">
+                    <div class="header__search flex-box ">
+                        <input class="input header__input __js-searchInput " type="text" placeholder="Найти арбуз...">
                         <button class="button header__search-btn">
                             <img class="object-fit-contain" src="./img/icons/search.svg" alt="Иконка поиска">
                         </button>
                     </div>
-                    <button class="button header__menu-btn menu-btn">
+                    <button class="button header__menu-btn menu-btn ">
 
                         <span class="menu-btn__line menu-btn__line_1"></span>
                         <span class="menu-btn__line menu-btn__line_2"></span>
@@ -50,94 +43,212 @@
             </div>
         </header>
       
-        <main class="main">            
-            <section class="main-card">
+        <main class="main main_beige-bg">            
+            <!-- Хлебные крошки -->
+            <section class="info path">
                 <div class="container">
-                    <div class="main-card__banner">
-                        <p class="main-card__header">Карта «Снегири»</p> 
-                        <p class="main-card__welcome">
-                            <span class="main-card__user-name">Максим</span>, на&nbsp;Вашей&nbsp;карте
-                        </p>
-                        <div class="main-card__footer flex-box">
-                               
-                            <div class="main-card__box">
-                                <p class="main-card__bonus-count card__bonus-count">
-                                    567,01 б
-                                </p>
-                                <div class="card__to-hide main-card__to-hide">
-                                    <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain">
-                                </div>
+                    <div class="path-swiper">
+                        <div class="info__inner flex-box swiper-wrapper">
+                            <div class="info__item path__item swiper-slide">
+                                <a class="" href="#">
+                                    Главная
+                                    <!-- <img class="path__icon" src="./img/menu/arrow.svg" alt="Иконка стрелки"> -->
+                                </a>
                             </div>
-                            <div class="main-card__box" id="card-magnifier">
-                                <div class="main-card__scanner-img">
-                                    <img class="object-fit-contain" src="./img/card/main-scan.svg" alt="Штрихкод">
-                                </div>
-                                <div class="main-card__magnifier">
-                                    <img src="./img/card/magnifier.svg" alt="Иконка глаза" class="object-fit-contain">
-                                </div>
+                            <div class="info__item path__item swiper-slide">
+                                <a class="" href="#">
+                                    Каталог
+                                </a>
                             </div>
-
-                        </div>
+                            <div class="info__item path__item swiper-slide">
+                                <a class="" href="#">
+                                    Заказы
+                                </a>
+                            </div>
+                           
+                        </div>  
                     </div>
                 </div>
+            
             </section>
 
-            <!-- Витрина -->
-           <section class="storefront">
-                <div class="container">
-                    <a href="./storefront.html" class="storefront__content">
-                        <h2 class="storefront__head">
-                            Витрина
-                        </h2>
-                        <p class="storefront__text">
-                            Ознакомиться с&nbsp;ассортиментом&nbsp;выбранного магазина
-                        </p>
-                    </a>
-                </div>
-           </section>
-
-           <section class="delivery">
-                <div class="container">
-                    <div class="actual__wrapper flex-box">
-                        <a href="./delivery.html">
-                            <div class="actual-card delivery__card_1 flex-box">
-                                <h3 class="delivery__title">
-                                    Доставка
-                                </h3>
-                                <div class="delivery__btn" href="#">
-                                    <img class="object-fit-contain" src="./img/white-arrow.svg" alt="Иконка стрелки">
+            <section class="order-details ">
+                    <div class="container">
+                        <div class="order-details__wrapper easy-border">
+                            <div class="order-details__header flex-box">
+                                <h2 class="order-details__title">
+                                    Заказ №210889
+                                </h2>
+                                <!-- добавляем только один класс (order-details__rejected или order-details__accepted)  -->
+                                <div class="order-details__indicator-wrapper order-details__accepted">
+                                    <div class="order-details__indicator order-details__indicator_accepted">
+                                        Принят
+                                    </div>
+                                    <div class="order-details__indicator order-details__indicator_done">
+                                        Выполнен
+                                    </div>
+                                    <div class="order-details__indicator order-details__indicator_rejected">
+                                        Отклонен
+                                    </div>
                                 </div>
                                 
+                            
                             </div>
-                        </a>
-                        <a href="./selfdelivery.html">
-                            <div class="actual-card delivery__card_2 flex-box">
-                                <h3 class="delivery__title">
-                                    Самовывоз
-                                </h3>
-                                <div class="delivery__btn" href="#">
-                                    <img class="object-fit-contain" src="./img/white-arrow.svg" alt="Иконка стрелки">
+                            
+                            <div class="order-details__schema">
+                                <div class="schema">
+                                    <div class="schema__item schema__item_done">
+                                        <p class="schema__header">
+                                            Принят
+                                        </p>
+                                        <div class="schema__done">
+                                            <div class="schema__arrow"></div>
+                                        </div>
+                                    </div>
+
+                                    <span class="schema__line"></span>
+                                
+                                    <div class="schema__item">
+                                        <p class="schema__header">
+                                            Собран
+                                        </p>
+                                        <div class="schema__done">
+                                            <div class="schema__arrow"></div>
+                                        </div>
+                                    </div>
+
+                                    <span class="schema__line"></span>
+                                    <div class="schema__item">
+                                        <p class="schema__header">
+                                            В&nbsp;пути
+                                        </p>
+                                        <div class="schema__done">
+                                            <div class="schema__arrow"></div>
+                                        </div>
+                                    </div>
+
+                                    <span class="schema__line"></span>
+                                
+                                    <div class="schema__item ">
+                                        <p class="schema__header">
+                                            Выдан
+                                        </p>
+                                        <div class="schema__done">
+                                            <div class="schema__arrow"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </a>
-                        
+                            <div class="order-details__content">
+                                <p class="order-details__text">
+                                    Дата заказа: 22.12.2023 - Дата доставки: 22.12.2023 <br>
+                                    Тип получения: Доставка <br>
+                                    Вид оплаты: Банковской картой курьеру<br>
+                                    Адрес выдачи: г. Архангельск, ул. Выучейского, д. 28, корп. 1, кв. 40, подъезд 1, этаж 2<br>
+                                    Сумма заказа: 5989,09 р. (ваша скидка: 403,40 р.) Стоимость доставки: О р.
+                                </p>
+                            </div>
+                            <div class="order-details__footer">
+                                <section class="two-btns two-btns_order">
+                                    <div class="container flex-box">
+                                        <button class="button two-btns__btn two-btns__btn_beige two-btns__btn_brown-color">Повторить заказ</button>
+                                        <button class="button two-btns__btn two-btns__btn_beige ">Отменить заказ</button>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    
                     </div>
-                </div> 
             </section>
-            <section class="web-site">
+
+
+            <section class="order-details ">
                 <div class="container">
-                    <div class="web-site__info">
-                        <p>Сайт&nbsp;временно
-                            недоступен</p>
+                    <div class="order-details__wrapper easy-border">
+                        <div class="order-details__header flex-box">
+                            <h2 class="order-details__title">
+                                Заказ №210889
+                            </h2>
+                            <!-- добавляем только один класс (order-details__rejected или order-details__accepted)  -->
+                            <div class="order-details__indicator-wrapper order-details__done">
+                                <div class="order-details__indicator order-details__indicator_accepted">
+                                    Принят
+                                </div>
+                                <div class="order-details__indicator order-details__indicator_done">
+                                    Выполнен
+                                </div>
+                                <div class="order-details__indicator order-details__indicator_rejected">
+                                    Отклонен
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-details__content">
+                            <p class="order-details__text">
+                                Дата заказа: 22.12.2023 - Дата доставки: 22.12.2023 <br>
+                                Тип получения: Доставка <br>
+                                Вид оплаты: Банковской картой курьеру<br>
+                                Адрес выдачи: г. Архангельск, ул. Выучейского, д. 28, корп. 1, кв. 40, подъезд 1, этаж 2<br>
+                                Сумма заказа: 5989,09 р. (ваша скидка: 403,40 р.) Стоимость доставки: О р.
+                            </p>
+                        </div>
+                        <div class="order-details__footer">
+                            <section class="two-btns two-btns_order">
+                                <div class="container flex-box">
+                                    <button class="button two-btns__btn two-btns__btn_beige two-btns__btn_brown-color">Повторить заказ</button>
+                                    <button class="button two-btns__btn two-btns__btn_beige ">Оценить заказ</button>
+                                </div>
+                            </section>
+                        </div>
                     </div>
+                
                 </div>
             </section>
+
+            <section class="order-details ">
+                <div class="container">
+                    <div class="order-details__wrapper easy-border">
+                        <div class="order-details__header flex-box">
+                            <h2 class="order-details__title">
+                                Заказ №210889
+                            </h2>
+                            <!-- добавляем только один класс (order-details__rejected или order-details__accepted)  -->
+                            <div class="order-details__indicator-wrapper order-details__rejected">
+                                <div class="order-details__indicator order-details__indicator_accepted">
+                                    Принят
+                                </div>
+                                <div class="order-details__indicator order-details__indicator_done">
+                                    Выполнен
+                                </div>
+                                <div class="order-details__indicator order-details__indicator_rejected">
+                                    Отклонен
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-details__content">
+                            <p class="order-details__text">
+                                Дата заказа: 22.12.2023 - Дата доставки: 22.12.2023 <br>
+                                Тип получения: Доставка <br>
+                                Вид оплаты: Банковской картой курьеру<br>
+                                Адрес выдачи: г. Архангельск, ул. Выучейского, д. 28, корп. 1, кв. 40, подъезд 1, этаж 2<br>
+                                Сумма заказа: 5989,09 р. (ваша скидка: 403,40 р.) Стоимость доставки: О р.
+                            </p>
+                        </div>
+                        <div class="order-details__footer order-details__footer_repeat">
+                            <button class="button order-details__repeat">Повторить заказ</button>
+                        </div>
+                    </div>
+                
+                </div>
+            </section>
+
         </main>
        
 
         <!-- Bottom menu panel -->
         <div class="menu-panel">
-            <div class="container">
+            <div class="container ">
                 <ul class="menu-panel__items flex-box">
                     <li class="menu-panel__item">
                         <a class="menu-panel__link flex-box" href="#">
@@ -191,32 +302,7 @@
 
         <!-- для попапов -->
       
-           <!-- карта для показа кассиру -->
-        <div class="overlay" id="show-card-overlay">
-            <div class="container">
-                <div class="show-card" id="show-card-popup">
-                
-                    <div class="main-card">
-                        <div class="show-card__box">
-                            <p class="main-card__header">Карта «Снегири»</p> 
-                            <p class="main-card__welcome">
-                                <span class="main-card__user-name">Покажите 
-                                    ее&nbsp;кассиру
-                            </span></p>
-                            <div class="show-card__scaner">
-                                <div class="show-card__scaner-img">
-                                    <img class="object-fit-contain" src="./img/card/big-scanner-example.png" alt="Штрихкод">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
-               
-
-        </div>
-
+   
         <!-- поиск -->
         <div class="overlay" id="search-overlay">
             <div class="popup" id="search-popup">
@@ -254,7 +340,7 @@
                                 <button type="button" class="button delivery-variants__var __js-active" id="delivery-address">
                                     Доставка
                                 </button>
-                                <button type="button" class="button delivery-variants__var" id="selfdelivery-address">
+                                <button type="button" class="button delivery-variants__var " id="selfdelivery-address">
                                     Самовывоз
                                 </button>
                             </div>
@@ -264,7 +350,7 @@
                 </div>
                 <!-- список меню -->
                 <ul class="menu__list">
-                    <li class="menu__li">
+                    <li class="menu__li ">
                         <a href="#" class="menu__li-with-content menu-link flex-box menu__message __js-active">
                             <div class="menu-link__title">
                                 <div class="menu-link__prefix">
@@ -276,7 +362,7 @@
                                 <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                             </span>
                         </a>
-                        <div class="menu__content">
+                        <div class="menu__content ">
                             <div class="menu__messages">
                                 <!-- активное сообщение -->
                                 <div class="message message__active">
@@ -314,7 +400,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="menu__li">
+                    <li class="menu__li ">
                         <a href="#" class="menu__li-with-content menu-link flex-box menu__message">
                             <div class="menu-link__title">
                                 <h5>О компании</h5>
@@ -458,7 +544,7 @@
                         </a>
                     </li>
             
-            </ul></div>
+            </div>
         </div>
 
         <!-- Данные профиля -->
@@ -473,7 +559,7 @@
                 
                 <!-- меню Данных профиля-->
                 <ul class="menu__list">
-                    <li class="menu__li">
+                    <li class="menu__li ">
                         <a href="#" class="menu__li-with-content menu-link flex-box" id="profile-data">
                             <div class="menu-link__title">
                                 <h5>Персональные данные</h5>
@@ -671,7 +757,7 @@
                 <div class="menu">
                     <!-- список меню -->
                     <ul class="menu__list">
-                        <li class="menu__li">
+                        <li class="menu__li ">
                             <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
                                 <div class="menu-link__title">
                                     <h5>Указать адрес</h5>
@@ -680,7 +766,7 @@
                                     <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                                 </span>
                             </a>
-                            <div class="menu__content">
+                            <div class="menu__content ">
                                 <div class="address__variants">
                                     <!-- адрес на выбор -->
                                     <div class="address__option">
@@ -713,7 +799,7 @@
 
                                      <!-- адрес на выбор  -->
                                      <div class="address__option">
-                                        <label class="radio">
+                                        <label class=" radio">
                                             <input class="radio__input" type="radio" name="address">
                                             <div class="radio__block">
                                                 <p class="address__city">г. Новодвинск</p>
@@ -782,7 +868,7 @@
                             </div>
                         </li>
     
-                        <li class="menu__li">
+                        <li class="menu__li ">
                             <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
                                 <div class="menu-link__title">
                                     <h5>Выбрать из сохраненных</h5>
@@ -791,7 +877,7 @@
                                     <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                                 </span>
                             </a>
-                            <div class="menu__content">
+                            <div class="menu__content ">
                                 <div class="address__variants">
                                     <!-- адрес на выбор  -->
                                     <div class="address__option">
@@ -808,7 +894,7 @@
 
                                      <!-- адрес на выбор  -->
                                      <div class="address__option">
-                                        <label class="radio">
+                                        <label class=" radio">
                                             <input class="radio__input" type="radio" name="address">
                                             <div class="radio__block">
                                                 <p class="address__saved-city">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
@@ -838,7 +924,7 @@
 
           <!-- Адреса доставки для самовывоза -->
           <div class="overlay" id="selfdelivery-address-overlay">
-            <div class="popup" id="selfdelivery-address-popup">
+            <div class="popup " id="selfdelivery-address-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Доставка</h2>
                     <button class="button flex-box return-btn">
@@ -847,7 +933,7 @@
                 </div>
 
                 
-                <li class="menu__li">
+                <li class="menu__li ">
                     <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
                         <div class="menu-link__title">
                             <h5>Указать адрес</h5>
@@ -856,7 +942,7 @@
                             <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                         </span>
                     </a>
-                    <div class="menu__content">
+                    <div class="menu__content ">
                         <div class="address__variants">
                              <!-- адрес на выбор -->
                              <div class="address__option">

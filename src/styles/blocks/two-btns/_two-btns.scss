@@ -1,0 +1,39 @@
+.two-btns {
+    margin-bottom: $s70px;
+
+    &_order {
+        margin-bottom: 0;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // width: min(45vw, 346px);
+        width: 48%;
+        height: $s40px;
+        @include gilroy-bold;
+        font-size: $size-14px;
+        // text-transform: uppercase;
+        border-radius: $size-13px;
+
+        &_beige {
+            background-color: $head-bg-color;
+            border: 1px solid $beige-color;
+            color: $black-color;
+        }
+
+        &_red {
+            background-color: $red-color;
+            color: $white-bg-color;
+        }
+
+        &_brown-color {
+            color: $brown-color;
+        }
+    }
+
+    
+
+    
+}

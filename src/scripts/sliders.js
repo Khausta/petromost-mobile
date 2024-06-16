@@ -14,6 +14,12 @@ const bannerSwiper = new Swiper('.banner-swiper', {
     loop: true,
     loopFillGroupWithBlank: true,
   });
+
+    
+  const pathSwiper = new Swiper('.path-swiper', {
+    spaceBetween: '1%',
+    slidesPerView: 'auto',
+  });
   
   
   const chanceSwiper = new Swiper('.chance-swiper', {

@@ -167,6 +167,13 @@ button:focus {
   width: 100%;
 }
 
+.main {
+  margin-bottom: min(18vw, 137px);
+}
+.main_beige-bg {
+  background-color: #FFFAF5;
+}
+
 .container-header {
   position: relative;
   margin: auto;
@@ -231,7 +238,7 @@ button:focus {
 }
 
 .overlay {
-  left: -300px;
+  left: -500px;
   z-index: -100;
   /* фон затемнения */
   background-color: rgba(0, 0, 0, 0.65);
@@ -265,6 +272,14 @@ button:focus {
 .popup__total-header {
   background-color: #FFFFFF;
   border-bottom: 1px solid #F5E6D6;
+}
+.popup__title {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(5.1vw, 40px);
+  color: #240405;
+  padding: 1vw min(5vw, 38px);
 }
 
 .overlay.__js-active {

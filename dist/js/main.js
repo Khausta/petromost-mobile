@@ -84,6 +84,11 @@ var popups = {
     trigger: document.querySelector('#selfdelivery-address'),
     overlay: document.querySelector('#selfdelivery-address-overlay'),
     content: document.querySelector('#selfdelivery-address-popup')
+  },
+  'order': {
+    trigger: document.querySelector('#order'),
+    overlay: document.querySelector('#order-overlay'),
+    content: document.querySelector('#order-popup')
   }
 };
 
@@ -179,6 +184,9 @@ popups.deliveryAddress.trigger.addEventListener('click', function () {
 });
 popups.selfdeliveryAddress.trigger.addEventListener('click', function () {
   openAnyPopup('selfdeliveryAddress');
+});
+popups.order.trigger.addEventListener('click', function () {
+  openAnyPopup('order');
 });
 function closeCard() {
   document.body.style.overflow = 'auto';

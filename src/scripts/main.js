@@ -90,6 +90,11 @@ const popups = {
     overlay: document.querySelector('#selfdelivery-address-overlay'),
     content: document.querySelector('#selfdelivery-address-popup'),
   },
+  'order': {
+    trigger: document.querySelector('#order'),
+    overlay: document.querySelector('#order-overlay'),
+    content: document.querySelector('#order-popup'),
+  },
   
  
   
@@ -196,6 +201,10 @@ popups.deliveryAddress.trigger.addEventListener('click', () => {
 
 popups.selfdeliveryAddress.trigger.addEventListener('click', () => {
   openAnyPopup('selfdeliveryAddress');
+});
+
+popups.order.trigger.addEventListener('click', () => {
+  openAnyPopup('order');
 });
 
 
