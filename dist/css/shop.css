@@ -1207,6 +1207,9 @@ button:focus {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
+.menu__content_white-bg {
+  background-color: #FFFFFF;
+}
 .menu__messages {
   padding: min(2.5vw, 19px) min(2.5vw, 19px) 0 min(2.5vw, 19px);
   border-bottom: 1px solid #F5E6D6;

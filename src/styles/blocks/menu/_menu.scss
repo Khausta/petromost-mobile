@@ -82,6 +82,10 @@
         max-height: 0;
         overflow: hidden;
         transition: all .3s ease-in-out;
+
+        &_white-bg {
+            background-color: $white-bg-color;
+        }
     }
 
     &__messages {

@@ -1,0 +1,187 @@
+.big-card {
+    &__wrapper {
+        border-radius: $size-18px;
+        overflow: hidden;
+    }
+
+    &__photo-box {
+        position: relative;
+        width: 100%;
+        height: min(63vw, 484px);
+        overflow: hidden;
+        background-color: $head-bg-color;
+    }
+
+    &__photo {
+        width: 100%;
+        height: 100%;
+       
+        background-image: url('../img/cart/cart-bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+       
+    
+    }
+
+    .cashback {
+        position: absolute;
+        left: $size-12px;
+        top: $size-12px;
+        @include gilroy-bold;
+        color: $black-color;
+        font-size: $size-14px;
+        line-height: 1.1;
+        padding: 0 $size-13px;
+        border-radius: $gap-10;
+        background-color: #FAC71D;
+    }
+
+    &__photo {
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-position: center;
+        }
+    }
+
+    &__photo::before {
+        
+        content: '';
+        position: absolute;
+        top: $gap-10;
+        right: $gap-10;
+        // left: 50%;
+        // transform: translateX(-50%);
+        display: block;
+       
+ 
+        width: $size-13px;
+        height: $size-13px;
+        background-image: url('../img/icons/no-like.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 10;
+    }
+
+    &__wrapper.liked {
+        .big-card__photo::before {
+            background-image: url('../img/icons/liked.svg')
+        }
+    }
+
+    &__photo::after {
+        padding: 0.6vw $gap-10;
+        position: absolute;
+        left: $size-14px;
+        
+        display: block;
+        content: 'СОБСТВЕННОЕ ПРОИЗВОДСТВО';
+        width: max-content;
+        bottom: $gap-10;
+        @include gilroy-bold;
+
+        text-transform: uppercase;
+        font-size: $gap-10;
+ 
+        border-radius: $gap-10;
+        background-color: $beige-color;
+        color: $brown-color;
+        z-index: 10;
+    }
+
+   
+}
+
+.data {
+    padding: $size-14px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__origin {
+        @include gilroy-semibold;
+        color: $brown-color;
+        font-size: $size-13px;
+    }
+
+    &__stars {
+        flex-shrink: 0;
+    }
+
+    &__star {
+        display: inline-block;
+        width: $size-18px;
+        height: $size-18px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+   
+
+        &_full {
+            background-image: url('../img/icons/star.svg');
+        }
+
+        &_empty {
+            background-image: url('../img/icons/empty-star.svg');
+        }
+    } 
+
+    .title {
+        padding-left: 0;
+    }
+
+    .good__price {
+        margin-right: $size-13px;
+        font-size: $size-32px;
+    }
+
+    .good__discount {
+        width: $size-62px;
+        height: $size-32px;
+        font-size: $size-16and25;
+    }
+    .good__small-text {
+        font-size: $size-16and25;
+    }
+
+    .good__snegiri {
+        width: $s80px;
+        height: $size-18px;
+    }
+    
+    &__menu {
+        @include gilroy-bold;
+        color: $black-color;    
+        font-size: $size-14px;
+        border-bottom: none;
+    }
+
+    .menu-link {
+        border-bottom: none;
+        border-top: 1px solid $beige-color;
+    }
+
+    .menu__li {
+        border-bottom: 1px solid $beige-color;
+    }
+
+   
+
+
+
+
+}
+
+.same {
+    &__title {
+        padding: $size-13px 0;
+        @include gilroy-bold;
+        color: $black-color;
+        font-size: $size-20px;
+    }
+}
