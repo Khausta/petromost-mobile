@@ -274,6 +274,7 @@ button:focus {
   border-bottom: 1px solid #F5E6D6;
 }
 .popup__title {
+  margin-bottom: min(3.1vw, 24px);
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
   line-height: normal;
@@ -1130,6 +1131,13 @@ button:focus {
 .menu-link__icon.__js-opened {
   transform: rotate(90deg);
 }
+.menu-link__title.catalog__title {
+  display: flex;
+  align-items: center;
+}
+.menu-link__title.catalog__title h5 {
+  font-size: min(4.2vw, 32px);
+}
 
 .message {
   margin-bottom: min(3.3vw, 25px);
@@ -1552,6 +1560,156 @@ button:focus {
   background-size: contain;
 }
 
+.good {
+  margin-bottom: min(3.1vw, 24px);
+  padding: min(2vw, 16px);
+  background-color: #FFFFFF;
+}
+.good__header {
+  margin-bottom: min(4.2vw, 32px);
+  display: flex;
+  gap: min(2vw, 16px);
+}
+.good__photo-wrapper {
+  width: min(47vw, 358px);
+  height: min(39vw, 287px);
+  border-radius: min(2.5vw, 19px);
+  border: 1px solid #F5E6D6;
+  background-image: url("../img/cart/cart-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.good__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.good__name, .good__weight {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: min(3.3vw, 25px);
+  color: #240405;
+}
+.good__weight {
+  margin-bottom: min(2vw, 16px);
+}
+.good__price-box {
+  margin-bottom: min(2vw, 16px);
+  display: flex;
+  align-items: center;
+}
+.good__price {
+  display: inline-block;
+  margin-right: 1vw;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(5vw, 38px);
+  color: #240405;
+}
+.good__discount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(min(4.2vw, 32px) * 2);
+  height: min(4.2vw, 32px);
+  background-color: #DC1E1E;
+  border-radius: min(1.67vw, 13px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  color: #FFFFFF;
+  font-size: min(2.5vw, 19px);
+}
+.good__small-text {
+  display: flex;
+  align-items: center;
+  gap: min(1.67vw, 13px);
+  margin-bottom: min(1.67vw, 13px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  color: #BE957D;
+  font-size: min(2vw, 16px);
+}
+.good__small-text_bold {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+}
+.good__benefit {
+  padding: 1vw 0;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(2.5vw, 19px);
+  text-align: center;
+  border-radius: min(2.5vw, 19px);
+  border: 1px solid #F5E6D6;
+  background-color: #FFFAF5;
+  color: #240405;
+}
+.good__dnd {
+  margin-bottom: min(3.1vw, 24px);
+}
+.good__dnd-header {
+  position: relative;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(3.75vw, 29px);
+  color: #240405;
+}
+.good__dnd-icon {
+  transform: rotate(90deg);
+}
+.good__dnd-icon.__js-opened {
+  transform: rotate(-90deg);
+}
+.good__comment-input {
+  width: 100%;
+  padding: min(2vw, 16px) min(3.3vw, 25px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(3.75vw, 29px);
+  border-radius: min(2.5vw, 19px);
+  border: 1px solid #F5E6D6;
+  background-color: #FFFAF5;
+  color: #240405;
+}
+.good__photo-wrapper_puck {
+  flex-shrink: 0;
+  width: min(47vw, 358px);
+  height: min(31vw, 216px);
+}
+.good__puck-note {
+  padding-top: min(3.75vw, 29px);
+  padding-bottom: min(2vw, 16px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: min(2.5vw, 19px);
+  color: #BE957D;
+}
+.good__puck-price {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  padding: min(2vw, 16px);
+  background-color: #F5E6D6;
+  border-radius: min(2vw, 16px);
+  color: #BE957D;
+}
+.good__header_puck {
+  margin-bottom: 0;
+}
+
 .order-details {
   margin-bottom: min(3.1vw, 24px);
   background-color: #FFFFFF;
@@ -1773,6 +1931,12 @@ button:focus {
 }
 .two-btns__btn_brown-color {
   color: #BE957D;
+}
+
+.order-list__counter {
+  padding: min(2vw, 16px);
+  justify-content: center;
+  background: #F5E6D6;
 }
 
 .path {

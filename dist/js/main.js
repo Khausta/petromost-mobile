@@ -10,7 +10,8 @@ var state = {
     myCard: false,
     address: false,
     delivertAddress: false,
-    selfdeliveryAddress: false
+    selfdeliveryAddress: false,
+    catalog: false
   }
 };
 var headerElements = {
@@ -89,6 +90,11 @@ var popups = {
     trigger: document.querySelector('#order'),
     overlay: document.querySelector('#order-overlay'),
     content: document.querySelector('#order-popup')
+  },
+  'catalog': {
+    trigger: document.querySelector('#catalog'),
+    overlay: document.querySelector('#catalog-overlay'),
+    content: document.querySelector('#catalog-popup')
   }
 };
 
@@ -185,8 +191,21 @@ popups.deliveryAddress.trigger.addEventListener('click', function () {
 popups.selfdeliveryAddress.trigger.addEventListener('click', function () {
   openAnyPopup('selfdeliveryAddress');
 });
-popups.order.trigger.addEventListener('click', function () {
-  openAnyPopup('order');
+if (popups.order.trigger) {
+  popups.order.trigger.addEventListener('click', function () {
+    openAnyPopup('order');
+  });
+}
+popups.catalog.trigger.addEventListener('click', function () {
+  // if (!headerElements.header.classList.contains('__js-fixed')) {
+  //   headerElements.header.classList.add('__js-fixed');
+  // }
+  // if (document.body.style.overflow !== 'hidden') {
+  //   document.body.style.overflow = 'hidden';
+  // } 
+  openAnyPopup('catalog');
+  // headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
+  // headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
 });
 function closeCard() {
   document.body.style.overflow = 'auto';
@@ -204,7 +223,11 @@ if (popups.card.trigger) {
 }
 function openPreviousPopup() {
   state.path.pop();
-  openAnyPopup(state.path[state.path.length - 1]);
+  if (state.path.length) {
+    openAnyPopup(state.path[state.path.length - 1]);
+  } else {
+    popups.closeAllPopups();
+  }
 }
 
 // для инпутов Данных профиля

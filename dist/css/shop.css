@@ -274,6 +274,7 @@ button:focus {
   border-bottom: 1px solid #F5E6D6;
 }
 .popup__title {
+  margin-bottom: min(3.1vw, 24px);
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
   line-height: normal;
@@ -1244,6 +1245,13 @@ button:focus {
 }
 .menu-link__icon.__js-opened {
   transform: rotate(90deg);
+}
+.menu-link__title.catalog__title {
+  display: flex;
+  align-items: center;
+}
+.menu-link__title.catalog__title h5 {
+  font-size: min(4.2vw, 32px);
 }
 
 .message {

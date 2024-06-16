@@ -9,6 +9,7 @@ const state = {
     address: false,
     delivertAddress: false,
     selfdeliveryAddress: false,
+    catalog: false,
   }
 }
 const headerElements = {
@@ -95,6 +96,11 @@ const popups = {
     overlay: document.querySelector('#order-overlay'),
     content: document.querySelector('#order-popup'),
   },
+  'catalog': {
+    trigger: document.querySelector('#catalog'),
+    overlay: document.querySelector('#catalog-overlay'),
+    content: document.querySelector('#catalog-popup'),
+  },
   
  
   
@@ -157,6 +163,7 @@ headerElements.openMenuOrCloseAllBtn.addEventListener('click', () => {
 });
 
 function openAnyPopup(popupName) {
+ 
   popups.closeAllPopups();
   state.openedPopups[popupName] = true;
     if (document.body.style.overflow !== 'hidden') {
@@ -203,9 +210,24 @@ popups.selfdeliveryAddress.trigger.addEventListener('click', () => {
   openAnyPopup('selfdeliveryAddress');
 });
 
-popups.order.trigger.addEventListener('click', () => {
+if ( popups.order.trigger) {
+  popups.order.trigger.addEventListener('click', () => {
   openAnyPopup('order');
 });
+}
+
+popups.catalog.trigger.addEventListener('click', () => {
+  // if (!headerElements.header.classList.contains('__js-fixed')) {
+  //   headerElements.header.classList.add('__js-fixed');
+  // }
+  // if (document.body.style.overflow !== 'hidden') {
+  //   document.body.style.overflow = 'hidden';
+  // } 
+  openAnyPopup('catalog');
+  // headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
+  // headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
+});
+
 
 
 function closeCard() {
@@ -235,7 +257,11 @@ if (popups.card.trigger) {
 
 function openPreviousPopup() {
   state.path.pop();
-  openAnyPopup(state.path[state.path.length - 1]);
+  if(state.path.length) {
+    openAnyPopup(state.path[state.path.length - 1]);
+  } else {
+    popups.closeAllPopups();
+  }
 }
 
 

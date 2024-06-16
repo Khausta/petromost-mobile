@@ -13,10 +13,11 @@
 @import 'blocks/dnd/dnd';
 @import 'blocks/white-box/white-box';
 @import 'blocks/notification-box/notification-box';
-// @import 'blocks/good/good';  
+@import 'blocks/good/good';  
 @import 'blocks/order-details/order-details';
 @import 'blocks/schema/schema';
 @import 'blocks/two-btns/two-btns';
+@import 'blocks/order-list/order-list';
 
 .path {
     background-color: $head-bg-color;

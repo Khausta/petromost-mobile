@@ -12,6 +12,9 @@
     font-size: $size-19-point-5-px;
    }
 
+  
+
+
     &__prefix {
         margin-right: min(4.17vw, 32px);
         display: inline-block;
@@ -28,5 +31,16 @@
 
     &__icon.__js-opened {
         transform: rotate(90deg);
+    }
+
+    &__title.catalog {
+        
+        &__title {
+            display: flex;
+            align-items: center;
+            h5 {
+                font-size: $size-16and25;
+            }
+        }
     }
 }

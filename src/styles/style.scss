@@ -149,6 +149,7 @@ button:focus {
     }
 
     &__title {
+        margin-bottom: $size-12px;
         @include gilroy-bold;
         font-size: $size-20px;
         color: $black-color;
