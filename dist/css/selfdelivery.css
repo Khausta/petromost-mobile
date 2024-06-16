@@ -1234,6 +1234,9 @@ button:focus {
 .menu-link__title.catalog__title h5 {
   font-size: min(4.2vw, 32px);
 }
+.menu-link__title.menu-link__catalog-subtitle h5 {
+  font-size: min(4.2vw, 32px);
+}
 
 .message {
   margin-bottom: min(3.3vw, 25px);

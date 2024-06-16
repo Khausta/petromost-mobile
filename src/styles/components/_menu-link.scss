@@ -43,4 +43,11 @@
             }
         }
     }
+
+    &__title.menu-link__catalog-subtitle {
+        h5 {
+            font-size: $size-16and25;
+        }
+    }
+
 }

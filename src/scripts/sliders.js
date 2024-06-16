@@ -19,6 +19,7 @@ const bannerSwiper = new Swiper('.banner-swiper', {
   const pathSwiper = new Swiper('.path-swiper', {
     spaceBetween: '1%',
     slidesPerView: 'auto',
+    
   });
   
   

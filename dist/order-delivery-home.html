@@ -234,7 +234,7 @@
 
 
 
-            <button class="button save-btn save-btn_shop save-btn_fz13">Согласиться с условиями и оформить заказ</button> 
+            <a href="./delivery-order-status.html" class="button save-btn save-btn_shop save-btn_fz13">Согласиться с условиями и оформить заказ</a> 
         </main>
        
 
@@ -243,12 +243,12 @@
             <div class="container">
                 <ul class="menu-panel__items flex-box">
                     <li class="menu-panel__item">
-                        <a class="menu-panel__link flex-box" href="#">
+                        <div class="menu-panel__link flex-box" id="catalog">
                             <div class="menu-panel__icon">
                                 <img class="object-fit-contain" src="./img/icons/menu-panel-catalog.svg" alt="Иконка каталога">
                             </div>
                             <p class="menu-panel__name">Каталог</p>
-                        </a>
+                        </div>
                     </li>
                     <li class="menu-panel__item">
                         <a class="menu-panel__link flex-box" href="#">
@@ -1051,6 +1051,172 @@
 
                 <button class="button save-btn">Сохранить</button>
             </div>
+        </div>
+
+           <!-- каталог -->
+           <div class="overlay" id="catalog-overlay">
+            <div class="popup catalog" id="catalog-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Каталог</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+             
+                <!-- меню каталога-->
+                <ul class="menu__list">
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box" id="profile-data">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img//catalog/new-year-ball.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Новый Год, Рождество</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/gloves.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Готовимся к зиме</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box" id="my-card">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/persent.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Выгодные предложения</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li"> 
+                        <a href="#" class="menu-link flex-box" id="address">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/croissant.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Хлеб и хлебобулочные изделия</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/cheese.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Молочные продукты, сыры, яйцо</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/apple.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Фрукты, овощи</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/cake.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Кондитерские изделия</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+            
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/meat.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Мясо, птица, колбасы</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/grocery.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Бакалея</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/pasta.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Крупы, макароны, сухие завтраки</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/healthy-food.svg" alt="Иконка записи">
+                                </div>
+                                <h5> Здоровое питание
+                                </h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+            </ul></div>
         </div>
     </div>
 </body>

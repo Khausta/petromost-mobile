@@ -15,12 +15,23 @@ const state = {
 const headerElements = {
   header: document.querySelector('.header'),
   logo: document.querySelector('.__js-logo'),
-  openMenuOrCloseAllBtn: document.querySelector('.menu-btn')
+  openMenuOrCloseAllBtn: document.querySelector('.menu-btn'),
+  toFixHeader: function() {
+    if (!headerElements.header.classList.contains('__js-fixed')) {
+      headerElements.header.classList.add('__js-fixed');
+    }
+    if (document.body.style.overflow !== 'hidden') {
+      document.body.style.overflow = 'hidden';
+    } 
+  },
+  removeFixHeader: function() {
+    document.body.style.overflow = 'auto';
+    headerElements.header.classList.remove('__js-fixed');
+  }
 }
 
 
 const popups = {
-  
   allPopups: document.querySelectorAll('.overlay'),
   closeAllPopups() {
     popups.allPopups.forEach(el => {
@@ -28,13 +39,19 @@ const popups = {
     });
     for (let el in state.openedPopups) {
       state.openedPopups[el] = false;
-    } 
-
-    document.body.style.overflow = 'auto';
-
-  
+    }  
   },
   returnBtns: document.querySelectorAll('.return-btn'),
+  openPreviousPopup: function () {
+    state.path.pop();
+    if(state.path.length) {
+      openAnyPopup(state.path[state.path.length - 1]);
+    } else {
+      popups.closeAllPopups();
+      headerElements.openMenuOrCloseAllBtn.classList.remove('__js_active');
+      headerElements.openMenuOrCloseAllBtn.removeEventListener('click', closePopup);
+    }
+  },
   'search': {
     overlay: document.querySelector('#search-overlay'),
     input: document.querySelector('.__js-searchInput'),
@@ -101,9 +118,6 @@ const popups = {
     overlay: document.querySelector('#catalog-overlay'),
     content: document.querySelector('#catalog-popup'),
   },
-  
- 
-  
 }
 
 //собитие на фокус инпута поиска
@@ -114,12 +128,7 @@ popups.search.input.addEventListener('focus', () => {
 //логика открытия поиска отличчается, поэтому создана отдельная функция
 function openSearchPopup () {
   popups.search.open();
-  if (!headerElements.header.classList.contains('__js-fixed')) {
-    headerElements.header.classList.add('__js-fixed');
-  }
-  if (document.body.style.overflow !== 'hidden') {
-    document.body.style.overflow = 'hidden';
-  } 
+  headerElements.toFixHeader();
   popups.search.input.classList.add('__js-searchInput_active');
   popups.search.input.parentElement.classList.add('__js-headerSearch_active');
   headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
@@ -128,8 +137,7 @@ function openSearchPopup () {
 
 // закрытие попапов
 function closePopup() {
-  document.body.style.overflow = 'auto';
-  headerElements.header.classList.remove('__js-fixed');
+  headerElements.removeFixHeader();
   if (state.openedPopups.search) {
     popups.search.close();
     state.openedPopups.search = false;
@@ -149,44 +157,33 @@ headerElements.openMenuOrCloseAllBtn.addEventListener('click', () => {
     console.log(true);
     state.path.push('menu');
   }
-
   state.openedPopups.menu = true;
-  if (!headerElements.header.classList.contains('__js-fixed')) {
-    headerElements.header.classList.add('__js-fixed');
-  }
-  if (document.body.style.overflow !== 'hidden') {
-    document.body.style.overflow = 'hidden';
-  } 
+  headerElements.toFixHeader(); 
   popups.menu.overlay.classList.add('__js-active');
   headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
   headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
 });
 
 function openAnyPopup(popupName) {
- 
   popups.closeAllPopups();
   state.openedPopups[popupName] = true;
-    if (document.body.style.overflow !== 'hidden') {
-      document.body.style.overflow = 'hidden';
-    } 
-    popups[popupName].overlay.classList.add('__js-active');
+  headerElements.toFixHeader();
+  popups[popupName].overlay.classList.add('__js-active');
+  if(popups[popupName].content) {
     popups[popupName].content.addEventListener('scroll', () => {
-    popups[popupName].content.style.height = document.querySelector('.menu-panel').offsetTop - headerElements.header.offsetHeight + 5 + "px";
-  });
+      popups[popupName].content.style.height = document.querySelector('.menu-panel').offsetTop - headerElements.header.offsetHeight + 5 + "px";
+      });
+  }
   popups.returnBtns.forEach(btn => {
-    btn.addEventListener('click', openPreviousPopup);
+    btn.addEventListener('click', popups.openPreviousPopup);
   })
   if(popupName != 'search' && popupName != 'menu' && state.path[state.path.length - 1] != popupName) {
-    console.log('check');
-  state.path.push(`${popupName}`);
- 
+    state.path.push(`${popupName}`);
   }
-  console.log(state.path);
 }
 
 popups.profile.trigger.addEventListener('click', () => {
   openAnyPopup('profile');
-
 });
 
 popups.profileData.trigger.addEventListener('click', () => {
@@ -217,19 +214,14 @@ if ( popups.order.trigger) {
 }
 
 popups.catalog.trigger.addEventListener('click', () => {
-  // if (!headerElements.header.classList.contains('__js-fixed')) {
-  //   headerElements.header.classList.add('__js-fixed');
-  // }
-  // if (document.body.style.overflow !== 'hidden') {
-  //   document.body.style.overflow = 'hidden';
-  // } 
+  headerElements.toFixHeader();
   openAnyPopup('catalog');
-  // headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
-  // headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
+  headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
+  headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
 });
 
 
-
+// открытие и закрытие карты участника бонусной программы
 function closeCard() {
   document.body.style.overflow = 'auto';
   popups.card.overlay.classList.remove('__js-active');
@@ -241,28 +233,14 @@ if (popups.card.trigger) {
     if (document.body.style.overflow !== 'hidden') {
       document.body.style.overflow = 'hidden';
     }
-  
     popups.card.overlay.classList.add('__js-active');
-   
     popups.card.overlay.addEventListener('click', closeCard);
   });
 }
 
 
 
- 
-   
 
-
-
-function openPreviousPopup() {
-  state.path.pop();
-  if(state.path.length) {
-    openAnyPopup(state.path[state.path.length - 1]);
-  } else {
-    popups.closeAllPopups();
-  }
-}
 
 
 
@@ -323,38 +301,6 @@ function dnd(triggerElement, animatedIcon, hiddenContent) {
   
 }
 
-// открытие внутреннего списка с возможностью изменения высоты родительского контейнера
-// function dnd(triggerElement, animatedIcon, hiddenContent) {
-//   document.querySelectorAll(`.${triggerElement}`).forEach(el => {
-//     el.addEventListener('click', () => {
-//       const arrow = el.querySelector(`.${animatedIcon}`);
-//       const content = el.nextElementSibling;
-  
-//       if (content.style.maxHeight) {
-//         document.querySelectorAll(`.${hiddenContent}`).forEach( item => {
-//           item.style.maxHeight = null;
-//           item.style.opacity = null;
-//           }) 
-//         document.querySelectorAll(`.${animatedIcon}`).forEach(item => {
-//           item.classList.remove('__js-opened');
-//         })
-//       } else {
-//         document.querySelectorAll(`.${hiddenContent}`).forEach( item => {
-//           item.style.maxHeight = null;
-//           item.style.opacity = null;  
-//         })
-//         content.style.maxHeight = content.scrollHeight + 'px';
-//         content.style.opacity = 1;
-        
-//         document.querySelectorAll(`.${animatedIcon}`).forEach(item => {
-//           item.classList.remove('__js-opened');
-//         })
-//         arrow.classList.add('__js-opened');
-//       }
-//     })
-//   });
-  
-// }
 
 // Открытие скрытого контента меню
 dnd('menu__li-with-content', 'menu-link__icon', 'menu__content');
