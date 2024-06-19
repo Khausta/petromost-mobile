@@ -828,7 +828,8 @@ button:focus {
   background-color: #FFFFFF;
 }
 .info__item a {
-  height: 100%;
+  display: block;
+  height: min(5.1vw, 40px);
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-style: normal;
@@ -1945,6 +1946,9 @@ button:focus {
   background: #F5E6D6;
 }
 
+.good-cards {
+  background-color: #FFFAF5;
+}
 .good-cards__items {
   display: flex;
   flex-wrap: wrap;
@@ -1965,13 +1969,23 @@ button:focus {
   background-size: cover;
   overflow: hidden;
 }
-.good-cards__photo img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  -o-object-position: center;
-     object-position: center;
+.good-cards__photo .like {
+  position: absolute;
+  top: min(2.5vw, 19px);
+  right: min(2.5vw, 19px);
+  display: block;
+  width: min(3.1vw, 24px);
+  height: min(3.1vw, 24px);
+  z-index: 1;
+}
+.good-cards__photo .like__yes {
+  display: none;
+}
+.good-cards__photo .like.liked .like__no {
+  display: none;
+}
+.good-cards__photo .like.liked .like__yes {
+  display: block;
 }
 .good-cards__photo::after {
   padding: 0.6vw min(2.5vw, 19px);
@@ -1993,24 +2007,8 @@ button:focus {
   color: #BE957D;
   z-index: 10;
 }
-.good-cards__photo::before {
-  content: "";
-  position: absolute;
-  top: min(2.5vw, 19px);
-  right: min(2.5vw, 19px);
-  display: block;
-  width: min(3.1vw, 24px);
-  height: min(3.1vw, 24px);
-  background-image: url("../img/icons/no-like.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 10;
-}
-.good-cards__wrapper.liked .good-cards__photo::before {
-  background-image: url("../img/icons/liked.svg");
-}
 .good-cards__info {
+  background-color: #FFFFFF;
   padding: min(1.67vw, 13px) min(2.5vw, 19px) min(2.5vw, 19px) min(2.5vw, 19px);
 }
 .good-cards__info::after {
@@ -2031,24 +2029,36 @@ button:focus {
   z-index: 10;
 }
 .good-cards__quantity {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1vw;
   border-radius: min(2.5vw, 19px);
-  background-color: #FFFAF5;
   padding: 1vw 0;
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
   line-height: normal;
   font-size: min(2.5vw, 19px);
-  color: #BE957D;
+  color: #5EA636;
+}
+.good-cards__quantity::before {
+  position: absolute;
+  left: min(2vw, 16px);
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  display: block;
+  width: 1vw;
+  height: 1vw;
+  background-color: #5EA636;
+  border-radius: 100%;
 }
 .good-cards__watch {
   display: inline-block;
   width: min(2.5vw, 19px);
   height: min(2.5vw, 19px);
-  background-image: url("../img/profile/watch.svg");
+  background-image: url("../img/icons/green-watch.svg");
   background-size: contain;
   background-position: center;
 }
@@ -2108,30 +2118,22 @@ button:focus {
   border-radius: min(2.5vw, 19px);
   background-color: #FAC71D;
 }
-.big-card__photo img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  -o-object-position: center;
-     object-position: center;
-}
-.big-card__photo::before {
-  content: "";
+.big-card__photo .like {
   position: absolute;
-  top: min(2.5vw, 19px);
-  right: min(2.5vw, 19px);
-  display: block;
-  width: min(3.3vw, 25px);
-  height: min(3.3vw, 25px);
-  background-image: url("../img/icons/no-like.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: min(4.6vw, 38px);
+  height: min(4.6vw, 38px);
+  top: min(3.75vw, 29px);
+  right: min(3.75vw, 29px);
   z-index: 10;
 }
-.big-card__wrapper.liked .big-card__photo::before {
-  background-image: url("../img/icons/liked.svg");
+.big-card__photo .like__yes {
+  display: none;
+}
+.big-card__photo .like.liked .like__no {
+  display: none;
+}
+.big-card__photo .like.liked .like__yes {
+  display: block;
 }
 .big-card__photo::after {
   padding: 0.6vw min(2.5vw, 19px);
@@ -2219,6 +2221,10 @@ button:focus {
 .data .menu__li {
   border-bottom: 1px solid #F5E6D6;
 }
+.data__tabs {
+  margin-top: min(2.5vw, 19px);
+  background-color: #FFFAF5;
+}
 
 .same__title {
   padding: min(3.3vw, 25px) 0;
@@ -2227,6 +2233,57 @@ button:focus {
   line-height: normal;
   color: #240405;
   font-size: min(5.1vw, 40px);
+}
+
+.tabs__nav {
+  width: 100%;
+  margin-bottom: -1.2px;
+  display: flex;
+}
+.tabs__item {
+  width: 50%;
+}
+.tabs__nav-btn {
+  width: 100%;
+  padding: min(3.1vw, 24px) min(4.2vw, 32px);
+  background: #FFFFFF;
+  border: 1px solid #F5E6D6;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(3.75vw, 29px);
+  color: #240405;
+  text-align: left;
+}
+.tabs__nav-btn_1 {
+  border-bottom-right-radius: min(4.2vw, 32px);
+}
+.tabs__nav-btn_2 {
+  border-bottom-left-radius: min(4.2vw, 32px);
+}
+.tabs__nav-btn_active {
+  border: none;
+  background: none;
+}
+.tabs__nav-btn_active .tabs__icon {
+  transform: rotate(-90deg);
+}
+.tabs__icon {
+  transform: rotate(90deg);
+}
+.tabs__panel {
+  padding: min(3.1vw, 24px) min(4.2vw, 32px);
+  display: none;
+  width: 100%;
+  border-bottom: 1px solid #F5E6D6;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(3.75vw, 29px);
+  color: #240405;
+}
+.tabs__panel_active {
+  display: block;
 }
 
 .path {
@@ -2263,8 +2320,42 @@ button:focus {
   background-repeat: no-repeat;
   background-position: center;
 }
+.path__item_first {
+  width: min(5.1vw, 40px);
+}
+.path__item_first::after {
+  transform: translateY(-50%) rotate(180deg);
+}
 .path__icon {
   margin-left: min(2vw, 16px);
   display: inline-block;
   height: min(2.5vw, 19px);
+}
+
+.counter-info__benefit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFAF5;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(3.1vw, 24px);
+  color: #240405;
+  border: 1px solid #F5E6D6;
+  border-radius: min(2.5vw, 19px);
+  width: 48%;
+  height: min(8.2vw, 63px);
+}
+.counter-info__wrapper {
+  width: 100%;
+  display: flex;
+  gap: min(3.75vw, 29px);
+}
+.counter-info .counter {
+  padding: 0.6vw;
+  width: 48%;
+}
+.counter-info .counter__btn {
+  color: #BE957D;
 }

@@ -849,7 +849,8 @@ button:focus {
   background-color: #FFFFFF;
 }
 .info__item a {
-  height: 100%;
+  display: block;
+  height: min(5.1vw, 40px);
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-style: normal;

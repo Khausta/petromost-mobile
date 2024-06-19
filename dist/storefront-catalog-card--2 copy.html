@@ -2,17 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Петромост</title>
     <link rel="stylesheet" href="./css/order.css">
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-      <script src="./js/sliders.js" defer></script>
-    <script src="./js/main.js" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer="defer"></script>
+      <script src="./js/sliders.js" defer="defer"></script>
+    <script src="./js/main.js" defer="defer"></script>
 </head>
 <body>
     <div class="wrapper mobile-wrapper">
@@ -20,18 +17,18 @@
         <header class="header">
             <div class="container-header">
                 <div class="header__items flex-box">
-                    <div class="header__main-logo __js-logo header_storefront" >
+                    <div class="header__main-logo __js-logo header_storefront">
                         <img class="object-fit-contain header__main-logo-img header__base-logo-img" src="./img/logotype/logo-petromost-start.svg" alt="Логотип Петромост">
                         <!-- витрина, доставка, самовывоз -->
-                        <img class="object-fit-contain header__main-logo-img  header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
+                        <img class="object-fit-contain header__main-logo-img header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
                     </div>
-                    <div class="header__search flex-box ">
-                        <input class="input header__input __js-searchInput " type="text" placeholder="Найти арбуз...">
+                    <div class="header__search flex-box">
+                        <input class="input header__input __js-searchInput" type="text" placeholder="Найти арбуз...">
                         <button class="button header__search-btn">
                             <img class="object-fit-contain" src="./img/icons/search.svg" alt="Иконка поиска">
                         </button>
                     </div>
-                    <button class="button header__menu-btn menu-btn ">
+                    <button class="button header__menu-btn menu-btn">
 
                         <span class="menu-btn__line menu-btn__line_1"></span>
                         <span class="menu-btn__line menu-btn__line_2"></span>
@@ -48,8 +45,8 @@
             <section class="info path">
                 <div class="container">
                     <div class="path-swiper">
-                        <div class="info__inner  swiper-wrapper">
-                            <div class="info__item path__item path__item_first swiper-slide ">
+                        <div class="info__inner swiper-wrapper">
+                            <div class="info__item path__item path__item_first swiper-slide">
                                 <a class="" href="#">
                                     
                                     <!-- <img class="path__icon" src="./img/menu/arrow.svg" alt="Иконка стрелки"> -->
@@ -132,6 +129,31 @@
                         <span class="good__small-text_bold">до 28.03.23</span>
                     </p>
                 </div>
+
+                <div class="counter-info">
+                    <div class="container">
+                        <div class="counter-info__wrapper">
+                            <p class="counter-info__benefit">
+                                Ваш кэшбэк: 28,03 б. 
+                            </p>
+
+                            <div class="counter">
+                                <button class="button counter__btn">
+                                    -
+                                </button>
+                                <p class="counter__price">
+                                    <span class="counter__sum">1</span>
+                                    / шт.
+                                </p>
+                                <button class="button counter__btn">
+                                    +
+                                </button>
+                            </div>
+                           
+
+                        </div>
+                    </div>
+                </div>
     
                 <!-- tabs  -->
                 <div class="tabs data__tabs" data-tabs="tab">
@@ -140,14 +162,14 @@
                             <button class="tabs__nav-btn tabs__nav-btn_1 order__tab flex-box" type="button">
                                 <span>Описание</span>
                                 <span class="menu-link__icon tabs__icon">
-                                    <img class=" object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                    <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                                 </span>
                             </button>
                         </li>
                         <li class="tabs__item">
                             <button class="tabs__nav-btn tabs__nav-btn_2 order__tab flex-box" type="button">
                                 <span>Отзывы</span>
-                                <span class=" menu-link__icon tabs__icon">
+                                <span class="menu-link__icon tabs__icon">
                                     <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                                 </span>
                             </button>
@@ -191,7 +213,7 @@
                                         <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
                                     </span>
                                     <!-- фото -->
-                                     <!-- <img class="object-fit-cover" src="./img/banners/banner-1.png" alt=""> -->
+                                     <img class="object-fit-cover" src="./img/drink.png" alt="">
                                 </div>
                                 <div class="good__info good-cards__info">
                                     <p class="good__name">Наименование товара</p>
@@ -227,7 +249,7 @@
                                         <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
                                     </span>
                                     <!-- фото -->
-                                     <!-- <img src="./img/banners/banner-1.png" alt=""> -->
+                                    <img class="object-fit-cover" src="./img/drink.png" alt="">
                                 </div>
                                 <div class="good__info good-cards__info">
                                     <p class="good__name">Наименование товара</p>
@@ -263,7 +285,7 @@
                                         <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
                                     </span>
                                     <!-- фото -->
-                                    <img src="./img/catalog/good-photo.png" alt="">
+                                    <img class="object-fit-cover" src="./img/drink.png" alt="">
                                 </div>
                                 <div class="good__info good-cards__info">
                                     <p class="good__name">Наименование товара</p>
@@ -297,7 +319,7 @@
                                         <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
                                     </span>
                                     <!-- фото -->
-                                     <!-- <img src="./img/banners/banner-1.png" alt=""> -->
+                                    <img class="object-fit-cover" src="./img/drink.png" alt="">
                                 </div>
                                 <div class="good__info good-cards__info">
                                     <p class="good__name">Наименование товара</p>
@@ -313,7 +335,7 @@
                                     </p>
                                   
                                     <p class="good-cards__quantity easy-border">
-                                        <span>Кол-во: Нет в наличии</span>
+                                        <span>Нет в наличии</span>
                                       
                                     </p>
                                 </div>
@@ -337,7 +359,7 @@
 
         <!-- Bottom menu panel -->
         <div class="menu-panel">
-            <div class="container ">
+            <div class="container">
                 <ul class="menu-panel__items flex-box">
                     <li class="menu-panel__item">
                         <a class="menu-panel__link flex-box" href="#" id="catalog">
@@ -429,7 +451,7 @@
                                 <button type="button" class="button delivery-variants__var __js-active" id="delivery-address">
                                     Доставка
                                 </button>
-                                <button type="button" class="button delivery-variants__var " id="selfdelivery-address">
+                                <button type="button" class="button delivery-variants__var" id="selfdelivery-address">
                                     Самовывоз
                                 </button>
                             </div>
@@ -439,7 +461,7 @@
                 </div>
                 <!-- список меню -->
                 <ul class="menu__list">
-                    <li class="menu__li ">
+                    <li class="menu__li">
                         <a href="#" class="menu__li-with-content menu-link flex-box menu__message __js-active">
                             <div class="menu-link__title">
                                 <div class="menu-link__prefix">
@@ -451,7 +473,7 @@
                                 <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                             </span>
                         </a>
-                        <div class="menu__content ">
+                        <div class="menu__content">
                             <div class="menu__messages">
                                 <!-- активное сообщение -->
                                 <div class="message message__active">
@@ -489,7 +511,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="menu__li ">
+                    <li class="menu__li">
                         <a href="#" class="menu__li-with-content menu-link flex-box menu__message">
                             <div class="menu-link__title">
                                 <h5>О компании</h5>
@@ -633,7 +655,7 @@
                         </a>
                     </li>
             
-            </div>
+            </ul></div>
         </div>
 
         <!-- Данные профиля -->
@@ -648,7 +670,7 @@
                 
                 <!-- меню Данных профиля-->
                 <ul class="menu__list">
-                    <li class="menu__li ">
+                    <li class="menu__li">
                         <a href="#" class="menu__li-with-content menu-link flex-box" id="profile-data">
                             <div class="menu-link__title">
                                 <h5>Персональные данные</h5>
@@ -846,7 +868,7 @@
                 <div class="menu">
                     <!-- список меню -->
                     <ul class="menu__list">
-                        <li class="menu__li ">
+                        <li class="menu__li">
                             <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
                                 <div class="menu-link__title">
                                     <h5>Указать адрес</h5>
@@ -855,7 +877,7 @@
                                     <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                                 </span>
                             </a>
-                            <div class="menu__content ">
+                            <div class="menu__content">
                                 <div class="address__variants">
                                     <!-- адрес на выбор -->
                                     <div class="address__option">
@@ -888,7 +910,7 @@
 
                                      <!-- адрес на выбор  -->
                                      <div class="address__option">
-                                        <label class=" radio">
+                                        <label class="radio">
                                             <input class="radio__input" type="radio" name="address">
                                             <div class="radio__block">
                                                 <p class="address__city">г. Новодвинск</p>
@@ -957,7 +979,7 @@
                             </div>
                         </li>
     
-                        <li class="menu__li ">
+                        <li class="menu__li">
                             <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
                                 <div class="menu-link__title">
                                     <h5>Выбрать из сохраненных</h5>
@@ -966,7 +988,7 @@
                                     <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                                 </span>
                             </a>
-                            <div class="menu__content ">
+                            <div class="menu__content">
                                 <div class="address__variants">
                                     <!-- адрес на выбор  -->
                                     <div class="address__option">
@@ -983,7 +1005,7 @@
 
                                      <!-- адрес на выбор  -->
                                      <div class="address__option">
-                                        <label class=" radio">
+                                        <label class="radio">
                                             <input class="radio__input" type="radio" name="address">
                                             <div class="radio__block">
                                                 <p class="address__saved-city">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
@@ -1013,7 +1035,7 @@
 
           <!-- Адреса доставки для самовывоза -->
           <div class="overlay" id="selfdelivery-address-overlay">
-            <div class="popup " id="selfdelivery-address-popup">
+            <div class="popup" id="selfdelivery-address-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Доставка</h2>
                     <button class="button flex-box return-btn">
@@ -1022,7 +1044,7 @@
                 </div>
 
                 
-                <li class="menu__li ">
+                <li class="menu__li">
                     <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
                         <div class="menu-link__title">
                             <h5>Указать адрес</h5>
@@ -1031,7 +1053,7 @@
                             <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                         </span>
                     </a>
-                    <div class="menu__content ">
+                    <div class="menu__content">
                         <div class="address__variants">
                              <!-- адрес на выбор -->
                              <div class="address__option">
@@ -1153,7 +1175,7 @@
 
           <!-- Открытий заказ -->
           <div class="overlay" id="order-overlay">
-            <div class="popup " id="order-popup">
+            <div class="popup" id="order-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Заказ №210889</h2>
                     <button class="button flex-box return-btn">
@@ -1162,7 +1184,7 @@
                 </div>
 
 
-                <section class="order-details order-details_popup" >
+                <section class="order-details order-details_popup">
                     <div class="container">
                         <div class="order-details__wrapper easy-border">
                             <div class="order-details__header flex-box">
@@ -1216,7 +1238,7 @@
 
                                     <span class="schema__line"></span>
                                 
-                                    <div class="schema__item ">
+                                    <div class="schema__item">
                                         <p class="schema__header">
                                             Выдан
                                         </p>
@@ -1239,7 +1261,7 @@
                                 <section class="two-btns two-btns_order">
                                     <div class="container flex-box">
                                         <button class="button two-btns__btn two-btns__btn_beige two-btns__btn_brown-color">Повторить заказ</button>
-                                        <button class="button two-btns__btn two-btns__btn_beige ">Отменить заказ</button>
+                                        <button class="button two-btns__btn two-btns__btn_beige">Отменить заказ</button>
                                     </div>
                                 </section>
                             </div>
@@ -1320,7 +1342,7 @@
                         <div class="comment__container">
                             <div class="white-box">
                                 <div class="dnd">
-                                    <div class=" white-box__header">
+                                    <div class="white-box__header">
                                         <h5>Комментарий</h5>
                                         <p>Оставьте свой комментарий к заказу</p>
                                         <div class="dnd__icon white-box__icon">

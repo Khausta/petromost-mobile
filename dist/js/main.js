@@ -1,5 +1,11 @@
 "use strict";
 
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 var state = {
   path: [],
   openedPopups: {
@@ -282,4 +288,124 @@ dnd('menu__li-with-content', 'menu-link__icon', 'menu__content');
 dnd('dnd', 'dnd__icon', 'dnd__content');
 // Открытие внутреннего выпадающего списка для выбора адреса доставки 
 dnd('inner-dnd', 'shops__city-box', 'inner-dnd__content');
+var Tab = /*#__PURE__*/function () {
+  function Tab(selector, options) {
+    _classCallCheck(this, Tab);
+    var defaultOptions = {
+      isChanged: function isChanged() {}
+    };
+    this.options = Object.assign(defaultOptions, options); //совмезщение, перезапись
+    this.selector = selector;
+    this.tabs = document.querySelector("[data-tabs=\"".concat(selector, "\"]")); //нахождение табов
+    if (this.tabs) {
+      this.tabsList = this.tabs.querySelector('.tabs__nav');
+      this.tabsButtons = this.tabs.querySelectorAll('.tabs__nav-btn');
+      this.tabsPanels = this.tabs.querySelectorAll('.tabs__panel');
+    } else {
+      console.error("\u041D\u0435\u0442 \u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430 \u0441\u043E \u0441\u0432\u043E\u0439\u0441\u0442\u0432\u043E\u043C data-tabs=".concat(selector));
+      return;
+    }
+    this.check();
+    this.init();
+    this.events();
+  }
+  return _createClass(Tab, [{
+    key: "check",
+    value: function check() {
+      if (document.querySelectorAll("[data-tabs=\"".concat(this.selector, "]")).length > 1) {
+        console.error('Количество элементов с одинакомым data-tabs больше одного');
+        return;
+      }
+      if (this.tabsButtons.length !== this.tabsPanels.length) {
+        console.error('Количество табов и панелей не совпадает');
+        return;
+      }
+    }
+  }, {
+    key: "init",
+    value: function init() {
+      var _this = this;
+      this.tabsList.setAttribute('role', 'tablist');
+      this.tabsButtons.forEach(function (el, i) {
+        el.setAttribute('role', 'tab');
+        el.setAttribute('tabindex', '-1');
+        el.setAttribute('id', "".concat(_this.selector).concat(i + 1)); //чтобы не пересекались id
+        el.classList.remove('tabs__nav-btn_active');
+      });
+      this.tabsPanels.forEach(function (el, i) {
+        el.setAttribute('role', 'tabpanel');
+        el.setAttribute('tabindex', '-1');
+        //aria-labeledBy
+        el.setAttribute('aria-labelledby', _this.tabsButtons[i].id);
+        el.classList.remove('tabs__panel_active');
+      });
+      this.tabsButtons[0].classList.add('tabs__nav-btn_active');
+      this.tabsButtons[0].removeAttribute('tabindex');
+      this.tabsButtons[0].setAttribute('aria-selected', 'true');
+      this.tabsPanels[0].classList.add('tabs__panel_active');
+    }
+  }, {
+    key: "events",
+    value: function events() {
+      var _this2 = this;
+      this.tabsButtons.forEach(function (el, i) {
+        el.addEventListener('click', function (e) {
+          var currentTab = _this2.tabsList.querySelector('[aria-selected]');
+          if (e.currentTarget !== currentTab) {
+            _this2.switchTabs(e.currentTarget, currentTab);
+          }
+        });
+        el.addEventListener('keydown', function (e) {
+          var index = Array.prototype.indexOf.call(_this2.tabsButtons, e.currentTarget);
+          var direction = null;
+          if (e.which === 37) {
+            direction = index - 1;
+          } else if (e.which === 39) {
+            direction = index + 1;
+          } else if (e.which === 40) {
+            direction = 'down';
+          } else {
+            direction = null;
+          }
+          if (direction !== null) {
+            if (direction === 'down') {
+              _this2.tabsPanels[i].focus();
+            } else if (_this2.tabsButtons[direction]) {
+              _this2.switchTabs(_this2.tabsButtons[direction], e.currentTarget);
+            } else {}
+          }
+        });
+      });
+    }
+  }, {
+    key: "switchTabs",
+    value: function switchTabs(newTab) {
+      var oldTab = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.tabs.querySelector('[aria-selected]');
+      newTab.focus();
+      newTab.removeAttribute('tabindex');
+      newTab.setAttribute('aria-selected', 'true');
+      oldTab.removeAttribute('aria-selected');
+      oldTab.setAttribute('tabindex', '-1');
+      var index = Array.prototype.indexOf.call(this.tabsButtons, newTab);
+      var oldIndex = Array.prototype.indexOf.call(this.tabsButtons, oldTab);
+      this.tabsPanels[oldIndex].classList.remove('tabs__panel_active');
+      this.tabsPanels[index].classList.add('tabs__panel_active');
+      this.tabsButtons[oldIndex].classList.remove('tabs__nav-btn_active');
+      this.tabsButtons[index].classList.add('tabs__nav-btn_active');
+      this.options.isChanged(this);
+    }
+  }]);
+}();
+var tab1 = new Tab('tab', {
+  //для примера
+  // isChanged: (tabs) => { 
+  //      console.log(tabs); 
+  // }
+});
+
+//добавление фиксированной позиции блоку "Итого" в правой панели
+// const totalStep = document.querySelector('.total');
+// const rightPanelHeight = totalStep.offsetTop - 800;
+// const rightPanel = document.querySelector('.order__right');
+// rightPanel.style.height = rightPanelHeight + 'px';
 //# sourceMappingURL=main.js.map

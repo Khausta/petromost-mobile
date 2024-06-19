@@ -17,7 +17,8 @@
         background-color: $white-bg-color;
 
         a {
-            height: 100%;
+            display: block;
+            height: $size-20px;
             font-family: 'Gilroy', Arial, Helvetica, sans-serif;
             font-weight: bold;
             font-style: normal;

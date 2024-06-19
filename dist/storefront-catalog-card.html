@@ -46,6 +46,12 @@
                 <div class="container">
                     <div class="path-swiper">
                         <div class="info__inner swiper-wrapper">
+                            <div class="info__item path__item path__item_first swiper-slide">
+                                <a class="" href="#">
+                                    
+                                    <!-- <img class="path__icon" src="./img/menu/arrow.svg" alt="Иконка стрелки"> -->
+                                </a>
+                            </div>
                             <div class="info__item path__item swiper-slide">
                                 <a class="" href="#">
                                     Главная
@@ -74,11 +80,15 @@
                 <div class="container">
                     <div class="big-card__wrapper easy-border liked">
                         <div class="big-card__photo-box">
-
+                            <!-- добавлен класс для img фото товара -->
                             <div class="big-card__photo">
+                                <span class="like liked">
+                                    <img class="object-fit-contain like__no" src="./img/icons/no-like.svg" alt="">
+                                    <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
+                                </span>
                                 <span class="cashback">КЭШБЭК 20%</span>
                                 <!-- фото -->
-                                 <img src="./img/catalog/good-photo.png" alt="">
+                                 <img class="object-fit-cover" src="./img/catalog/good-photo.png" alt="">
                             </div>
                         </div>
 
@@ -119,50 +129,43 @@
                         <span class="good__small-text_bold">до 28.03.23</span>
                     </p>
                 </div>
+    
+                <!-- tabs  -->
+                <div class="tabs data__tabs" data-tabs="tab">
+                    <ul class="tabs__nav">
+                        <li class="tabs__item">
+                            <button class="tabs__nav-btn tabs__nav-btn_1 order__tab flex-box" type="button">
+                                <span>Описание</span>
+                                <span class="menu-link__icon tabs__icon">
+                                    <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="tabs__item">
+                            <button class="tabs__nav-btn tabs__nav-btn_2 order__tab flex-box" type="button">
+                                <span>Отзывы</span>
+                                <span class="menu-link__icon tabs__icon">
+                                    <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tabs__content">
+                        <div class="tabs__panel order__panel">
+                            
+                            Состав: Вода, клюква, сахар-песок, консервантПищевая ценность на 100 г.: Белки-0,1г, Жиры: 0,0г, Углеводы: 13,0г, Эн.ценность (калорийность): 210кДж/50,0 ККал ТУ 11.07.19-264-79036538-2017Условия хранения: 0+6 
+                            Срок хранения: 15 сутокИзготовитель: ИП Бондин Б.Н. Адр. юр.: г Архангельск, пр. Троицкий, д. 16, кв. 17 Адр.факт.: г Архангельск, ул. Тимме, 4 корпус 5
 
-                <ul class="menu__list">
-                    
-                    <li class="menu__li">
-                        <div class="menu__li-with-content menu-link flex-box menu__message">
-                            <div class="menu-link__title">
-                                <span class="data__menu">Описание</span>
-                            </div>
-                            <span class="menu-link__icon">
-                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
-                            </span>
+                                
+
                         </div>
-
-                        <div class="menu__content menu__content_white-bg">
-                            <div class="menu__container">
-                                Состав: Вода,клюква, сахар-песок, консервант <br> 
-                                Пищевая ценность на 100 г.: Белки-0,1г, Жиры-0,0г, Углеводы-13,0г,<br>
-                                Эн.ценность (калорийность): <br> 210кДж/50,0 ККал <br> 
-                                ТУ 11.07.19-264-79036538-2017 <br>
-                                Адр. юр.: г. Архангельск, пр. Троицкий, 16, кв. 17 Адр. факт.: г Архангельск, ул. Тимме, 4, корпус 5
-                            </div>
+                        <div class="tabs__panel order__panel">
+                            Здесь будут отзывы
                         </div>
-
-                    </li>
-
-                    <li class="menu__li">
-                        <div class="menu__li-with-content menu-link flex-box menu__message">
-                            <div class="menu-link__title">
-                                <span class="data__menu">Отзывы</span>
-                            </div>
-                            <span class="menu-link__icon">
-                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
-                            </span>
-                        </div>
-
-                        <div class="menu__content menu__content_white-bg">
-                            <div class="menu__container">
-                               комментарии
-                            </div>
-                        </div>
-
-                    </li>
-                   
-                </ul>
+                    </div>
+    
+                </div>
+      
             </section>
 
             <section class="same">
@@ -173,42 +176,53 @@
                 </div>
             </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
             <section class="good-cards">
                     <div class="container">
                       
                         <div class="good-cards__items">
+                                 <!-- карточка товара -->
+                            <div class="good-cards__wrapper easy-border liked">
+                                <div class="good-cards__photo">
+                                    <span class="like liked">
+                                        <img class="object-fit-contain like__no" src="./img/icons/no-like.svg" alt="">
+                                        <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
+                                    </span>
+                                    <!-- фото -->
+                                     <!-- <img class="object-fit-cover" src="./img/banners/banner-1.png" alt=""> -->
+                                </div>
+                                <div class="good__info good-cards__info">
+                                    <p class="good__name">Наименование товара</p>
+                                    <p class="good__weight">1кг</p>
+                                    <div class="good__price-box">
+                                        <span class="good__price">139,98 ₽</span>
+                                        <span class="good__discount">-34%</span>
+                                    </div>
+                                    <p class="good__small-text">
+                                        <img class="good__snegiri" src="./img/icons/snegiri.svg" alt="Акция по карте СНЕГИРИ">
+                                        <span>76,29 ₽ 1 шт./</span>
+                                        <span class="good__small-text_bold">до 28.03.23</span>
+                                    </p>
+                                    <button class="button good-cards__btn good-cards__btn_yellow">
+                                        В корзину
+                                    </button>
+                                  
+                                    <p class="good-cards__quantity easy-border">
+                                        <span>Достаточно</span>
+                                        <span class="good-cards__watch"></span>
+                                        <span class="good-cards__time">13:00</span>
+                                    </p>
+                                </div>
+    
+                            </div>
 
                             <!-- карточка товара -->
                              <!-- добить класс liked, чтобы иконка лайка изменилась -->
                             <div class="good-cards__wrapper easy-border liked">
                                 <div class="good-cards__photo">
+                                    <span class="like liked">
+                                        <img class="object-fit-contain like__no" src="./img/icons/no-like.svg" alt="">
+                                        <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
+                                    </span>
                                     <!-- фото -->
                                      <!-- <img src="./img/banners/banner-1.png" alt=""> -->
                                 </div>
@@ -229,7 +243,7 @@
                                     </button>
                                   
                                     <p class="good-cards__quantity easy-border">
-                                        <span>Кол-во: достаточно</span>
+                                        <span>Достаточно</span>
                                         <span class="good-cards__watch"></span>
                                         <span class="good-cards__time">13:00</span>
                                     </p>
@@ -241,6 +255,10 @@
                                <!-- карточка товара -->
                                <div class="good-cards__wrapper easy-border">
                                 <div class="good-cards__photo">
+                                    <span class="like liked">
+                                        <img class="object-fit-contain like__no" src="./img/icons/no-like.svg" alt="">
+                                        <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
+                                    </span>
                                     <!-- фото -->
                                     <img src="./img/catalog/good-photo.png" alt="">
                                 </div>
@@ -258,7 +276,7 @@
                                     </p>
                                    
                                     <p class="good-cards__quantity easy-border">
-                                        <span>Кол-во: достаточно</span>
+                                        <span>Достаточно</span>
                                         <span class="good-cards__watch"></span>
                                         <span class="good-cards__time">13:00</span>
                                     </p>
@@ -271,6 +289,10 @@
                                 <!-- добавляем класс good-cards__missed карточке и кнопке класс  good-cards__btn_beige-->
                                <div class="good-cards__wrapper easy-border liked good-cards__missed">
                                 <div class="good-cards__photo">
+                                    <span class="like liked">
+                                        <img class="object-fit-contain like__no" src="./img/icons/no-like.svg" alt="">
+                                        <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
+                                    </span>
                                     <!-- фото -->
                                      <!-- <img src="./img/banners/banner-1.png" alt=""> -->
                                 </div>

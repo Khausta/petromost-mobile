@@ -309,3 +309,137 @@ dnd('dnd', 'dnd__icon', 'dnd__content');
 // Открытие внутреннего выпадающего списка для выбора адреса доставки 
 dnd('inner-dnd', 'shops__city-box', 'inner-dnd__content');
 
+
+
+class Tab {
+  constructor(selector, options) {
+      let defaultOptions = {
+          isChanged: () => {
+
+          }
+      }
+      this.options = Object.assign(defaultOptions, options); //совмезщение, перезапись
+      this.selector = selector;
+      this.tabs = document.querySelector(`[data-tabs="${selector}"]`); //нахождение табов
+      if(this.tabs) {
+          this.tabsList = this.tabs.querySelector('.tabs__nav');
+          this.tabsButtons = this.tabs.querySelectorAll('.tabs__nav-btn');
+          this.tabsPanels = this.tabs.querySelectorAll('.tabs__panel');
+
+      } else {
+          console.error(`Нет элемента со свойством data-tabs=${selector}`);
+          return;
+      }
+
+      this.check();
+      this.init();
+      this.events();
+  }
+
+  check() {
+      if (document.querySelectorAll(`[data-tabs="${this.selector}]`).length > 1) {
+          console.error('Количество элементов с одинакомым data-tabs больше одного');
+          return;
+      }
+
+      if (this.tabsButtons.length !== this.tabsPanels.length) {
+          console.error('Количество табов и панелей не совпадает');
+          return;
+      }
+   }
+
+  init() {
+      this.tabsList.setAttribute('role', 'tablist');
+
+      this.tabsButtons.forEach((el, i) => {
+          el.setAttribute('role', 'tab');
+          el.setAttribute('tabindex', '-1');
+          el.setAttribute('id', `${this.selector}${i + 1}`); //чтобы не пересекались id
+          el.classList.remove('tabs__nav-btn_active');
+      });
+      this.tabsPanels.forEach((el, i) => {
+          el.setAttribute('role', 'tabpanel');
+          el.setAttribute('tabindex', '-1');
+          //aria-labeledBy
+          el.setAttribute('aria-labelledby', this.tabsButtons[i].id);
+          el.classList.remove('tabs__panel_active');
+      });
+
+      this.tabsButtons[0].classList.add('tabs__nav-btn_active');
+      this.tabsButtons[0].removeAttribute('tabindex');
+      this.tabsButtons[0].setAttribute('aria-selected', 'true');
+      this.tabsPanels[0].classList.add('tabs__panel_active');
+      
+  }
+
+  events() {
+      this.tabsButtons.forEach((el, i) => {
+          el.addEventListener('click', e => {
+              let currentTab = this.tabsList.querySelector('[aria-selected]');
+              if (e.currentTarget !== currentTab) {
+                  this.switchTabs(e.currentTarget, currentTab);
+              }
+          });
+
+          el.addEventListener('keydown', e => {
+              let index = Array.prototype.indexOf.call(this.tabsButtons, e.currentTarget);
+
+              let direction = null;
+
+              if (e.which === 37) {
+                  direction = index - 1;
+              } else if (e.which === 39) {
+                  direction = index + 1;
+              } else if (e.which === 40) {
+                  direction = 'down';
+              } else {
+                  direction = null;
+              }
+
+              if (direction !== null) {
+                  if (direction === 'down') {
+                      this.tabsPanels[i].focus();
+                  } else if (this.tabsButtons[direction]) {
+                      this.switchTabs(this.tabsButtons[direction], e.currentTarget);
+                  } else {
+                  }
+              }
+          })
+      });
+
+
+  }
+
+  switchTabs(newTab, oldTab = this.tabs.querySelector('[aria-selected]')) {
+      newTab.focus();
+      newTab.removeAttribute('tabindex');
+      newTab.setAttribute('aria-selected', 'true');
+
+      oldTab.removeAttribute('aria-selected');
+      oldTab.setAttribute('tabindex', '-1');
+
+      let index = Array.prototype.indexOf.call(this.tabsButtons, newTab);
+      let oldIndex = Array.prototype.indexOf.call(this.tabsButtons, oldTab);
+      this.tabsPanels[oldIndex].classList.remove('tabs__panel_active');
+      this.tabsPanels[index].classList.add('tabs__panel_active');
+      this.tabsButtons[oldIndex].classList.remove('tabs__nav-btn_active');
+      this.tabsButtons[index].classList.add('tabs__nav-btn_active');
+
+      this.options.isChanged(this);
+  }
+}
+
+
+const tab1 = new Tab('tab', {
+  //для примера
+  // isChanged: (tabs) => { 
+  //      console.log(tabs); 
+  // }
+});
+
+
+//добавление фиксированной позиции блоку "Итого" в правой панели
+// const totalStep = document.querySelector('.total');
+// const rightPanelHeight = totalStep.offsetTop - 800;
+// const rightPanel = document.querySelector('.order__right');
+// rightPanel.style.height = rightPanelHeight + 'px';

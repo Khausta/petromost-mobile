@@ -20,6 +20,7 @@
 @import 'blocks/order-list/order-list';
 @import 'blocks/good-card/good-card';
 @import 'blocks/big-card/big-card';
+@import 'blocks/tabs/tabs';
 
 
 .path {
@@ -34,6 +35,7 @@
         border-radius: $size-6and5;
         border: 1px solid $beige-color;
         background-color: $head-bg-color;
+
 
         a {
             @include gilroy-bold;
@@ -55,6 +57,15 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+
+        
+        &_first {
+            width: $size-20px;
+
+            &::after {
+            transform: translateY(-50%) rotate(180deg);
+            }
+        }
     }
 
     &__icon {
@@ -62,5 +73,39 @@
         display: inline-block;
         height: $gap-10;
     }
+}
+
+.counter-info {
+        &__benefit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        background-color: $head-bg-color;
+        @include gilroy-bold;
+        font-size: $size-12px;
+        color: $black-color;
+        border: 1px solid $beige-color;
+        border-radius: $gap-10;
+        width: 48%;
+        height: $size-32px;
+
+        }
+        &__wrapper {
+            width: 100%;
+            display: flex;
+            gap: $size-14px;
+        }
+
+        .counter {
+            padding: 0.6vw;
+            // height: $size-32px;
+            width: 48%;
+
+            &__btn {
+                color: $brown-color;
+            }
+        }
+
+
 }
 
