@@ -507,11 +507,17 @@ button:focus {
 
 .red-bg {
   background-color: #DC1E1E;
+  color: #FFFFFF;
 }
 
 .beige-bg {
   background-color: #FFFAF5;
   border: 1px solid #F5E6D6;
+}
+
+.brown-bg {
+  background: #F5E6D6;
+  color: #BE957D;
 }
 
 .easy-border {
@@ -1617,6 +1623,21 @@ button:focus {
   border: 1px solid #F5E6D6;
   border-radius: min(5vw, 38px);
 }
+.login__input-wrapper_err {
+  border: 1px solid #DC1E1E;
+}
+.login__input-wrapper_err .login__input {
+  color: #DC1E1E;
+}
+.login__input-wrapper_err .login__hide-btn {
+  background-image: url("../img/icons/hide-btn-red.svg");
+}
+.login__input-wrapper_err .login__unhide-btn {
+  background-image: url("../img/icons/unhide-btn.svg");
+}
+.login__inputs {
+  position: relative;
+}
 .login__input {
   width: 87%;
   padding-top: min(3.3vw, 25px);
@@ -1641,9 +1662,23 @@ button:focus {
   background-size: contain;
   background-position: center;
 }
+.login__hide-btn {
+  background-image: url("../img/icons/hide-btn.svg");
+}
 .login__btn {
+  margin-bottom: min(4.2vw, 32px);
+  width: 100%;
   height: min(13vw, 102px);
   border-radius: min(5vw, 38px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+}
+.login__btn_small-text {
+  font-size: min(4.2vw, 32px);
+}
+.login__btn_big-text {
+  font-size: min(5.1vw, 40px);
 }
 .login__two-btns {
   display: flex;
@@ -1652,4 +1687,90 @@ button:focus {
 }
 .login__two-btns .login__btn {
   width: 48%;
+}
+.login__btn-with-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: min(3.1vw, 24px);
+}
+.login__btn-icon {
+  display: block;
+  width: min(6.66vw, 51.2px);
+  height: min(6.66vw, 51.2px);
+  background-image: url("../img/icons/vk-blue.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.login__error-text {
+  width: 100%;
+  position: absolute;
+  top: calc(-1 * min(3.3vw, 25px));
+  transform: translateY(-100%);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: min(3.75vw, 29px);
+  color: #DC1E1E;
+  text-align: center;
+}
+.login__policy {
+  margin-bottom: min(4.2vw, 32px);
+  padding: min(3.1vw, 24px) min(3.3vw, 25px);
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  background-color: #FFFAF5;
+  gap: min(3.1vw, 24px);
+}
+.login__policy-text {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: min(2.5vw, 19px);
+  color: #BE957D;
+}
+.login__policy-text a {
+  color: #DC1E1E;
+}
+.login__policy-checkbox {
+  display: none;
+}
+.login__checkbox-wrapper {
+  position: relative;
+  border: 1px solid #F5E6D6;
+  border-radius: min(2vw, 16px);
+  background-color: #FFFFFF;
+  width: min(6.66vw, 51.2px);
+  height: min(6.66vw, 51.2px);
+}
+.login__checkbox-wrapper::before, .login__checkbox-wrapper::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.login__checkbox-wrapper::before {
+  content: "";
+  display: block;
+  width: min(3.75vw, 29px);
+  height: min(3.75vw, 29px);
+  background-image: url("../img/icons/checkbox-brown.svg");
+}
+.login__checkbox-wrapper::after {
+  content: "";
+  display: none;
+  width: min(4.2vw, 32px);
+  height: min(4.2vw, 32px);
+  background-image: url("../img/icons/checkbox-red.svg");
+}
+.login__policy-checkbox:checked + .login__checkbox-wrapper::before {
+  display: none;
+}
+.login__policy-checkbox:checked + .login__checkbox-wrapper::after {
+  display: block;
 }

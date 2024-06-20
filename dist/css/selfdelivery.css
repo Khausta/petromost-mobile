@@ -507,11 +507,17 @@ button:focus {
 
 .red-bg {
   background-color: #DC1E1E;
+  color: #FFFFFF;
 }
 
 .beige-bg {
   background-color: #FFFAF5;
   border: 1px solid #F5E6D6;
+}
+
+.brown-bg {
+  background: #F5E6D6;
+  color: #BE957D;
 }
 
 .easy-border {

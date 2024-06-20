@@ -29,7 +29,31 @@
         padding: 0 $size-14px 0 $size-19-point-5-px;
         border: 1px solid $beige-color;
         border-radius: $size-19-point-5-px;
+
+        
+        
+        &_err {
+            border: 1px solid $red-color;
+            .login__input {
+                
+                color: $red-color;
+            }
+
+            .login__hide-btn {
+                background-image: url('../img/icons/hide-btn-red.svg');
+            }
+
+            .login__unhide-btn {
+                background-image: url('../img/icons/unhide-btn.svg');
+            }
+
+
+        }
        
+    }
+
+    &__inputs {
+        position: relative;
     }
 
     &__input {
@@ -43,7 +67,9 @@
         &::placeholder {
             color: $brown-color;
         }
+
     }
+
 
     &__input-btn {
         width: $s34px;
@@ -54,13 +80,31 @@
         background-position: center;
     }
 
+    &__hide-btn {
+        background-image: url('../img/icons/hide-btn.svg');
+    }
+
     &__btn {
+        margin-bottom: $size-16and25;
+        width: 100%;
         height: $size-52px;
         border-radius: $size-19-point-5-px;
+        @include gilroy-bold;
+
+        &_small-text {
+            font-size: $size-16and25;
+        }
+
+        &_big-text {
+            font-size: $size-20px;
+        }
     
     }
+
+
     
     &__two-btns {
+       
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -68,5 +112,107 @@
         .login__btn {
             width: 48%;
         }
+    }
+
+    &__btn-with-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $size-12px;
+
+    }
+
+    &__btn-icon {
+        display: block;
+        width: $s26px;
+        height: $s26px;
+        background-image: url('../img/icons/vk-blue.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+    &__error-text {
+        width: 100%;
+        position: absolute;
+        top: calc(-1 * $size-13px); 
+        transform: translateY(-100%);
+        @include gilroy-semibold;
+        font-size: $size-14px;
+        color: $red-color;
+        text-align: center;
+    }
+
+    &__policy {
+        margin-bottom: $size-16and25;
+        padding: $size-12px $size-13px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        background-color: $head-bg-color;
+        gap: $size-12px;
+    }
+
+    &__policy-text {
+        @include gilroy-semibold;
+        font-size: $gap-10;
+        color: $brown-color;
+
+        a {
+            color: $red-color;
+        }
+    }
+
+    &__policy-checkbox {
+        display: none;
+    }
+
+    &__checkbox-wrapper {
+        position: relative;
+        border: 1px solid $beige-color;
+        border-radius: $size-8px;
+        background-color: $white-bg-color;
+        width: $s26px;
+        height: $s26px;
+
+        &::before, &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        &::before {
+          
+            content: '';
+            display: block;
+            width: $size-14px;
+            height: $size-14px;
+            background-image: url('../img/icons/checkbox-brown.svg');
+         
+        }
+
+        &::after {
+            content: '';
+            display: none;
+            width: $size-16and25;
+            height: $size-16and25;
+            background-image: url('../img/icons/checkbox-red.svg');
+           
+        }
+        
+
+    }
+
+    &__policy-checkbox:checked +  &__checkbox-wrapper::before {
+        display: none;
+    }
+
+    &__policy-checkbox:checked +  &__checkbox-wrapper::after {
+        display: block;
     }
 }

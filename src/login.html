@@ -1210,10 +1210,12 @@
             </div>
         </div>
 
-         <!-- авторизация -->
 
 
-         <div class="overlay" id="login-overlay_1">
+        <!-- АВТОРИЗАЦИЯ -->
+
+        <!-- Вход 1 Пароль-->
+        <div class="overlay" id="login-overlay_1">
             <div class="popup login" id="login-popup">
                
                 <div class="login__block">
@@ -1239,24 +1241,505 @@
                             
                         </div>
                         <div class="login__two-btns">
-                            <button class="button login__btn beige-bg">Забыли пароль?</button>
-                            <button class="button login__btn brown-bg">Войти</button>
+                            <button class="button login__btn beige-bg login__btn_small-text">Забыли пароль?</button>
+                            <button class="button login__btn brown-bg login__btn_big-text">Войти</button>
                         </div>
-                        <button class="button login__btn beige-bg">Войти с помощью СМС кода</button>
-                        <button class="button login__btn beige-bg">
+                        <button class="button login__btn beige-bg login__btn_small-text">Войти с помощью СМС кода</button>
+                        <button class="button login__btn login__btn-with-icon beige-bg login__btn_small-text">
                             <span>Войти через ВК</span>
                             <span class="login__btn-icon"></span>
                         </button>
-                  
-                 
+                    </div>  
                 </div>
-           
-            
+            </div>
+        </div>
+
+        <!-- Вход 2 Пароль Ошибка-->
+        <div class="overlay" id="login-overlay_2">
+            <div class="popup login" id="login-popup">
                
+                <div class="login__block">
+                    <div class="container">
+                        <h2 class="login__title">
+                            Вход в аккаунт
+                        </h2>
+                        <p class="login__subtitle">
+                            Авторизируйтесь через свою учетную запись 
+                        </p>
+
+
+                        
+                        <div class="login__inputs">
+                            <p class="login__error-text">*неверно введены данные авторизации</p>
+                            <!-- Класс login__input-wrapper_err добавлять если ошибка -->
+                             <div class="login__input-wrapper login__input-wrapper_err">
+                                <input class="input login__input " type="text" name="phone" placeholder="Телефон">
+                            </div>
+    
+                            <div class="login__input-wrapper login__input-wrapper_err">
+                                <input class="input login__input " type="text" name="password" placeholder="Пароль">
+                                <div class="login__input-btn login__hide-btn"></div>
+                            </div>
+                            
+                        </div>
+                        <div class="login__two-btns">
+                            <button class="button login__btn beige-bg login__btn_small-text">Забыли пароль?</button>
+                            <button class="button login__btn red-bg login__btn_big-text">Войти</button>
+                        </div>
+                        <button class="button login__btn beige-bg login__btn_small-text">Войти с помощью СМС кода</button>
+                        <button class="button login__btn login__btn-with-icon beige-bg login__btn_small-text">
+                            <span>Войти через ВК</span>
+                            <span class="login__btn-icon"></span>
+                        </button>
+                    </div>  
+                </div>
             </div>
         </div>
 
 
+        <!-- Вход 3 Пароль войти -->
+        <div class="overlay" id="login-overlay_3">
+            <div class="popup login" id="login-popup">
+               
+                <div class="login__block">
+                    <div class="container">
+                        <h2 class="login__title">
+                            Вход в аккаунт
+                        </h2>
+                        <p class="login__subtitle">
+                            Авторизируйтесь через свою учетную запись 
+                        </p>
+
+
+                        
+                        <div class="login__inputs">
+                            <!-- <p class="login__error-text">*неверно введены данные авторизации</p> -->
+                            <div class="login__input-wrapper ">
+                                <input class="input login__input " type="text" name="phone" placeholder="Телефон">
+                            </div>
+    
+                            <div class="login__input-wrapper">
+                                <input class="input login__input " type="text" name="password" placeholder="Пароль">
+                                <div class="login__input-btn login__unhide-btn"></div>
+                            </div>
+                            
+                        </div>
+                        <div class="login__two-btns">
+                            <button class="button login__btn beige-bg login__btn_small-text">Забыли пароль?</button>
+                            <button class="button login__btn red-bg login__btn_big-text">Войти</button>
+                        </div>
+                        <button class="button login__btn beige-bg login__btn_small-text">Войти с помощью СМС кода</button>
+                        <button class="button login__btn login__btn-with-icon beige-bg login__btn_small-text">
+                            <span>Войти через ВК</span>
+                            <span class="login__btn-icon"></span>
+                        </button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+        <!-- Вход 4 СМС -->
+        <div class="overlay" id="login-overlay_4">
+            <div class="popup login" id="login-popup">
+               
+                <div class="login__block">
+                    <div class="container">
+                        <h2 class="login__title">
+                            Вход в аккаунт
+                        </h2>
+                        <p class="login__subtitle">
+                            Авторизируйтесь по номеру телефона с <br> помощью СМС кода
+                        </p>
+
+
+                        
+                        <div class="login__inputs">
+                            <!-- <p class="login__error-text">*неверно введены данные авторизации</p> -->
+                            <div class="login__input-wrapper ">
+                                <input class="input login__input " type="text" name="phone" placeholder="Телефон">
+                            </div>
+    
+                            <div class="login__input-wrapper">
+                                <input class="input login__input " type="text" name="code" placeholder="СМС код">
+                               
+                            </div>
+                            
+                        </div>
+
+                        <button class="button login__btn brown-bg login__btn_big-text">Получить код</button>
+                        <button class="button login__btn beige-bg login__btn_small-text">Войти с помощью пароля</button>
+                        <button class="button login__btn login__btn-with-icon beige-bg login__btn_small-text">
+                            <span>Войти через ВК</span>
+                            <span class="login__btn-icon"></span>
+                        </button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+        <!-- Вход 5 СМС Ошибка  -->
+        <div class="overlay" id="login-overlay_5">
+            <div class="popup login" id="login-popup">
+                
+                <div class="login__block">
+                    <div class="container">
+                        <h2 class="login__title">
+                            Вход в аккаунт
+                        </h2>
+                        <p class="login__subtitle">
+                            Авторизируйтесь по номеру телефона с <br> помощью СМС кода
+                        </p>
+
+
+                        
+                        <div class="login__inputs">
+                            <p class="login__error-text">*Номер телефона не найден</p>
+                            <div class="login__input-wrapper login__input-wrapper_err">
+                                <input class="input login__input " type="text" name="phone" placeholder="Телефон">
+                            </div>
+    
+                            <div class="login__input-wrapper login__input-wrapper_err">
+                                <input class="input login__input " type="text" name="code" placeholder="СМС код">
+                                
+                            </div>
+                            
+                        </div>
+                        
+                        <button class="button login__btn red-bg login__btn_big-text">Получить код повторно</button>
+                        <button class="button login__btn beige-bg login__btn_small-text">Войти с помощью пароля</button>
+                        <button class="button login__btn login__btn-with-icon beige-bg login__btn_small-text">
+                            <span>Войти через ВК</span>
+                            <span class="login__btn-icon"></span>
+                        </button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+
+          <!-- Вход 5 СМС Ошибка  -->
+          <div class="overlay" id="login-overlay_6">
+            <div class="popup login" id="login-popup">
+                
+                <div class="login__block">
+                    <div class="container">
+                        <h2 class="login__title">
+                            Вход в аккаунт
+                        </h2>
+                        <p class="login__subtitle">
+                            Авторизируйтесь по номеру телефона с <br> помощью СМС кода
+                        </p>
+
+
+                        
+                        <div class="login__inputs">
+                            <!-- <p class="login__error-text">*Номер телефона не найден</p> -->
+                            <div class="login__input-wrapper">
+                                <input class="input login__input " type="text" name="phone" placeholder="Телефон">
+                            </div>
+    
+                            <div class="login__input-wrapper ">
+                                <input class="input login__input " type="text" name="code" placeholder="СМС код">
+                                
+                            </div>
+                            
+                        </div>
+                        
+                        <button class="button login__btn brown-bg login__btn_big-text">Получить код повторно</button>
+                        <button class="button login__btn beige-bg login__btn_small-text">Войти с помощью пароля</button>
+                        <button class="button login__btn login__btn-with-icon beige-bg login__btn_small-text">
+                            <span>Войти через ВК</span>
+                            <span class="login__btn-icon"></span>
+                        </button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+        <!-- Вход Пароль -->
+        <div class="overlay" id="login-overlay_7">
+            <div class="popup login" id="login-popup">
+                
+                <div class="login__block">
+                    <div class="container">
+                        <h2 class="login__title">
+                            Забыли пароль?
+                        </h2>
+                        <p class="login__subtitle">
+                            На указаный номер будет отправлено <br> сообщение с кодом для получения ссылки
+                        </p>
+
+
+                        
+                        <div class="login__inputs">
+                            <!-- <p class="login__error-text">*Номер телефона не найден</p> -->
+                            <div class="login__input-wrapper">
+                                <input class="input login__input " type="text" name="phone" placeholder="Телефон">
+                            </div>
+    
+                           
+                            
+                        </div>
+                        
+                        <button class="button login__btn brown-bg login__btn_big-text">Получить код</button>
+                        
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+          <!-- Вход Пароль -->
+          <div class="overlay" id="login-overlay_8">
+            <div class="popup login" id="login-popup">
+                
+                <div class="login__block">
+                    <div class="container">
+                        <h2 class="login__title">
+                            Забыли пароль?
+                        </h2>
+                        <p class="login__subtitle">
+                            На указаный номер будет отправлено <br> сообщение с кодом для получения ссылки
+                        </p>
+
+
+                        
+                        <div class="login__inputs">
+                            <p class="login__error-text">*Номер телефона не найден</p>
+                            <div class="login__input-wrapper login__input-wrapper_err">
+                                <input class="input login__input " type="text" name="phone" placeholder="Телефон">
+                            </div>
+
+                        </div>
+                        
+                        <button class="button login__btn red-bg login__btn_big-text">Получить код</button>
+                        
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+        <!-- Вход Пароль 3 -->
+        <div class="overlay" id="login-overlay_9">
+            <div class="popup login" id="login-popup">
+                
+                <div class="login__block">
+                    <div class="container">
+                        <h2 class="login__title">
+                            Забыли пароль?
+                        </h2>
+                        <p class="login__subtitle">
+                            На указаный номер будет отправлено <br> сообщение с кодом для получения ссылки
+                        </p>
+
+
+                        
+                        <div class="login__inputs">
+                            <!-- <p class="login__error-text">*Номер телефона не найден</p> -->
+                            <div class="login__input-wrapper">
+                                <input class="input login__input " type="text" name="phone" placeholder="Телефон">
+                            </div>
+
+                        </div>
+                        
+                        <button class="button login__btn red-bg login__btn_big-text">Получить код</button>
+                        
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+        <!-- Вход Пароль получить код-->
+        <div class="overlay" id="login-overlay_10">
+            <div class="popup login" id="login-popup">
+                
+                <div class="login__block">
+                    <div class="container">
+                        <h2 class="login__title">
+                            Забыли пароль?
+                        </h2>
+                        <p class="login__subtitle">
+                            На указаный номер будет отправлено <br> сообщение с кодом для получения ссылки
+                        </p>
+
+
+                        
+                        <div class="login__inputs">
+                            <!-- <p class="login__error-text">*Номер телефона не найден</p> -->
+                            <div class="login__input-wrapper">
+                                <input class="input login__input " type="text" name="phone" placeholder="Телефон">
+                            </div>
+                            <div class="login__input-wrapper">
+                                <input class="input login__input " type="text" name="code" placeholder="Код из СМС">
+                               
+                            </div>
+
+                        </div>
+                        
+                        <button class="button login__btn beige-bg login__btn_big-text">Получить новый код</button>
+                        
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Вход Пароль ошибка -->
+        <div class="overlay" id="login-overlay_11">
+            <div class="popup login" id="login-popup">
+                
+                <div class="login__block">
+                    <div class="container">
+                        <h2 class="login__title">
+                            Забыли пароль?
+                        </h2>
+                        <p class="login__subtitle">
+                            На указаный номер будет отправлено <br> сообщение с кодом для получения ссылки
+                        </p>
+
+
+                        
+                        <div class="login__inputs">
+                            <p class="login__error-text">*неверно введен код</p>
+                            <div class="login__input-wrapper">
+                                <input class="input login__input " type="text" name="phone" placeholder="Телефон">
+                            </div>
+                            <div class="login__input-wrapper login__input-wrapper_err">
+                                <input class="input login__input " type="text" name="code" placeholder="Код из СМС">
+                               
+                            </div>
+
+                        </div>
+                        
+                        <button class="button login__btn red-bg login__btn_big-text">Получить новый код</button>
+                        
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Регистрация -->
+
+        <!-- Вход 3 Регистрация Форма -->
+        <div class="overlay" id="login-overlay_12">
+            <div class="popup login" id="login-popup">
+                
+                <div class="login__block">
+                    <div class="container">
+                        <h2 class="login__title">
+                            Регистрация
+                        </h2>
+                        <p class="login__subtitle">
+                            Для начала работы нам понадобится <br> дополнительная информация
+                        </p>
+
+
+                        
+                        <div class="login__inputs">
+                            <!-- <p class="login__error-text">*неверно введен код</p> -->
+                            <div class="login__input-wrapper">
+                                <input class="input login__input " type="text" name="phone" placeholder="Телефон">
+                            </div>
+                            <div class="login__input-wrapper">
+                                <input class="input login__input" type="text" name="user-name" placeholder="Ваше Имя">
+                            </div>
+                            <button class="button login__btn brown-bg login__btn_big-text">Продолжить</button>
+                            <div class="login__policy easy-border">
+                           
+                                    <label class="">
+                                        <input class="login__policy-checkbox" type="checkbox" class="input">
+                                        <div class="login__checkbox-wrapper">
+
+                                        </div>
+                                    </label>
+                    
+                                <p class="login__policy-text">
+                                    Я ознакомлен(а) с <a href="#">Положением о защите 
+                                        персональных данных покупателей интернет&nbsp;– 
+                                        магазина «Петровские пироги»</a> и&nbsp;Политикой 
+                                    обработки персональных данных. Настоящим я даю 
+                                    согласие ИП Жемчугову Николаю Владимировичу и&nbsp;его 
+                                    уполномоченным представителям получать, собирать, хранить
+                                    и&nbsp;использовать мои персональные данные:
+                                    Фамилию, Имя, Отчество, домашний и&nbsp;
+                                    мобильный телефоны, адрес доставки, адрес электронной почты, 
+                                    в&nbsp;целях заключения и&nbsp;исполнения договора 
+                                    купли-продажи и информирования потребителя. 
+                                    Согласие может в любой момент быть мною отозвано
+                                    путем направления письменного уведомления.
+                                </p>
+
+    
+                            </div>
+                           
+                        </div>
+                        
+                       
+                        
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+         <!-- Вход 4 Регистрация Чекбокс-->
+         <div class="overlay" id="login-overlay_13">
+            <div class="popup login" id="login-popup">
+                
+                <div class="login__block">
+                    <div class="container">
+                        <h2 class="login__title">
+                            Регистрация
+                        </h2>
+                        <p class="login__subtitle">
+                            Для начала работы нам понадобится <br> дополнительная информация
+                        </p>
+
+
+                        
+                        <div class="login__inputs">
+                            <!-- <p class="login__error-text">*неверно введен код</p> -->
+                            <div class="login__input-wrapper">
+                                <input class="input login__input " type="text" name="phone" placeholder="Телефон">
+                            </div>
+                            <div class="login__input-wrapper">
+                                <input class="input login__input" type="text" name="user-name" placeholder="Ваше Имя">
+                            </div>
+                            <div class="login__policy easy-border">
+                           
+                                    <label class="">
+                                        <input class="login__policy-checkbox" type="checkbox" class="input">
+                                        <div class="login__checkbox-wrapper">
+
+                                        </div>
+                                    </label>
+                    
+                                <p class="login__policy-text">
+                                    Я ознакомлен(а) с <a href="#">Положением о защите 
+                                        персональных данных покупателей интернет&nbsp;– 
+                                        магазина «Петровские пироги»</a> и&nbsp;Политикой 
+                                    обработки персональных данных. Настоящим я даю 
+                                    согласие ИП Жемчугову Николаю Владимировичу и&nbsp;его 
+                                    уполномоченным представителям получать, собирать, хранить
+                                    и&nbsp;использовать мои персональные данные:
+                                    Фамилию, Имя, Отчество, домашний и&nbsp;
+                                    мобильный телефоны, адрес доставки, адрес электронной почты, 
+                                    в&nbsp;целях заключения и&nbsp;исполнения договора 
+                                    купли-продажи и информирования потребителя. 
+                                    Согласие может в любой момент быть мною отозвано
+                                    путем направления письменного уведомления.
+                                </p>
+
+    
+                            </div>
+                           
+                        </div>
+                        
+                        <button class="button login__btn red-bg login__btn_big-text">Получить новый код</button>
+                        
+                    </div>  
+                </div>
+            </div>
+        </div>
 
     </div>
 </body>

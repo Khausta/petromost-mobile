@@ -410,11 +410,17 @@ button:focus {
 
 .red-bg {
     background-color: $red-color;
+    color: $white-bg-color;
 }
 
 .beige-bg {
     background-color: $head-bg-color;
     border: 1px solid $beige-color; 
+}
+
+.brown-bg {
+    background: $beige-color;
+    color: $brown-color;
 }
 
 .easy-border {
