@@ -535,6 +535,22 @@ button:focus {
   height: min(7.7vw, 55px);
 }
 
+.red-circle {
+  display: block;
+  width: 1vw;
+  height: 1vw;
+  background-color: #DC1E1E;
+  border-radius: 100%;
+}
+
+.green-circle {
+  display: block;
+  width: 1vw;
+  height: 1vw;
+  background-color: #5EA636;
+  border-radius: 100%;
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;

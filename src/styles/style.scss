@@ -439,6 +439,22 @@ button:focus {
     }
 }
 
+.red-circle {
+    display: block;
+    width: 1vw;
+    height: 1vw;
+    background-color: $red-color;
+    border-radius: 100%;
+}
+
+.green-circle {
+    display: block;
+    width: 1vw;
+    height: 1vw;
+    background-color: #5EA636;
+    border-radius: 100%;
+}
+
 
 
 @import './components/save-btn';
