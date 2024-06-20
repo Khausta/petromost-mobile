@@ -10,6 +10,7 @@ const state = {
     delivertAddress: false,
     selfdeliveryAddress: false,
     catalog: false,
+    login: false,
   }
 }
 const headerElements = {
@@ -118,6 +119,11 @@ const popups = {
     overlay: document.querySelector('#catalog-overlay'),
     content: document.querySelector('#catalog-popup'),
   },
+  'login': {
+    trigger: document.querySelector('#login'),
+    overlay: document.querySelector('#login-overlay_1'),
+    content: document.querySelector('#login-popup_1'),
+  },
 }
 
 //собитие на фокус инпута поиска
@@ -213,12 +219,24 @@ if ( popups.order.trigger) {
 });
 }
 
-popups.catalog.trigger.addEventListener('click', () => {
-  headerElements.toFixHeader();
-  openAnyPopup('catalog');
-  headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
-  headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
-});
+if (popups.catalog.trigger) {
+  popups.catalog.trigger.addEventListener('click', () => {
+    headerElements.toFixHeader();
+    openAnyPopup('catalog');
+    headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
+    headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
+  });
+}
+
+if (popups.login.trigger) {
+  popups.login.trigger.addEventListener('click', () => {
+    headerElements.toFixHeader();
+    openAnyPopup('login');
+    headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
+    headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
+  });
+}
+
 
 
 // открытие и закрытие карты участника бонусной программы
@@ -429,17 +447,9 @@ class Tab {
   }
 }
 
+if (document.querySelector('.tab')) {
+  const tab1 = new Tab('tab', {});
 
-const tab1 = new Tab('tab', {
-  //для примера
-  // isChanged: (tabs) => { 
-  //      console.log(tabs); 
-  // }
-});
+}
 
 
-//добавление фиксированной позиции блоку "Итого" в правой панели
-// const totalStep = document.querySelector('.total');
-// const rightPanelHeight = totalStep.offsetTop - 800;
-// const rightPanel = document.querySelector('.order__right');
-// rightPanel.style.height = rightPanelHeight + 'px';

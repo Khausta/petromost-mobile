@@ -412,6 +412,11 @@ button:focus {
     background-color: $red-color;
 }
 
+.beige-bg {
+    background-color: $head-bg-color;
+    border: 1px solid $beige-color; 
+}
+
 .easy-border {
     border-radius: $size-19-point-5-px;
     border: 1px solid $beige-color;

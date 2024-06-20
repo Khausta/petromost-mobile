@@ -17,7 +17,8 @@ var state = {
     address: false,
     delivertAddress: false,
     selfdeliveryAddress: false,
-    catalog: false
+    catalog: false,
+    login: false
   }
 };
 var headerElements = {
@@ -122,6 +123,11 @@ var popups = {
     trigger: document.querySelector('#catalog'),
     overlay: document.querySelector('#catalog-overlay'),
     content: document.querySelector('#catalog-popup')
+  },
+  'login': {
+    trigger: document.querySelector('#login'),
+    overlay: document.querySelector('#login-overlay_1'),
+    content: document.querySelector('#login-popup_1')
   }
 };
 
@@ -210,12 +216,22 @@ if (popups.order.trigger) {
     openAnyPopup('order');
   });
 }
-popups.catalog.trigger.addEventListener('click', function () {
-  headerElements.toFixHeader();
-  openAnyPopup('catalog');
-  headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
-  headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
-});
+if (popups.catalog.trigger) {
+  popups.catalog.trigger.addEventListener('click', function () {
+    headerElements.toFixHeader();
+    openAnyPopup('catalog');
+    headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
+    headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
+  });
+}
+if (popups.login.trigger) {
+  popups.login.trigger.addEventListener('click', function () {
+    headerElements.toFixHeader();
+    openAnyPopup('login');
+    headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
+    headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
+  });
+}
 
 // открытие и закрытие карты участника бонусной программы
 function closeCard() {
@@ -396,16 +412,7 @@ var Tab = /*#__PURE__*/function () {
     }
   }]);
 }();
-var tab1 = new Tab('tab', {
-  //для примера
-  // isChanged: (tabs) => { 
-  //      console.log(tabs); 
-  // }
-});
-
-//добавление фиксированной позиции блоку "Итого" в правой панели
-// const totalStep = document.querySelector('.total');
-// const rightPanelHeight = totalStep.offsetTop - 800;
-// const rightPanel = document.querySelector('.order__right');
-// rightPanel.style.height = rightPanelHeight + 'px';
+if (document.querySelector('.tab')) {
+  var tab1 = new Tab('tab', {});
+}
 //# sourceMappingURL=main.js.map

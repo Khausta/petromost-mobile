@@ -509,6 +509,11 @@ button:focus {
   background-color: #DC1E1E;
 }
 
+.beige-bg {
+  background-color: #FFFAF5;
+  border: 1px solid #F5E6D6;
+}
+
 .easy-border {
   border-radius: min(5vw, 38px);
   border: 1px solid #F5E6D6;
@@ -1577,4 +1582,74 @@ button:focus {
   margin: auto;
   text-align: center;
   width: 60%;
+}
+
+.login {
+  background-color: #FFFFFF;
+}
+.login__block {
+  padding-top: min(23vw, 177px);
+}
+.login__title {
+  margin-bottom: min(4.2vw, 32px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(6.66vw, 51.2px);
+  color: #240405;
+  text-align: center;
+}
+.login__subtitle {
+  margin-bottom: min(20vw, 157px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: min(3.75vw, 29px);
+  color: #BE957D;
+  text-align: center;
+}
+.login__input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: min(4.2vw, 32px);
+  padding: 0 min(3.75vw, 29px) 0 min(5vw, 38px);
+  border: 1px solid #F5E6D6;
+  border-radius: min(5vw, 38px);
+}
+.login__input {
+  width: 87%;
+  padding-top: min(3.3vw, 25px);
+  padding-bottom: min(4.2vw, 32px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: min(5.1vw, 40px);
+  color: #240405;
+}
+.login__input::-moz-placeholder {
+  color: #BE957D;
+}
+.login__input::placeholder {
+  color: #BE957D;
+}
+.login__input-btn {
+  width: min(8.7vw, 67px);
+  height: min(8.7vw, 67px);
+  background-image: url("../img/icons/unhide-btn.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.login__btn {
+  height: min(13vw, 102px);
+  border-radius: min(5vw, 38px);
+}
+.login__two-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login__two-btns .login__btn {
+  width: 48%;
 }

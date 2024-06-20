@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Петромост</title>
     <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/main.js" defer="defer"></script>
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
     <div class="wrapper mobile-wrapper">
@@ -27,18 +27,18 @@
         <header class="header">
             <div class="container-header">
                 <div class="header__items flex-box">
-                    <div class="header__main-logo __js-logo">
+                    <div class="header__main-logo __js-logo " >
                         <img class="object-fit-contain header__main-logo-img header__base-logo-img" src="./img/logotype/logo-petromost-start.svg" alt="Логотип Петромост">
                         <!-- витрина, доставка, самовывоз -->
-                        <img class="object-fit-contain header__main-logo-img header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
+                        <img class="object-fit-contain header__main-logo-img  header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
                     </div>
-                    <div class="header__search flex-box">
-                        <input class="input header__input __js-searchInput" type="text" placeholder="Найти арбуз...">
+                    <div class="header__search flex-box ">
+                        <input class="input header__input __js-searchInput " type="text" placeholder="Найти арбуз...">
                         <button class="button header__search-btn">
                             <img class="object-fit-contain" src="./img/icons/search.svg" alt="Иконка поиска">
                         </button>
                     </div>
-                    <button class="button header__menu-btn menu-btn">
+                    <button class="button header__menu-btn menu-btn ">
 
                         <span class="menu-btn__line menu-btn__line_1"></span>
                         <span class="menu-btn__line menu-btn__line_2"></span>
@@ -60,7 +60,7 @@
                         </p>
                         <div class="main-card__footer flex-box">
                                
-                            <div class="main-card__box">
+                            <div class="main-card__box ">
                                 <p class="main-card__bonus-count card__bonus-count">
                                     567,01 б
                                 </p>
@@ -68,7 +68,7 @@
                                     <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain">
                                 </div>
                             </div>
-                            <div class="main-card__box" id="card-magnifier">
+                            <div class="main-card__box " id="card-magnifier">
                                 <div class="main-card__scanner-img">
                                     <img class="object-fit-contain" src="./img/card/main-scan.svg" alt="Штрихкод">
                                 </div>
@@ -137,9 +137,9 @@
 
         <!-- Bottom menu panel -->
         <div class="menu-panel">
-            <div class="container">
+            <div class="container ">
                 <ul class="menu-panel__items flex-box">
-                    <li class="menu-panel__item">
+                    <li class="menu-panel__item" >
                         <a class="menu-panel__link flex-box" href="#" id="catalog">
                             <div class="menu-panel__icon">
                                 <img class="object-fit-contain" src="./img/icons/menu-panel-catalog.svg" alt="Иконка каталога">
@@ -175,15 +175,15 @@
                         </a>
                     </li>
                     <li class="menu-panel__item">
-                        <a class="menu-panel__link flex-box" href="./cart-delivery.html">
+                        <div class="menu-panel__link flex-box" id="login">
                             <div class="menu-panel__icon-block flex-box">
                                 <div class="menu-panel__icon">
-                                    <img class="object-fit-contain" src="./img/icons/menu-panel-cart.svg" alt="Иконка корзины">
+                                    <img class="object-fit-contain" src="./img/icons/login.svg" alt="Иконка профиля">
                                 </div>
-                                <span class="menu-panel__circle menu-panel__cart-total" id="cart-total">3</span>
+                                <!-- <span class="menu-panel__circle menu-panel__cart-total" id="cart-total">3</span> -->
                             </div>
-                            <p class="menu-panel__name">Корзина</p>
-                        </a>
+                            <p class="menu-panel__name">Войти</p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -202,7 +202,7 @@
                             <p class="main-card__welcome">
                                 <span class="main-card__user-name">Покажите 
                                     ее&nbsp;кассиру
-                            </span></p>
+                            </p>
                             <div class="show-card__scaner">
                                 <div class="show-card__scaner-img">
                                     <img class="object-fit-contain" src="./img/card/big-scanner-example.png" alt="Штрихкод">
@@ -254,7 +254,7 @@
                                 <button type="button" class="button delivery-variants__var __js-active" id="delivery-address">
                                     Доставка
                                 </button>
-                                <button type="button" class="button delivery-variants__var" id="selfdelivery-address">
+                                <button type="button" class="button delivery-variants__var " id="selfdelivery-address">
                                     Самовывоз
                                 </button>
                             </div>
@@ -264,7 +264,7 @@
                 </div>
                 <!-- список меню -->
                 <ul class="menu__list">
-                    <li class="menu__li">
+                    <li class="menu__li ">
                         <a href="#" class="menu__li-with-content menu-link flex-box menu__message __js-active">
                             <div class="menu-link__title">
                                 <div class="menu-link__prefix">
@@ -276,7 +276,7 @@
                                 <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                             </span>
                         </a>
-                        <div class="menu__content">
+                        <div class="menu__content ">
                             <div class="menu__messages">
                                 <!-- активное сообщение -->
                                 <div class="message message__active">
@@ -314,7 +314,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="menu__li">
+                    <li class="menu__li ">
                         <a href="#" class="menu__li-with-content menu-link flex-box menu__message">
                             <div class="menu-link__title">
                                 <h5>О компании</h5>
@@ -458,7 +458,7 @@
                         </a>
                     </li>
             
-            </ul></div>
+            </div>
         </div>
 
         <!-- Данные профиля -->
@@ -473,7 +473,7 @@
                 
                 <!-- меню Данных профиля-->
                 <ul class="menu__list">
-                    <li class="menu__li">
+                    <li class="menu__li ">
                         <a href="#" class="menu__li-with-content menu-link flex-box" id="profile-data">
                             <div class="menu-link__title">
                                 <h5>Персональные данные</h5>
@@ -671,7 +671,7 @@
                 <div class="menu">
                     <!-- список меню -->
                     <ul class="menu__list">
-                        <li class="menu__li">
+                        <li class="menu__li ">
                             <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
                                 <div class="menu-link__title">
                                     <h5>Указать адрес</h5>
@@ -680,7 +680,7 @@
                                     <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                                 </span>
                             </a>
-                            <div class="menu__content">
+                            <div class="menu__content ">
                                 <div class="address__variants">
                                     <!-- адрес на выбор -->
                                     <div class="address__option">
@@ -713,7 +713,7 @@
 
                                      <!-- адрес на выбор  -->
                                      <div class="address__option">
-                                        <label class="radio">
+                                        <label class=" radio">
                                             <input class="radio__input" type="radio" name="address">
                                             <div class="radio__block">
                                                 <p class="address__city">г. Новодвинск</p>
@@ -782,7 +782,7 @@
                             </div>
                         </li>
     
-                        <li class="menu__li">
+                        <li class="menu__li ">
                             <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
                                 <div class="menu-link__title">
                                     <h5>Выбрать из сохраненных</h5>
@@ -791,7 +791,7 @@
                                     <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                                 </span>
                             </a>
-                            <div class="menu__content">
+                            <div class="menu__content ">
                                 <div class="address__variants">
                                     <!-- адрес на выбор  -->
                                     <div class="address__option">
@@ -808,7 +808,7 @@
 
                                      <!-- адрес на выбор  -->
                                      <div class="address__option">
-                                        <label class="radio">
+                                        <label class=" radio">
                                             <input class="radio__input" type="radio" name="address">
                                             <div class="radio__block">
                                                 <p class="address__saved-city">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
@@ -838,7 +838,7 @@
 
           <!-- Адреса доставки для самовывоза -->
           <div class="overlay" id="selfdelivery-address-overlay">
-            <div class="popup" id="selfdelivery-address-popup">
+            <div class="popup " id="selfdelivery-address-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Доставка</h2>
                     <button class="button flex-box return-btn">
@@ -847,7 +847,7 @@
                 </div>
 
                 
-                <li class="menu__li">
+                <li class="menu__li ">
                     <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
                         <div class="menu-link__title">
                             <h5>Указать адрес</h5>
@@ -856,7 +856,7 @@
                             <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                         </span>
                     </a>
-                    <div class="menu__content">
+                    <div class="menu__content ">
                         <div class="address__variants">
                              <!-- адрес на выбор -->
                              <div class="address__option">
@@ -1031,7 +1031,7 @@
                         </a>
                     </li>
                     <li class="menu__li"> 
-                        <a href="#" class="menu__li-with-content menu-link flex-box" id="address">
+                        <a href="#" class="menu__li-with-content  menu-link flex-box" id="address">
                             <div class="menu-link__title catalog__title">
                                 <div class="menu-link__prefix">
                                     <img class="object-fit-contain" src="./img/catalog/croissant.svg" alt="Иконка записи">
@@ -1042,7 +1042,7 @@
                                 <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                             </span>
                         </a>
-                        <div class="menu__content">
+                        <div class="menu__content ">
                             <!-- список второго порядка для хлебобулочных изделий -->
                             <ul>
                                 <li class="menu__li">
@@ -1207,10 +1207,54 @@
                             </span>
                         </a>
                     </li>
-            </ul></div>
+            </div>
         </div>
 
-      
+         <!-- авторизация -->
+
+
+         <div class="overlay" id="login-overlay_1">
+            <div class="popup login" id="login-popup">
+               
+                <div class="login__block">
+                    <div class="container">
+                        <h2 class="login__title">
+                            Вход в аккаунт
+                        </h2>
+                        <p class="login__subtitle">
+                            Авторизируйтесь через свою учетную запись 
+                        </p>
+    
+                        <div class="login__inputs">
+                            <div class="login__input-wrapper">
+                                <input class="input login__input" type="text" name="phone" placeholder="Телефон">
+                            </div>
+    
+                            <div class="login__input-wrapper">
+                                <input class="input login__input" type="text" name="password" placeholder="Пароль">
+                                <div class="login__input-btn login__hide-btn">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="login__two-btns">
+                            <button class="button login__btn beige-bg">Забыли пароль?</button>
+                            <button class="button login__btn brown-bg">Войти</button>
+                        </div>
+                        <button class="button login__btn beige-bg">Войти с помощью СМС кода</button>
+                        <button class="button login__btn beige-bg">
+                            <span>Войти через ВК</span>
+                            <span class="login__btn-icon"></span>
+                        </button>
+                  
+                 
+                </div>
+           
+            
+               
+            </div>
+        </div>
 
 
 

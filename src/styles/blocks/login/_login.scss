@@ -1,0 +1,72 @@
+.login {
+    background-color: $white-bg-color;
+
+    &__block {
+        padding-top: min(23vw, 177px);
+    }
+
+    &__title {
+        margin-bottom: $size-16and25;
+        @include gilroy-bold;
+        font-size: $s26px;
+        color: $black-color;
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin-bottom: $s80px;
+        @include gilroy-semibold;
+        font-size: $size-14px;
+        color: $brown-color;
+        text-align: center;
+    }
+
+    &__input-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $size-16and25;
+        padding: 0 $size-14px 0 $size-19-point-5-px;
+        border: 1px solid $beige-color;
+        border-radius: $size-19-point-5-px;
+       
+    }
+
+    &__input {
+        width: 87%;
+        padding-top: $size-13px;
+        padding-bottom: $size-16and25;
+        @include gilroy-semibold;
+        font-size: $size-20px;
+        color: $black-color;
+
+        &::placeholder {
+            color: $brown-color;
+        }
+    }
+
+    &__input-btn {
+        width: $s34px;
+        height: $s34px;
+        background-image: url('../img/icons/unhide-btn.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    &__btn {
+        height: $size-52px;
+        border-radius: $size-19-point-5-px;
+    
+    }
+    
+    &__two-btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .login__btn {
+            width: 48%;
+        }
+    }
+}

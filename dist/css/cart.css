@@ -509,6 +509,11 @@ button:focus {
   background-color: #DC1E1E;
 }
 
+.beige-bg {
+  background-color: #FFFAF5;
+  border: 1px solid #F5E6D6;
+}
+
 .easy-border {
   border-radius: min(5vw, 38px);
   border: 1px solid #F5E6D6;

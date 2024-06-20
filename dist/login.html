@@ -175,15 +175,15 @@
                         </a>
                     </li>
                     <li class="menu-panel__item">
-                        <a class="menu-panel__link flex-box" href="./cart-delivery.html">
+                        <div class="menu-panel__link flex-box" id="login">
                             <div class="menu-panel__icon-block flex-box">
                                 <div class="menu-panel__icon">
-                                    <img class="object-fit-contain" src="./img/icons/menu-panel-cart.svg" alt="Иконка корзины">
+                                    <img class="object-fit-contain" src="./img/icons/login.svg" alt="Иконка профиля">
                                 </div>
-                                <span class="menu-panel__circle menu-panel__cart-total" id="cart-total">3</span>
+                                <!-- <span class="menu-panel__circle menu-panel__cart-total" id="cart-total">3</span> -->
                             </div>
-                            <p class="menu-panel__name">Корзина</p>
-                        </a>
+                            <p class="menu-panel__name">Войти</p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -1210,10 +1210,54 @@
             </ul></div>
         </div>
 
-      
+         <!-- авторизация -->
+
+
+         <div class="overlay" id="login-overlay_1">
+            <div class="popup login" id="login-popup">
+               
+                <div class="login__block">
+                    <div class="container">
+                        <h2 class="login__title">
+                            Вход в аккаунт
+                        </h2>
+                        <p class="login__subtitle">
+                            Авторизируйтесь через свою учетную запись 
+                        </p>
+    
+                        <div class="login__inputs">
+                            <div class="login__input-wrapper">
+                                <input class="input login__input" type="text" name="phone" placeholder="Телефон">
+                            </div>
+    
+                            <div class="login__input-wrapper">
+                                <input class="input login__input" type="text" name="password" placeholder="Пароль">
+                                <div class="login__input-btn login__hide-btn">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="login__two-btns">
+                            <button class="button login__btn beige-bg">Забыли пароль?</button>
+                            <button class="button login__btn brown-bg">Войти</button>
+                        </div>
+                        <button class="button login__btn beige-bg">Войти с помощью СМС кода</button>
+                        <button class="button login__btn beige-bg">
+                            <span>Войти через ВК</span>
+                            <span class="login__btn-icon"></span>
+                        </button>
+                  
+                 
+                </div>
+           
+            
+               
+            </div>
+        </div>
 
 
 
     </div>
-</body>
+</div></body>
 </html>
