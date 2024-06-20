@@ -2070,6 +2070,21 @@ button:focus {
   background-color: #5EA636;
   border-radius: 100%;
 }
+.good-cards__quantity_miss {
+  color: #DC1E1E;
+}
+.good-cards__quantity_miss::before {
+  position: absolute;
+  left: min(2vw, 16px);
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  display: block;
+  width: 1vw;
+  height: 1vw;
+  background-color: #DC1E1E;
+  border-radius: 100%;
+}
 .good-cards__watch {
   display: inline-block;
   width: min(2.5vw, 19px);

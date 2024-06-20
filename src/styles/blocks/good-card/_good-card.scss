@@ -130,6 +130,25 @@
         }
     }
 
+    &__quantity {
+        &_miss {
+            color: $red-color;
+
+        &::before {
+            position: absolute;
+            left: $size-8px;
+            top: 50%;
+            transform: translateY(-50%);
+            content: '';
+            display: block;
+            width: 1vw;
+            height: 1vw;
+            background-color: $red-color;
+            border-radius: 100%;
+        } 
+        }
+    }
+
     &__watch {
         display: inline-block;
         width: $gap-10;
