@@ -1505,6 +1505,11 @@ button:focus {
   transform: rotate(-180deg);
 }
 
+.outer-dnd__content {
+  max-height: 0;
+  opacity: 0;
+}
+
 .inner-dnd__icon {
   display: flex;
   width: min(3.3vw, 25px);

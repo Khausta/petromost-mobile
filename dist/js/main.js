@@ -415,4 +415,40 @@ var Tab = /*#__PURE__*/function () {
 if (document.querySelector('.tab')) {
   var tab1 = new Tab('tab', {});
 }
+var coll = document.getElementsByClassName("collapsible");
+var i;
+var heightArray = [];
+for (var _i = 0; _i < coll.length; _i++) {
+  // добавляем значения высоты каждого .content в массив по порядку
+  heightArray.push(coll[_i].nextElementSibling.scrollHeight);
+}
+var _loop = function _loop(_i2) {
+  coll[_i2].addEventListener("click", function () {
+    this.classList.toggle("active");
+    if (!this.classList.contains('active')) {
+      // при закрытии какой-либо кнопки закрывается также все внутренние кнопки и контент
+      for (var x = _i2 + 1; x < coll.length; x++) {
+        coll[x].classList.remove("active");
+        coll[x].nextElementSibling.style.maxHeight = null;
+      }
+    }
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      for (var prevContent = 0; prevContent < _i2; prevContent++) {
+        // при открытии какой-либо кнопки нам необходимо также менять высоту всех предыдущих .content для корректного отображения аккордеона, высчитываем новую высоту путем сложения предыдущих значений высоты
+        var sumHeight = 0;
+        for (var _prevContent = 0; _prevContent <= _i2; _prevContent++) {
+          sumHeight = sumHeight + heightArray[_prevContent];
+        }
+        coll[prevContent].nextElementSibling.style.maxHeight = sumHeight + 'px';
+      }
+    }
+  });
+};
+for (var _i2 = 0; _i2 < coll.length; _i2++) {
+  _loop(_i2);
+}
 //# sourceMappingURL=main.js.map

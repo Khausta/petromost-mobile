@@ -19,8 +19,13 @@
         transform: rotate(-180deg);
     }
 }
+.outer-dnd__content {
+    max-height: 0;
+    opacity: 0;
+}
 
 .inner-dnd {
+
     &__icon {
         display: flex;
         width: $size-13px;
