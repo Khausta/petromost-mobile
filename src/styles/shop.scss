@@ -256,6 +256,10 @@
     &__collaps {
         width: 100%;
     }
+
+    &__block:not(last-child) {
+        margin-bottom: min(3.3vw, 25px);
+    }
 }
   
 //   .active,

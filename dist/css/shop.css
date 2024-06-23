@@ -562,6 +562,17 @@ button:focus {
   border-radius: 100%;
 }
 
+.list-content, .list-header {
+  position: relative;
+  opacity: 1;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+._js-hidden {
+  opacity: 0;
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;
@@ -1878,6 +1889,9 @@ button:focus {
 
 .shops__collaps {
   width: 100%;
+}
+.shops__block:not(last-child) {
+  margin-bottom: min(3.3vw, 25px);
 }
 
 .content {

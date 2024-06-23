@@ -415,40 +415,96 @@ var Tab = /*#__PURE__*/function () {
 if (document.querySelector('.tab')) {
   var tab1 = new Tab('tab', {});
 }
-var coll = document.getElementsByClassName("collapsible");
-var i;
-var heightArray = [];
-for (var _i = 0; _i < coll.length; _i++) {
-  // добавляем значения высоты каждого .content в массив по порядку
-  heightArray.push(coll[_i].nextElementSibling.scrollHeight);
+
+// var coll = document.getElementsByClassName("collapsible");
+//     let i;
+
+//     let heightArray = [];
+//     for (let i = 0; i < coll.length; i++) { // добавляем значения высоты каждого .content в массив по порядку
+//       heightArray.push(coll[i].nextElementSibling.scrollHeight);
+//     }
+
+//     for (let i = 0; i < coll.length; i++) {
+//       coll[i].addEventListener("click", function() {
+//         console.log(this);
+//         coll[i].classList.toggle("active");
+
+//         if (!coll[i].classList.contains('active')) { // при закрытии какой-либо кнопки закрывается также все внутренние кнопки и контент
+//           for (let x = i + 1; x < coll.length; x++) {
+//             coll[x].classList.remove("active");
+//             coll[x].nextElementSibling.style.maxHeight = null;
+//           }
+//         }
+
+//         var content = coll[i].nextElementSibling;
+//         if (content.style.maxHeight) {
+//           content.style.maxHeight = null;
+//         } else {
+//           content.style.maxHeight = content.scrollHeight + "px";
+
+//           for (let prevContent = 0; prevContent < i; prevContent++) { // при открытии какой-либо кнопки нам необходимо также менять высоту всех предыдущих .content для корректного отображения аккордеона, высчитываем новую высоту путем сложения предыдущих значений высоты
+//             let sumHeight = 0;
+
+//             for (let prevContent = 0; prevContent <= i; prevContent++) {
+//               sumHeight = sumHeight + heightArray[prevContent];
+//             }
+
+//             coll[prevContent].nextElementSibling.style.maxHeight = sumHeight + 'px';
+//           }
+//         }
+//       });
+//     }
+
+// определяем все заголовки списков
+var listHeaders = document.querySelectorAll('.list-header');
+
+// добавляем всем контентам класс _js-hidden
+for (var i = 0; i < listHeaders.length; i++) {
+  addHiddenStyle(listHeaders[i].nextElementSibling);
 }
-var _loop = function _loop(_i2) {
-  coll[_i2].addEventListener("click", function () {
-    this.classList.toggle("active");
-    if (!this.classList.contains('active')) {
-      // при закрытии какой-либо кнопки закрывается также все внутренние кнопки и контент
-      for (var x = _i2 + 1; x < coll.length; x++) {
-        coll[x].classList.remove("active");
-        coll[x].nextElementSibling.style.maxHeight = null;
+function addHiddenStyle(content) {
+  content.classList.add('_js-hidden');
+  content.style.maxHeight = '0px'; // только так работает анимация изменения высоты
+}
+var timerId;
+// вешаем событие клика на заголовки каждого списка
+listHeaders.forEach(function (header) {
+  header.addEventListener('click', function () {
+    if (!timerId) {
+      if (header.nextElementSibling.classList.contains('_js-hidden')) {
+        showContent(this); // т.к. функция не стрелочная, то this будет именно тот header на который произошел клик 
+        return;
       }
-    }
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-      for (var prevContent = 0; prevContent < _i2; prevContent++) {
-        // при открытии какой-либо кнопки нам необходимо также менять высоту всех предыдущих .content для корректного отображения аккордеона, высчитываем новую высоту путем сложения предыдущих значений высоты
-        var sumHeight = 0;
-        for (var _prevContent = 0; _prevContent <= _i2; _prevContent++) {
-          sumHeight = sumHeight + heightArray[_prevContent];
-        }
-        coll[prevContent].nextElementSibling.style.maxHeight = sumHeight + 'px';
-      }
+      hideContent(this);
     }
   });
-};
-for (var _i2 = 0; _i2 < coll.length; _i2++) {
-  _loop(_i2);
+});
+function showContent(element) {
+  var hiddenContent = element.nextElementSibling;
+  hiddenContent.classList.remove('_js-hidden');
+  hiddenContent.style.maxHeight = hiddenContent.scrollHeight + 'px';
+  function changeMaxHeight(element) {
+    element.parentNode.parentNode.style.maxHeight = element.parentNode.parentNode.scrollHeight + hiddenContent.scrollHeight + 'px';
+    if (element.parentNode.parentNode.closest('.list-content')) {
+      changeMaxHeight(element.parentNode.parentNode.closest('.list-content'));
+    } else {
+      return;
+    }
+  }
+  changeMaxHeight(hiddenContent);
+
+  // таймер для того, чтобы каждое союытие ожидало выполнения предыдущего
+  timerId = setTimeout(function () {
+    console.log("котент раскрылся");
+    timerId = 0;
+  }, 300);
+}
+function hideContent(element) {
+  var openedContent = element.nextElementSibling;
+  addHiddenStyle(openedContent);
+  var allOpenedItems = openedContent.querySelectorAll('.list-content');
+  allOpenedItems.forEach(function (el) {
+    addHiddenStyle(el);
+  });
 }
 //# sourceMappingURL=main.js.map

@@ -562,6 +562,17 @@ button:focus {
   border-radius: 100%;
 }
 
+.list-content, .list-header {
+  position: relative;
+  opacity: 1;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+._js-hidden {
+  opacity: 0;
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;
