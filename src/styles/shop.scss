@@ -100,6 +100,18 @@
         
     }
 
+    .list-header._active{
+        .shops__city-name {
+            &::before {
+                display: none;
+            }
+            
+            &::after {
+                display: block;
+            }
+        } 
+    }
+
     &__item {
         padding-left: $size-13px;
         padding-right: $size-13px;
@@ -189,6 +201,7 @@
 }
 
 .shop-search {
+    background-color: $head-bg-color;
     padding: $gap-10;
     &__input-block {
         padding: 0 min(2.5vw, 17px) 0 min(3vw, 20px);
@@ -196,6 +209,7 @@
         height: min(8.2vw, 62px);
         border: 1px solid $beige-color;
         border-radius: min(2vw, 15px);
+        background-color: #fff;
      
     }
 
@@ -206,6 +220,7 @@
         font-style: normal;
         font-size: $fz-13px;
         color: $black-color;
+        background-color: #fff;
 
 
         &::placeholder {

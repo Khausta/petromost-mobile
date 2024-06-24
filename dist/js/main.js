@@ -437,6 +437,7 @@ function listHendler() {
     addHiddenStyle(listHeaders[i].nextElementSibling);
   }
   function addHiddenStyle(content) {
+    // content.previousSiblingELement.classList.remove('._active');
     content.classList.add('_js-hidden');
     content.style.maxHeight = '0px'; // только так работает анимация изменения высоты
   }
@@ -454,6 +455,7 @@ function listHendler() {
     });
   });
   function showContent(element) {
+    element.classList.add('_active');
     var hiddenContent = element.nextElementSibling;
     hiddenContent.classList.remove('_js-hidden');
     hiddenContent.style.maxHeight = hiddenContent.scrollHeight + 'px';
@@ -473,11 +475,13 @@ function listHendler() {
     }, 300);
   }
   function hideContent(element) {
+    element.classList.remove('_active');
     var openedContent = element.nextElementSibling;
     addHiddenStyle(openedContent);
     var allOpenedItems = openedContent.querySelectorAll('.list-content');
     allOpenedItems.forEach(function (el) {
       addHiddenStyle(el);
+      el.previousElementSibling.classList.remove('_active');
     });
   }
 }

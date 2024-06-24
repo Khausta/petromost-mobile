@@ -573,6 +573,20 @@ button:focus {
   opacity: 0;
 }
 
+.arrow-icon {
+  display: flex;
+  width: min(3.3vw, 25px);
+  height: min(3.3vw, 25px);
+}
+.arrow-icon__img {
+  transition: all 0.3s ease-in-out;
+  transform: rotate(90deg);
+}
+
+.list-header._active .arrow-icon__img {
+  transform: rotate(-90deg);
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;

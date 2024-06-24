@@ -573,6 +573,20 @@ button:focus {
   opacity: 0;
 }
 
+.arrow-icon {
+  display: flex;
+  width: min(3.3vw, 25px);
+  height: min(3.3vw, 25px);
+}
+.arrow-icon__img {
+  transition: all 0.3s ease-in-out;
+  transform: rotate(90deg);
+}
+
+.list-header._active .arrow-icon__img {
+  transform: rotate(-90deg);
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;
@@ -1771,6 +1785,12 @@ button:focus {
 .shops__city-box.__js-opened .shops__city-name::after {
   display: block;
 }
+.shops .list-header._active .shops__city-name::before {
+  display: none;
+}
+.shops .list-header._active .shops__city-name::after {
+  display: block;
+}
 .shops__item {
   padding-left: min(3.3vw, 25px);
   padding-right: min(3.3vw, 25px);
@@ -1846,6 +1866,7 @@ button:focus {
 }
 
 .shop-search {
+  background-color: #FFFAF5;
   padding: min(2.5vw, 19px);
 }
 .shop-search__input-block {
@@ -1854,6 +1875,7 @@ button:focus {
   height: min(8.2vw, 62px);
   border: 1px solid #F5E6D6;
   border-radius: min(2vw, 15px);
+  background-color: #fff;
 }
 .shop-search__input {
   width: 92%;
@@ -1862,6 +1884,7 @@ button:focus {
   font-style: normal;
   font-size: min(3.3vw, 25px);
   color: #240405;
+  background-color: #fff;
 }
 .shop-search__input::-moz-placeholder {
   color: #BE967D;

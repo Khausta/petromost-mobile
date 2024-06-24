@@ -480,6 +480,26 @@ button:focus {
     
 }
 
+.arrow-icon {
+    display: flex;
+    width: min(3.3vw, 25px);
+    height: min(3.3vw, 25px);
+
+
+    &__img {
+        transition: all 0.3s ease-in-out;
+        transform: rotate(90deg);
+    }
+}
+
+.list-header._active {
+    .arrow-icon {
+        &__img {
+            transform: rotate(-90deg);
+        }
+    }
+}
+
 
 @import './components/save-btn';
 @import './components/input-box';
