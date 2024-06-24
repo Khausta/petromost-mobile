@@ -188,30 +188,45 @@ function openAnyPopup(popupName) {
   }
 }
 
-popups.profile.trigger.addEventListener('click', () => {
-  openAnyPopup('profile');
-});
+if(popups.profile.trigger) {
+  popups.profile.trigger.addEventListener('click', () => {
+    openAnyPopup('profile');
+  });
+  
+}
 
-popups.profileData.trigger.addEventListener('click', () => {
-  openAnyPopup('profileData');
-});
+if(popups.profileData.trigger) {
+  popups.profileData.trigger.addEventListener('click', () => {
+    openAnyPopup('profileData');
+  });
+}
 
-popups.myCard.trigger.addEventListener('click', () => {
-  openAnyPopup('myCard');
-});
+if (popups.myCard.trigger) {
+  popups.myCard.trigger.addEventListener('click', () => {
+    openAnyPopup('myCard');
+  });
+}
 
-popups.address.trigger.addEventListener('click', () => {
-  openAnyPopup('address');
-});
-
-popups.deliveryAddress.trigger.addEventListener('click', () => {
-  openAnyPopup('deliveryAddress');
-});
+if (popups.address.trigger) {
+  popups.address.trigger.addEventListener('click', () => {
+    openAnyPopup('address');
+  });
+}
 
 
-popups.selfdeliveryAddress.trigger.addEventListener('click', () => {
-  openAnyPopup('selfdeliveryAddress');
-});
+if (popups.deliveryAddress.trigger) {
+  popups.deliveryAddress.trigger.addEventListener('click', () => {
+    openAnyPopup('deliveryAddress');
+  });  
+}
+
+
+if(popups.selfdeliveryAddress.trigger) {
+  popups.selfdeliveryAddress.trigger.addEventListener('click', () => {
+    openAnyPopup('selfdeliveryAddress');
+  });
+}
+
 
 if ( popups.order.trigger) {
   popups.order.trigger.addEventListener('click', () => {
@@ -258,15 +273,9 @@ if (popups.card.trigger) {
 
 
 
-
-
-
-
-
 // для инпутов Данных профиля
 document.querySelectorAll('.input-box__input').forEach(input => {
   input.addEventListener('input', () => {
-    console.log(input.value);
     if (input.value) {
       input.nextElementSibling.classList.add('__js-active');
       input.nextElementSibling.addEventListener('click', () => {
@@ -324,8 +333,7 @@ function dnd(triggerElement, animatedIcon, hiddenContent) {
 dnd('menu__li-with-content', 'menu-link__icon', 'menu__content');
 // Открытие списка магазинов
 dnd('dnd', 'dnd__icon', 'dnd__content');
-// Открытие внутреннего выпадающего списка для выбора адреса доставки 
-dnd('inner-dnd', 'shops__city-box', 'inner-dnd__content');
+
 
 
 
@@ -455,112 +463,73 @@ if (document.querySelector('.tab')) {
 
 
 
-// var coll = document.getElementsByClassName("collapsible");
-//     let i;
-
-
-//     let heightArray = [];
-//     for (let i = 0; i < coll.length; i++) { // добавляем значения высоты каждого .content в массив по порядку
-//       heightArray.push(coll[i].nextElementSibling.scrollHeight);
-//     }
-
-//     for (let i = 0; i < coll.length; i++) {
-//       coll[i].addEventListener("click", function() {
-//         console.log(this);
-//         coll[i].classList.toggle("active");
-
-//         if (!coll[i].classList.contains('active')) { // при закрытии какой-либо кнопки закрывается также все внутренние кнопки и контент
-//           for (let x = i + 1; x < coll.length; x++) {
-//             coll[x].classList.remove("active");
-//             coll[x].nextElementSibling.style.maxHeight = null;
-//           }
-//         }
-
-//         var content = coll[i].nextElementSibling;
-//         if (content.style.maxHeight) {
-//           content.style.maxHeight = null;
-//         } else {
-//           content.style.maxHeight = content.scrollHeight + "px";
-
-//           for (let prevContent = 0; prevContent < i; prevContent++) { // при открытии какой-либо кнопки нам необходимо также менять высоту всех предыдущих .content для корректного отображения аккордеона, высчитываем новую высоту путем сложения предыдущих значений высоты
-//             let sumHeight = 0;
-
-//             for (let prevContent = 0; prevContent <= i; prevContent++) {
-//               sumHeight = sumHeight + heightArray[prevContent];
-//             }
-
-//             coll[prevContent].nextElementSibling.style.maxHeight = sumHeight + 'px';
-//           }
-//         }
-//       });
-//     }
-
-
-
-
-
-
-
-
 
 // определяем все заголовки списков
-const listHeaders = document.querySelectorAll('.list-header');
+if (document.querySelector('.list-header')) {
+  listHendler();
+}
 
+function listHendler() {
+  const listHeaders = document.querySelectorAll('.list-header');
+  
 // добавляем всем контентам класс _js-hidden
 for (let i = 0; i < listHeaders.length; i++) {
-    addHiddenStyle(listHeaders[i].nextElementSibling);
+  addHiddenStyle(listHeaders[i].nextElementSibling);
 }
 
 function addHiddenStyle(content) {
-    content.classList.add('_js-hidden'); 
-    content.style.maxHeight = '0px';     // только так работает анимация изменения высоты
+ 
+  content.classList.add('_js-hidden'); 
+  content.style.maxHeight = '0px';     // только так работает анимация изменения высоты
 } 
 
 
 let timerId;
 // вешаем событие клика на заголовки каждого списка
 listHeaders.forEach(header => {
-    header.addEventListener('click', function () { 
-        if(!timerId) {
-            if (header.nextElementSibling.classList.contains('_js-hidden')) {
-                showContent(this); // т.к. функция не стрелочная, то this будет именно тот header на который произошел клик 
-                return;
-            } 
-            hideContent(this);
-        }
-    });
+  header.addEventListener('click', function () { 
+      if(!timerId) {
+          if (header.nextElementSibling.classList.contains('_js-hidden')) {
+              showContent(this); // т.к. функция не стрелочная, то this будет именно тот header на который произошел клик 
+              return;
+          } 
+          hideContent(this);
+      }
+  });
 })
 
 function showContent(element) {
-    const hiddenContent = element.nextElementSibling;
-    hiddenContent.classList.remove('_js-hidden');
-    hiddenContent.style.maxHeight = hiddenContent.scrollHeight + 'px';
+  const hiddenContent = element.nextElementSibling;
+  hiddenContent.classList.remove('_js-hidden');
+  hiddenContent.style.maxHeight = hiddenContent.scrollHeight + 'px';
 
-    function changeMaxHeight (element) {
-        element.parentNode.parentNode.style.maxHeight = element.parentNode.parentNode.scrollHeight + hiddenContent.scrollHeight + 'px';
-        if (element.parentNode.parentNode.closest('.list-content')) {
-            changeMaxHeight(element.parentNode.parentNode.closest('.list-content'));
-        }   else {
-            return;
-        }    
-    }
-    changeMaxHeight(hiddenContent);
+  function changeMaxHeight (element) {
+      element.parentNode.parentNode.style.maxHeight = element.parentNode.parentNode.scrollHeight + hiddenContent.scrollHeight + 'px';
+      if (element.parentNode.parentNode.closest('.list-content')) {
+          changeMaxHeight(element.parentNode.parentNode.closest('.list-content'));
+      }   else {
+          return;
+      }    
+  }
+  changeMaxHeight(hiddenContent);
 
-    // таймер для того, чтобы каждое союытие ожидало выполнения предыдущего
-    timerId = setTimeout(() => {
-        console.log("котент раскрылся");
-        timerId = 0;
-    },  300);
+  // таймер для того, чтобы каждое событие ожидало выполнения предыдущего
+  timerId = setTimeout(() => {
+      timerId = 0;
+  },  300);
 }
 
 function hideContent(element) {
-    const openedContent = element.nextElementSibling;
-    addHiddenStyle(openedContent);
-    const allOpenedItems = openedContent.querySelectorAll('.list-content');
+  const openedContent = element.nextElementSibling;
+  addHiddenStyle(openedContent);
+  const allOpenedItems = openedContent.querySelectorAll('.list-content');
     allOpenedItems.forEach(el => {
         addHiddenStyle(el);
     })
+  }
+
 }
+
 
 
 

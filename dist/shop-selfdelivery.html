@@ -69,11 +69,12 @@
                 </div>
             </section>
 
-            <!-- выбор магазина -->
+           
+            <!-- выбор магазина и вложенные списки -->
             <section class="shops">
-                <ul class="shops__list">
+                <ul class="shops__list list-content">
                     <li class="shops__li">
-                        <div class="dnd menu-link flex-box">
+                        <div class="dnd menu-link flex-box list-header">
                             <div class="menu-link__title">
                                 <h5>Список магазинов</h5>
                             </div>
@@ -82,179 +83,178 @@
                             </span>
                         </div>
 
-                        <div class="dnd__content">
-                            <div class="shops__option">
-                                <div class="inner-dnd shops__city">
-                                    <div class="shops__city-box flex-box">
-                                        <p class="shops__city-name">г. Архангельск</p>
-                                        <div class="inner-dnd__icon">
-                                            <img class="object-fit-contain shops__arrow" src="./img/menu/arrow.svg" alt="Иконка стрелки">
-                                        </div>  
+                        <ul class="list-content">
+                            <li>
+                                    <div class=" inner-dnd shops__city list-header">
+                                        <div class="shops__city-box flex-box">
+                                            <p class="shops__city-name">г. Архангельск</p>
+                                            <div class="inner-dnd__icon">
+                                                <img class="object-fit-contain shops__arrow" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                            </div>  
+                                        </div>
+                                      
                                     </div>
-                                  
-                                </div>
-                                <div class="inner-dnd__content">
-                                    <ul class="shops__address">
-                                        <li class="shops__item">
-                                            <label>
-                                                <input class="shops__input" type="radio" name="shop">
-                                                <div class="shops__block">
-                                                    <div class="shops__logo-block">
-                                                        <div class="shops__logo">
-                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                    <div class="list-content">
+                                        <ul class="shops__address">
+                                            <li class="shops__item">
+                                                <label>
+                                                    <input class="shops__input" type="radio" name="shop">
+                                                    <div class="shops__block">
+                                                        <div class="shops__logo-block">
+                                                            <div class="shops__logo">
+                                                                <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                            </div>
+                                                            <p class="shops__element">
+                                                                САМОВЫВОЗ
+                                                            </p>
                                                         </div>
-                                                        <p class="shops__element">
-                                                            САМОВЫВОЗ
-                                                        </p>
-                                                    </div>
-                                                    <div class="shops__text-block">
-                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
-                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
-                                                        <p class="shops__center-contacts">
-                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
-                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </label>
-                                        </li>
-                                        <li class="shops__item">
-                                            <label>
-                                                <input class="shops__input" type="radio" name="shop">
-                                                <div class="shops__block">
-                                                    <div class="shops__logo-block">
-                                                        <div class="shops__logo">
-                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                        <div class="shops__text-block">
+                                                            <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                            <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                            <p class="shops__center-contacts">
+                                                                <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                                <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                            </p>
                                                         </div>
-                                                        <p class="shops__element">
-                                                            САМОВЫВОЗ
-                                                        </p>
                                                     </div>
-                                                    <div class="shops__text-block">
-                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
-                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
-                                                        <p class="shops__center-contacts">
-                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
-                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </label>
-                                        </li>
-                                        <li class="shops__item">
-                                            <label>
-                                                <input class="shops__input" type="radio" name="shop">
-                                                <div class="shops__block">
-                                                    <div class="shops__logo-block">
-                                                        <div class="shops__logo">
-                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                </label>
+                                            </li>
+                                            <li class="shops__item">
+                                                <label>
+                                                    <input class="shops__input" type="radio" name="shop">
+                                                    <div class="shops__block">
+                                                        <div class="shops__logo-block">
+                                                            <div class="shops__logo">
+                                                                <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                            </div>
+                                                            <p class="shops__element">
+                                                                САМОВЫВОЗ
+                                                            </p>
                                                         </div>
-                                                        <p class="shops__element">
-                                                            САМОВЫВОЗ
-                                                        </p>
+                                                        <div class="shops__text-block">
+                                                            <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                            <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                            <p class="shops__center-contacts">
+                                                                <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                                <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                    <div class="shops__text-block">
-                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
-                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
-                                                        <p class="shops__center-contacts">
-                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
-                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
-                                                        </p>
+                                                </label>
+                                            </li>
+                                            <li class="shops__item">
+                                                <label>
+                                                    <input class="shops__input" type="radio" name="shop">
+                                                    <div class="shops__block">
+                                                        <div class="shops__logo-block">
+                                                            <div class="shops__logo">
+                                                                <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                            </div>
+                                                            <p class="shops__element">
+                                                                САМОВЫВОЗ
+                                                            </p>
+                                                        </div>
+                                                        <div class="shops__text-block">
+                                                            <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                            <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                            <p class="shops__center-contacts">
+                                                                <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                                <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="shops__option">
-                                <div class="inner-dnd shops__city">
-                                    <div class="shops__city-box flex-box">
-                                        <p class="shops__city-name">г. Северодвинск</p>
-                                        <div class="inner-dnd__icon">
-                                            <img class="object-fit-contain shops__arrow" src="./img/menu/arrow.svg" alt="Иконка стрелки">
-                                        </div>  
+                                                </label>
+                                            </li>
+                                        </ul>
                                     </div>
-                                  
-                                </div>
-                                <div class="inner-dnd__content">
-                                    <ul class="shops__address">
-                                        <li class="shops__item">
-                                            <label>
-                                                <input class="shops__input" type="radio" name="shop">
-                                                <div class="shops__block">
-                                                    <div class="shops__logo-block">
-                                                        <div class="shops__logo">
-                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                            </li>
+                            <li>
+                                    <div class=" inner-dnd shops__city list-header">
+                                        <div class="shops__city-box flex-box">
+                                            <p class="shops__city-name">г. Северодвинск</p>
+                                            <div class="inner-dnd__icon">
+                                                <img class="object-fit-contain shops__arrow" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                            </div>  
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="list-content">
+                                        <ul class="shops__address">
+                                            <li class="shops__item">
+                                                <label>
+                                                    <input class="shops__input" type="radio" name="shop">
+                                                    <div class="shops__block">
+                                                        <div class="shops__logo-block">
+                                                            <div class="shops__logo">
+                                                                <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                            </div>
+                                                            <p class="shops__element">
+                                                                САМОВЫВОЗ
+                                                            </p>
                                                         </div>
-                                                        <p class="shops__element">
-                                                            САМОВЫВОЗ
-                                                        </p>
-                                                    </div>
-                                                    <div class="shops__text-block">
-                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
-                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
-                                                        <p class="shops__center-contacts">
-                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
-                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </label>
-                                        </li>
-                                        <li class="shops__item">
-                                            <label>
-                                                <input class="shops__input" type="radio" name="shop">
-                                                <div class="shops__block">
-                                                    <div class="shops__logo-block">
-                                                        <div class="shops__logo">
-                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                        <div class="shops__text-block">
+                                                            <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                            <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                            <p class="shops__center-contacts">
+                                                                <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                                <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                            </p>
                                                         </div>
-                                                        <p class="shops__element">
-                                                            САМОВЫВОЗ
-                                                        </p>
                                                     </div>
-                                                    <div class="shops__text-block">
-                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
-                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
-                                                        <p class="shops__center-contacts">
-                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
-                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </label>
-                                        </li>
-                                        <li class="shops__item">
-                                            <label>
-                                                <input class="shops__input" type="radio" name="shop">
-                                                <div class="shops__block">
-                                                    <div class="shops__logo-block">
-                                                        <div class="shops__logo">
-                                                            <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                </label>
+                                            </li>
+                                            <li class="shops__item">
+                                                <label>
+                                                    <input class="shops__input" type="radio" name="shop">
+                                                    <div class="shops__block">
+                                                        <div class="shops__logo-block">
+                                                            <div class="shops__logo">
+                                                                <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                            </div>
+                                                            <p class="shops__element">
+                                                                САМОВЫВОЗ
+                                                            </p>
                                                         </div>
-                                                        <p class="shops__element">
-                                                            САМОВЫВОЗ
-                                                        </p>
+                                                        <div class="shops__text-block">
+                                                            <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                            <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                            <p class="shops__center-contacts">
+                                                                <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                                <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                    <div class="shops__text-block">
-                                                        <p class="shops__center-name">ТЦ “Название центра”</p>
-                                                        <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
-                                                        <p class="shops__center-contacts">
-                                                            <span class="shops__center-schedule">08:30 - 21:30</span>
-                                                            <span class="shops__center-phone">8 (8182) 525 252</span>
-                                                        </p>
+                                                </label>
+                                            </li>
+                                            <li class="shops__item">
+                                                <label>
+                                                    <input class="shops__input" type="radio" name="shop">
+                                                    <div class="shops__block">
+                                                        <div class="shops__logo-block">
+                                                            <div class="shops__logo">
+                                                                <img class="object-fit-contain" src="./img/icons/logo.svg" alt="Логотип торгового центра">
+                                                            </div>
+                                                            <p class="shops__element">
+                                                                САМОВЫВОЗ
+                                                            </p>
+                                                        </div>
+                                                        <div class="shops__text-block">
+                                                            <p class="shops__center-name">ТЦ “Название центра”</p>
+                                                            <p class="shops__center-address">пр. Троицкий, 1. 163000</p>
+                                                            <p class="shops__center-contacts">
+                                                                <span class="shops__center-schedule">08:30 - 21:30</span>
+                                                                <span class="shops__center-phone">8 (8182) 525 252</span>
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="shops__option">
-                                <div class="inner-dnd shops__city">
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+  
+                            </li>
+                            <li>
+                                <div class=" inner-dnd shops__city list-header">
                                     <div class="shops__city-box flex-box">
                                         <p class="shops__city-name">г. Новодвинск</p>
                                         <div class="inner-dnd__icon">
@@ -263,7 +263,7 @@
                                     </div>
                                   
                                 </div>
-                                <div class="inner-dnd__content">
+                                <div class="list-content">
                                     <ul class="shops__address">
                                         <li class="shops__item">
                                             <label>
@@ -336,16 +336,12 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                          
-                        </div>
-
+                            </li> 
+                        </ul>
                     </li>
-                
                 </ul>
-
-                <button class="button save-btn save-btn_shop">Перейти к покупкам</button>
             </section>
+            <button class="button save-btn save-btn_shop">Перейти к покупкам</button>
             
         
 

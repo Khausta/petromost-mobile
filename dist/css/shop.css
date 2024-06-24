@@ -1887,13 +1887,6 @@ button:focus {
   background-color: #FFFFFF;
 }
 
-.shops__collaps {
-  width: 100%;
-}
-.shops__block:not(last-child) {
-  margin-bottom: min(3.3vw, 25px);
-}
-
 .content {
   max-height: 0;
   overflow: hidden;
