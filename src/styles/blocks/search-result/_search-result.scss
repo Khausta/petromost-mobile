@@ -1,0 +1,204 @@
+.search-result {
+    padding-top: $size-8px;
+
+
+    &__wrapper {
+        
+
+        padding-left: 1%;
+        padding-right: 1%;
+        background-color: #fff;
+    }
+    &__item {
+        padding-top: $size-8px;
+        padding-bottom: $size-8px;
+        position: relative;
+        display: flex;
+        grid-template-columns: 16%  52% 22%;
+        overflow: hidden;
+        border-bottom: 1px solid $beige-color;
+        
+        &_1 {
+            position: relative;
+            margin-right: 2.8%;
+            width: $size-66px;
+            height: $size-66px;
+            overflow: hidden;
+            border-radius: $gap-10;
+        }
+
+        &_2 { 
+            position: relative;
+            margin-right: 2%;
+            width: 57%;
+        }
+
+        &_3 {
+            position: relative;
+            width: 22%;
+        }
+    }
+
+    &__own-production {
+        display: block;
+        position: absolute;
+        right: 23%;
+        bottom: 0;
+        width: $size-62px;
+        height: $size-62px;
+        
+        img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            object-position: bottom;
+        }
+    }
+
+    &__price {
+        margin-right: min(1vw, 8px);
+        @include gilroy-semibold;
+        color: $black-color;
+
+        &_list {
+            font-size: $size-12px;
+        }
+
+    
+
+    }
+
+    &__discount {
+        margin-right: min(1vw, 8px);
+    }
+
+    &__snegiri {
+        display: block;
+        width: $s40px;
+        height: $size-16and25;
+
+    }
+
+    &__counter-block {
+        display: flex;
+        flex-direction: column;
+        gap: 1.3vw;
+        @include gilroy-bold;
+        
+
+    }
+
+    &__counter {
+        display: flex;
+        padding: 0.5vw;
+        background-color: #FAC71D;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: $gap-10;
+        color: $black-color;
+        font-size: $size-12px;
+    }
+
+    &__btn {
+        width: $s26px;
+        height: $s26px;
+        background-color: $white-bg-color;
+        border-radius: $gap-10;
+        font-size: $size-12px;
+        color: $brown-color;
+
+    }
+
+    &__benefit {
+        padding: 0.7vw 1.6vw;
+        border-radius: $gap-10;
+        background-color: $head-bg-color;
+        color: $black-color;
+        font-size: $gap-10;
+        text-align: center;
+    }
+
+    &__add-btn {
+        height: $size-30px;
+        border-radius: $gap-10;
+        @include gilroy-bold;
+        font-size: $size-12px;
+        color: $black-color;
+        background-color: #FAC71D;
+
+    }
+
+    &__stock {
+        height: $size-30px;
+        border-radius: $gap-10;
+        text-align: center;
+        padding: 0.8vw $gap-10;
+       
+        @include gilroy-bold;
+        font-size: $gap-10;
+
+        &_green {
+            color: #5EA636;
+        }
+
+    }
+    
+
+    &_list-view {
+        .search-result__item {
+            margin-bottom: $gap-10;
+            padding: min(1.7vw, 14px);
+            border: 1px solid $beige-color;
+            border-radius: $size-16and25;
+        }
+    }
+
+
+}
+
+.search-filter {
+    
+    padding: $size-11px $size-12px;
+
+   
+}
+
+.view-selector {
+    display: inline-block;
+    padding: $size-8px;
+    width: $size-30px;
+    height: $size-30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    border-radius: $gap-10;
+    
+    &_to-list {
+        background-image: url('../img/icons/to-list.svg');
+    }
+
+    &_to-grid {
+        background-image: url('../img/icons/to-grid.svg');
+    }
+
+}
+
+.filter {
+    display: inline-block;
+    width: 83%;
+
+    &__text {
+        display: flex;
+        gap: $size-8px;
+        &::before {
+            content: '';
+            display: block;
+            width: $size-16and25;
+            height: $size-16and25;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../img/icons/filter-before-element.svg');
+        }
+    }
+}

@@ -55,7 +55,7 @@ button:focus {
 .container {
     position: relative;
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
     padding: 0  min(3.33vw, 26px);
 }
 
@@ -171,23 +171,50 @@ button:focus {
         transform: translate(-50%, 0);
         top: min(13vw, 102px);
         padding-bottom: min(6vw, 154px);
-        // height: calc(100vh - 13vw - 13vw);
     }
 }
 
 #search-popup {
     background-color: $head-bg-color;
 
-    .search-img {
+    
+
+  
+}
+
+.popup-search {
+    
+
+    &__start-block {
+        width: 100%;
         position: absolute;
-        display: block;
+        display: none;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); 
+
+        &._visible {
+            display: block;
+        }
+    }
+
+    &__img {
+        
+        display: block;
+        margin: auto;
+        margin-bottom: $s40px;
         width: min(41vw, 317px);
         height: min(41vw, 317px);
-        
     }
+
+    &__start-text {
+        padding: $size-16and25 $size-30px;
+        @include gilroy-semibold;
+        font-size: $size-18px;
+        color: $brown-color;
+    }
+
+  
 }
 
 .return-btn {
@@ -500,9 +527,29 @@ button:focus {
     }
 }
 
+.cashback-label {
+    display: block;
+    position: absolute;
+    bottom: 1vw;
+    left: 50%;
+    padding: 3px 3.5px;
+    transform: translateX(-50%);
+    border-radius: 6px;
+    background-color: #FAC71D;
+    color: $black-color;
+    @include gilroy-bold;
+    font-size: $size-8px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+
+
 
 @import './components/save-btn';
 @import './components/input-box';
+@import './blocks/search-result/search-result';
+
 
 
 

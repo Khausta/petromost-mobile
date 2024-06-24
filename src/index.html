@@ -217,13 +217,464 @@
 
         </div>
 
-        <!-- поиск -->
-        <div class="overlay" id="search-overlay">
-            <div class="popup" id="search-popup">
+        <!-- Окно поиска -->
+        <div class="overlay" id="search-overlay_">
+            <div class="popup popup-search" id="search-popup_">
                 <div class="container">
                 </div>
-                <img class="search-img" src="./img/icons/search.svg" alt="Иконка лупы">
+                <!-- если пользователь ничего не вписал, то стартовый блок включяается добавлением класса ._visible -->
+                <div class="popup-search__start-block _visible">
+                    <div class="container">
+                        <img class="popup-search__img" src="./img/icons/big-search-icon.svg" alt="Иконка лупы">
+                        <p class="popup-search__start-text easy-border">
+                            Попробуйте ввести название того, 
+                            что хотите найти. По мере ввода 
+                            будут выводиться релевантные 
+                            результаты поиска...
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
 
+        <!-- Поиск Подзагрузка актуальных товаров по вводу -->
+        <div class="overlay" id="search-overlay_">
+            <div class="popup popup-search" id="search-popup_">
+                <div class="search-result">
+                  
+                       <div class="search-result__wrapper">
+                            <ul>
+                                <!-- товар -->
+                                <li class="search-result__item">
+                                    <span class="search-result__own-production">
+                                        <img src="./img/icons/own-production-label.png" alt="">
+                                    </span>
+                                    <div class="search-result__item_1 easy-border">
+                                        <span class="cashback-label">
+                                            КЭШБЭК&nbsp;20%
+                                        </span>
+                                        <img class="object-fit-cover" src="./img/drink.png" alt="">
+                                    </div>
+                                    <div class="search-result__item_2">
+                                                <p class="good__name">Масло Президент сливочное 82% 180г</p>
+                                                <div class="good__price-box">
+                                                    <span class="search-result__price search-result__price_list">139,98 ₽</span>
+                                                    <span class="good__discount search-result__discount">-34%</span>
+                                                    <span class="search-result__snegiri">
+                                                        <img class="object-fit-contain" src="./img/icons/search-snegiri.svg" alt="">
+                                                    </span>
+                                                </div>
+                                                <p class="good__small-text">
+                                                    <span>76,29 ₽ 1 шт.</span>
+                                                    <span class="good__small-text_bold">до 28.03.23</span>
+                                                </p>
+                                                <!-- <p class="good-cards__quantity easy-border">
+                                                    <span>Достаточно</span>
+                                                    <span class="good-cards__watch"></span>
+                                                    <span class="good-cards__time">13:00</span>
+                                                </p> -->
+                                    </div>
+                                    <div class="search-result__item_3">
+                                        <div class="search-result__counter-block">
+                                            <div class="search-result__counter">
+                                                <button class="button search-result__btn">
+                                                    -
+                                                </button>
+                                                <p class="search-result__num">
+                                                  1
+                                                </p>
+                                                <button class="button search-result__btn">
+                                                    +
+                                                </button>
+                                            </div>
+
+                                            <p class="search-result__benefit easy-border">
+                                                Ваш кэшбэк: 28,03 б. 
+                                            </p>
+                                           
+                
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+
+                                <!-- товар -->
+                                <li class="search-result__item">
+                                   
+                                    <div class="search-result__item_1 easy-border">
+                                        <img class="object-fit-cover" src="./img/drink.png" alt="">
+                                    </div>
+                                    <div class="search-result__item_2">
+                                                <p class="good__name">Масло Президент сливочное 82% 180г</p>
+                                                <div class="good__price-box">
+                                                    <span class="search-result__price search-result__price_list">139,98 ₽</span>
+                                                   
+                                                    <span class="search-result__snegiri">
+                                                        <img class="object-fit-contain" src="./img/icons/search-snegiri.svg" alt="">
+                                                    </span>
+                                                </div>
+                                                <p class="good__small-text">
+                                                    <span>76,29 ₽ 1 шт.</span>
+                                                    <span class="good__small-text_bold">до 28.03.23</span>
+                                                </p>
+                                    </div>
+                                    <div class="search-result__item_3">
+                                        <div class="search-result__counter-block">
+                                            
+                                            <button class="button search-result__add-btn">
+                                                В коризну
+                                            </button>
+                                              
+
+                                            <div class="search-result__stock easy-border search-result__stock_green">
+                                                <div class="flex-box">
+                                                    <span class="green-circle"></span>
+                                                    <span class="">Достаточно</span>
+                                                </div>
+                                                
+                                                <span class="good-cards__watch"></span>
+                                                <span>13:00</span>
+                                            </div>
+                                           
+                
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+                                   <!--  товар -->
+                                <li class="search-result__item">
+                                   
+                                    <div class="search-result__item_1 easy-border">
+                                        <img class="object-fit-cover" src="./img/drink.png" alt="">
+                                    </div>
+                                    <div class="search-result__item_2">
+                                                <p class="good__name">Масло Президент сливочное 82% 180г</p>
+                                                <div class="good__price-box">
+                                                    <span class="search-result__price search-result__price_list">139,98 ₽</span>
+                                                   
+                                                    <span class="search-result__snegiri">
+                                                        <img class="object-fit-contain" src="./img/icons/search-snegiri.svg" alt="">
+                                                    </span>
+                                                </div>
+                                                <p class="good__small-text">
+                                                    <span>76,29 ₽ 1 шт.</span>
+                                                    <span class="good__small-text_bold">до 28.03.23</span>
+                                                </p>
+                                    </div>
+                                    <div class="search-result__item_3">
+                                        <div class="search-result__counter-block">
+                                            
+                                            <button class="button search-result__add-btn">
+                                                В коризну
+                                            </button>
+                                              
+
+                                            <div class="search-result__stock easy-border search-result__stock_green">
+                                                <div class="flex-box">
+                                                    <span class="green-circle"></span>
+                                                    <span class="">Достаточно</span>
+                                                </div>
+                                                
+                                                <span class="good-cards__watch"></span>
+                                                <span>13:00</span>
+                                            </div>
+                                           
+                
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+                                <!--  товар -->
+                                <li class="search-result__item">
+                                   
+                                <div class="search-result__item_1 easy-border">
+                                    <img class="object-fit-cover" src="./img/drink.png" alt="">
+                                </div>
+                                <div class="search-result__item_2">
+                                            <p class="good__name">Масло Президент сливочное 82% 180г</p>
+                                            <div class="good__price-box">
+                                                <span class="search-result__price search-result__price_list">139,98 ₽</span>
+                                               
+                                                <span class="search-result__snegiri">
+                                                    <img class="object-fit-contain" src="./img/icons/search-snegiri.svg" alt="">
+                                                </span>
+                                            </div>
+                                            <p class="good__small-text">
+                                                <span>76,29 ₽ 1 шт.</span>
+                                                <span class="good__small-text_bold">до 28.03.23</span>
+                                            </p>
+                                </div>
+                                <div class="search-result__item_3">
+                                    <div class="search-result__counter-block">
+                                        
+                                        <button class="button search-result__add-btn">
+                                            В коризну
+                                        </button>
+                                          
+
+                                        <div class="search-result__stock easy-border search-result__stock_green">
+                                            <div class="flex-box">
+                                                <span class="green-circle"></span>
+                                                <span class="">Достаточно</span>
+                                            </div>
+                                            
+                                            <span class="good-cards__watch"></span>
+                                            <span>13:00</span>
+                                        </div>
+                                       
+            
+                                    </div>
+                                </div>
+                                
+                                </li>
+                            </ul>
+                       </div>
+                    </div>
+       
+                <!-- если пользователь ничего не вписал, то стартовый блок включяается добавлением класса ._visible -->
+                <div class="popup-search__start-block">
+                    <div class="container">
+                        <img class="popup-search__img" src="./img/icons/big-search-icon.svg" alt="Иконка лупы">
+                        <p class="popup-search__start-text easy-border">
+                            Попробуйте ввести название того, 
+                            что хотите найти. По мере ввода 
+                            будут выводиться релевантные 
+                            результаты поиска...
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+          <!-- Поиск Результаты - Список -->
+          <div class="overlay" id="search-overlay">
+            <div class="popup popup-search" id="search-popup">
+                <div class="search-filter ">
+                    <div class="view-selector easy-border view-selector_to-list ">
+
+                    </div>
+                    <div class="filter">
+                        <div class="list-header flex-box">
+                            <p class="filter__text">Фильтр</p>
+                            <div class="arrow-icon">
+                                <img class="arrow-icon__img" src="./img/menu/arrow.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="list-content">
+                            rjhgsdkhj
+                        </div>
+
+                    </div>
+                </div>
+                <div class="search-result search-result_list-view">
+            
+                        <div class="search-result__wrapper">
+                            <ul>
+                                <!-- товар -->
+                                <li class="search-result__item">
+                                    <span class="search-result__own-production">
+                                        <img src="./img/icons/own-production-label.png" alt="">
+                                    </span>
+                                    <div class="search-result__item_1 easy-border">
+                                        <span class="cashback-label">
+                                            КЭШБЭК&nbsp;20%
+                                        </span>
+                                        <img class="object-fit-cover" src="./img/drink.png" alt="">
+                                    </div>
+                                    <div class="search-result__item_2">
+                                                <p class="good__name">Масло Президент сливочное 82% 180г</p>
+                                                <div class="good__price-box">
+                                                    <span class="search-result__price search-result__price_list">139,98 ₽</span>
+                                                    <span class="good__discount search-result__discount">-34%</span>
+                                                    <span class="search-result__snegiri">
+                                                        <img class="object-fit-contain" src="./img/icons/search-snegiri.svg" alt="">
+                                                    </span>
+                                                </div>
+                                                <p class="good__small-text">
+                                                    <span>76,29 ₽ 1 шт.</span>
+                                                    <span class="good__small-text_bold">до 28.03.23</span>
+                                                </p>
+                                    </div>
+                                    <div class="search-result__item_3">
+                                        <div class="search-result__counter-block">
+                                            <div class="search-result__counter">
+                                                <button class="button search-result__btn">
+                                                    -
+                                                </button>
+                                                <p class="search-result__num">
+                                                  1
+                                                </p>
+                                                <button class="button search-result__btn">
+                                                    +
+                                                </button>
+                                            </div>
+
+                                            <p class="search-result__benefit easy-border">
+                                                Ваш кэшбэк: 28,03 б. 
+                                            </p>
+                                           
+                
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+
+                                <!-- товар -->
+                                <li class="search-result__item">
+                                   
+                                    <div class="search-result__item_1 easy-border">
+                                        <img class="object-fit-cover" src="./img/drink.png" alt="">
+                                    </div>
+                                    <div class="search-result__item_2">
+                                                <p class="good__name">Масло Президент сливочное 82% 180г</p>
+                                                <div class="good__price-box">
+                                                    <span class="search-result__price search-result__price_list">139,98 ₽</span>
+                                                   
+                                                    <span class="search-result__snegiri">
+                                                        <img class="object-fit-contain" src="./img/icons/search-snegiri.svg" alt="">
+                                                    </span>
+                                                </div>
+                                                <p class="good__small-text">
+                                                    <span>76,29 ₽ 1 шт.</span>
+                                                    <span class="good__small-text_bold">до 28.03.23</span>
+                                                </p>
+                                    </div>
+                                    <div class="search-result__item_3">
+                                        <div class="search-result__counter-block">
+                                            
+                                            <button class="button search-result__add-btn">
+                                                В коризну
+                                            </button>
+                                              
+
+                                            <div class="search-result__stock easy-border search-result__stock_green">
+                                                <div class="flex-box">
+                                                    <span class="green-circle"></span>
+                                                    <span class="">Достаточно</span>
+                                                </div>
+                                                
+                                                <span class="good-cards__watch"></span>
+                                                <span>13:00</span>
+                                            </div>
+                                           
+                
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+                                   <!--  товар -->
+                                <li class="search-result__item">
+                                   
+                                    <div class="search-result__item_1 easy-border">
+                                        <img class="object-fit-cover" src="./img/drink.png" alt="">
+                                    </div>
+                                    <div class="search-result__item_2">
+                                                <p class="good__name">Масло Президент сливочное 82% 180г</p>
+                                                <div class="good__price-box">
+                                                    <span class="search-result__price search-result__price_list">139,98 ₽</span>
+                                                   
+                                                    <span class="search-result__snegiri">
+                                                        <img class="object-fit-contain" src="./img/icons/search-snegiri.svg" alt="">
+                                                    </span>
+                                                </div>
+                                                <p class="good__small-text">
+                                                    <span>76,29 ₽ 1 шт.</span>
+                                                    <span class="good__small-text_bold">до 28.03.23</span>
+                                                </p>
+                                    </div>
+                                    <div class="search-result__item_3">
+                                        <div class="search-result__counter-block">
+                                            
+                                            <button class="button search-result__add-btn">
+                                                В коризну
+                                            </button>
+                                              
+
+                                            <div class="search-result__stock easy-border search-result__stock_green">
+                                                <div class="flex-box">
+                                                    <span class="green-circle"></span>
+                                                    <span class="">Достаточно</span>
+                                                </div>
+                                                
+                                                <span class="good-cards__watch"></span>
+                                                <span>13:00</span>
+                                            </div>
+                                           
+                
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+                                <!--  товар -->
+                                <li class="search-result__item">
+                                   
+                                <div class="search-result__item_1 easy-border">
+                                    <img class="object-fit-cover" src="./img/drink.png" alt="">
+                                </div>
+                                <div class="search-result__item_2">
+                                            <p class="good__name">Масло Президент сливочное 82% 180г</p>
+                                            <div class="good__price-box">
+                                                <span class="search-result__price search-result__price_list">139,98 ₽</span>
+                                               
+                                                <span class="search-result__snegiri">
+                                                    <img class="object-fit-contain" src="./img/icons/search-snegiri.svg" alt="">
+                                                </span>
+                                            </div>
+                                            <p class="good__small-text">
+                                                <span>76,29 ₽ 1 шт.</span>
+                                                <span class="good__small-text_bold">до 28.03.23</span>
+                                            </p>
+                                </div>
+                                <div class="search-result__item_3">
+                                    <div class="search-result__counter-block">
+                                        
+                                        <button class="button search-result__add-btn">
+                                            В коризну
+                                        </button>
+                                          
+
+                                        <div class="search-result__stock easy-border search-result__stock_green">
+                                            <div class="flex-box">
+                                                <span class="green-circle"></span>
+                                                <span class="">Достаточно</span>
+                                            </div>
+                                            
+                                            <span class="good-cards__watch"></span>
+                                            <span>13:00</span>
+                                        </div>
+                                       
+            
+                                    </div>
+                                </div>
+                                
+                                </li>
+                            </ul>
+                       </div>
+                 
+                      
+                    </div>
+       
+                <!-- если пользователь ничего не вписал, то стартовый блок включяается добавлением класса ._visible -->
+                <div class="popup-search__start-block">
+                    <div class="container">
+                        <img class="popup-search__img" src="./img/icons/big-search-icon.svg" alt="Иконка лупы">
+                        <p class="popup-search__start-text easy-border">
+                            Попробуйте ввести название того, 
+                            что хотите найти. По мере ввода 
+                            будут выводиться релевантные 
+                            результаты поиска...
+                        </p>
+                    </div>
+                </div>
+                
             </div>
         </div>
 
