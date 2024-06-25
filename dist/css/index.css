@@ -812,7 +812,7 @@ button:focus {
   height: min(7.7vw, 56px);
   border-radius: min(2.5vw, 19px);
   text-align: center;
-  padding: 0.8vw min(2.5vw, 19px);
+  padding: 0.8vw 1.4vw;
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
   line-height: normal;
@@ -845,8 +845,6 @@ button:focus {
   background-repeat: no-repeat;
   background-size: 50%;
   border-radius: min(2.5vw, 19px);
-}
-.view-selector_to-list {
   background-image: url("../img/icons/to-list.svg");
 }
 .view-selector_to-grid {
@@ -875,7 +873,7 @@ button:focus {
   background-image: url("../img/icons/filter-before-element.svg");
 }
 .filter__options {
-  padding: 0 min(2vw, 16px) min(2vw, 16px) min(2vw, 16px);
+  padding: 0 min(2vw, 16px) 0 min(2vw, 16px);
   display: inline-block;
   width: 88%;
   background-color: #F5E6D6;
@@ -892,21 +890,25 @@ button:focus {
   margin-bottom: min(2.5vw, 19px);
 }
 .filter__inputs {
+  padding-bottom: min(2vw, 16px);
   display: grid;
   gap: min(3.1vw, 24px);
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+}
+.filter__inputs._js-hidden {
+  padding: 0;
 }
 .filter__input {
   display: none;
 }
 .filter__block {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   position: relative;
   height: min(7.7vw, 56px);
-  padding: min(1.67vw, 13px) min(2.5vw, 19px) min(1.67vw, 13px) min(7.7vw, 56px);
+  padding: min(1.67vw, 13px) 2% min(1.67vw, 13px) min(7.7vw, 56px);
   background-color: #FFFFFF;
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;

@@ -133,7 +133,7 @@
         height: $size-30px;
         border-radius: $gap-10;
         text-align: center;
-        padding: 0.8vw $gap-10;
+        padding: 0.8vw 1.4vw;
        
         @include gilroy-bold;
         font-size: $gap-10;
@@ -177,10 +177,9 @@
     background-repeat: no-repeat;
     background-size: 50%;
     border-radius: $gap-10;
+    background-image: url('../img/icons/to-list.svg');
     
-    &_to-list {
-        background-image: url('../img/icons/to-list.svg');
-    }
+ 
 
     &_to-grid {
         background-image: url('../img/icons/to-grid.svg');
@@ -211,7 +210,7 @@
     }
 
     &__options {
-        padding: 0 $size-8px $size-8px $size-8px;
+        padding: 0 $size-8px 0 $size-8px;
         display: inline-block;
         width: 88%; 
         background-color: $beige-color;
@@ -229,10 +228,15 @@
 .filter {
     margin-bottom: $gap-10;
     &__inputs {
+        padding-bottom: $size-8px;
         display: grid;
         gap: $size-12px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
+    }
+
+    &__inputs._js-hidden {
+        padding: 0;
     }
 
     &__input {
@@ -241,11 +245,11 @@
 
     &__block {
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         position: relative;
         height: $size-30px;
-        padding: $size-6and5 $gap-10 $size-6and5 $size-30px;
+        padding: $size-6and5 2% $size-6and5 $size-30px;
         background-color: $white-bg-color;
         @include gilroy-bold;
         font-size: $size-12px; 

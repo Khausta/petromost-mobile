@@ -536,6 +536,22 @@ function hideContent(element) {
 
 
 
+// Выбор фильтра поиска
+const filterRadioBtns = document.querySelectorAll('[name="filter"]');
+if (filterRadioBtns) {
+  filterRadioBtns.forEach(radioBtn => {
+    radioBtn.addEventListener('change', () => {
+      document.querySelector('#filter-type').innerText = `Фильтр / ${radioBtn.value}`;
+    })
+  })
+}
+
+const filterViewSelector = document.querySelector('.view-selector');
+filterViewSelector.addEventListener('click', () => {
+  filterViewSelector.classList.toggle('view-selector_to-grid');
+})
+
+
 
 
 

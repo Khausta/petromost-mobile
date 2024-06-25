@@ -485,4 +485,18 @@ function listHendler() {
     });
   }
 }
+
+// Выбор фильтра поиска
+var filterRadioBtns = document.querySelectorAll('[name="filter"]');
+if (filterRadioBtns) {
+  filterRadioBtns.forEach(function (radioBtn) {
+    radioBtn.addEventListener('change', function () {
+      document.querySelector('#filter-type').innerText = "\u0424\u0438\u043B\u044C\u0442\u0440 / ".concat(radioBtn.value);
+    });
+  });
+}
+var filterViewSelector = document.querySelector('.view-selector');
+filterViewSelector.addEventListener('click', function () {
+  filterViewSelector.classList.toggle('view-selector_to-grid');
+});
 //# sourceMappingURL=main.js.map
