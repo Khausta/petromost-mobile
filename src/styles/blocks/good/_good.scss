@@ -28,7 +28,8 @@
     }
 
     &__name, &__weight {
-       
+       position: relative;
+       z-index: 1;
         @include gilroy-semibold;
         font-size: $size-13px;
         color: $black-color;

@@ -218,8 +218,8 @@
         </div>
 
         <!-- Окно поиска -->
-        <div class="overlay" id="search-overlay_">
-            <div class="popup popup-search" id="search-popup_">
+        <div class="overlay" id="search-overlay">
+            <div class="popup popup-search" id="search-popup">
                 <div class="container">
                 </div>
                 <!-- если пользователь ничего не вписал, то стартовый блок включяается добавлением класса ._visible -->
@@ -239,8 +239,8 @@
         </div>
 
         <!-- Поиск Подзагрузка актуальных товаров по вводу -->
-        <div class="overlay" id="search-overlay_">
-            <div class="popup popup-search" id="search-popup_">
+        <div class="overlay" id="search-overlay______1">
+            <div class="popup popup-search" id="search-popup">
                 <div class="search-result">
                   
                        <div class="search-result__wrapper">
@@ -452,7 +452,7 @@
         </div>
 
           <!-- Поиск Результаты - Список -->
-          <div class="overlay" id="search-overlay">
+        <div class="overlay" id="search-overlay_______2">
             <div class="popup popup-search" id="search-popup">
                 <div class="search-filter">
                     <div class="view-selector easy-border  ">
@@ -595,7 +595,7 @@
                                             </button>
                                               
 
-                                            <div class="search-result__stock easy-border search-result__stock_green">
+                                            <div class="search-result__stock search-result__stock_list easy-border search-result__stock_green">
                                                 <div class="flex-box">
                                                     <span class="green-circle"></span>
                                                     <span class="">Достаточно</span>
@@ -639,7 +639,7 @@
                                             </button>
                                               
 
-                                            <div class="search-result__stock easy-border search-result__stock_green">
+                                            <div class="search-result__stock search-result__stock_list easy-border search-result__stock_green">
                                                 <div class="flex-box">
                                                     <span class="green-circle"></span>
                                                     <span class="">Достаточно</span>
@@ -683,7 +683,7 @@
                                         </button>
                                           
 
-                                        <div class="search-result__stock easy-border search-result__stock_green">
+                                        <div class="search-result__stock search-result__stock_list easy-border search-result__stock_green">
                                             <div class="flex-box">
                                                 <span class="green-circle"></span>
                                                 <span class="">Достаточно</span>
@@ -701,6 +701,275 @@
                             </ul>
                        </div>
                  
+                      
+                    </div>
+       
+                <!-- если пользователь ничего не вписал, то стартовый блок включяается добавлением класса ._visible -->
+                <div class="popup-search__start-block">
+                    <div class="container">
+                        <img class="popup-search__img" src="./img/icons/big-search-icon.svg" alt="Иконка лупы">
+                        <p class="popup-search__start-text easy-border">
+                            Попробуйте ввести название того, 
+                            что хотите найти. По мере ввода 
+                            будут выводиться релевантные 
+                            результаты поиска...
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+          <!-- Поиск Результаты - Сетка-->
+          <div class="overlay" id="search-overlay______3">
+            <div class="popup popup-search" id="search-popup">
+                <div class="search-filter">
+                    <div class="view-selector easy-border  ">
+
+                    </div>
+                    
+                        <div class="filter__options">
+                            <div class="list-header">
+                                <div class="filter__options-header"> 
+                                    <p class="filter__text" id="filter-type">Фильтр</p>
+                                    <div class="arrow-icon">
+                                        <img class="arrow-icon__img" src="./img/menu/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <div class="list-content ">
+                                <div class="filter__inputs">
+                                    <label class="filter__label">
+                                        <input class="filter__input" type="radio" name="filter" value="Сначала дешевле">
+                                        <p class="filter__block ">
+                                            Сначала дешевле
+                                        </p>
+                                    </label>
+                                    <label class="filter__label">
+                                        <input class="filter__input" type="radio" name="filter" value="Сначала дороже">
+                                        <p class="filter__block ">
+                                            Сначала дороже
+                                        </p>
+                                    </label>
+                                    <label class="filter__label">
+                                        <input class="filter__input" type="radio" name="filter" value="По размеру скидки">
+                                        <p class="filter__block ">
+                                            По&nbsp;размеру&nbsp;скидки
+                                        </p>
+                                    </label>
+                                    <label class="filter__label">
+                                        <input class="filter__input" type="radio" name="filter" value=" По популярности">
+                                        <p class="filter__block ">
+                                            По популярности
+                                        </p>
+                                    </label>
+                                    <label class="filter__label">
+                                        <input class="filter__input" type="radio" name="filter" value="По названию А-Я">
+                                        <p class="filter__block ">
+                                            По названию А-Я
+                                        </p>
+                                    </label>
+                                    <label class="filter__label">
+                                        <input class="filter__input" type="radio" name="filter" value="С кэшбэком">
+                                        <p class="filter__block ">
+                                            С кэшбэком
+                                        </p>
+                                    </label>
+                                </div>
+                              
+                            </div>
+                        </div>
+
+                </div>
+                <div class="search-result search-result_grid-view">
+            
+                    <div class="search-result__wrapper">
+                        <section class="good-cards">
+                       
+                                <div class="good-cards__items">
+
+                                    <!-- карточка товара -->
+                                    <!-- добить класс liked, чтобы иконка лайка изменилась -->
+                                    <div class="good-cards__wrapper easy-border liked">
+                                        <div class="good-cards__photo">
+                                            <span class="like liked">
+                                                <img class="object-fit-contain like__no" src="./img/icons/no-like.svg" alt="">
+                                                <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
+                                            </span>
+                                            <!-- фото -->
+                                            <img class="object-fit-cover" src="./img/drink.png" alt="">
+                                        </div>
+                                        <div class="good__info good-cards__info search-result__good-info">
+                                            <!-- Знак собственного производства -->
+                                            <span class="search-result__good-own-production">
+                                                <img src="./img/icons/own-production-label.png" alt="">
+                                            </span>
+                                            <p class="good__name">Наименование товара</p>
+                                            <p class="good__weight">1кг</p>
+                                            <div class="good__price-box">
+                                                <span class="good__price">139,98 ₽</span>
+                                                <span class="good__discount search-result__discount">-34%</span>
+                                                <span class="search-result__snegiri">
+                                                    <img class="object-fit-contain" src="./img/icons/search-snegiri.svg" alt="">
+                                                </span>
+                                            </div>
+                                            <p class="good__small-text">
+                                               
+                                                <span>76,29 ₽ 1 шт.</span>
+                                                <span class="good__small-text_bold">до 28.03.23</span>
+                                            </p>
+                                            <button class="button good-cards__btn good-cards__btn_yellow">
+                                                В корзину
+                                            </button>
+                                        
+                                            <p class="good-cards__quantity easy-border">
+                                                <span>Достаточно</span>
+                                                <span class="good-cards__watch"></span>
+                                                <span class="good-cards__time">13:00</span>
+                                            </p>
+                                        </div>
+            
+                                    </div>
+
+                                     <!-- карточка товара -->
+                                    <!-- добить класс liked, чтобы иконка лайка изменилась -->
+                                    <div class="good-cards__wrapper easy-border liked">
+                                        <div class="good-cards__photo">
+                                            <span class="like liked">
+                                                <img class="object-fit-contain like__no" src="./img/icons/no-like.svg" alt="">
+                                                <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
+                                            </span>
+                                            <!-- фото -->
+                                            <img class="object-fit-cover" src="./img/drink.png" alt="">
+                                        </div>
+                                        <div class="good__info good-cards__info search-result__good-info">
+                                            <!-- Знак собственного производства -->
+                                            <span class="search-result__good-own-production">
+                                                <img src="./img/icons/own-production-label.png" alt="">
+                                            </span>
+                                            <p class="good__name">Наименование товара</p>
+                                            <p class="good__weight">1кг</p>
+                                            <div class="good__price-box">
+                                                <span class="good__price">139,98 ₽</span>
+                                                <span class="good__discount search-result__discount">-34%</span>
+                                                <span class="search-result__snegiri">
+                                                    <img class="object-fit-contain" src="./img/icons/search-snegiri.svg" alt="">
+                                                </span>
+                                            </div>
+                                            <p class="good__small-text">
+                                               
+                                                <span>76,29 ₽ 1 шт.</span>
+                                                <span class="good__small-text_bold">до 28.03.23</span>
+                                            </p>
+                                            <button class="button good-cards__btn good-cards__btn_yellow">
+                                                В корзину
+                                            </button>
+                                        
+                                            <p class=" search-result__stock search-result__stock_beige easy-border">
+
+                                                <span class="red-circle"></span>
+                                                <span>Мало</span>
+                                                <span class="good-cards__watch good-cards__watch_beige"></span>
+                                                <span class="good-cards__time">13:00</span>
+                                                <span class="search-result__label red-bg">
+                                                    Есть еще!
+                                                </span>
+                                        
+                                               
+                                            </p>
+                                        </div>
+            
+                                    </div>
+
+                                     <!-- карточка товара -->
+                                    <!-- добить класс liked, чтобы иконка лайка изменилась -->
+                                    <div class="good-cards__wrapper easy-border liked">
+                                        <div class="good-cards__photo">
+                                            <span class="like liked">
+                                                <img class="object-fit-contain like__no" src="./img/icons/no-like.svg" alt="">
+                                                <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
+                                            </span>
+                                            <!-- фото -->
+                                            <img class="object-fit-cover" src="./img/drink.png" alt="">
+                                        </div>
+                                        <div class="good__info good-cards__info search-result__good-info">
+                                            <!-- Знак собственного производства -->
+                                            <span class="search-result__good-own-production">
+                                                <img src="./img/icons/own-production-label.png" alt="">
+                                            </span>
+                                            <p class="good__name">Наименование товара</p>
+                                            <p class="good__weight">1кг</p>
+                                            <div class="good__price-box">
+                                                <span class="good__price">139,98 ₽</span>
+                                                <span class="good__discount search-result__discount">-34%</span>
+                                                <span class="search-result__snegiri">
+                                                    <img class="object-fit-contain" src="./img/icons/search-snegiri.svg" alt="">
+                                                </span>
+                                            </div>
+                                            <p class="good__small-text">
+                                               
+                                                <span>76,29 ₽ 1 шт.</span>
+                                                <span class="good__small-text_bold">до 28.03.23</span>
+                                            </p>
+                                            <button class="button good-cards__btn good-cards__btn_yellow">
+                                                В корзину
+                                            </button>
+                                        
+                                            <p class="good-cards__quantity easy-border">
+                                                <span>Достаточно</span>
+                                                <span class="good-cards__watch"></span>
+                                                <span class="good-cards__time">13:00</span>
+                                            </p>
+                                        </div>
+            
+                                    </div>
+
+                                     <!-- карточка товара -->
+                                    <!-- добить класс liked, чтобы иконка лайка изменилась -->
+                                    <div class="good-cards__wrapper easy-border liked">
+                                        <div class="good-cards__photo">
+                                            <span class="like liked">
+                                                <img class="object-fit-contain like__no" src="./img/icons/no-like.svg" alt="">
+                                                <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
+                                            </span>
+                                            <!-- фото -->
+                                            <img class="object-fit-cover" src="./img/drink.png" alt="">
+                                        </div>
+                                        <div class="good__info good-cards__info search-result__good-info">
+                                            <!-- Знак собственного производства -->
+                                            <span class="search-result__good-own-production">
+                                                <img src="./img/icons/own-production-label.png" alt="">
+                                            </span>
+                                            <p class="good__name">Наименование товара</p>
+                                            <p class="good__weight">1кг</p>
+                                            <div class="good__price-box">
+                                                <span class="good__price">139,98 ₽</span>
+                                                <span class="good__discount search-result__discount">-34%</span>
+                                                <span class="search-result__snegiri">
+                                                    <img class="object-fit-contain" src="./img/icons/search-snegiri.svg" alt="">
+                                                </span>
+                                            </div>
+                                            <p class="good__small-text">
+                                               
+                                                <span>76,29 ₽ 1 шт.</span>
+                                                <span class="good__small-text_bold">до 28.03.23</span>
+                                            </p>
+                                            <button class="button good-cards__btn good-cards__btn_yellow">
+                                                В корзину
+                                            </button>
+                                        
+                                            <p class="good-cards__quantity easy-border">
+                                                <span>Достаточно</span>
+                                                <span class="good-cards__watch"></span>
+                                                <span class="good-cards__time">13:00</span>
+                                            </p>
+                                        </div>
+            
+                                    </div>
+                                </div>
+                 
+                        </section>
                       
                     </div>
        

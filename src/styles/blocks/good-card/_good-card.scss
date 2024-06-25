@@ -57,25 +57,26 @@
         }
     }
 
-    &__photo::after {
-        padding: 0.6vw $gap-10;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        display: block;
-        content: 'СОБСТВЕННОЕ ПРОИЗВОДСТВО';
-        width: max-content;
-        bottom: $gap-10;
-        @include gilroy-bold;
+    //удалено по просьбе
+    // &__photo::after {
+    //     padding: 0.6vw $gap-10;
+    //     position: absolute;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     display: block;
+    //     content: 'СОБСТВЕННОЕ ПРОИЗВОДСТВО';
+    //     width: max-content;
+    //     bottom: $gap-10;
+    //     @include gilroy-bold;
 
-        text-transform: uppercase;
-        font-size: $gap-10;
+    //     text-transform: uppercase;
+    //     font-size: $gap-10;
  
-        border-radius: $gap-10;
-        background-color: $beige-color;
-        color: $brown-color;
-        z-index: 10;
-    }
+    //     border-radius: $gap-10;
+    //     background-color: $beige-color;
+    //     color: $brown-color;
+    //     z-index: 10;
+    // }
    
 
     &__info {
@@ -157,7 +158,12 @@
         background-size: contain;
         background-position: center;
 
+        &_beige {
+            background-image: url('../img/profile/watch.svg');
+        }
     }
+
+
 
     &__btn {
         margin-bottom: $size-6and5;

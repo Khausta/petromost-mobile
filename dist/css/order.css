@@ -809,7 +809,6 @@ button:focus {
   background-color: #FAC71D;
 }
 .search-result__stock {
-  height: min(7.7vw, 56px);
   border-radius: min(2.5vw, 19px);
   text-align: center;
   padding: 0.8vw 1.4vw;
@@ -817,15 +816,57 @@ button:focus {
   font-weight: bold;
   line-height: normal;
   font-size: min(2.5vw, 19px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
 }
 .search-result__stock_green {
   color: #5EA636;
+}
+.search-result__stock_beige {
+  color: #BE957D;
+}
+.search-result__stock_list {
+  display: block;
+  height: min(7.7vw, 56px);
+}
+.search-result__label {
+  padding: 1px 5px;
+  border-radius: min(2.5vw, 19px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
 }
 .search-result_list-view .search-result__item {
   margin-bottom: min(2.5vw, 19px);
   padding: min(1.7vw, 14px);
   border: 1px solid #F5E6D6;
   border-radius: min(4.2vw, 32px);
+}
+.search-result__good-info {
+  position: relative;
+}
+.search-result__good-own-production {
+  display: block;
+  position: absolute;
+  right: 2%;
+  top: -10%;
+  width: min(15.9vw, 122px);
+  height: min(15.9vw, 122px);
+}
+.search-result__good-own-production img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+}
+.search-result .good__name {
+  position: relative;
+  z-index: 1;
 }
 
 .search-filter {
@@ -1945,6 +1986,8 @@ button:focus {
   height: 100%;
 }
 .good__name, .good__weight {
+  position: relative;
+  z-index: 1;
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: 600;
   line-height: normal;
@@ -2337,26 +2380,6 @@ button:focus {
 .good-cards__photo .like.liked .like__yes {
   display: block;
 }
-.good-cards__photo::after {
-  padding: 0.6vw min(2.5vw, 19px);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  content: "СОБСТВЕННОЕ ПРОИЗВОДСТВО";
-  width: -moz-max-content;
-  width: max-content;
-  bottom: min(2.5vw, 19px);
-  font-family: "Gilroy", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  line-height: normal;
-  text-transform: uppercase;
-  font-size: min(2.5vw, 19px);
-  border-radius: min(2.5vw, 19px);
-  background-color: #F5E6D6;
-  color: #BE957D;
-  z-index: 10;
-}
 .good-cards__info {
   background-color: #FFFFFF;
   padding: min(1.67vw, 13px) min(2.5vw, 19px) min(2.5vw, 19px) min(2.5vw, 19px);
@@ -2426,6 +2449,9 @@ button:focus {
   background-image: url("../img/icons/green-watch.svg");
   background-size: contain;
   background-position: center;
+}
+.good-cards__watch_beige {
+  background-image: url("../img/profile/watch.svg");
 }
 .good-cards__btn {
   margin-bottom: min(1.67vw, 13px);
