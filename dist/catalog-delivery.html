@@ -17,11 +17,13 @@
         <header class="header">
             <div class="container-header">
                 <div class="header__items flex-box">
-                    <div class="header__main-logo __js-logo header_delivery">
-                        <img class="object-fit-contain header__main-logo-img header__base-logo-img" src="./img/logotype/logo-petromost-start.svg" alt="Логотип Петромост">
-                        <!-- витрина, доставка, самовывоз -->
-                        <img class="object-fit-contain header__main-logo-img header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
-                    </div>
+                    <a href="index.html">
+                        <div class="header__main-logo __js-logo header_delivery">
+                            <img class="object-fit-contain header__main-logo-img header__base-logo-img" src="./img/logotype/logo-petromost-start.svg" alt="Логотип Петромост">
+                            <!-- витрина, доставка, самовывоз -->
+                            <img class="object-fit-contain header__main-logo-img header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
+                        </div>
+                    </a>
                     <div class="header__search flex-box">
                         <input class="input header__input __js-searchInput" type="text" placeholder="Найти арбуз...">
                         <button class="button header__search-btn">
@@ -242,13 +244,24 @@
         <!-- для попапов -->
       
    
-        <!-- поиск -->
+          <!-- Окно поиска -->
         <div class="overlay" id="search-overlay">
-            <div class="popup" id="search-popup">
+            <div class="popup popup-search" id="search-popup">
                 <div class="container">
                 </div>
-                <img class="search-img" src="./img/icons/search.svg" alt="Иконка лупы">
-
+                <!-- если пользователь ничего не вписал, то стартовый блок включяается добавлением класса ._visible -->
+                <div class="popup-search__start-block _visible">
+                    <div class="container">
+                        <img class="popup-search__img" src="./img/icons/big-search-icon.svg" alt="Иконка лупы">
+                        <p class="popup-search__start-text easy-border">
+                            Попробуйте ввести название того, 
+                            что хотите найти. По мере ввода 
+                            будут выводиться релевантные 
+                            результаты поиска...
+                        </p>
+                    </div>
+                </div>
+                
             </div>
         </div>
 
@@ -1253,7 +1266,7 @@
                         </a>
                     </li>
                     <li class="menu__li"> 
-                        <a href="#" class="menu-link flex-box" id="address">
+                        <a href="#" class="menu__li-with-content menu-link flex-box" id="address">
                             <div class="menu-link__title catalog__title">
                                 <div class="menu-link__prefix">
                                     <img class="object-fit-contain" src="./img/catalog/croissant.svg" alt="Иконка записи">
@@ -1264,6 +1277,72 @@
                                 <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                             </span>
                         </a>
+                        <div class="menu__content">
+                            <!-- список второго порядка для хлебобулочных изделий -->
+                            <ul>
+                                <li class="menu__li">
+                                    <a href="./catalog-delivery.html" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Хлебобулочные изделия</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Пироги</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Кексы, чизкейки</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Торты, пирожные, рулеты</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Хлебцы</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Хлеб</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                        </div>
                     </li>
                     <li class="menu__li">
                         <a href="#" class="menu-link flex-box">

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Петромост</title>
-    <link rel="stylesheet" href="./css/order.css">
+    <!-- <link rel="stylesheet" href="./css/order.css"> -->
+    <link rel="stylesheet" href="./css/all-styles.css">
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -551,15 +552,27 @@
         <!-- для попапов -->
       
    
-        <!-- поиск -->
-        <div class="overlay" id="search-overlay">
-            <div class="popup" id="search-popup">
+         <!-- Окно поиска -->
+         <div class="overlay" id="search-overlay">
+            <div class="popup popup-search" id="search-popup">
                 <div class="container">
                 </div>
-                <img class="search-img" src="./img/icons/search.svg" alt="Иконка лупы">
-
+                <!-- если пользователь ничего не вписал, то стартовый блок включяается добавлением класса ._visible -->
+                <div class="popup-search__start-block _visible">
+                    <div class="container">
+                        <img class="popup-search__img" src="./img/icons/big-search-icon.svg" alt="Иконка лупы">
+                        <p class="popup-search__start-text easy-border">
+                            Попробуйте ввести название того, 
+                            что хотите найти. По мере ввода 
+                            будут выводиться релевантные 
+                            результаты поиска...
+                        </p>
+                    </div>
+                </div>
+                
             </div>
         </div>
+
 
         <!-- меню -->
         <div class="overlay" id="menu-overlay">

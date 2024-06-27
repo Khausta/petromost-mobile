@@ -421,7 +421,7 @@ var Tab = /*#__PURE__*/function () {
     }
   }]);
 }();
-if (document.querySelector('.tab')) {
+if (document.querySelector('.tabs')) {
   var tab1 = new Tab('tab', {});
 }
 
@@ -496,7 +496,9 @@ if (filterRadioBtns) {
   });
 }
 var filterViewSelector = document.querySelector('.view-selector');
-filterViewSelector.addEventListener('click', function () {
-  filterViewSelector.classList.toggle('view-selector_to-grid');
-});
+if (filterViewSelector) {
+  filterViewSelector.addEventListener('click', function () {
+    filterViewSelector.classList.toggle('view-selector_to-grid');
+  });
+}
 //# sourceMappingURL=main.js.map

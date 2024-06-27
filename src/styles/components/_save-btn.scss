@@ -16,6 +16,9 @@
 }
 
 .save-btn_shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: $gap-10;
     // margin-bottom: $size-12px;
     margin-bottom: calc($size-66px + $size-12px);

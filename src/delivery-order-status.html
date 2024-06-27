@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Петромост</title>
-    <link rel="stylesheet" href="./css/order.css">
+    <!-- <link rel="stylesheet" href="./css/order.css"> -->
+    <link rel="stylesheet" href="./css/all-styles.css">
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -230,13 +231,24 @@
         <!-- для попапов -->
       
    
-        <!-- поиск -->
-        <div class="overlay" id="search-overlay">
-            <div class="popup" id="search-popup">
+         <!-- Окно поиска -->
+         <div class="overlay" id="search-overlay">
+            <div class="popup popup-search" id="search-popup">
                 <div class="container">
                 </div>
-                <img class="search-img" src="./img/icons/search.svg" alt="Иконка лупы">
-
+                <!-- если пользователь ничего не вписал, то стартовый блок включяается добавлением класса ._visible -->
+                <div class="popup-search__start-block _visible">
+                    <div class="container">
+                        <img class="popup-search__img" src="./img/icons/big-search-icon.svg" alt="Иконка лупы">
+                        <p class="popup-search__start-text easy-border">
+                            Попробуйте ввести название того, 
+                            что хотите найти. По мере ввода 
+                            будут выводиться релевантные 
+                            результаты поиска...
+                        </p>
+                    </div>
+                </div>
+                
             </div>
         </div>
 
@@ -1188,8 +1200,8 @@
             </div>
         </div>
 
-           <!-- каталог -->
-           <div class="overlay" id="catalog-overlay">
+        <!-- каталог -->
+        <div class="overlay" id="catalog-overlay">
             <div class="popup catalog" id="catalog-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Каталог</h2>
@@ -1241,7 +1253,7 @@
                         </a>
                     </li>
                     <li class="menu__li"> 
-                        <a href="#" class="menu-link flex-box" id="address">
+                        <a href="#" class="menu__li-with-content  menu-link flex-box" id="address">
                             <div class="menu-link__title catalog__title">
                                 <div class="menu-link__prefix">
                                     <img class="object-fit-contain" src="./img/catalog/croissant.svg" alt="Иконка записи">
@@ -1252,6 +1264,72 @@
                                 <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                             </span>
                         </a>
+                        <div class="menu__content ">
+                            <!-- список второго порядка для хлебобулочных изделий -->
+                            <ul>
+                                <li class="menu__li">
+                                    <a href="./catalog-delivery.html" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Хлебобулочные изделия</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Пироги</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Кексы, чизкейки</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Торты, пирожные, рулеты</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Хлебцы</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Хлеб</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                        </div>
                     </li>
                     <li class="menu__li">
                         <a href="#" class="menu-link flex-box">
@@ -1353,6 +1431,7 @@
                     </li>
             </div>
         </div>
+
         
     </div>
 </body>

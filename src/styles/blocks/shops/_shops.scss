@@ -1,20 +1,3 @@
-@import './style';
-@import 'blocks/head-inner/head-inner';
-@import 'blocks/menu-panel/menu-panel';
-@import 'blocks/header/header';
-@import 'blocks/info/info';
-@import 'blocks/footer/footer';
-@import 'blocks/categories/categories';
-@import 'components/category';
-@import 'blocks/chance/chance';
-@import 'blocks/address/address';
-@import 'blocks/menu/menu';
-@import 'blocks/profile-data/profile-data';
-@import 'blocks/card/card';
-@import 'blocks/map/map-container';
-@import 'blocks/dnd/dnd';
-@import 'blocks/white-box/white-box';
-
 .shops {
     margin-bottom: calc($size-66px + $size-12px);
 
@@ -49,7 +32,6 @@
     }
 
     &__city-name {
-       
        
         &::before {
             content: '';
@@ -118,11 +100,6 @@
         margin-bottom: $size-13px;
     }
 
-    // &__item:not(:last-child) {
-       
-    // }
-
-
     &__block {
         display: flex;
         justify-content: start;
@@ -188,7 +165,6 @@
     }
 
     //inputs
-    
     &__input {
         display: none;
     }
@@ -248,13 +224,4 @@
         background-color: $white-bg-color;
 
     }
-}
-
-  
-.content {
-// padding: 0 18px;
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.2s ease-out;
-background-color: $head-bg-color;
 }

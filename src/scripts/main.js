@@ -456,7 +456,7 @@ class Tab {
   }
 }
 
-if (document.querySelector('.tab')) {
+if (document.querySelector('.tabs')) {
   const tab1 = new Tab('tab', {});
 
 }
@@ -547,9 +547,11 @@ if (filterRadioBtns) {
 }
 
 const filterViewSelector = document.querySelector('.view-selector');
-filterViewSelector.addEventListener('click', () => {
-  filterViewSelector.classList.toggle('view-selector_to-grid');
-})
+if (filterViewSelector) {
+  filterViewSelector.addEventListener('click', () => {
+    filterViewSelector.classList.toggle('view-selector_to-grid');
+  })
+}
 
 
 

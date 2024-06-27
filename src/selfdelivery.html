@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Петромост</title>
-    <link rel="stylesheet" href="./css/selfdelivery.css">
+    <!-- <link rel="stylesheet" href="./css/selfdelivery.css"> -->
+    <link rel="stylesheet" href="./css/all-styles.css">
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -258,12 +259,12 @@
             <div class="container ">
                 <ul class="menu-panel__items flex-box">
                     <li class="menu-panel__item">
-                        <a class="menu-panel__link flex-box" href="#">
+                        <div class="menu-panel__link flex-box" id="catalog">
                             <div class="menu-panel__icon">
                                 <img class="object-fit-contain" src="./img/icons/menu-panel-catalog.svg" alt="Иконка каталога">
                             </div>
                             <p class="menu-panel__name">Каталог</p>
-                        </a>
+                        </div>
                     </li>
                     <li class="menu-panel__item">
                         <a class="menu-panel__link flex-box" href="#">
@@ -308,18 +309,31 @@
         </div>
 
         <!-- для попапов -->
-        <!-- поиск -->
-        <div class="overlay" id="search-overlay">
-            <div class="popup" id="search-popup">
+         <!-- Окно поиска -->
+         <div class="overlay" id="search-overlay">
+            <div class="popup popup-search" id="search-popup">
                 <div class="container">
                 </div>
-                <img class="search-img" src="./img/icons/search.svg" alt="Иконка лупы">
-
+                <!-- если пользователь ничего не вписал, то стартовый блок включяается добавлением класса ._visible -->
+                <div class="popup-search__start-block _visible">
+                    <div class="container">
+                        <img class="popup-search__img" src="./img/icons/big-search-icon.svg" alt="Иконка лупы">
+                        <p class="popup-search__start-text easy-border">
+                            Попробуйте ввести название того, 
+                            что хотите найти. По мере ввода 
+                            будут выводиться релевантные 
+                            результаты поиска...
+                        </p>
+                    </div>
+                </div>
+                
             </div>
         </div>
 
-        <!-- меню -->
-        <div class="overlay" id="menu-overlay">
+        
+
+         <!-- меню -->
+         <div class="overlay" id="menu-overlay">
             <div class="popup menu" id="menu-popup">
                 <div class="menu__header flex-box">
                     <h2 class="title">Меню</h2>
@@ -342,10 +356,10 @@
                                 </p>
                             </div>
                             <div class="delivery-variants__choosen flex-box">
-                                <button type="button" class="button delivery-variants__var __js-active">
+                                <button type="button" class="button delivery-variants__var __js-active" id="delivery-address">
                                     Доставка
                                 </button>
-                                <button type="button" class="button delivery-variants__var ">
+                                <button type="button" class="button delivery-variants__var " id="selfdelivery-address">
                                     Самовывоз
                                 </button>
                             </div>
@@ -575,34 +589,34 @@
                         </a>
                         <div class="menu__content">
                             <div class="menu__container">
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="text" name="user-name" placeholder="Имя" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                <div class="input-box">
+                                    <input class="input-box__input" type="text" name="user-name" placeholder="Имя" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
                                     </div>
                                 </div>
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="text" name="user-last-name" placeholder="Фамилия" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                <div class="input-box">
+                                    <input class="input-box__input" type="text" name="user-last-name" placeholder="Фамилия" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
                                     </div>
                                 </div>
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="text" name="user-faather-name" placeholder="Отчество" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                <div class="input-box">
+                                    <input class="input-box__input" type="text" name="user-faather-name" placeholder="Отчество" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
                                     </div>
                                 </div>
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="tel" name="user-phone" id="user-phone" placeholder="Телефон" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                <div class="input-box">
+                                    <input class="input-box__input" type="tel" name="user-phone" id="user-phone" placeholder="Телефон" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
                                     </div>
                                 </div>
-                                <div class="profile-data__input-box">
-                                    <input class="profile-data__input" type="email" name="user-email" id="user-email" placeholder="E-mail" value>
-                                    <div class="profile-data__input-cross">
-                                        <img class="object-fit-contain" src="./img/profile/cross.svg" alt="Иконка удаления">
+                                <div class="input-box">
+                                    <input class="input-box__input" type="email" name="user-email" id="user-email" placeholder="E-mail" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
                                     </div>
                                 </div>
 
@@ -632,7 +646,7 @@
                         </a>
                     </li>
                 </ul>
-                <button class="button profile-data__save-btn">Сохранить изменения</button>
+                <button class="button save-btn">Сохранить изменения</button>
             </div>
         </div>
 
@@ -709,8 +723,8 @@
         </div>
 
 
-          <!-- Адреса доставки -->
-          <div class="overlay" id="address-overlay">
+        <!-- Адреса доставки -->
+        <div class="overlay" id="address-overlay">
             <div class="popup address" id="address-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Адреса доставки</h2>
@@ -719,35 +733,581 @@
                     </button>
                 </div>
 
-
                 <div class="address__variants">
                     <!-- адрес, который выбран -->
-                     <div class="address__option">
+                    <div class="address__option">
                         <label class="radio">
                             <input class="radio__input" type="radio" name="address">
                             <div class="radio__block">
                                 <p class="address__choosed">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
                                 <p class="address__note">Выбран как основной</p>
                             </div>
+                            
                         </label>
-                     </div>
-                  
+                    </div>
+                
                     <!-- адрес на выбор  -->
                     <div class="address__option">
                         <label class="radio__dates radio">
                             <input class="radio__input" type="radio" name="address">
                             <div class="radio__block">
-                              <p class="address__for-choosing">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
+                            <p class="address__for-choosing">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
                             </div>
                         </label>
                     </div>
 
-                    <button type="button" class="address__add-btn">
+                    <button type="button" class="address__add-btn address__add-btn_with-plus">
                         Новый адрес
                     </button>
                 </div>
-              
-              
+            </div>
+        </div>
+
+         <!-- Адреса для доставки -->
+         <div class="overlay" id="delivery-address-overlay">
+            <div class="popup" id="delivery-address-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Доставка</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+                
+                <div class="menu">
+                    <!-- список меню -->
+                    <ul class="menu__list">
+                        <li class="menu__li ">
+                            <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
+                                <div class="menu-link__title">
+                                    <h5>Указать адрес</h5>
+                                </div>
+                                <span class="menu-link__icon">
+                                    <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                </span>
+                            </a>
+                            <div class="menu__content ">
+                                <div class="address__variants">
+                                    <!-- адрес на выбор -->
+                                    <div class="address__option">
+                                        <label class="radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                                <p class="address__city">г. Архангельск</p>
+                                                <div class="radio__delete-address">
+                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                                </div>  
+                                            </div>
+                                           
+                                         
+                                        </label>
+                                       
+                                    </div>
+                                
+                                    <!-- адрес на выбор  -->
+                                    <div class="address__option">
+                                        <label class="radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                                <p class="address__city">г. Свердловск</p>
+                                                <div class="radio__delete-address">
+                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                                </div>  
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                     <!-- адрес на выбор  -->
+                                     <div class="address__option">
+                                        <label class=" radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                                <p class="address__city">г. Новодвинск</p>
+                                                <div class="radio__delete-address">
+                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                                </div> 
+                                            </div>
+                                            
+                                        </label>
+                                       
+                                        
+                                    </div>
+                
+                                    <button type="button" class="address__add-btn address__add-btn_map flex-box">
+                                        <span>Выбрать адрес на карте</span>
+                                        <span class="cross-icon">
+                                            <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                        </span>
+                                    </button>
+
+                                    <div class="address__wrapper">
+                                        <div class="input-box">
+                                            <input class="input-box__input" type="text" name="street" placeholder="Улица" value>
+                                            <div class="input-box__cross">
+                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                            </div>
+                                        </div>
+                                        <div class="input-box input-box_w48">
+                                            <input class="input-box__input" type="text" name="house" placeholder="Дом" value>
+                                            <div class="input-box__cross">
+                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                            </div>
+                                        </div>
+
+                                        <div class="input-box input-box_w48">
+                                            <input class="input-box__input" type="text" name="building" placeholder="Корпус" value>
+                                            <div class="input-box__cross">
+                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                            </div>
+                                        </div>
+
+                                        <div class="input-box input-box_w48">
+                                            <input class="input-box__input" type="text" name="flat" placeholder="Квартира" value>
+                                            <div class="input-box__cross">
+                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                            </div>
+                                        </div>
+
+                                        <div class="input-box input-box_w48">
+                                            <input class="input-box__input" type="text" name="entrance" placeholder="Подъезд" value>
+                                            <div class="input-box__cross">
+                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                            </div>
+                                        </div>
+
+                                        <div class="input-box input-box_w48">
+                                            <input class="input-box__input" type="text" name="floor" placeholder="Этаж" value>
+                                            <div class="input-box__cross">
+                                                <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                  
+                                </div>
+                            </div>
+                        </li>
+    
+                        <li class="menu__li ">
+                            <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
+                                <div class="menu-link__title">
+                                    <h5>Выбрать из сохраненных</h5>
+                                </div>
+                                <span class="menu-link__icon">
+                                    <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                </span>
+                            </a>
+                            <div class="menu__content ">
+                                <div class="address__variants">
+                                    <!-- адрес на выбор  -->
+                                    <div class="address__option">
+                                        <label class="radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                                <p class="address__saved-city">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
+                                                <div class="radio__delete-address">
+                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                                </div>  
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                     <!-- адрес на выбор  -->
+                                     <div class="address__option">
+                                        <label class=" radio">
+                                            <input class="radio__input" type="radio" name="address">
+                                            <div class="radio__block">
+                                                <p class="address__saved-city">г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
+                                                <div class="radio__delete-address">
+                                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                                </div> 
+                                            </div>
+                                            
+                                        </label>
+                                       
+                                        
+                                    </div>
+                
+                                   
+                                </div>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                </div>
+
+                <button class="button save-btn">Сохранить</button>
+            </div>
+        </div>
+
+          <!-- Адреса доставки для самовывоза -->
+          <div class="overlay" id="selfdelivery-address-overlay">
+            <div class="popup " id="selfdelivery-address-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Доставка</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+
+                
+                <li class="menu__li ">
+                    <a href="#" class="menu__li-with-content menu-link flex-box __js-active">
+                        <div class="menu-link__title">
+                            <h5>Указать адрес</h5>
+                        </div>
+                        <span class="menu-link__icon">
+                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                        </span>
+                    </a>
+                    <div class="menu__content ">
+                        <div class="address__variants">
+                             <!-- адрес на выбор -->
+                             <div class="address__option">
+                                <label class="radio">
+                                    <input class="radio__input" type="radio" name="address">
+                                    <div class="radio__block">
+                                        <p class="address__city">г. Архангельск</p>
+                                        <div class="radio__delete-address">
+                                            <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                        </div>  
+                                    </div>
+                                </label>
+                               
+                            </div>
+
+                              <!-- адрес на выбор  -->
+                              <div class="address__option">
+                                <label class="address-radio">
+                                    <input class="address-radio__input" type="radio" name="selfdelivery-address">
+                                    <div class="address-radio__exact-address">
+                                        <p class="address-radio__text">пр-т. Ленинградский, 2</p>
+                                        <p class="address-radio__choosed">Выбрано</p>
+                                        <p class="address-radio__for-choosing">Заберу тут</p>
+                                    </div>
+                                </label>
+                            </div>
+    
+                            <!-- адрес на выбор  -->
+                            <div class="address__option">
+                                <label class="address-radio">
+                                    <input class="address-radio__input" type="radio" name="selfdelivery-address">
+                                    <div class="address-radio__exact-address">
+                                        <p class="address-radio__text">пр-т. Ленинградский, 255</p>
+                                        <p class="address-radio__choosed">Выбрано</p>
+                                        <p class="address-radio__for-choosing">Заберу тут</p>
+                                    </div>
+                                </label>
+                            </div>
+    
+                            <!-- адрес на выбор  -->
+                            <div class="address__option">
+                                <label class="address-radio">
+                                    <input class="address-radio__input" type="radio" name="selfdelivery-address">
+                                    <div class="address-radio__exact-address">
+                                        <p class="address-radio__text">ул. Нагонрная, 1</p>
+                                        <p class="address-radio__choosed">Выбрано</p>
+                                        <p class="address-radio__for-choosing">Заберу тут</p>
+                                    </div>
+                                </label>
+                            </div>
+                        
+                             <!-- адрес на выбор -->
+                             <div class="address__option">
+                                <label class="radio">
+                                    <input class="radio__input" type="radio" name="address">
+                                    <div class="radio__block">
+                                        <p class="address__city">г. Северодвинск</p>
+                                        <div class="radio__delete-address">
+                                            <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                        </div>  
+                                    </div>
+                                </label>
+                               
+                            </div>
+    
+                             <!-- адрес на выбор -->
+                             <div class="address__option">
+                                <label class="radio">
+                                    <input class="radio__input" type="radio" name="address">
+                                    <div class="radio__block">
+                                        <p class="address__city">г. Новодвинск</p>
+                                        <div class="radio__delete-address">
+                                            <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                        </div>  
+                                    </div>
+                                </label>
+                               
+                            </div>
+    
+                            <button type="button" class="address__add-btn address__add-btn_map flex-box">
+                                <span>Выбрать адрес на карте</span>
+                                <span class="cross-icon">
+                                    <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка закрытия">
+                                </span>
+                            </button>
+                            
+                          
+                          
+                        </div>
+
+                    </div>
+                
+
+                </li>
+
+                <div class="address__notes-block">
+    
+                                
+                    <ul>
+                        <li class="address__note-text">
+                            Заказ можно оформить на сегодня до 17:30, после 17:30 заказ будет отправлен к выдаче на завтра не ранее 10:00
+                        </li>
+                        <li class="address__note-text">
+                            Забрать заказ можно после СМС-оповещения «Заказ собран и готов к выдаче»
+                        </li>
+                        <li class="address__note-text">
+                            Заказ будет хранится в выбраном магазине до 21:00 в день выдачи
+                        </li>
+                        <li class="address__note-text">
+                            Подробнее об услуге «Самовывоз» можно ознакомиться <a href="#" style="color: #DE1C23;">по ссылке</a> 
+                        </li>
+                    </ul>
+                </div>
+
+
+                <button class="button save-btn">Сохранить</button>
+            </div>
+        </div>
+        
+        <!-- каталог -->
+        <div class="overlay" id="catalog-overlay">
+            <div class="popup catalog" id="catalog-popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Каталог</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>
+            
+                <!-- меню каталога-->
+                <ul class="menu__list">
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box" id="profile-data">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img//catalog/new-year-ball.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Новый Год, Рождество</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/gloves.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Готовимся к зиме</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box" id="my-card">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/persent.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Выгодные предложения</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu__li"> 
+                        <a href="#" class="menu__li-with-content  menu-link flex-box" id="address">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/croissant.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Хлеб и хлебобулочные изделия</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                        <div class="menu__content ">
+                            <!-- список второго порядка для хлебобулочных изделий -->
+                            <ul>
+                                <li class="menu__li">
+                                    <a href="./catalog-delivery.html" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Хлебобулочные изделия</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Пироги</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Кексы, чизкейки</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Торты, пирожные, рулеты</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Хлебцы</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="#" class="menu-link flex-box">
+                                        <div class="menu-link__title menu-link__catalog-subtitle">
+                                            <h5>Хлеб</h5>
+                                        </div>
+                                        <span class="menu-link__icon">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/cheese.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Молочные продукты, сыры, яйцо</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/apple.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Фрукты, овощи</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/cake.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Кондитерские изделия</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+            
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/meat.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Мясо, птица, колбасы</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/grocery.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Бакалея</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/pasta.svg" alt="Иконка записи">
+                                </div>
+                                <h5>Крупы, макароны, сухие завтраки</h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="menu__li">
+                        <a href="#" class="menu-link flex-box">
+                            <div class="menu-link__title catalog__title">
+                                <div class="menu-link__prefix">
+                                    <img class="object-fit-contain" src="./img/catalog/healthy-food.svg" alt="Иконка записи">
+                                </div>
+                                <h5> Здоровое питание
+                                </h5>
+                            </div>
+                            <span class="menu-link__icon">
+                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                            </span>
+                        </a>
+                    </li>
             </div>
         </div>
     </div>

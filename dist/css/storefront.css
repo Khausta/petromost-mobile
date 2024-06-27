@@ -642,6 +642,9 @@ button:focus {
 }
 
 .save-btn_shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: min(2.5vw, 19px);
   margin-bottom: calc(min(17vw, 130px) + min(3.1vw, 24px));
 }
