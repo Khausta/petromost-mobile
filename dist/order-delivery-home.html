@@ -52,9 +52,44 @@
             </section>
 
        
-       
+            <section class="address-choice">
+                <div class="container">
+                    <div class="address-choice__container">
+                        <div class="white-box">
+                            <div class="dnd">
+                                <div class="white-box__header">
+                                    <h5>Адрес доставки</h5>
+                                    <p>Выберите адрес получения заказа</p>
+                                    <div class="dnd__icon white-box__icon">
+                                        <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dnd__content">
+                               <div class="white-box-outer-wrapper">
+                                   <div class="white-box">
+                                       <p>г. Архангельск, ул. Гагарина, д. 4, кв. 40, подъезд 2, этаж 5</p>
+                                       <p class="red-text">Выбран как основной</p>
+                                   </div>
+                                   <button class="button btn-change">
+                                       Изменить
+                                   </button>
+                                   <button class="button btn-contain red-bg">
+                                     Продолжить
+                                    </button>
 
-            <section class="time">
+
+                               </div>
+
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="time valid-el">
                 <div class="container">
                     <div class="time__container">
                         <div class="white-box">
@@ -92,6 +127,14 @@
 
                                 <!-- выбор времени -->
                                 <div class="white-box__times">
+                                    <div class="white-box__item white-box__item_big">
+                                        <label class="white-box__time-label">
+                                            <input class="white-box__input" type="radio" name="time">
+                                            <p class="white-box__time-radio white-box__time-radio_express">
+                                                <span class="white-box__express">ЭКСПРЕСС ДОСТАВКА</span>
+                                            </p>
+                                        </label>
+                                    </div>
                                     <div class="white-box__item white-box__disabled">
                                         <label class="white-box__time-label">
                                             <input class="white-box__input" type="radio" name="time" disabled="true">
@@ -134,16 +177,19 @@
                                     </div>
                                 </div>
 
-                                <p class="white-box__note">
-                                    Минимальная сумма заказа для БЕСПЛАТНОЙ доставки составляет 1000 руб.
+                                <p class="white-box__note white-box__note_top0">
+                                    Минимальная сумма заказа для БЕСПЛАТНОЙ доставки составляет 250 руб.
                                 </p>
+                                <button class="button btn-contain red-bg">
+                                    Продолжить
+                                   </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="pay-method">
+            <!-- <section class="pay-method">
                 <div class="container">
                     <div class="pay-method__container">
                         <div class="white-box">
@@ -162,9 +208,9 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
-            <section class="user-data">
+            <section class="user-data valid-el">
                 <div class="container">
                     <div class="user-data__container">
                         <div class="white-box">
@@ -178,35 +224,49 @@
                                 </div>
                             </div>
                             <div class="dnd__content">
-                               <p style="background-color: blueviolet;"> контент</p>
+                                <div class="white-box-outer-wrapper">
+                                    <div class="white-box__red-star">
+                                        <input class="input easy-border white-box__user-input white-box__red-star" type="text" name="user-name" placeholder="Ваше Имя">
+                                    </div>
+                                    <div class="white-box__red-star">
+                                        <input class="input easy-border white-box__user-input white-box__red-star" type="text" name="user-phone" placeholder="Телефон ">
+                                    </div>
+                                    <input class="input easy-border white-box__user-input" type="text" name="user-email" placeholder="E-mail">
+                                    <p class="white-box__red-info-text">Поля обязательные к заполнению</p>
+                                    <button class="button red-bg btn-contain" desabled>
+                                        Продолжить
+                                       </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="comment">
+            <section class="comment valid-el">
                 <div class="container">
                     <div class="comment__container">
                         <div class="white-box">
                             <div class="dnd">
                                 <div class="white-box__header">
                                     <h5>Комментарий</h5>
-                                    <p>Оставьте свой комментарий к заказу</p>
+                                    <p>Укажите промокод или пожелание к заказу</p>
                                     <div class="dnd__icon white-box__icon">
                                         <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                                     </div>
                                 </div>
                             </div>
                             <div class="dnd__content">
-                               <p style="background-color: blueviolet;"> контент</p>
+                               <div class="white-box-outer-wrapper">
+                                    <textarea class="input white-box__comment-textarea easy-border" name="user-comment" id="user-comment" placeholder="Написать комментарий к заказу..."></textarea>
+                               </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="agreemnt-condition">
+            <section class="agreemnt-condition valid-el">
                 <div class="container">
                     <div class="agreemnt-condition__container">
                         <div class="white-box white-box_sand-bg">
@@ -226,6 +286,44 @@
                                 «Петромост».
                                 Настоящим я даю согласие ИП Жемчугову Николаю Владимировичу и его уполномоченным представителям получать, собирать, хранить и использовать мои персональные данные: Фамилию, Имя, Отчество, домашний и мобильный телефоны, адрес доставки, адрес электронной почты, в целях заключения и исполнения договора купли-продажи и информирования потребителя. Согласие может в любой момент быть мною отозвано путем направления письменного уведомления.
                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="order-sum valid-el">
+                <div class="container">
+                    <div class="order-sum__container">
+                        <div class="white-box">
+                            <div class="dnd">
+                                <div class="white-box__header flex-box">
+                                    <h5> СУММА ЗАКАЗА</h5>
+                                    <!-- <p class="order-sum__text">
+                                        СУММА ЗАКАЗА
+                                    </p> -->
+                                    
+                                    <div class="order-sum__sum">
+                                        <h5>237,55</h5>
+                                        <!-- <span class="order-sum__total">237,55 ₽</span> -->
+                                        <div class="dnd__icon order-sum__arrow">
+                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="dnd__content">
+                                <div class="white-box-outer-wrapper">
+                                    <div class="order-sum__content">
+                                        <p class="order-sum__info order-sum__info_1">Стоимость: 3 товара; 261,41 руб
+                                        </p>
+                                       <p class="order-sum__info order-sum__info_2"> Итого стоимость: 3 товара; 237,55 руб.
+                                        </p>
+                                       <p class="order-sum__info order-sum__info_2"> Ваша выгода: 23,86 руб.</p>    
+                                    </div>
+                                </div>
+                             
                             </div>
                         </div>
                     </div>

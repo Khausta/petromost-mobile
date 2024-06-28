@@ -1,3 +1,9 @@
+.white-box-outer-wrapper {
+    padding-top: $size-18px;
+    // .white-box {
+    // }
+}
+
 .white-box {
     margin-bottom: $gap-10;
     position: relative;
@@ -9,6 +15,8 @@
     color: $black-color;
     font-size: $size-14px;
 
+  
+    
 
     &_sand-bg {
         margin-top: $gap-10;
@@ -88,6 +96,45 @@
         border-radius: $size-13px;
         border: 1px solid $beige-color;
         overflow: hidden;
+
+        &_big {
+            width: 100%;
+        }
+    }
+
+    &__express {
+        display: flex;
+        color: #FF6D00;
+
+        &::before {
+            margin-right: $gap-10;
+            content: '';
+            display: block;
+            width: $size-20px;
+            height: $size-20px;
+            background-image: url('../img/icons/zipper.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+
+        }
+
+        &::after {
+
+            margin-left: $size-6and5;
+            padding: 0 $size-19-point-5-px;
+            content: '30 минут';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include gilroy-bold;
+            font-size: $size-12px;
+            color: $white-bg-color;
+            border-radius: $gap-10;
+            background: linear-gradient(90deg, #FF6B00, #FFCC00);
+           
+           
+
+        }
     }
 
     
@@ -100,12 +147,6 @@
         padding-top: $size-8px;
         padding-bottom: $size-8px;
         width: 100%; 
-        // min-height: min(12vw, 90px);
-        // width: 100%;
-        // display: inline-block;
-        // @include white-blocks;
-        // padding-left: min(13.3vw, 102px);
-        // padding-top: min(2.92vw, 22px);
         transition: all .3s ease-in-out;
 
         &::before {
@@ -136,6 +177,10 @@
             background-repeat: no-repeat;
             background-size: contain;
             transition: all .3s ease-in-out;
+        }
+
+        &_express::after {
+            background-image: url('../img/radio/orange-radio.svg');
         }
     }
 
@@ -194,6 +239,10 @@
         transition: all .3s ease-in-out;
     }
 
+    &__note_top0:before {
+       top: 0;
+    }
+
     &__note_home::before {
         top: 1vw;
     }
@@ -204,7 +253,87 @@
         font-size: $gap-10;
         color: $brown-color;
     }
+
+    &__user-input {
+        margin-bottom: $size-12px;
+        width: 100%;
+        padding: $size-14px $size-16and25;
+        color: $black-color;
+        border-radius: $gap-10;
+        @include gilroy-semibold;
+        
+        &::placeholder {
+            color: $brown-color;
+        }
+
+    }
+
+    &__red-info-text {
+        margin-bottom: $s55px;
+        position: relative;
+        padding-left: $size-16and25;
+        display: flex;
+        color: $red-color;
+        font-size: $size-12px;
+        @include gilroy-semibold;
+        
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: $size-8px;
+            transform: translateY(-50%);
+            content: '';
+            display: block;
+           
+            width: 1.6vw;
+            height: 1.6vw;
+            background-image: url('../img/icons/red-star-symbol.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+           
+        }
+    }
+
+    &__red-star {
+        position: relative;
+        
+
+        &::before {
+            position: absolute;
+            top: $size-8px;
+            left: $size-8px;
+            transform: translateY(-50%);
+            content: '';
+            display: block;
+           
+            width: 1.6vw;
+            height: 1.6vw;
+            background-image: url('../img/icons/red-star-symbol.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+           z-index: 1;
+        }
+    }
+
+
+    &__comment-textarea {
+        width: 100%;
+        height: 80vw;
+        background-color: $head-bg-color;
+        border-radius: $gap-10;
+        padding: $gap-10 $size-13px;
+        color: $black-color;
+        @include gilroy-bold;
+        font-size: $size-14px;
+
+        &::placeholder {
+            color: $brown-color;
+        }
+    }
     
+
+ 
     
     
 }

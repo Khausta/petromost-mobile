@@ -497,6 +497,52 @@ button:focus {
   z-index: 1;
 }
 
+.red-text {
+  color: #DC1E1E;
+}
+
+.btn-change {
+  padding: min(2.5vw, 19px) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: min(4.6vw, 38px);
+  border-radius: min(3.3vw, 25px);
+  border: 1px solid #F5E6D6;
+  background-color: #FFFAF5;
+}
+.btn-change::before {
+  content: "";
+  margin-right: 3px;
+  display: block;
+  width: min(5.1vw, 40px);
+  height: min(5.1vw, 40px);
+  background-image: url("../img/icons/change-btn.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(3.75vw, 29px);
+}
+
+.btn-contain {
+  margin-top: min(2.5vw, 19px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: min(2.5vw, 19px) 0;
+  background-color: #DC1E1E;
+  border-radius: min(3.3vw, 25px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(3.75vw, 29px);
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;

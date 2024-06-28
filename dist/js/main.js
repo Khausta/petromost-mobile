@@ -501,4 +501,12 @@ if (filterViewSelector) {
     filterViewSelector.classList.toggle('view-selector_to-grid');
   });
 }
+
+//order
+var validElements = document.querySelectorAll('.valid-el');
+if (validElements) {
+  validElements.forEach(function (el) {
+    el.classList.add('_js-desabled');
+  });
+}
 //# sourceMappingURL=main.js.map

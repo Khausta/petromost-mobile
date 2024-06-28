@@ -555,6 +555,14 @@ if (filterViewSelector) {
 
 
 
+//order
+const validElements = document.querySelectorAll('.valid-el');
+
+if(validElements) {
+  validElements.forEach(el => {
+    el.classList.add('_js-desabled');
+  })
+}
 
 
 

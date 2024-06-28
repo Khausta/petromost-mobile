@@ -543,6 +543,56 @@ button:focus {
     z-index: 1;
 }
 
+.red-text {
+    color: $red-color;
+}
+
+.btn-change {
+    padding: $gap-10 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: min(4.6vw, 38px);
+    
+    border-radius: min(3.3vw, 25px);
+    border: 1px solid #F5E6D6;
+    background-color: #FFFAF5;
+
+    &::before {
+        content: '';
+        margin-right: 3px;
+        display: block;
+        width: $size-20px;
+        height: $size-20px;
+        background-image: url("../img/icons/change-btn.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        @include gilroy-bold;
+        font-size: $size-14px;
+    }
+}
+
+
+.btn-contain {
+    margin-top: $gap-10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: $gap-10 0;
+    background-color: $red-color;
+    border-radius: min(3.3vw, 25px);
+    @include gilroy-bold;
+    font-size: $size-14px;
+
+  
+    
+}
+
+
+
 
 
 
