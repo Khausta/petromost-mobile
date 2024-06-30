@@ -104,7 +104,8 @@
 
     &__express {
         display: flex;
-        color: #FF6D00;
+        // color: #FF6D00;
+        color: $black-color;
 
         &::before {
             margin-right: $gap-10;
@@ -137,6 +138,7 @@
         }
     }
 
+   
     
 
   
@@ -186,6 +188,11 @@
 
     &__input:checked + &__time-radio {
         background-color: $head-bg-color;
+
+        .white-box__express {
+            color: #FF6D00;
+        }
+    
     }
 
     &__input:checked + &__time-radio::before {
@@ -331,9 +338,40 @@
             color: $brown-color;
         }
     }
-    
 
- 
-    
-    
+}
+
+._js-desabled {
+    .white-box {
+        &__header {
+            color: $brown-color;
+        }
+        &__icon {
+            opacity: 0;
+        }
+    }
+}
+
+#delivery-time._js-add-zipper-before {
+    display: flex;
+    align-items: center;
+    color: #FF6D00;
+
+    &::before {
+        margin-right: 4px;
+        content: '';
+        display: block;
+        width: $size-14px;
+        height: $size-14px;
+        background-image: url('../img/icons/zipper.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+    }
+}
+
+#user-contacts-text {
+    max-width: 100%;
+    max-height: $size-20px;
+    overflow: hidden;
 }

@@ -543,6 +543,16 @@ button:focus {
   font-size: min(3.75vw, 29px);
 }
 
+.address-choice {
+  margin-top: min(4.2vw, 32px);
+}
+.address-choice__input input {
+  display: none;
+}
+.address-choice__input input:checked + .white-box {
+  border: 1px solid #DC1E1E;
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;
@@ -1648,18 +1658,18 @@ button:focus {
   background-size: contain;
 }
 
-.dnd__icon {
+.dnd__icon, .ddl__icon {
   width: min(3.3vw, 25px);
   height: min(3.3vw, 25px);
   transition: all 0.3s ease-in-out;
 }
-.dnd__content {
+.dnd__content, .ddl__content {
   max-height: 0;
   opacity: 0;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
 }
-.dnd__icon.__js-opened {
+.dnd__icon.__js-opened, .ddl__icon.__js-opened {
   transform: rotate(-180deg);
 }
 
@@ -1771,7 +1781,7 @@ button:focus {
 }
 .white-box__express {
   display: flex;
-  color: #FF6D00;
+  color: #240405;
 }
 .white-box__express::before {
   margin-right: min(2.5vw, 19px);
@@ -1839,6 +1849,9 @@ button:focus {
 }
 .white-box__input:checked + .white-box__time-radio {
   background-color: #FFFAF5;
+}
+.white-box__input:checked + .white-box__time-radio .white-box__express {
+  color: #FF6D00;
 }
 .white-box__input:checked + .white-box__time-radio::before {
   display: none;
@@ -1972,6 +1985,35 @@ button:focus {
 }
 .white-box__comment-textarea::placeholder {
   color: #BE957D;
+}
+
+._js-desabled .white-box__header {
+  color: #BE957D;
+}
+._js-desabled .white-box__icon {
+  opacity: 0;
+}
+
+#delivery-time._js-add-zipper-before {
+  display: flex;
+  align-items: center;
+  color: #FF6D00;
+}
+#delivery-time._js-add-zipper-before::before {
+  margin-right: 4px;
+  content: "";
+  display: block;
+  width: min(3.75vw, 29px);
+  height: min(3.75vw, 29px);
+  background-image: url("../img/icons/zipper.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#user-contacts-text {
+  max-width: 100%;
+  max-height: min(5.1vw, 40px);
+  overflow: hidden;
 }
 
 .notification__content {

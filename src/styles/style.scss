@@ -593,6 +593,27 @@ button:focus {
 
 
 
+.address-choice {
+    margin-top: $size-16and25;
+    &__input {
+        input {
+            display: none;
+
+           
+        }
+
+        input:checked + .white-box{
+            border: 1px solid $red-color;
+        }
+
+    }
+
+   
+}
+
+
+
+
 
 
 

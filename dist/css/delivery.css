@@ -543,6 +543,16 @@ button:focus {
   font-size: min(3.75vw, 29px);
 }
 
+.address-choice {
+  margin-top: min(4.2vw, 32px);
+}
+.address-choice__input input {
+  display: none;
+}
+.address-choice__input input:checked + .white-box {
+  border: 1px solid #DC1E1E;
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;
