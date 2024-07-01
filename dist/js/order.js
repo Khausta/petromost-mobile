@@ -6,43 +6,76 @@ function addDDL(element) {
     var arrow = element.querySelector(".ddl__icon");
     var content = element.querySelector(".ddl__content");
     if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-      content.style.opacity = null;
-      arrow.classList.remove('__js-opened');
+      closeContent(content, arrow);
     } else {
-      content.style.maxHeight = content.scrollHeight + 'px';
-      content.style.opacity = 1;
-      arrow.classList.add('__js-opened');
+      openContent(content, arrow);
     }
   });
 }
+function openContent(contentBlock, arrowIcon) {
+  contentBlock.style.maxHeight = contentBlock.scrollHeight + 'px';
+  contentBlock.style.opacity = 1;
+  arrowIcon.classList.add('__js-opened');
+}
+function closeContent(contentBlock, arrowIcon) {
+  contentBlock.style.maxHeight = null;
+  contentBlock.style.opacity = null;
+  arrowIcon.classList.remove('__js-opened');
+}
+function ableBtn(btn) {
+  document.querySelector("".concat(btn)).removeAttribute('disabled');
+}
+function disableBtn(btn) {
+  document.querySelector("".concat(btn)).setAttribute('disabled', true);
+}
 
 //order
-var addressSection = document.querySelector('.address-choice');
+// сначала делаем стили для первого блока выбора адреса, 
+// так как он по умолчанию открыт сразу
+var addressSection = document.querySelector('.address-choice'),
+  addressContent = addressSection.querySelector('.ddl__content'),
+  addressArrow = addressSection.querySelector('.ddl__icon');
+openContent(addressContent, addressArrow);
 addDDL(addressSection);
+
+// определим все блоки, которые требуют выполнения определённых условий для открытия
 var validElements = document.querySelectorAll('.valid-el');
 if (validElements) {
   validElements.forEach(function (el) {
-    el.classList.add('_js-desabled');
+    el.classList.add('_js-disabled');
   });
 }
 
 // Обработчик события клика на кнопки Продолжить
 var continueBtns = document.querySelectorAll('.btn-contain');
-var _loop = function _loop() {
+var _loop = function _loop(i) {
+  if (i == continueBtns.length - 1) {
+    continueBtns[i].addEventListener('click', function () {
+      document.querySelector('#accept-order-btn').classList.remove('_disabled');
+      console.log(validElements[i - 1]);
+      var commentContent = validElements[i - 1].querySelector('.ddl__content');
+      var commnetArrow = validElements[i - 1].querySelector('.ddl__icon');
+      closeContent(commentContent, commnetArrow);
+    });
+    return 1; // break
+  }
   var validBLock = validElements[i];
   var nextContent = validBLock.querySelector('.ddl__content');
   var arrow = validBLock.querySelector('.ddl__icon');
+  var currentBlock = validBLock.previousElementSibling;
+  var currentBlockContent = currentBlock.querySelector('.ddl__content');
+  var currentBlockArrow = currentBlock.querySelector('.ddl__icon');
   continueBtns[i].addEventListener('click', function () {
-    validBLock.classList.remove('_js-desabled');
+    closeContent(currentBlockContent, currentBlockArrow);
+    validBLock.classList.remove('_js-disabled');
     nextContent.style.maxHeight = nextContent.scrollHeight + 'px';
     nextContent.style.opacity = 1;
     arrow.classList.add('__js-opened');
     addDDL(validBLock);
   });
 };
-for (var i = 0; i < continueBtns.length - 1; i++) {
-  _loop();
+for (var i = 0; i < continueBtns.length; i++) {
+  if (_loop(i)) break;
 }
 
 // обработчик инпута адреса на странице Оформления заказа
@@ -54,28 +87,48 @@ userAddressInput.addEventListener('change', function () {
 // обработка изменений инпутов выбора времени страницы Оформление заказа
 var timeDeliveryData = {
   content: document.querySelector('.time').querySelector('.ddl__content'),
-  day: '',
+  day: 'сегодня',
   time: '',
   footerText: 'Минимальная сумма заказа для БЕСПЛАТНОЙ доставки составляет 250 рублей',
   expressFooterText: 'Стоимость - 249 рублей. Экспресс доставка - доставка от 30 минут в звисимости от объема заказа и адреса доставки',
   headerText: document.querySelector('#delivery-time'),
   footerTextElement: document.querySelector('#min-sum-text'),
   dayInputs: document.querySelectorAll('[name="day"]'),
-  timeInputs: document.querySelectorAll('[name="time"]')
+  timeInputs: document.querySelectorAll('[name="time"]'),
+  expressDeliveryHendler: function expressDeliveryHendler() {
+    timeDeliveryData.headerText.innerText = 'Экспрес доставка от 30 минут - 249 рублей';
+    timeDeliveryData.headerText.classList.add('_js-add-zipper-before');
+    timeDeliveryData.footerTextElement.innerText = timeDeliveryData.expressFooterText;
+    timeDeliveryData.content.style.maxHeight = timeDeliveryData.content.scrollHeight + 'px';
+  },
+  anyTimeHendler: function anyTimeHendler(input) {
+    timeDeliveryData.day = input.value;
+    timeDeliveryData.headerText.classList.remove('_js-add-zipper-before');
+    timeDeliveryData.headerText.innerText = 'Выберите удобное время получения заказа';
+    // timeDeliveryData.footerTextElement.innerText = timeDeliveryData.footerText;
+  }
 };
 timeDeliveryData.dayInputs.forEach(function (el) {
   el.addEventListener('change', function () {
+    if (el.value == 'сегодня') {
+      document.querySelector('._js-express-block').classList.add('_visible');
+    }
+    // document.querySelector('._js-express-block').classList.remove('_visible');
+
     if (el.classList.contains('_js-express-delivery')) {
-      timeDeliveryData.headerText.innerText = 'Экспрес доставка от 30 минут - 249 рублей';
-      timeDeliveryData.headerText.classList.add('_js-add-zipper-before');
-      timeDeliveryData.footerTextElement.innerText = timeDeliveryData.expressFooterText;
-      timeDeliveryData.content.style.maxHeight = timeDeliveryData.content.scrollHeight + 'px';
+      // timeDeliveryData.headerText.innerText = 'Экспрес доставка от 30 минут - 249 рублей';
+      // timeDeliveryData.headerText.classList.add('_js-add-zipper-before');
+      // timeDeliveryData.footerTextElement.innerText = timeDeliveryData.expressFooterText;
+      // timeDeliveryData.content.style.maxHeight =  timeDeliveryData.content.scrollHeight + 'px';
+      timeDeliveryData.expressDeliveryHendler();
       return;
     }
     timeDeliveryData.day = el.value;
     timeDeliveryData.headerText.classList.remove('_js-add-zipper-before');
     timeDeliveryData.headerText.innerText = 'Выберите удобное время получения заказа';
+    // timeDeliveryData.anyTimeHendler(el);
     if (timeDeliveryData.day && timeDeliveryData.time) {
+      console.log('work');
       timeDeliveryData.headerText.innerText = "\u041E\u0436\u0438\u0434\u0430\u0439\u0442\u0435 \u0437\u0430\u043A\u0430\u0437 ".concat(timeDeliveryData.day, " ").concat(timeDeliveryData.time);
       timeDeliveryData.footerTextElement.innerText = timeDeliveryData.footerText;
       timeDeliveryData.content.style.maxHeight = timeDeliveryData.content.scrollHeight + 'px';
@@ -84,17 +137,22 @@ timeDeliveryData.dayInputs.forEach(function (el) {
 });
 timeDeliveryData.timeInputs.forEach(function (el) {
   el.addEventListener('change', function () {
+    ableBtn('#time-btn');
     if (el.classList.contains('_js-express-delivery')) {
-      timeDeliveryData.headerText.innerText = 'Экспрес доставка от 30 минут - 249 рублей';
-      timeDeliveryData.headerText.classList.add('_js-add-zipper-before');
-      timeDeliveryData.footerTextElement.innerText = timeDeliveryData.expressFooterText;
-      timeDeliveryData.content.style.maxHeight = timeDeliveryData.content.scrollHeight + 'px';
+      // timeDeliveryData.headerText.innerText = 'Экспрес доставка от 30 минут - 249 рублей';
+      // timeDeliveryData.headerText.classList.add('_js-add-zipper-before');
+      // timeDeliveryData.footerTextElement.innerText = timeDeliveryData.expressFooterText;
+      // timeDeliveryData.content.style.maxHeight =  timeDeliveryData.content.scrollHeight + 'px';
+      timeDeliveryData.expressDeliveryHendler();
       return;
     }
     timeDeliveryData.time = el.value;
     timeDeliveryData.headerText.classList.remove('_js-add-zipper-before');
     timeDeliveryData.headerText.innerText = 'Выберите удобное время получения заказа';
+    // timeDeliveryData.anyTimeHendler(e.target);
+
     if (timeDeliveryData.day && timeDeliveryData.time) {
+      console.log('wor');
       timeDeliveryData.headerText.innerText = "\u041E\u0436\u0438\u0434\u0430\u0439\u0442\u0435 \u0437\u0430\u043A\u0430\u0437 ".concat(timeDeliveryData.day, " ").concat(timeDeliveryData.time);
       timeDeliveryData.footerTextElement.innerText = timeDeliveryData.footerText;
       timeDeliveryData.content.style.maxHeight = timeDeliveryData.content.scrollHeight + 'px';
@@ -115,16 +173,12 @@ contactsInputs.forEach(function (el) {
   el.addEventListener('input', function () {
     if (el == document.querySelector('[name="user-name"]')) {
       contactsData.userName = el.value;
-      console.log(el.value);
-      console.log(contactsData);
     }
     if (el == document.querySelector('[name="user-phone"]')) {
       contactsData.userPhone = el.value;
-      console.log(contactsData);
     }
     if (el == document.querySelector('[name="user-email"]')) {
       contactsData.userEmail = el.value;
-      console.log(contactsData);
     }
     if (contactsData.userName && contactsData.userPhone) {
       contactsData.headerText.innerText = "".concat(contactsData.userName, " ").concat(contactsData.userPhone, " ").concat(contactsData.userEmail);
@@ -167,9 +221,9 @@ validatedInputs.forEach(function (el) {
   el.addEventListener('input', function () {
     isValid = validOptions.validateName(validatedInputs[0]) && validOptions.validatePhone(validatedInputs[1]);
     if (isValid) {
-      document.querySelector('._js-btn-valid').removeAttribute('desabled');
+      ableBtn('#contacts-btn');
     } else {
-      document.querySelector('._js-btn-valid').setAttribute('desabled', true);
+      disableBtn('#contacts-btn');
     }
   });
 });

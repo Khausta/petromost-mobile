@@ -611,6 +611,24 @@ button:focus {
    
 }
 
+._js-express-block {
+    display: none;
+
+ 
+}
+
+._js-express-block._visible {
+    display: block;
+}
+
+#accept-order-btn._disabled {
+    color: $brown-color;
+    background-color: $beige-color;
+}
+
+a._disabled {
+    pointer-events: none;
+}
 
 
 

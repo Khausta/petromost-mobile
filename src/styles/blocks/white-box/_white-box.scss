@@ -138,6 +138,9 @@
         }
     }
 
+
+   
+
    
     
 
@@ -341,7 +344,7 @@
 
 }
 
-._js-desabled {
+._js-disabled {
     .white-box {
         &__header {
             color: $brown-color;
@@ -374,4 +377,11 @@
     max-width: 100%;
     max-height: $size-20px;
     overflow: hidden;
+}
+
+.white-box {
+    button[disabled] {
+        color: $brown-color;
+        background-color: $beige-color;
+    }
 }

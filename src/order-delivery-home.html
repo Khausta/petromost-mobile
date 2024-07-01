@@ -110,7 +110,7 @@
                                 <!-- переключатель дней СЕГОДНЯ, ЗАВТРА, ПОСЛЕЗАВТРА -->
                                 <div class="white-box__days">
                                     <label class="white-box__label">
-                                        <input class="white-box__input" type="radio" name="day" value="сегодня">
+                                        <input id="today" class="white-box__input" type="radio" name="day" value="сегодня" checked>
                                         <p class="white-box__radio">
                                             Сегодня
                                         </p>
@@ -131,7 +131,7 @@
 
                                 <!-- выбор времени -->
                                 <div class="white-box__times">
-                                    <div class="white-box__item white-box__item_big">
+                                    <div class="white-box__item white-box__item_big _js-express-block _visible">
                                         <label class="white-box__time-label">
                                             <input class="white-box__input _js-express-delivery"  type="radio" name="time" value="express-delivery">
                                             <p class="white-box__time-radio white-box__time-radio_express">
@@ -184,7 +184,7 @@
                                 <p class="white-box__note white-box__note_top0" id="min-sum-text">
                                     Минимальная сумма заказа для БЕСПЛАТНОЙ доставки составляет 250 руб.
                                 </p>
-                                <button class="button btn-contain red-bg">
+                                <button id="time-btn" class="button btn-contain red-bg" disabled>
                                     Продолжить
                                    </button>
                             </div>
@@ -237,7 +237,7 @@
                                     </div>
                                     <input class="input easy-border white-box__user-input" type="text" name="user-email" placeholder="E-mail">
                                     <p class="white-box__red-info-text">Поля обязательные к заполнению</p>
-                                    <button class="button red-bg btn-contain _js-btn-valid" desabled>
+                                    <button id="contacts-btn" class="button red-bg btn-contain _js-btn-valid" disabled>
                                         Продолжить
                                        </button>
                                 </div>
@@ -342,7 +342,7 @@
 
 
 
-            <a href="./delivery-order-status.html" class="button save-btn save-btn_shop save-btn_fz13">Согласиться с условиями и оформить заказ</a> 
+            <a id="accept-order-btn" href="./delivery-order-status.html" class="button save-btn save-btn_shop save-btn_fz13 _disabled">Согласиться с условиями и оформить заказ</a> 
         </main>
        
 

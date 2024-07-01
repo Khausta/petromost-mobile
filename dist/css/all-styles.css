@@ -553,6 +553,23 @@ button:focus {
   border: 1px solid #DC1E1E;
 }
 
+._js-express-block {
+  display: none;
+}
+
+._js-express-block._visible {
+  display: block;
+}
+
+#accept-order-btn._disabled {
+  color: #BE957D;
+  background-color: #F5E6D6;
+}
+
+a._disabled {
+  pointer-events: none;
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;
@@ -3054,10 +3071,10 @@ button:focus {
   color: #BE957D;
 }
 
-._js-desabled .white-box__header {
+._js-disabled .white-box__header {
   color: #BE957D;
 }
-._js-desabled .white-box__icon {
+._js-disabled .white-box__icon {
   opacity: 0;
 }
 
@@ -3081,6 +3098,11 @@ button:focus {
   max-width: 100%;
   max-height: min(5.1vw, 40px);
   overflow: hidden;
+}
+
+.white-box button[disabled] {
+  color: #BE957D;
+  background-color: #F5E6D6;
 }
 
 .shops {
@@ -4075,9 +4097,4 @@ button:focus {
 .two-btns__btn_red {
   background-color: #DC1E1E;
   color: #FFFFFF;
-}
-
-.white-box button[desabled] {
-  color: #BE957D;
-  background-color: #F5E6D6;
 }
