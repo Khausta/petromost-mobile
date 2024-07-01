@@ -35,6 +35,25 @@ function addDDL(element) {
     document.querySelector(`${btn}`).setAttribute('disabled', true);
   }
 
+  function cutter(text, subheader) {
+    let cutText;
+    if (text.length > 28) {
+      cutText = text.slice(0, 27)  + '...';
+    } else {
+      cutText = text;
+    }
+      subheader.innerText =  cutText;
+  }
+
+  const contactsData = {
+    userName: '',
+    userPhone: '',
+    userEmail: '',
+    headerText: document.querySelector('#user-contacts-text'),
+  }
+
+
+
   //order
   // сначала делаем стили для первого блока выбора адреса, 
   // так как он по умолчанию открыт сразу
@@ -54,24 +73,32 @@ function addDDL(element) {
   
   // Обработчик события клика на кнопки Продолжить
   const continueBtns = document.querySelectorAll('.btn-contain');
+
   for (let i = 0; i < continueBtns.length; i++) {
+    // исключение для кнопки "Продолжить" блока комментария
     if(i == continueBtns.length - 1) {
       continueBtns[i].addEventListener('click', () => {
         document.querySelector('#accept-order-btn').classList.remove('_disabled');
-       console.log(validElements[i-1]);
-       const commentContent = validElements[i-1].querySelector('.ddl__content');
-       const commnetArrow = validElements[i-1].querySelector('.ddl__icon');
+        const commentContent = validElements[i-1].querySelector('.ddl__content');
+        const commnetArrow = validElements[i-1].querySelector('.ddl__icon');
+        const text = document.querySelector('#comment-area').value;
+        cutter(text, document.querySelector('#comment-p'));
         closeContent(commentContent, commnetArrow);
       })
       break;
     }
+
     const validBLock = validElements[i];
     const nextContent = validBLock.querySelector('.ddl__content');
     const arrow =  validBLock.querySelector('.ddl__icon');
     const currentBlock = validBLock.previousElementSibling;
     const currentBlockContent = currentBlock.querySelector('.ddl__content');
     const currentBlockArrow =  currentBlock.querySelector('.ddl__icon');
+
     continueBtns[i].addEventListener('click', () => {
+      if(currentBlock.classList.contains('user-data')) {
+        cutter(`${contactsData.userName} ${contactsData.userPhone} ${contactsData.userEmail}`, contactsData.headerText);
+      }
       closeContent(currentBlockContent, currentBlockArrow);
 
       validBLock.classList.remove('_js-disabled');
@@ -105,11 +132,10 @@ function addDDL(element) {
         timeDeliveryData.footerTextElement.innerText = timeDeliveryData.expressFooterText;
         timeDeliveryData.content.style.maxHeight =  timeDeliveryData.content.scrollHeight + 'px';
     },
-    anyTimeHendler: function (input) {
-      timeDeliveryData.day = input.value;
-      timeDeliveryData.headerText.classList.remove('_js-add-zipper-before');
-      timeDeliveryData.headerText.innerText = 'Выберите удобное время получения заказа';
-      // timeDeliveryData.footerTextElement.innerText = timeDeliveryData.footerText;
+    changeTexts: function() {
+      timeDeliveryData.headerText.innerText = `Ожидайте заказ ${timeDeliveryData.day} ${timeDeliveryData.time}`
+      timeDeliveryData.footerTextElement.innerText = timeDeliveryData.footerText;
+      timeDeliveryData.content.style.maxHeight =  timeDeliveryData.content.scrollHeight + 'px';
     }
 
   }
@@ -119,26 +145,18 @@ function addDDL(element) {
      
       if(el.value == 'сегодня') {
         document.querySelector('._js-express-block').classList.add('_visible');
-      } 
-        // document.querySelector('._js-express-block').classList.remove('_visible');
-      
+      } else {
+        document.querySelector('._js-express-block').classList.remove('_visible');
+      }
       if(el.classList.contains('_js-express-delivery')) {
-        // timeDeliveryData.headerText.innerText = 'Экспрес доставка от 30 минут - 249 рублей';
-        // timeDeliveryData.headerText.classList.add('_js-add-zipper-before');
-        // timeDeliveryData.footerTextElement.innerText = timeDeliveryData.expressFooterText;
-        // timeDeliveryData.content.style.maxHeight =  timeDeliveryData.content.scrollHeight + 'px';
         timeDeliveryData.expressDeliveryHendler();
         return;
       }
       timeDeliveryData.day = el.value;
-      timeDeliveryData.headerText.classList.remove('_js-add-zipper-before');
-      timeDeliveryData.headerText.innerText = 'Выберите удобное время получения заказа';
-      // timeDeliveryData.anyTimeHendler(el);
+      timeDeliveryData.headerText.classList.remove('_js-add-zipper-before'); 
+
       if(timeDeliveryData.day && timeDeliveryData.time) {
-        console.log('work');
-        timeDeliveryData.headerText.innerText = `Ожидайте заказ ${timeDeliveryData.day} ${timeDeliveryData.time}`
-        timeDeliveryData.footerTextElement.innerText = timeDeliveryData.footerText;
-        timeDeliveryData.content.style.maxHeight =  timeDeliveryData.content.scrollHeight + 'px';
+        timeDeliveryData.changeTexts();
       }
       
     })
@@ -148,23 +166,13 @@ function addDDL(element) {
     el.addEventListener('change', () => {
       ableBtn('#time-btn');
       if(el.classList.contains('_js-express-delivery')) {
-        // timeDeliveryData.headerText.innerText = 'Экспрес доставка от 30 минут - 249 рублей';
-        // timeDeliveryData.headerText.classList.add('_js-add-zipper-before');
-        // timeDeliveryData.footerTextElement.innerText = timeDeliveryData.expressFooterText;
-        // timeDeliveryData.content.style.maxHeight =  timeDeliveryData.content.scrollHeight + 'px';
         timeDeliveryData.expressDeliveryHendler();
         return;
       }
       timeDeliveryData.time = el.value;
       timeDeliveryData.headerText.classList.remove('_js-add-zipper-before');
-      timeDeliveryData.headerText.innerText = 'Выберите удобное время получения заказа';
-      // timeDeliveryData.anyTimeHendler(e.target);
-
       if(timeDeliveryData.day && timeDeliveryData.time) {
-        console.log('wor');
-        timeDeliveryData.headerText.innerText = `Ожидайте заказ ${timeDeliveryData.day} ${timeDeliveryData.time}`
-        timeDeliveryData.footerTextElement.innerText = timeDeliveryData.footerText;
-        timeDeliveryData.content.style.maxHeight =  timeDeliveryData.content.scrollHeight + 'px';
+        timeDeliveryData.changeTexts();
       }
     })
   })
@@ -172,32 +180,18 @@ function addDDL(element) {
   
   // Обработка изменнений инпутов контактных данных польхователя
   // Валидация полей Имени пользователя и Номера телефона
-  const contactsData = {
-    userName: '',
-    userPhone: '',
-    userEmail: '',
-    headerText: document.querySelector('#user-contacts-text'),
-  }
-  
+ 
   const contactsInputs = document.querySelectorAll('.white-box__user-input ');
   contactsInputs.forEach(el => {
     el.addEventListener('input', () => {
       if (el == document.querySelector('[name="user-name"]')) {
         contactsData.userName = el.value;
       }
-  
       if (el == document.querySelector('[name="user-phone"]')) {
         contactsData.userPhone = el.value;
-
       }
-  
       if (el == document.querySelector('[name="user-email"]')) {
         contactsData.userEmail = el.value;
- 
-      }
-  
-      if (contactsData.userName && contactsData.userPhone) {
-        contactsData.headerText.innerText = `${contactsData.userName} ${contactsData.userPhone} ${contactsData.userEmail}`
       }
     })
   })
@@ -251,6 +245,4 @@ function addDDL(element) {
         disableBtn('#contacts-btn');
       }
     });
-  
-  
   })
