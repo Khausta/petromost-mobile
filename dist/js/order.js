@@ -49,11 +49,18 @@ var contactsData = {
 // так как он по умолчанию открыт сразу
 var addressSection = document.querySelector('.address-choice'),
   addressContent = addressSection.querySelector('.ddl__content'),
-  addressArrow = addressSection.querySelector('.ddl__icon');
+  addressArrow = addressSection.querySelector('.ddl__icon'),
+  addressIputs = document.querySelectorAll('[name="user-address"]');
+disableBtn('#address-btn');
 openContent(addressContent, addressArrow);
 addDDL(addressSection);
+addressIputs.forEach(function (el) {
+  el.addEventListener('change', function () {
+    ableBtn('#address-btn');
+  });
+});
 
-// определим все блоки, которые требуют выполнения определённых условий для открытия
+// блоки, которые требуют выполнения определённых условий для открытия
 var validElements = document.querySelectorAll('.valid-el');
 if (validElements) {
   validElements.forEach(function (el) {
@@ -127,12 +134,13 @@ var timeDeliveryData = {
     timeDeliveryData.content.style.maxHeight = timeDeliveryData.content.scrollHeight + 'px';
   }
 };
+var expressBlock = document.querySelector('._js-express-block');
 timeDeliveryData.dayInputs.forEach(function (el) {
   el.addEventListener('change', function () {
-    if (el.value == 'сегодня') {
-      document.querySelector('._js-express-block').classList.add('_visible');
+    if (expressBlock && el.value == 'сегодня') {
+      expressBlock.classList.add('_visible');
     } else {
-      document.querySelector('._js-express-block').classList.remove('_visible');
+      if (expressBlock) expressBlock.classList.remove('_visible');
     }
     if (el.classList.contains('_js-express-delivery')) {
       timeDeliveryData.expressDeliveryHendler();
@@ -219,12 +227,17 @@ var validOptions = {
 var validatedInputs = document.querySelectorAll('._js-input-required');
 validOptions.addPhoneMask(validatedInputs[1]);
 validatedInputs.forEach(function (el) {
+  var commentBlock = document.querySelector('.comment');
   var isValid = false;
   el.addEventListener('input', function () {
     isValid = validOptions.validateName(validatedInputs[0]) && validOptions.validatePhone(validatedInputs[1]);
     if (isValid) {
       ableBtn('#contacts-btn');
+      if (!commentBlock.classList.contains('_js-disabled')) {
+        document.querySelector('#accept-order-btn').classList.remove('_disabled');
+      }
     } else {
+      document.querySelector('#accept-order-btn').classList.add('_disabled');
       disableBtn('#contacts-btn');
     }
   });
