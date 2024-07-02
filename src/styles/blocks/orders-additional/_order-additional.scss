@@ -4,6 +4,10 @@
     padding: $size-16and25 0;
     border: none;
 
+    .path-swiper {
+        overflow: hidden;
+    }
+
     &__item {
         position: relative;
         display: inline-block;

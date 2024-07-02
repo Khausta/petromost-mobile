@@ -80,10 +80,10 @@ function addDDL(element) {
       continueBtns[i].addEventListener('click', () => {
         document.querySelector('#accept-order-btn').classList.remove('_disabled');
         const commentContent = validElements[i-1].querySelector('.ddl__content');
-        const commnetArrow = validElements[i-1].querySelector('.ddl__icon');
+        const commentArrow = validElements[i-1].querySelector('.ddl__icon');
         const text = document.querySelector('#comment-area').value;
         cutter(text, document.querySelector('#comment-p'));
-        closeContent(commentContent, commnetArrow);
+        closeContent(commentContent, commentArrow);
       })
       break;
     }
@@ -174,6 +174,17 @@ function addDDL(element) {
       if(timeDeliveryData.day && timeDeliveryData.time) {
         timeDeliveryData.changeTexts();
       }
+    })
+  })
+
+  //Обработка изменений инпутов при выборе способа оплаты
+  const payMethodInputs = document.querySelectorAll('[name="pay-method"]');
+  const paySubheader = document.querySelector('#pay-subheader');
+
+  payMethodInputs.forEach(el => {
+    el.addEventListener('change', () => {
+      ableBtn('#pay-btn');
+      paySubheader.innerText = el.nextElementSibling.innerText;
     })
   })
   

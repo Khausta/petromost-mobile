@@ -69,10 +69,10 @@ var _loop = function _loop(i) {
     continueBtns[i].addEventListener('click', function () {
       document.querySelector('#accept-order-btn').classList.remove('_disabled');
       var commentContent = validElements[i - 1].querySelector('.ddl__content');
-      var commnetArrow = validElements[i - 1].querySelector('.ddl__icon');
+      var commentArrow = validElements[i - 1].querySelector('.ddl__icon');
       var text = document.querySelector('#comment-area').value;
       cutter(text, document.querySelector('#comment-p'));
-      closeContent(commentContent, commnetArrow);
+      closeContent(commentContent, commentArrow);
     });
     return 1; // break
   }
@@ -157,6 +157,16 @@ timeDeliveryData.timeInputs.forEach(function (el) {
     if (timeDeliveryData.day && timeDeliveryData.time) {
       timeDeliveryData.changeTexts();
     }
+  });
+});
+
+//Обработка изменений инпутов при выборе способа оплаты
+var payMethodInputs = document.querySelectorAll('[name="pay-method"]');
+var paySubheader = document.querySelector('#pay-subheader');
+payMethodInputs.forEach(function (el) {
+  el.addEventListener('change', function () {
+    ableBtn('#pay-btn');
+    paySubheader.innerText = el.nextElementSibling.innerText;
   });
 });
 

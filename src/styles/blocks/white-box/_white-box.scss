@@ -144,7 +144,9 @@
    
     
 
-  
+   &__pay-items {
+    padding: $size-13px 0;
+   }
      
     &__time-radio {
         position: relative;
@@ -152,6 +154,7 @@
         padding-top: $size-8px;
         padding-bottom: $size-8px;
         width: 100%; 
+        border-radius: min(3.3vw, 25px);
         transition: all .3s ease-in-out;
 
         &::before {
@@ -196,6 +199,10 @@
             color: #FF6D00;
         }
     
+    }
+
+    &__input:checked + &__pay-radio {
+        border: 1px solid $red-color;
     }
 
     &__input:checked + &__time-radio::before {

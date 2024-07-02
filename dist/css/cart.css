@@ -1949,12 +1949,16 @@ a._disabled {
   border-radius: min(2.5vw, 19px);
   background: linear-gradient(90deg, #FF6B00, #FFCC00);
 }
+.white-box__pay-items {
+  padding: min(3.3vw, 25px) 0;
+}
 .white-box__time-radio {
   position: relative;
   padding-left: calc(min(14vw, 109px) - 8px);
   padding-top: min(2vw, 16px);
   padding-bottom: min(2vw, 16px);
   width: 100%;
+  border-radius: min(3.3vw, 25px);
   transition: all 0.3s ease-in-out;
 }
 .white-box__time-radio::before {
@@ -1993,6 +1997,9 @@ a._disabled {
 }
 .white-box__input:checked + .white-box__time-radio .white-box__express {
   color: #FF6D00;
+}
+.white-box__input:checked + .white-box__pay-radio {
+  border: 1px solid #DC1E1E;
 }
 .white-box__input:checked + .white-box__time-radio::before {
   display: none;
