@@ -39,6 +39,8 @@ function addDDL(element) {
     let cutText;
     if (text.length > 28) {
       cutText = text.slice(0, 27)  + '...';
+    } else if (text.length == 0) {
+      return;
     } else {
       cutText = text;
     }
@@ -50,6 +52,7 @@ function addDDL(element) {
     userPhone: '',
     userEmail: '',
     headerText: document.querySelector('#user-contacts-text'),
+    isValid: false,
   }
 
 
@@ -90,7 +93,9 @@ function addDDL(element) {
     // исключение для кнопки "Продолжить" блока комментария
     if(i == continueBtns.length - 1) {
       continueBtns[i].addEventListener('click', () => {
-        document.querySelector('#accept-order-btn').classList.remove('_disabled');
+        if (contactsData.isValid) {
+          document.querySelector('#accept-order-btn').classList.remove('_disabled');
+        }
         const commentContent = validElements[i-1].querySelector('.ddl__content');
         const commentArrow = validElements[i-1].querySelector('.ddl__icon');
         const text = document.querySelector('#comment-area').value;
@@ -270,12 +275,14 @@ function addDDL(element) {
 
       if (isValid) {
         ableBtn('#contacts-btn');
+        contactsData.isValid = true;
    
         if (!commentBlock.classList.contains('_js-disabled')) {
           document.querySelector('#accept-order-btn').classList.remove('_disabled');
         }
         
       } else {
+        contactsData.isValid = false;
         document.querySelector('#accept-order-btn').classList.add('_disabled');
         disableBtn('#contacts-btn');
       }

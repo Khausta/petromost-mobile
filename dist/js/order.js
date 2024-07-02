@@ -32,6 +32,8 @@ function cutter(text, subheader) {
   var cutText;
   if (text.length > 28) {
     cutText = text.slice(0, 27) + '...';
+  } else if (text.length == 0) {
+    return;
   } else {
     cutText = text;
   }
@@ -41,7 +43,8 @@ var contactsData = {
   userName: '',
   userPhone: '',
   userEmail: '',
-  headerText: document.querySelector('#user-contacts-text')
+  headerText: document.querySelector('#user-contacts-text'),
+  isValid: false
 };
 
 //order
@@ -74,7 +77,9 @@ var _loop = function _loop(i) {
   // исключение для кнопки "Продолжить" блока комментария
   if (i == continueBtns.length - 1) {
     continueBtns[i].addEventListener('click', function () {
-      document.querySelector('#accept-order-btn').classList.remove('_disabled');
+      if (contactsData.isValid) {
+        document.querySelector('#accept-order-btn').classList.remove('_disabled');
+      }
       var commentContent = validElements[i - 1].querySelector('.ddl__content');
       var commentArrow = validElements[i - 1].querySelector('.ddl__icon');
       var text = document.querySelector('#comment-area').value;
@@ -233,10 +238,12 @@ validatedInputs.forEach(function (el) {
     isValid = validOptions.validateName(validatedInputs[0]) && validOptions.validatePhone(validatedInputs[1]);
     if (isValid) {
       ableBtn('#contacts-btn');
+      contactsData.isValid = true;
       if (!commentBlock.classList.contains('_js-disabled')) {
         document.querySelector('#accept-order-btn').classList.remove('_disabled');
       }
     } else {
+      contactsData.isValid = false;
       document.querySelector('#accept-order-btn').classList.add('_disabled');
       disableBtn('#contacts-btn');
     }
