@@ -570,6 +570,10 @@ a._disabled {
   pointer-events: none;
 }
 
+.w100 {
+  width: 100% !important;
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;

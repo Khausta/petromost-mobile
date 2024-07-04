@@ -5,6 +5,8 @@
     border: none;
 
     .path-swiper {
+        height: $size-20px;
+
         overflow: hidden;
     }
 
@@ -15,22 +17,25 @@
         border-radius: $size-6and5;
         border: 1px solid $beige-color;
         background-color: $head-bg-color;
-
+      
 
         a {
             @include gilroy-bold;
             font-size: $size-13px;
             color: $brown-color;
+            height: 100%;
+            line-height: 100%;
+            
         }
 
         &::after {
             content: '';
             display: inline-block;
             position: absolute;
-            width: $size-6and5;
-            height: $gap-10;
+            width: $size-11px;
+            height: $size-19-point-5-px;
             top: 50%;
-            right: $size-8px;
+            right: $size-5px;
             transform: translateY(-50%);
             background-image: url('../img/menu/arrow.svg');
             background-size: contain;

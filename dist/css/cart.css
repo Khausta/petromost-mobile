@@ -570,6 +570,10 @@ a._disabled {
   pointer-events: none;
 }
 
+.w100 {
+  width: 100% !important;
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;
@@ -2482,30 +2486,4 @@ a._disabled {
 }
 .order-sum__info_2 {
   color: #240405;
-}
-
-.two-btns {
-  margin-bottom: min(18vw, 137px);
-}
-.two-btns__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: min(45vw, 346px);
-  height: min(10vw, 78px);
-  font-family: "Gilroy", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  line-height: normal;
-  font-size: min(3.75vw, 29px);
-  text-transform: uppercase;
-  border-radius: min(3.3vw, 25px);
-}
-.two-btns__btn_beige {
-  background-color: #FFFAF5;
-  border: 1px solid #F5E6D6;
-  color: #240405;
-}
-.two-btns__btn_red {
-  background-color: #DC1E1E;
-  color: #FFFFFF;
 }

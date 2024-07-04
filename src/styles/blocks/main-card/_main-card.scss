@@ -20,6 +20,99 @@
         font-size: min(5.5vw, 42px);
     }
 
+    &__card-banner {
+        height: min(41vw, 311px);
+        margin-top: $size-13px;
+        padding-top: $size-18px;
+        padding-bottom: $size-14px;
+        padding-left: $size-20px;
+        padding-right: $size-20px;
+        border-radius: $size-19-point-5-px;
+       
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        background-position: 0 0;
+    }
+
+    &__login-banner {
+        background-image: url('../img/card/card-login-bg.png');
+    }
+
+    &__phone-banner {
+        background-image: url('../img/card/card-phone-bg.png');
+    }
+
+    &__header-black {
+        width: 78%;
+        // padding-left: min(3.1vw, 24px);
+        margin-bottom: $s24px;
+        @include gilroy-bold;
+        font-size: $size-18px;
+        color: $black-color;
+    }
+
+    &__login-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $size-8px;
+        width: min(54vw, 417px);
+        // padding: 0 $s55px;
+        height: $s40px;
+        background-color: #fff;
+        border-radius: $size-12px;
+
+    }
+
+    &__btn-text {
+       
+       
+        @include gilroy-bold;
+        font-size: $size-14px;
+        color: $black-color;
+
+        // &::before {
+        //     content: '';
+        //     display: block;
+        //     width: $size-14px;
+        //     height: $size-14px;
+        //     background-image: url("../img/icons/login.svg");
+        //     background-repeat: no-repeat;
+        //     background-size: contain;
+        //     background-position: center;
+
+        // }
+    }
+
+    &__btn-text-icon {
+        position: relative;
+        display: block;
+        width: $size-14px;
+        height: $size-14px;
+       
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    &__header-with-note-sign {
+        display: flex;
+        justify-content: start;
+        gap: $size-14px;
+        &::before {
+            content: '';
+            display: block;
+            flex-shrink: 0;
+            width: $s26px;
+            height: $s26px;
+            background-image: url('../img/icons/notification.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }   
+    }
+
     &__welcome {
         margin-bottom: min(3.8vw, 30px);
         width: min-content;

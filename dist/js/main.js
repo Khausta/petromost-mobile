@@ -128,6 +128,16 @@ var popups = {
     trigger: document.querySelector('#login'),
     overlay: document.querySelector('#login-overlay_1'),
     content: document.querySelector('#login-popup_1')
+  },
+  'manageCard': {
+    trigger: document.querySelector('#manage-my-card-btn'),
+    overlay: document.querySelector('#my-card-overlay'),
+    content: document.querySelector('#my-card-popup')
+  },
+  'cardLogin': {
+    trigger: document.querySelector('#card-login-btn'),
+    overlay: document.querySelector('#login-overlay_12'),
+    content: document.querySelector('#login-popup')
   }
 };
 
@@ -240,6 +250,26 @@ if (popups.login.trigger) {
   popups.login.trigger.addEventListener('click', function () {
     headerElements.toFixHeader();
     openAnyPopup('login');
+    headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
+    headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
+  });
+}
+
+// manage-card
+if (popups.manageCard.trigger) {
+  popups.manageCard.trigger.addEventListener('click', function () {
+    headerElements.toFixHeader();
+    openAnyPopup('manageCard');
+    headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
+    headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
+  });
+}
+
+// открытие формы регистрации
+if (popups.cardLogin.trigger) {
+  popups.cardLogin.trigger.addEventListener('click', function () {
+    headerElements.toFixHeader();
+    openAnyPopup('cardLogin');
     headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
     headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
   });

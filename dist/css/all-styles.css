@@ -570,6 +570,10 @@ a._disabled {
   pointer-events: none;
 }
 
+.w100 {
+  width: 100% !important;
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;
@@ -1916,6 +1920,76 @@ a._disabled {
   font-weight: bold;
   line-height: normal;
   font-size: min(5.5vw, 42px);
+}
+.main-card__card-banner {
+  height: min(41vw, 311px);
+  margin-top: min(3.3vw, 25px);
+  padding-top: min(4.6vw, 38px);
+  padding-bottom: min(3.75vw, 29px);
+  padding-left: min(5.1vw, 40px);
+  padding-right: min(5.1vw, 40px);
+  border-radius: min(5vw, 38px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-position: 0 0;
+}
+.main-card__login-banner {
+  background-image: url("../img/card/card-login-bg.png");
+}
+.main-card__phone-banner {
+  background-image: url("../img/card/card-phone-bg.png");
+}
+.main-card__header-black {
+  width: 78%;
+  margin-bottom: min(6.1vw, 42px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(4.6vw, 38px);
+  color: #240405;
+}
+.main-card__login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: min(2vw, 16px);
+  width: min(54vw, 417px);
+  height: min(10vw, 78px);
+  background-color: #fff;
+  border-radius: min(3.1vw, 24px);
+}
+.main-card__btn-text {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(3.75vw, 29px);
+  color: #240405;
+}
+.main-card__btn-text-icon {
+  position: relative;
+  display: block;
+  width: min(3.75vw, 29px);
+  height: min(3.75vw, 29px);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.main-card__header-with-note-sign {
+  display: flex;
+  justify-content: start;
+  gap: min(3.75vw, 29px);
+}
+.main-card__header-with-note-sign::before {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  width: min(6.66vw, 51.2px);
+  height: min(6.66vw, 51.2px);
+  background-image: url("../img/icons/notification.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .main-card__welcome {
   margin-bottom: min(3.8vw, 30px);
@@ -3494,9 +3568,6 @@ a._disabled {
   width: min(18vw, 137px);
 }
 
-.two-btns {
-  margin-bottom: min(18vw, 137px);
-}
 .two-btns_order {
   margin-bottom: 0;
 }
@@ -3737,6 +3808,7 @@ a._disabled {
   border: none;
 }
 .path .path-swiper {
+  height: min(5.1vw, 40px);
   overflow: hidden;
 }
 .path__item {
@@ -3753,15 +3825,17 @@ a._disabled {
   line-height: normal;
   font-size: min(3.3vw, 25px);
   color: #BE957D;
+  height: 100%;
+  line-height: 100%;
 }
 .path__item::after {
   content: "";
   display: inline-block;
   position: absolute;
-  width: min(1.67vw, 13px);
-  height: min(2.5vw, 19px);
+  width: min(2.82vw, 22px);
+  height: min(5vw, 38px);
   top: 50%;
-  right: min(2vw, 16px);
+  right: min(1.3vw, 10px);
   transform: translateY(-50%);
   background-image: url("../img/menu/arrow.svg");
   background-size: contain;
@@ -4081,30 +4155,4 @@ a._disabled {
 }
 .order-sum__info_2 {
   color: #240405;
-}
-
-.two-btns {
-  margin-bottom: min(18vw, 137px);
-}
-.two-btns__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: min(45vw, 346px);
-  height: min(10vw, 78px);
-  font-family: "Gilroy", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  line-height: normal;
-  font-size: min(3.75vw, 29px);
-  text-transform: uppercase;
-  border-radius: min(3.3vw, 25px);
-}
-.two-btns__btn_beige {
-  background-color: #FFFAF5;
-  border: 1px solid #F5E6D6;
-  color: #240405;
-}
-.two-btns__btn_red {
-  background-color: #DC1E1E;
-  color: #FFFFFF;
 }

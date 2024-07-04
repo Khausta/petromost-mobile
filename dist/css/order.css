@@ -570,6 +570,10 @@ a._disabled {
   pointer-events: none;
 }
 
+.w100 {
+  width: 100% !important;
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;
@@ -2417,9 +2421,6 @@ a._disabled {
   width: min(18vw, 137px);
 }
 
-.two-btns {
-  margin-bottom: min(18vw, 137px);
-}
 .two-btns_order {
   margin-bottom: 0;
 }
@@ -2865,6 +2866,7 @@ a._disabled {
   line-height: normal;
   font-size: min(3.3vw, 25px);
   color: #BE957D;
+  height: 100%;
 }
 .path__item::after {
   content: "";
