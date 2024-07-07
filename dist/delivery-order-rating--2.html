@@ -95,64 +95,53 @@
                             
                             </div>
                             
-                            <div class="order-details__schema">
-                                <div class="schema">
-                                    <div class="schema__item schema__item_done">
-                                        <p class="schema__header">
-                                            Принят
-                                        </p>
-                                        <div class="schema__done">
-                                            <div class="schema__arrow"></div>
-                                        </div>
-                                    </div>
-
-                                    <span class="schema__line"></span>
-                                
-                                    <div class="schema__item">
-                                        <p class="schema__header">
-                                            Собран
-                                        </p>
-                                        <div class="schema__done">
-                                            <div class="schema__arrow"></div>
-                                        </div>
-                                    </div>
-
-                                    <span class="schema__line"></span>
-                                    <div class="schema__item">
-                                        <p class="schema__header">
-                                            В&nbsp;пути
-                                        </p>
-                                        <div class="schema__done">
-                                            <div class="schema__arrow"></div>
-                                        </div>
-                                    </div>
-
-                                    <span class="schema__line"></span>
-                                
-                                    <div class="schema__item">
-                                        <p class="schema__header">
-                                            Выдан
-                                        </p>
-                                        <div class="schema__done">
-                                            <div class="schema__arrow"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                         
                             <div class="order-details__content">
-                                <div class="order-details__content-header">
-                                    Решили отменить заказ?
-                                </div>
-                                <div class="good__comment">
-                                    <textarea type="text" name="cart-comment" class="input order-details__cancel-comment good__comment-input" placeholder="Укажите причину..."></textarea>
-                                </div>
-                            
+                                <p class="order-details__text">
+                                    Дата заказа: 22.12.2023 - Дата доставки: 22.12.2023 <br>
+                                    Тип получения: Доставка <br>
+                                    Вид оплаты: Банковской картой курьеру<br>
+                                    Адрес выдачи: г. Архангельск, ул. Выучейского, д. 28, корп. 1, кв. 40, подъезд 1, этаж 2<br>
+                                    Сумма заказа: 5989,09 р. (ваша скидка: 403,40 р.) Стоимость доставки: О р.
+                                </p>
                             </div>
+                           
                             <div class="order-details__footer">
+                                <div class="order-details__rating-wrapper flex-box">
+                                    <p class="order-details__rating-p black-color">
+                                        Оцените заказ
+                                    </p>
+                                    <div class="order-details__rating-panel">
+                                        <div class="rating">
+                                            <input type="radio" class="star-ratio" name="rt" value="1">
+                                            <input type="radio" class="star-ratio" name="rt" value="2">
+                                            <input type="radio" class="star-ratio" name="rt" value="3">
+                                            <input type="radio" class="star-ratio" name="rt" value="4">
+                                            <input type="radio" class="star-ratio" name="rt" value="5">
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="order-details__content">
+                                   
+                                    <div class="good__comment">
+                                        <textarea type="text" name="cart-comment" class="input order-details__cancel-comment good__comment-input" placeholder="Для отзывов и предложений..."></textarea>
+                                    </div>
+                                
+                                </div>
                                 <section class="two-btns two-btns_order">
                                     <div class="container flex-box">
-                                        <button class="button two-btns__btn brown-bg black-color">Отменить заказ</button>
-                                        <button class="button two-btns__btn easy-border white-bg brown-color">Ожидает оплаты</button>
+                                        <button class="button button__with-icon two-btns__btn yellow-bg black-color">
+                                            <span>Оценить заказ</span>
+                                            <span class="button__icon">
+                                                <img src="./img/icons/white-empty-star.svg" alt="">
+                                            </span>
+                                        </button>
+                                        <button class="button button__with-icon two-btns__btn easy-border white-bg black-color">
+                                            <span>Повторить заказ</span>
+                                            <span class="button__icon">
+                                                <img src="./img/icons/repeat-icon.svg" alt="">
+                                            </span>
+                                        </button>
                                     </div>
                                 </section>
                             </div>

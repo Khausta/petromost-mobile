@@ -169,11 +169,30 @@
         text-align: center;
     }
 
+
+
     &__content-header {
         margin-bottom: $size-12px;
         @include gilroy-bold;
         font-size: $size-20px;
         color: $black-color;
+    }
+
+    &__rating-wrapper {
+        padding: 0 $size-12px;
+    }
+
+    &__rating-p {
+        @include gilroy-bold;
+        font-size: $size-20px;
+    }
+
+    &__rating-panel {
+        position: relative;
+        width: min(26vw, 230px);
+     
+        height: $s24px;
+        padding: $size-5px $size-8px;
     }
     
 }

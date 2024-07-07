@@ -38,6 +38,7 @@ button:focus {
 }
 
 .main {
+    min-height: 84vh;
     margin-bottom: $s70px;
 
     &_beige-bg {
@@ -452,6 +453,10 @@ button:focus {
     border: 1px solid $beige-color; 
 }
 
+.yellow-bg {
+    background-color: #FFCC00;
+}
+
 .brown-bg {
     background: $beige-color;
     color: $brown-color;
@@ -670,7 +675,86 @@ a._disabled {
 }
 
 
+.star-ratio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: $size-18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    margin: 0;
+    font-size: 1em;
+  }
 
+  //реализация блока оценка заказа
+  .rating {
+    // width: min(27.2px, 209px);
+    width: 100%;
+    height: $size-18px;
+    position: relative;
+    background: url('../img/icons/empty-star.svg');
+    background-size: $size-18px $size-18px;
+    background-repeat: repeat-x;
+  }
+  
+  .star-ratio:nth-of-type(1) {
+    width: $size-18px;
+    z-index: 5;
+  }
+  
+  .star-ratio:nth-of-type(2) {
+    width: calc($size-18px * 2);
+    z-index: 4;
+  }
+  
+  .star-ratio:nth-of-type(3) {
+    width: calc($size-18px * 3);
+    z-index: 3;
+  }
+  
+  .star-ratio:nth-of-type(4) {
+    width: calc($size-18px * 4);
+    z-index: 2;
+  }
+  
+  .star-ratio:nth-of-type(5) {
+    width:calc($size-18px * 5);
+    z-index: 1;
+  }
+  
+  .star-ratio:checked,
+  .star-ratio:hover {
+    background: url('../img/icons/star.svg');
+    background-size: $size-18px $size-18px;
+    background-repeat: repeat-x;
+  }
+  
+  .star-ratio:hover~.star-ratio {
+    background: url('../img/icons/empty-star.svg');
+    background-size: $size-18px $size-18px;
+    background-repeat: repeat-x;
+  }
+
+  .button {
+    &__with-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3%;
+    }
+
+    &__icon {
+        width: $size-14px;
+        height: $size-14px;     
+        img {
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+        }
+    }
+  }
 
 
 
