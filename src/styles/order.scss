@@ -24,62 +24,62 @@
 @import 'blocks/footer/footer';
 
 
-.path {
-    background-color: $head-bg-color;
-    padding: $size-16and25 0;
-    border: none;
+// .path {
+//     background-color: $head-bg-color;
+//     padding: $size-16and25 0;
+//     border: none;
 
-    .path-swiper {
-        overflow: hidden;
-    }
+//     .path-swiper {
+//         overflow: hidden;
+//     }
 
-    &__item {
-        position: relative;
-        display: inline-block;
-        padding: 0.6vw $size-20px 0.6vw 1vw;
-        border-radius: $size-6and5;
-        border: 1px solid $beige-color;
-        background-color: $head-bg-color;
+//     &__item {
+//         position: relative;
+//         display: inline-block;
+//         padding: 0.6vw $size-20px 0.6vw 1vw;
+//         border-radius: $size-6and5;
+//         border: 1px solid $beige-color;
+//         background-color: $head-bg-color;
 
 
-        a {
-            @include gilroy-bold;
-            font-size: $size-13px;
-            color: $brown-color;
-            height: 100%;
-        }
+//         a {
+//             @include gilroy-bold;
+//             font-size: $size-13px;
+//             color: $brown-color;
+//             height: 100%;
+//         }
 
-        &::after {
-            content: '';
-            display: inline-block;
-            position: absolute;
-            width: $size-6and5;
-            height: $gap-10;
-            top: 50%;
-            right: $size-8px;
-            transform: translateY(-50%);
-            background-image: url('../img/menu/arrow.svg');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+//         &::after {
+//             content: '';
+//             display: inline-block;
+//             position: absolute;
+//             width: $size-6and5;
+//             height: $gap-10;
+//             top: 50%;
+//             right: $size-8px;
+//             transform: translateY(-50%);
+//             background-image: url('../img/menu/arrow.svg');
+//             background-size: contain;
+//             background-repeat: no-repeat;
+//             background-position: center;
+//         }
 
         
-        &_first {
-            width: $size-20px;
+//         &_first {
+//             width: $size-20px;
 
-            &::after {
-            transform: translateY(-50%) rotate(180deg);
-            }
-        }
-    }
+//             &::after {
+//             transform: translateY(-50%) rotate(180deg);
+//             }
+//         }
+//     }
 
-    &__icon {
-        margin-left: $size-8px;
-        display: inline-block;
-        height: $gap-10;
-    }
-}
+//     &__icon {
+//         margin-left: $size-8px;
+//         display: inline-block;
+//         height: $gap-10;
+//     }
+// }
 
 .counter-info {
     padding-bottom: $size-14px;

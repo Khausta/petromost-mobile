@@ -1293,11 +1293,10 @@ a._disabled {
 .info__item {
   padding: min(1.98vw, 15px) min(4.2vw, 32px);
   height: min(8.2vw, 62px);
-  border: 1px solid #F5E6D6;
+  border: 1px solid #BE957D;
   border-radius: min(2vw, 15px);
   width: -moz-min-content !important;
   width: min-content !important;
-  background-color: #FFFFFF;
 }
 .info__item a {
   display: block;
@@ -3975,8 +3974,7 @@ a._disabled {
   display: inline-block;
   padding: 0.6vw min(5.1vw, 40px) 0.6vw 1vw;
   border-radius: min(1.67vw, 13px);
-  border: 1px solid #F5E6D6;
-  background-color: #FFFAF5;
+  border: 1px solid #BE957D;
 }
 .path__item a {
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
