@@ -47,6 +47,9 @@ button:focus {
 .main_beige-bg {
   background-color: #FFFAF5;
 }
+.main_sand-bg {
+  background-color: #F5E6D6;
+}
 
 .container-header {
   position: relative;
@@ -418,11 +421,27 @@ button:focus {
 }
 
 .counter {
-  width: min(40vw, 307px);
   margin-bottom: min(1.67vw, 13px);
+  gap: min(1.3vw, 10px);
+}
+.counter__delete-btn {
+  width: min(8.2vw, 63px);
+  height: min(8.2vw, 63px);
+  border-radius: min(2vw, 16px);
+  flex-shrink: 0;
+}
+.counter__delete-icon {
+  display: block;
+  margin: auto;
+  width: min(3.75vw, 29px);
+  width: min(4.2vw, 32px);
+}
+.counter__add-remove {
+  width: min(30vw, 233px);
+  height: min(8.2vw, 63px);
   border-radius: min(2vw, 16px);
   background-color: #FAC71D;
-  padding: 2px;
+  padding: 0.6vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -434,8 +453,19 @@ button:focus {
 .counter__btn {
   background-color: #FFFAF5;
   border-radius: min(2vw, 16px);
-  width: min(7.7vw, 55px);
-  height: min(7.7vw, 55px);
+  width: min(7.7vw, 56px);
+  height: 100%;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  color: #BE957D;
+}
+.counter__price {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(3.1vw, 24px);
+  color: #240405;
 }
 
 .red-circle {
@@ -568,10 +598,6 @@ button:focus {
 
 a._disabled {
   pointer-events: none;
-}
-
-.w100 {
-  width: 100% !important;
 }
 
 .save-btn {
@@ -1175,6 +1201,9 @@ a._disabled {
   border-bottom: 1px solid #F5E6D6;
   background-color: #FFFAF5;
   overflow: hidden;
+}
+.info.sand-bg {
+  background-color: #F5E6D6;
 }
 .info__inner {
   gap: min(2.5vw, 19px);

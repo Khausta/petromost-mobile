@@ -582,8 +582,31 @@ if (filterViewSelector) {
   })
 }
 
+const focusHendler = (element) => {
+  element.classList.add('_active');
+
+}
+
+function blurHendler(element) {
+  element.classList.remove('_active');
+
+}
 
 
+const cardCommentInputs = document.querySelectorAll('.good__comment-input');
+if (cardCommentInputs) {
+  cardCommentInputs.forEach(el => {
+    el.addEventListener('focus', () => focusHendler(el));
+    el.addEventListener('blur', () =>  blurHendler(el));
+  });
+}
 
 
+// const orderCancelComments = document.querySelectorAll('.order-details__cancel-comment');
+// if (orderCancelComments) {
+//   orderCancelComments.forEach(el => {
+//     el.addEventListener('change', () => {
 
+//     });
+//   })
+// }

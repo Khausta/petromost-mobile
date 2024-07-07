@@ -93,17 +93,23 @@
                                         <span>76,29 ₽ 1 шт./</span>
                                         <span class="good__small-text_bold">до 28.03.23</span>
                                     </p>
-                                    <div class="counter">
-                                        <button class="button counter__btn">
-                                            +
+                                    <!-- блок кнопок управления количеством выбранного товара -->
+                                    <div class="counter flex-box">
+                                        <button class="button easy-border counter__delete-btn">
+                                           <img class="counter__delete-icon" src="./img/icons/delete.svg" alt="Кнопка удалени товара из корзины">
                                         </button>
-                                        <p class="counter__price">
-                                            <span class="counter__sum">1</span>
-                                            / шт.
-                                        </p>
-                                        <button class="button counter__btn">
-                                            -
-                                        </button>
+                                        <div class="counter__add-remove">
+                                            <button class="button counter__btn">
+                                                -
+                                            </button>
+                                            <p class="counter__price">
+                                                <span class="counter__sum">1</span>
+                                                /шт.
+                                            </p>
+                                            <button class="button counter__btn">
+                                                +
+                                            </button>
+                                        </div>
                                     </div>
                                     <p class="good__benefit">
                                         Ваша выгода: 26,39 ₽
@@ -112,23 +118,9 @@
 
                             </div>
                             <div class="good__footer">
-                                <div class="good__dnd">
-                                    <div class="dnd">
-                                        <div class="good__dnd-header flex-box">
-                                            
-                                            <p>Показать дополнительную информцию</p>
-                                            <div class="dnd__icon good__dnd-icon">
-                                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="dnd__content">
-                                       <p style="background-color: blueviolet;"> контент</p>
-                                    </div>
-                                   
-                                </div>
+                              
                                 <div class="good__comment">
-                                    <input type="text" class="input good__comment-input" placeholder="Написать комментарий к заказу...">
+                                    <textarea type="text" name="cart-comment" class="input good__comment-input" placeholder="Написать комментарий к заказу..."></textarea>
                                 </div>
                             </div>
 
@@ -152,17 +144,23 @@
                                         <span>76,29 ₽ 1 шт./</span>
                                         <span class="good__small-text_bold">до 28.03.23</span>
                                     </p>
-                                    <div class="counter">
-                                        <button class="button counter__btn">
-                                            +
+                                     <!-- блок кнопок управления количеством выбранного товара -->
+                                     <div class="counter flex-box">
+                                        <button class="button easy-border counter__delete-btn">
+                                           <img class="counter__delete-icon" src="./img/icons/delete.svg" alt="Кнопка удалени товара из корзины">
                                         </button>
-                                        <p class="counter__price">
-                                            <span class="counter__sum">1</span>
-                                            / шт.
-                                        </p>
-                                        <button class="button counter__btn">
-                                            -
-                                        </button>
+                                        <div class="counter__add-remove">
+                                            <button class="button counter__btn">
+                                                -
+                                            </button>
+                                            <p class="counter__price">
+                                                <span class="counter__sum">1</span>
+                                                /шт.
+                                            </p>
+                                            <button class="button counter__btn">
+                                                +
+                                            </button>
+                                        </div>
                                     </div>
                                     <p class="good__benefit">
                                         Ваша выгода: 26,39 ₽
@@ -171,7 +169,7 @@
 
                             </div>
                             <div class="good__footer">
-                                <div class="good__dnd">
+                                <!-- <div class="good__dnd">
                                     <div class="dnd">
                                         <div class="good__dnd-header flex-box">
                                             
@@ -185,9 +183,9 @@
                                        <p style="background-color: blueviolet;"> контент</p>
                                     </div>
                                    
-                                </div>
+                                </div> -->
                                 <div class="good__comment">
-                                    <input type="text" class="input good__comment-input" placeholder="Написать комментарий к заказу...">
+                                    <textarea type="text" name="cart-comment" class="input good__comment-input" placeholder="Написать комментарий к заказу..."></textarea>
                                 </div>
                             </div>
 

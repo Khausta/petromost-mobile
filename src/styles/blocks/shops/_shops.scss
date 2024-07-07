@@ -111,7 +111,8 @@
     }
 
     &__logo-block {
-       
+        height: $s78px;
+        width:  $s78px;
         padding: $size-8px;
         border-radius: $gap-10;
         background-color: $beige-color;

@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Петромост</title>
-    <!-- <link rel="stylesheet" href="./css/cart.css"> -->
+    <!-- <link rel="stylesheet" href="./css/order.css"> -->
     <link rel="stylesheet" href="./css/all-styles.css">
-   
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+      <script src="./js/sliders.js" defer></script>
     <script src="./js/main.js" defer></script>
 </head>
 <body>
     <div class="wrapper mobile-wrapper">
-       
+      
         <header class="header">
             <div class="container-header">
                 <div class="header__items flex-box">
-                    <a href="index.html">
-                        <div class="header__main-logo __js-logo header_selfdelivery" >
-                            <img class="object-fit-contain header__main-logo-img header__base-logo-img" src="./img/logotype/logo-petromost-start.svg" alt="Логотип Петромост">
-                            <!-- витрина, доставка, самовывоз -->
-                            <img class="object-fit-contain header__main-logo-img  header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
-                        </div>
-                    </a>
-                  
+                    <div class="header__main-logo __js-logo header_delivery" >
+                        <img class="object-fit-contain header__main-logo-img header__base-logo-img" src="./img/logotype/logo-petromost-start.svg" alt="Логотип Петромост">
+                        <!-- витрина, доставка, самовывоз -->
+                        <img class="object-fit-contain header__main-logo-img  header__current-logo-img" src="./img/logotype/logo-petromost-current.svg" alt="Логотип Петромост">
+                    </div>
                     <div class="header__search flex-box ">
                         <input class="input header__input __js-searchInput " type="text" placeholder="Найти арбуз...">
                         <button class="button header__search-btn">
@@ -35,269 +38,214 @@
                         <span class="menu-btn__line menu-btn__line_2"></span>
                         <span class="menu-btn__line menu-btn__line_3"></span>
 
-                        
+                        <!-- <img class="object-fit-contain" src="./img/icons/menu-burger.svg" alt="Орнамент"> -->
                     </button> 
                 </div>
             </div>
         </header>
       
-        <main class="main">
-            <section class="subheader">
-                <div class="popup__total-header flex-box">
-                    <h2 class="title">Корзина</h2>
-                    <button class="button flex-box return-btn">
-                        Назад
-                    </button>
-                </div>
-            </section>
-
-            <section class="notification">
+        <main class="main main_sand-bg">            
+            <!-- Хлебные крошки -->
+            <section class="info  path sand-bg">
                 <div class="container">
-                    <p class="notification__content">
-                        Вы можете указать Ваши пожелания по срокам 
-                        годности или особенностям товара раскрыв 
-                        выпадающее меню «показать дополнительные опции»
-                    </p>
+                    <div class="path-swiper">
+                        <div class=" swiper-wrapper">
+                            <div class="info__item path__item swiper-slide">
+                                <a class="" href="#">
+                                    Главная
+                                    <!-- <img class="path__icon" src="./img/menu/arrow.svg" alt="Иконка стрелки"> -->
+                                </a>
+                            </div>
+                            <div class="info__item path__item swiper-slide">
+                                <a class="" href="#">
+                                    Каталог
+                                </a>
+                            </div>
+                            <div class="info__item path__item swiper-slide">
+                                <a class="" href="#">
+                                    Заказы
+                                </a>
+                            </div>
+
+
+                           
+                        </div>  
+                    </div>
                 </div>
+            
             </section>
 
-            <section class="cart-info">
-                <p class="cart-info__text">
-                    Для бесплатной доставки закажите ещё на 726,45 рублей
-                </p>
-                <p class="white-box__note white-box__note_home">
-                    Минимальная сумма заказа для БЕСПЛАТНОЙ доставки составляет 1000 руб.
-                </p>
-
-            </section>
-
-            <section class="cart">
-                <div class="container">
-                    <div class="cart__wrapper">
-
-                        <!-- товар в корзине -->
-                        <div class="good easy-border">
-                            <div class="good__header">
-                                <div class="good__photo-wrapper">
-                                    <!-- фото -->
-                                </div>
-                                <div class="good__info">
-                                    <p class="good__name">Наименование товара</p>
-                                    <p class="good__weight">1кг</p>
-                                    <div class="good__price-box">
-                                        <span class="good__price">139,98 ₽</span>
-                                        <span class="good__discount">-34%</span>
+            <section class="order-details sand-bg">
+                    <div class="container">
+                        <div class="order-details__wrapper easy-border white-bg">
+                            <div class="order-details__header flex-box">
+                                <h2 class="order-details__title">
+                                    Заказ №210889
+                                </h2>
+                                <!-- добавляем только один класс (order-details__rejected или order-details__accepted)  -->
+                                <div class="order-details__indicator-wrapper order-details__accepted">
+                                    <div class="order-details__indicator order-details__indicator_accepted">
+                                        Принят
                                     </div>
-                                    <p class="good__small-text">
-                                        <img class="good__snegiri" src="./img/icons/snegiri.svg" alt="Акция по карте СНЕГИРИ">
-                                        <span>76,29 ₽ 1 шт./</span>
-                                        <span class="good__small-text_bold">до 28.03.23</span>
-                                    </p>
-                                    <!-- блок кнопок управления количеством выбранного товара -->
-                                    <div class="counter flex-box">
-                                        <button class="button easy-border counter__delete-btn">
-                                           <img class="counter__delete-icon" src="./img/icons/delete.svg" alt="Кнопка удалени товара из корзины">
-                                        </button>
-                                        <div class="counter__add-remove">
-                                            <button class="button counter__btn">
-                                                -
-                                            </button>
-                                            <p class="counter__price">
-                                                <span class="counter__sum">1</span>
-                                                /шт.
-                                            </p>
-                                            <button class="button counter__btn">
-                                                +
-                                            </button>
+                                    <div class="order-details__indicator order-details__indicator_done">
+                                        Выполнен
+                                    </div>
+                                    <div class="order-details__indicator order-details__indicator_rejected">
+                                        Отклонен
+                                    </div>
+                                </div>
+                                
+                            
+                            </div>
+                            
+                            <div class="order-details__schema">
+                                <div class="schema">
+                                    <div class="schema__item schema__item_done">
+                                        <p class="schema__header">
+                                            Принят
+                                        </p>
+                                        <div class="schema__done">
+                                            <div class="schema__arrow"></div>
                                         </div>
                                     </div>
-                                    <p class="good__benefit">
-                                        Ваша выгода: 26,39 ₽
-                                    </p>
-                                </div>
 
+                                    <span class="schema__line"></span>
+                                
+                                    <div class="schema__item">
+                                        <p class="schema__header">
+                                            Собран
+                                        </p>
+                                        <div class="schema__done">
+                                            <div class="schema__arrow"></div>
+                                        </div>
+                                    </div>
+
+                                    <span class="schema__line"></span>
+                                    <div class="schema__item">
+                                        <p class="schema__header">
+                                            В&nbsp;пути
+                                        </p>
+                                        <div class="schema__done">
+                                            <div class="schema__arrow"></div>
+                                        </div>
+                                    </div>
+
+                                    <span class="schema__line"></span>
+                                
+                                    <div class="schema__item ">
+                                        <p class="schema__header">
+                                            Выдан
+                                        </p>
+                                        <div class="schema__done">
+                                            <div class="schema__arrow"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="good__footer">
-                              
+                            <div class="order-details__content">
+                                <div class="order-details__content-header">
+                                    Решили отменить заказ?
+                                </div>
                                 <div class="good__comment">
-                                    <textarea type="text" name="cart-comment" class="input good__comment-input" placeholder="Написать комментарий к заказу..." ></textarea>
+                                    <textarea type="text" name="cart-comment" class="input order-details__cancel-comment
+                                     good__comment-input" placeholder="Укажите причину..." ></textarea>
                                 </div>
+                            
                             </div>
-
+                            <div class="order-details__footer">
+                                <section class="two-btns two-btns_order">
+                                    <div class="container flex-box">
+                                        <button class="button two-btns__btn  brown-bg black-color">Отменить заказ</button>
+                                        <button class="button two-btns__btn easy-border white-bg brown-color">Ожидает оплаты</button>
+                                    </div>
+                                </section>
+                            </div>
                         </div>
-
-                        <!-- товар в корзине -->
-                        <div class="good easy-border">
-                            <div class="good__header">
-                                <div class="good__photo-wrapper">
-                                    <!-- фото -->
-                                </div>
-                                <div class="good__info">
-                                    <p class="good__name">Наименование товара</p>
-                                    <p class="good__weight">1кг</p>
-                                    <div class="good__price-box">
-                                        <span class="good__price">139,98 ₽</span>
-                                        <span class="good__discount">-34%</span>
-                                    </div>
-                                    <p class="good__small-text">
-                                        <img class="good__snegiri" src="./img/icons/snegiri.svg" alt="Акция по карте СНЕГИРИ">
-                                        <span>76,29 ₽ 1 шт./</span>
-                                        <span class="good__small-text_bold">до 28.03.23</span>
-                                    </p>
-                                     <!-- блок кнопок управления количеством выбранного товара -->
-                                     <div class="counter flex-box">
-                                        <button class="button easy-border counter__delete-btn">
-                                           <img class="counter__delete-icon" src="./img/icons/delete.svg" alt="Кнопка удалени товара из корзины">
-                                        </button>
-                                        <div class="counter__add-remove">
-                                            <button class="button counter__btn">
-                                                -
-                                            </button>
-                                            <p class="counter__price">
-                                                <span class="counter__sum">1</span>
-                                                /шт.
-                                            </p>
-                                            <button class="button counter__btn">
-                                                +
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <p class="good__benefit">
-                                        Ваша выгода: 26,39 ₽
-                                    </p>
-                                </div>
-
-                            </div>
-                            <div class="good__footer">
-                                <!-- <div class="good__dnd">
-                                    <div class="dnd">
-                                        <div class="good__dnd-header flex-box">
-                                            
-                                            <p>Показать дополнительную информцию</p>
-                                            <div class="dnd__icon good__dnd-icon">
-                                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="dnd__content">
-                                       <p style="background-color: blueviolet;"> контент</p>
-                                    </div>
-                                   
-                                </div> -->
-                                <div class="good__comment">
-                                    <textarea type="text" name="cart-comment" class="input good__comment-input" placeholder="Написать комментарий к заказу..." ></textarea>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- пакет -->
-                        <div class="good easy-border">
-                            <div class="good__header good__header_puck">
-                                <div class="good__photo-wrapper good__photo-wrapper_puck">
-                                    <!-- фото -->
-                                </div>
-                                <div class="good__info">
-                                    <p class="good__name">Пакет Петровский майка</p>
-                                    <p class="good__weight">40х70 х 1 шт.</p>
-                                    <p class="good__puck-note">
-                                        Количество упаковки  расчитано автоматически
-                                    </p>
-                                    <p class="good__puck-price">
-                                        9,89 ₽
-                                    </p>
-                                    
-                                   
-                                </div>
-
-                            </div>
-                          
-
-                        </div>
+                    
                     </div>
-                </div>
             </section>
-            <section class="delivery-question">
+
+<!-- 
+            <section class="order-details sand-bg">
                 <div class="container">
-                    <p class="cart-info__text">
-                        Как поступить если выбраный товар закончился?                
-                    </p>
-                    <div class="delivery-question__inputs">
-                        <label class="delivery-question__label">
-                            <input class="delivery-question__input" type="radio" name="todo">
-                            <p class="delivery-question__text easy-border">
-                                Позвонить мне, если не отвечу, убрать
-                            </p>
-                        </label>
-                        <label class="delivery-question__label">
-                            <input class="delivery-question__input" type="radio" name="todo">
-                            <p class="delivery-question__text easy-border">
-                                Позвонить мне, если не отвечу, заменить
-                            </p>
-                        </label>
-                        <label class="delivery-question__label">
-                            <input class="delivery-question__input" type="radio" name="todo">
-                            <p class="delivery-question__text easy-border">
-                                Не звонить мне,  убрать
-                            </p>
-                        </label>
-                        <label class="delivery-question__label">
-                            <input class="delivery-question__input" type="radio" name="todo">
-                            <p class="delivery-question__text easy-border">
-                                Не звонить мне, заменить
-                            </p>
-                        </label>
-                    </div>
-    
-                </div>
-
-            </section>
-
-            <section class="order-sum">
-                <div class="container">
-                    <div class="order-sum__container">
-                        <div class="white-box white-box_sand-bg">
-                            <div class="dnd">
-                                <div class="white-box__header order-sum__header">
-                                    <p class="order-sum__text">
-                                        СУММА ЗАКАЗА
-                                    </p>
-                                    <div class="order-sum__sum">
-                                        <span class="order-sum__total">237,55 ₽</span>
-                                        <div class="dnd__icon order-sum__arrow">
-                                            <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
-                                        </div>
-                                    </div>
-                                    
+                    <div class="order-details__wrapper easy-border sand-border">
+                        <div class="order-details__header flex-box">
+                            <h2 class="order-details__title">
+                                Заказ №210889
+                            </h2>
+                            <div class="order-details__indicator-wrapper order-details__done">
+                                <div class="order-details__indicator order-details__indicator_accepted">
+                                    Принят
                                 </div>
-                            </div>
-                            <div class="dnd__content ">
-                                <div class="order-sum__content">
-                                    <p class="order-sum__info order-sum__info_1">Стоимость: 3 товара; 261,41 руб
-                                    </p>
-                                   <p class="order-sum__info order-sum__info_2"> Итого стоимость: 3 товара; 237,55 руб.
-                                    </p>
-                                   <p class="order-sum__info order-sum__info_2"> Ваша выгода: 23,86 руб.</p>    
+                                <div class="order-details__indicator order-details__indicator_done">
+                                    Выполнен
                                 </div>
-                             
+                                <div class="order-details__indicator order-details__indicator_rejected">
+                                    Отклонен
+                                </div>
                             </div>
                         </div>
+                        
+                        <div class="order-details__content">
+                            <p class="order-details__text">
+                                Дата заказа: 22.12.2023 - Дата доставки: 22.12.2023 <br>
+                                Тип получения: Доставка <br>
+                                Вид оплаты: Банковской картой курьеру<br>
+                                Адрес выдачи: г. Архангельск, ул. Выучейского, д. 28, корп. 1, кв. 40, подъезд 1, этаж 2<br>
+                                Сумма заказа: 5989,09 р. (ваша скидка: 403,40 р.) Стоимость доставки: О р.
+                            </p>
+                        </div>
+                        <div class="order-details__footer">
+                            <section class="two-btns two-btns_order">
+                                <div class="container flex-box">
+                                    <button class="button two-btns__btn two-btns__btn_beige two-btns__btn_brown-color">Повторить заказ</button>
+                                    <button class="button two-btns__btn two-btns__btn_beige ">Оценить заказ</button>
+                                </div>
+                            </section>
+                        </div>
                     </div>
+                
+                </div>
+            </section> -->
+
+            <section class="order-details sand-bg">
+                <div class="container">
+                    <div class="order-details__wrapper easy-border sand-border">
+                        <div class="order-details__header flex-box">
+                            <h2 class="order-details__title">
+                                Заказ №210889
+                            </h2>
+                            <!-- добавляем только один класс (order-details__rejected или order-details__accepted)  -->
+                            <div class="order-details__indicator-wrapper order-details__rejected">
+                                <div class="order-details__indicator order-details__indicator_accepted">
+                                    Принят
+                                </div>
+                                <div class="order-details__indicator order-details__indicator_done">
+                                    Выполнен
+                                </div>
+                                <div class="order-details__indicator order-details__indicator_rejected">
+                                    Отклонен
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-details__content">
+                            <p class="order-details__text">
+                                Дата заказа: 22.12.2023 - Дата доставки: 22.12.2023 <br>
+                                Тип получения: Доставка <br>
+                                Вид оплаты: Банковской картой курьеру<br>
+                                Адрес выдачи: г. Архангельск, ул. Выучейского, д. 28, корп. 1, кв. 40, подъезд 1, этаж 2<br>
+                                Сумма заказа: 5989,09 р. (ваша скидка: 403,40 р.) Стоимость доставки: О р.
+                            </p>
+                        </div>
+                        <div class="order-details__footer order-details__footer_repeat">
+                            <button class="button order-details__repeat easy-border sand-border sand-bg black-color">Повторить заказ</button>
+                        </div>
+                    </div>
+                
                 </div>
             </section>
 
-
-
-          
-
-           
-            <section class="two-btns">
-                <div class="container flex-box">
-                    <button class="button two-btns__btn two-btns__btn_beige">ОТЧИСТИТЬ КОРЗИНУ</button>
-                    <button class="button two-btns__btn two-btns__btn_red">ПРОДОЛЖИТЬ</button>
-                </div>
-            </section>
-           
         </main>
        
 
@@ -356,9 +304,10 @@
         </div>
 
         <!-- для попапов -->
-       
-        <!-- Окно поиска -->
-        <div class="overlay" id="search-overlay">
+      
+   
+         <!-- Окно поиска -->
+         <div class="overlay" id="search-overlay">
             <div class="popup popup-search" id="search-popup">
                 <div class="container">
                 </div>
@@ -1126,9 +1075,9 @@
                 <button class="button save-btn">Сохранить</button>
             </div>
         </div>
-
-         <!-- каталог -->
-         <div class="overlay" id="catalog-overlay">
+        
+          <!-- каталог -->
+          <div class="overlay" id="catalog-overlay">
             <div class="popup catalog" id="catalog-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Каталог</h2>
@@ -1358,6 +1307,7 @@
                     </li>
             </div>
         </div>
+
     </div>
 </body>
 </html>

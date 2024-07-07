@@ -35,4 +35,33 @@
 @import 'blocks/tabs/tabs';
 @import 'blocks/orders-additional/order-additional';
 @import 'blocks/cart/cart';
+@import 'blocks/pay-method/pay-method';
 
+.w100 {
+    width: 100% !important;
+}
+
+.sand-bg {
+    background-color: #F5E6D6;
+}
+
+.white-bg {
+    background-color: $white-bg-color;
+}
+
+.green-bg {
+    background-color: #5EA636;
+    color: $white-bg-color;
+}
+
+.black-color {
+    color: $black-color;
+}
+
+.brown-color {
+    color: $brown-color;
+}
+
+.sand-border {
+    border: 1px solid #F6D6B4;
+}

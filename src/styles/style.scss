@@ -43,6 +43,10 @@ button:focus {
     &_beige-bg {
         background-color: $head-bg-color;
     }
+
+    &_sand-bg {
+        background-color: #F5E6D6;
+    }
 }
 
 .container-header {
@@ -460,24 +464,59 @@ button:focus {
 
 
 .counter {
-    width: min(40vw, 307px);
-    margin-bottom: $size-6and5;;
-    border-radius: $size-8px;
-    background-color: #FAC71D;
-    padding: 2px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include gilroy-bold;
-    font-size: $size-14px;
+    margin-bottom: $size-6and5;
+    gap: $size-5px;
+
+    &__delete-btn {
+        width: $size-32px;
+        height: $size-32px;
+        border-radius: $size-8px;
+        flex-shrink: 0;
+        
+        
+
+    }
+
+    &__delete-icon {
+        display: block;
+        margin: auto;
+        width: $size-14px;
+        width: $size-16and25;
+    }
+
+    &__add-remove {
+        width: min(30vw, 233px);
+        height: $size-32px;
+        border-radius: $size-8px;
+        background-color: #FAC71D;
+        padding: min(0.6vw, 3.9vw);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include gilroy-bold;
+        font-size: $size-14px;
+    
+       
+    }
 
     &__btn {
         background-color: #FFFAF5;
         border-radius: $size-8px;
-        width: $s28px;
-        height: $s28px;
+        width: $size-30px;
+        // height: $s28px;
+        height: 100%;
+        @include gilroy-bold;
+        color: $brown-color;
 
     }
+
+    &__price {
+        @include gilroy-bold;
+        font-size: $size-12px;
+        color: $black-color;
+    }
+
+  
 }
 
 .red-circle {
@@ -630,9 +669,7 @@ a._disabled {
     pointer-events: none;
 }
 
-.w100 {
-    width: 100% !important;
-}
+
 
 
 

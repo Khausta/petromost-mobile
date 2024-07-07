@@ -2,6 +2,10 @@
     margin-bottom: $size-12px;
     background-color: $white-bg-color;
 
+    &.sand-bg {
+        background-color: #F5E6D6;
+    }
+
     &_popup {
         margin-top: $size-8px;
     }
@@ -20,6 +24,7 @@
     &__indicator-wrapper {
         position: relative;
         padding-left: $size-23px;
+        
     }
 
     &__accepted {
@@ -101,7 +106,7 @@
         }
 
         &_rejected {
-            background-color: $white-bg-color;
+            // background-color: $white-bg-color;
             border: 2px solid $red-color;
             color: $red-color;
 
@@ -111,7 +116,7 @@
         }
 
         &_done {
-            background-color: $white-bg-color;
+            // background-color: $white-bg-color;
             border: 2px solid #5EA636;
             color: #5EA636;
 
@@ -155,6 +160,21 @@
         font-size: $size-14px;
     }
 
+    &__red-text {
+        border-radius: $gap-10;
+        padding: $size-8px $gap-10;
+        @include gilroy-semibold;
+        font-size: $size-12px;
+        color: $red-color;
+        text-align: center;
+    }
+
+    &__content-header {
+        margin-bottom: $size-12px;
+        @include gilroy-bold;
+        font-size: $size-20px;
+        color: $black-color;
+    }
     
 }
 

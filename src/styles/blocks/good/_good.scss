@@ -8,6 +8,7 @@
         gap: $size-8px;
     }
     &__photo-wrapper {
+        flex-shrink: 0;
         width: min(47vw, 358px);
         height: min(39vw, 287px);
         border-radius: $gap-10;
@@ -70,7 +71,7 @@
     &__small-text {
         display: flex;
         align-items: center;
-        gap: $size-6and5;
+        gap: $size-5px;
         margin-bottom: $size-6and5;
         @include gilroy-semibold;
         color: #BE957D;
@@ -114,13 +115,23 @@
 
     &__comment-input {
         width: 100%;
-        padding: $size-8px $size-13px;
+        height: $size-32px;
+        padding: $size-5px $size-13px;
         @include gilroy-bold;
         font-size: $size-14px;
         border-radius: $gap-10;
         border: 1px solid $beige-color;
         background-color: $head-bg-color;
         color: $black-color;
+        transition: all .3s ease-in-out;
+
+        &::placeholder {
+            color: $brown-color;
+        }
+
+        &._active {
+            height: min(47vw, 362px);
+        }
     }
     &__photo-wrapper_puck {
         flex-shrink: 0;

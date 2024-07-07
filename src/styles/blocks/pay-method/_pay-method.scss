@@ -1,0 +1,196 @@
+.pay-method {
+
+    &__label {
+        display: block;
+        margin-bottom: $size-12px;
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__block {
+        border-radius: min(3.3vw, 25px);
+        border: 1px solid $beige-color;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+    &__name {
+        position: relative;
+        padding-left: calc(min(14vw, 109px) - 8px);
+        padding-top: min(2vw, 16px);
+        padding-bottom: min(2vw, 16px);
+        width: 100%;
+        // border-radius: min(3.3vw, 25px);
+        // border: 1px solid $beige-color;
+        transition: all 0.3s ease-in-out;
+
+        @include gilroy-bold;
+        color: $black-color;
+        font-size: $size-16and25;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: min(2vw, 16px);
+            transform: translateY(-50%);
+            display: block;
+            width: min(5vw, 38px);
+            height: min(5vw, 38px);
+            transition: all 0.3s ease-in-out;
+            background-image: url(../img/radio/beige-radio.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: min(2vw, 16px);
+            transform: translateY(-50%);
+            display: none;
+            width: min(5vw, 38px);
+            height: min(5vw, 38px);
+            background-image: url(../img/radio/green-radio.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: all 0.3s ease-in-out;
+                }
+    }
+
+    &__hidden-content {
+        height: 0;
+        opacity: 0;
+    }
+
+    
+
+    &__input:checked + &__block {
+        border: 1px solid #5EA636;
+
+        .pay-method {
+            &__name {
+                
+                color: #5EA636;
+            }
+
+            &__hidden-content {
+                opacity: 1;
+                height: auto;
+            }
+
+           
+        }
+         
+    }
+
+ 
+
+   
+    &__input:checked + &__block {
+        .pay-method__name::before {
+            opacity: 0;
+            display: none;
+        }
+    }
+
+    &__input:checked + &__block {
+        .pay-method__name::after {
+            opacity: 1;
+            display: block;
+        }
+    }
+}
+
+
+.pay-card-data {
+    padding: $size-12px;
+    &__p {
+        margin-bottom: $size-12px;
+        @include gilroy-bold;
+        font-size: $size-14px;
+        color: $black-color;
+        line-height: 110%;
+        padding-left: $size-16and25;
+    }
+
+    &__inputs {
+        margin-bottom: $size-12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: $size-12px;
+    }
+
+    &__input {
+        border: 1px solid $beige-color;
+        border-radius: $size-8px;
+        padding: $gap-10 $size-16and25;
+        width: 48%;
+        // height: 40px;
+        background-color: $head-bg-color;
+        @include gilroy-semibold;
+        font-size: $size-14px;
+        color: $black-color;
+
+        &::placeholder {
+            color: $brown-color;
+        }
+
+        &_big {
+            width: 100%;
+        }
+
+        &.white-bg {
+            background-color: $white-bg-color;
+        }
+    }
+
+
+    &__cvv-input {
+        width: 48%;
+        position: relative;
+
+    
+        
+    }
+
+    &__to-unhide {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+        display: block;
+        width: $s40px;
+        height: 100%;
+       background-image: url('../img/card/invisible-icon.svg');
+       background-position: center;
+       background-size: 50%;
+       background-repeat: no-repeat;
+    }
+
+    &__additional {
+        width: 96%;
+       @include gilroy-semibold;
+        font-size: $size-12px;
+        color: $brown-color;
+    }
+
+
+
+
+
+
+}
+
+
+
+#cvv {
+    width: 100%;
+    padding-right: $s40px;
+
+   
+}

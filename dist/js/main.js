@@ -531,4 +531,30 @@ if (filterViewSelector) {
     filterViewSelector.classList.toggle('view-selector_to-grid');
   });
 }
+var focusHendler = function focusHendler(element) {
+  element.classList.add('_active');
+};
+function blurHendler(element) {
+  element.classList.remove('_active');
+}
+var cardCommentInputs = document.querySelectorAll('.good__comment-input');
+if (cardCommentInputs) {
+  cardCommentInputs.forEach(function (el) {
+    el.addEventListener('focus', function () {
+      return focusHendler(el);
+    });
+    el.addEventListener('blur', function () {
+      return blurHendler(el);
+    });
+  });
+}
+
+// const orderCancelComments = document.querySelectorAll('.order-details__cancel-comment');
+// if (orderCancelComments) {
+//   orderCancelComments.forEach(el => {
+//     el.addEventListener('change', () => {
+
+//     });
+//   })
+// }
 //# sourceMappingURL=main.js.map
