@@ -16,6 +16,7 @@ const state = {
 const headerElements = {
   header: document.querySelector('.header'),
   logo: document.querySelector('.__js-logo'),
+  burger: document.querySelector('[data-modal="menu"]'),
   openMenuOrCloseAllBtn: document.querySelector('.menu-btn'),
   toFixHeader: function() {
     if (!headerElements.header.classList.contains('__js-fixed')) {
@@ -25,14 +26,25 @@ const headerElements = {
       document.body.style.overflow = 'hidden';
     } 
   },
-  removeFixHeader: function() {
+  removeFixHeader() {
     document.body.style.overflow = 'auto';
     headerElements.header.classList.remove('__js-fixed');
-  }
+  },
+  makeBurgerActive() {
+    headerElements.burger.classList.add('__js_active');
+    headerElements.burger.addEventListener('click', closePopup);
+    headerElements.burger.removeEventListener('click', openMenu);
+  },
+  removeBurgerActive() {
+    headerElements.burger.classList.remove('__js_active');
+    headerElements.burger.removeEventListener('click', closePopup);
+    headerElements.burger.addEventListener('click', openMenu);
+  },
 }
 
 
 const popups = {
+  showModalBtns: document.querySelectorAll('.js-show-modal'),
   allPopups: document.querySelectorAll('.overlay'),
   closeAllPopups() {
     popups.allPopups.forEach(el => {
@@ -42,17 +54,15 @@ const popups = {
       state.openedPopups[el] = false;
     }  
   },
-  returnBtns: document.querySelectorAll('.return-btn'),
-  openPreviousPopup: function () {
-    state.path.pop();
-    if(state.path.length) {
-      openAnyPopup(state.path[state.path.length - 1]);
-    } else {
-      popups.closeAllPopups();
-      headerElements.openMenuOrCloseAllBtn.classList.remove('__js_active');
-      headerElements.openMenuOrCloseAllBtn.removeEventListener('click', closePopup);
-    }
-  },
+  
+ 
+openSearchPopup () {  //логика открытия поиска отличчается, поэтому создана отдельная функция
+  popups.search.open();
+  headerElements.toFixHeader();
+  popups.search.input.classList.add('__js-searchInput_active');
+  popups.search.input.parentElement.classList.add('__js-headerSearch_active');
+  headerElements.makeBurgerActive();
+},
   'search': {
     overlay: document.querySelector('#search-overlay'),
     input: document.querySelector('.__js-searchInput'),
@@ -70,89 +80,47 @@ const popups = {
       popups.search.input.parentElement.classList.remove('__js-headerSearch_active');
     }
   },
-  'menu': {
-    overlay: document.querySelector('#menu-overlay'),
-    menuContent: document.querySelector('#menu-popup'),
-  },
-  'profile': {
-    trigger: document.querySelector('.menu__profile'),
-    overlay: document.querySelector('#profile-overlay'),
-    content: document.querySelector('#profile-popup'),
-  },
-  'profileData': {
-    trigger: document.querySelector('#profile-data'),
-    overlay: document.querySelector('#profile-data-overlay'),
-    content: document.querySelector('#profile-data-popup'),
-  },
-  'myCard': {
-    trigger: document.querySelector('#my-card'),
-    overlay: document.querySelector('#my-card-overlay'),
-    content: document.querySelector('#my-card-popup'),
-  },
-  'address': {
-    trigger: document.querySelector('#address'),
-    overlay: document.querySelector('#address-overlay'),
-    content: document.querySelector('#address-popup'),
-  },
   'card': {
     trigger: document.querySelector('#card-magnifier'),
     overlay: document.querySelector('#show-card-overlay'),
     content: document.querySelector('#show-card-popup'),
   },
-  'deliveryAddress': {
-    trigger: document.querySelector('#delivery-address'),
-    overlay: document.querySelector('#delivery-address-overlay'),
-    content: document.querySelector('#delivery-address-popup'),
-  },
-  'selfdeliveryAddress': {
-    trigger: document.querySelector('#selfdelivery-address'),
-    overlay: document.querySelector('#selfdelivery-address-overlay'),
-    content: document.querySelector('#selfdelivery-address-popup'),
-  },
-  'order': {
-    trigger: document.querySelector('#order'),
-    overlay: document.querySelector('#order-overlay'),
-    content: document.querySelector('#order-popup'),
-  },
-  'catalog': {
-    trigger: document.querySelector('#catalog'),
-    overlay: document.querySelector('#catalog-overlay'),
-    content: document.querySelector('#catalog-popup'),
-  },
-  'login': {
-    trigger: document.querySelector('#login'),
-    overlay: document.querySelector('#login-overlay_1'),
-    content: document.querySelector('#login-popup_1'),
-  },
   'manageCard': {
     trigger: document.querySelector('#manage-my-card-btn'),
-    overlay: document.querySelector('#my-card-overlay'),
+    overlay: document.querySelector('#my-card'),
     content: document.querySelector('#my-card-popup'),
   },
   'cardLogin': {
     trigger: document.querySelector('#card-login-btn'),
     overlay: document.querySelector('#login-overlay_12'),
     content: document.querySelector('#login-popup'),
-  }
+  },
+  'product': {
+       trigger: document.querySelector('#product'),
+       overlay: document.querySelector('#product-overlay'),
+       content: document.querySelector('#product-popup')
+   }
 }
 
-//собитие на фокус инпута поиска
-popups.search.input.addEventListener('focus', () => {
-  openSearchPopup();
+
+
+
+headerElements.burger.addEventListener('click', openMenu); // собитие на кнопке меню-бургер
+popups.search.input.addEventListener('focus', () => {   //собитие на фокус инпута поиска
+  popups.openSearchPopup();
 })
 
-//логика открытия поиска отличчается, поэтому создана отдельная функция
-function openSearchPopup () {
-  popups.search.open();
-  headerElements.toFixHeader();
-  popups.search.input.classList.add('__js-searchInput_active');
-  popups.search.input.parentElement.classList.add('__js-headerSearch_active');
-  headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
-  headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
+function openMenu ()  {  //отдельная функция для открытия меню 
+  if (state.openedPopups.search) return;
+  state.path.push('menu');
+  state.openedPopups.menu = true;
+  headerElements.toFixHeader(); 
+  openAnyModal('menu');
+  headerElements.makeBurgerActive();
 }
 
-// закрытие попапов
-function closePopup() {
+
+function closePopup() {          // закрытие попапа
   headerElements.removeFixHeader();
   if (state.openedPopups.search) {
     popups.search.close();
@@ -160,25 +128,10 @@ function closePopup() {
   }
   popups.closeAllPopups();
   state.path = []; 
-  headerElements.openMenuOrCloseAllBtn.classList.remove('__js_active');
-  headerElements.openMenuOrCloseAllBtn.removeEventListener('click', closePopup);
+  headerElements.removeBurgerActive();
+  removeAllActivesMenuPanel();
 }
 
-// собитие на клик по кнопке меню
-headerElements.openMenuOrCloseAllBtn.addEventListener('click', () => {
-  if (state.openedPopups.search) {
-    return;
-  }
-  if (!state.path.find(el => el == 'menu')) {
-    console.log(true);
-    state.path.push('menu');
-  }
-  state.openedPopups.menu = true;
-  headerElements.toFixHeader(); 
-  popups.menu.overlay.classList.add('__js-active');
-  headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
-  headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
-});
 
 function openAnyPopup(popupName) {
   popups.closeAllPopups();
@@ -198,69 +151,142 @@ function openAnyPopup(popupName) {
   }
 }
 
-if(popups.profile.trigger) {
-  popups.profile.trigger.addEventListener('click', () => {
-    openAnyPopup('profile');
+
+
+function toPrevModal() {
+  state.path.pop();
+  if(state.path.length) {
+    openAnyModal(state.path.at(-1));
+  } else {
+    popups.closeAllPopups();
+    headerElements.burger.classList.remove('__js_active');
+    headerElements.burger.removeEventListener('click', closePopup);
+    headerElements.removeFixHeader();
+    headerElements.burger.addEventListener('click', openMenu);
+  }
+
+}
+
+function openMenuListModal(modalName) {
+  openAnyModal(modalName);
+  // openPrevModal(modalName);
+  const modalOverlay = document.querySelector(`#${modalName}`);
+  const returnBtn = modalOverlay.querySelector('.return-btn');
+  if (returnBtn) returnBtn.addEventListener('click', toPrevModal);
+}
+
+
+function openAnyModal(modalName) {
+  popups.closeAllPopups();
+  state.openedPopups[modalName] = true;
+  headerElements.toFixHeader();
+  const modalOverlay = document.querySelector(`#${modalName}`);
+  const modalContent = modalOverlay.querySelector('.popup');
+  // const returnBtn = modalOverlay.querySelector('.return-btn');
+  modalOverlay.classList.add('__js-active');
+  modalContent.addEventListener('scroll', () => {
+    modalContent.style.height = 
+    document.querySelector('.menu-panel').offsetTop - 
+    headerElements.header.offsetHeight + 5 + "px";
+    });
+  // if (returnBtn) returnBtn.addEventListener('click', toPrevModal);
+  if(modalName != 'search' && modalName != 'menu' && state.path.at(-1) != modalName) {
+    state.path.push(`${modalName}`);
+  }
+}
+
+
+// навешивание события открытия модалок на кнопки
+popups.showModalBtns.forEach(btn => {
+  btn.addEventListener('click', function () {
+    const id = this.getAttribute('data-modal');
+    openMenuListModal(id);
+  })
+})
+
+function removeAllActivesMenuPanel() {
+  showMenuPanelModalsBtns.forEach(el => removeActiveMenuPanelItem(el));
+}
+
+const showMenuPanelModalsBtns = document.querySelectorAll('.js-show-menu-panel-modal');
+showMenuPanelModalsBtns.forEach(el => {       // навешивание события открытия модалок на кнопки в menu-panel 
+  el.addEventListener('click', e => {
+    removeAllActivesMenuPanel();
+    const id = e.currentTarget.getAttribute('data-modal');
+    showMenuPanelModal(id);
+    // showMenuPanelModal(e.currentTarget);
+    makeActiveMenuPanelItem(e.currentTarget);
   });
-  
+})
+
+function makeActiveMenuPanelItem(item) {
+  item.classList.add('menu-panel_active');
 }
 
-if(popups.profileData.trigger) {
-  popups.profileData.trigger.addEventListener('click', () => {
-    openAnyPopup('profileData');
-  });
+function removeActiveMenuPanelItem(item) {
+  item.classList.remove('menu-panel_active');
 }
 
-if (popups.myCard.trigger) {
-  popups.myCard.trigger.addEventListener('click', () => {
-    openAnyPopup('myCard');
-  });
+function toPrevMenuPanelModal() {
+  state.path.pop();
+  if(state.path.length) {
+    openAnyModal(state.path.at(-1));
+  } else {
+    popups.closeAllPopups();
+    headerElements.burger.classList.remove('__js_active');
+    headerElements.burger.removeEventListener('click', closePopup);
+    headerElements.removeFixHeader();
+    headerElements.burger.addEventListener('click', openMenu);
+    removeAllActivesMenuPanel();
+  }
+
 }
 
-if (popups.address.trigger) {
-  popups.address.trigger.addEventListener('click', () => {
-    openAnyPopup('address');
-  });
+function showMenuPanelModal(modalName) {   //отдельная функция для айтемов панели миню, фиксированной в нижней части экрана. Отличие в изменении массива 
+  state.path = [];
+  openAnyModal(modalName);
+  headerElements.makeBurgerActive();
+  const modalOverlay = document.querySelector(`#${modalName}`);
+  const returnBtn = modalOverlay.querySelector('.return-btn');
+  if (returnBtn) returnBtn.addEventListener('click', toPrevMenuPanelModal);
 }
 
+const showOrderDetailsBlocks = document.querySelectorAll('.js-show-order-details');
 
-if (popups.deliveryAddress.trigger) {
-  popups.deliveryAddress.trigger.addEventListener('click', () => {
-    openAnyPopup('deliveryAddress');
-  });  
-}
-
-
-if(popups.selfdeliveryAddress.trigger) {
-  popups.selfdeliveryAddress.trigger.addEventListener('click', () => {
-    openAnyPopup('selfdeliveryAddress');
-  });
-}
-
-
-if ( popups.order.trigger) {
-  popups.order.trigger.addEventListener('click', () => {
-  openAnyPopup('order');
+showOrderDetailsBlocks.forEach(el => {
+  el.addEventListener('click', e => {
+    const payOrderBtn = e.currentTarget.querySelector('.js-pay-btn');
+    const cancelOrderBtn = e.currentTarget.querySelector('.js-cancel-order-btn');
+    if(e.target === payOrderBtn) {
+      console.log('Оплатить заказ');
+      return;
+    }
+    if(e.target === cancelOrderBtn) {
+      console.log('Отменить заказ');
+      return;
+    } 
+    showOrderDetailsModal(e.currentTarget); 
 });
+})
+
+function showOrderDetailsModal(orderBlock) {   //отдельная функция для айтемов панели миню, фиксированной в нижней части экрана. Отличие в изменении массива 
+  state.path = [];
+  const id = orderBlock.getAttribute('data-order');
+  openAnyModal(id);
+  headerElements.makeBurgerActive();
 }
 
-if (popups.catalog.trigger) {
-  popups.catalog.trigger.addEventListener('click', () => {
-    headerElements.toFixHeader();
-    openAnyPopup('catalog');
-    headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
-    headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
-  });
-}
 
-if (popups.login.trigger) {
-  popups.login.trigger.addEventListener('click', () => {
-    headerElements.toFixHeader();
-    openAnyPopup('login');
-    headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
-    headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
-  });
-}
+
+
+// if (popups.login.trigger) {
+//   popups.login.trigger.addEventListener('click', () => {
+//     headerElements.toFixHeader();
+//     openAnyPopup('login');
+//     headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
+//     headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
+//   });
+// }
 
 // manage-card
 if (popups.manageCard.trigger) {
@@ -303,23 +329,40 @@ if (popups.card.trigger) {
 
 
 // для инпутов Данных профиля
-document.querySelectorAll('.input-box__input').forEach(input => {
-  input.addEventListener('input', () => {
-    if (input.value) {
-      input.nextElementSibling.classList.add('__js-active');
-      input.nextElementSibling.addEventListener('click', () => {
-        input.value = "";
+const profileDataInputs = document.querySelectorAll('.input-box__input');
+if (profileDataInputs) {
+  profileDataInputs.forEach(input => {
+    input.addEventListener('input', () => {
+      if (input.value) {
+        input.nextElementSibling.classList.add('__js-active');
+        input.nextElementSibling.addEventListener('click', () => {
+          input.value = "";
+          input.nextElementSibling.classList.remove('__js-active');
+        })
+      } else {
         input.nextElementSibling.classList.remove('__js-active');
-      })
-    } else {
-      input.nextElementSibling.classList.remove('__js-active');
-    }
-  })
-});
+      }
+    })
+  });
+}
 
-document.querySelector('.card__bonus').addEventListener('click', () => {
-  document.querySelector('.card__bonus-count').classList.toggle('__js-blur');
-})
+
+const cardBonus = document.querySelector('.card__bonus');
+if (cardBonus) {
+  cardBonus.addEventListener('click', () => {
+    document.querySelector('.card__bonus-count').classList.toggle('__js-blur');
+  })
+}
+
+const mainCardBonus = document.querySelector('.main-card__to-hide');
+if (mainCardBonus) {
+  mainCardBonus.addEventListener('click', () => {
+    document.querySelector('.main-card__bonus-number').classList.toggle('__js-blur');
+  })
+}
+
+
+
 
 
 
@@ -602,11 +645,14 @@ if (cardCommentInputs) {
 }
 
 
-// const orderCancelComments = document.querySelectorAll('.order-details__cancel-comment');
-// if (orderCancelComments) {
-//   orderCancelComments.forEach(el => {
-//     el.addEventListener('change', () => {
 
-//     });
-//   })
-// }
+
+//добавление и удаление лайков
+const likes = document.querySelectorAll('.like');
+likes.forEach(el => {
+  el.addEventListener('click', () => {   
+    el.classList.toggle('liked');
+  })
+})
+
+

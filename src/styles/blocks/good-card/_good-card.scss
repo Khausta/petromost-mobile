@@ -12,6 +12,12 @@
         width: 48%;
         overflow: hidden;
 
+        &_missed {
+            .good__name, .good__weight, .good__price {
+                color: $brown-color;
+            }
+        }
+
       
     }
 
@@ -57,26 +63,7 @@
         }
     }
 
-    //удалено по просьбе
-    // &__photo::after {
-    //     padding: 0.6vw $gap-10;
-    //     position: absolute;
-    //     left: 50%;
-    //     transform: translateX(-50%);
-    //     display: block;
-    //     content: 'СОБСТВЕННОЕ ПРОИЗВОДСТВО';
-    //     width: max-content;
-    //     bottom: $gap-10;
-    //     @include gilroy-bold;
-
-    //     text-transform: uppercase;
-    //     font-size: $gap-10;
- 
-    //     border-radius: $gap-10;
-    //     background-color: $beige-color;
-    //     color: $brown-color;
-    //     z-index: 10;
-    // }
+  
    
 
     &__info {
@@ -134,6 +121,25 @@
     &__quantity {
         &_miss {
             color: $red-color;
+
+        &::before {
+            position: absolute;
+            left: $size-8px;
+            top: 50%;
+            transform: translateY(-50%);
+            content: '';
+            display: block;
+            width: 1vw;
+            height: 1vw;
+            background-color: $red-color;
+            border-radius: 100%;
+        } 
+        }
+    }
+
+    &__quantity {
+        &_miss-beige {
+            color: $brown-color;
 
         &::before {
             position: absolute;

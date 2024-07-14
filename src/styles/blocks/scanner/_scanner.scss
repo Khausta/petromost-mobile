@@ -1,0 +1,50 @@
+.scanner {
+
+    &__box {
+        height: 100%;
+        padding-top: $s40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text {
+        margin-bottom: min(26vw, 197px);
+        width: 80%;
+        @include gilroy-semibold;
+        font-size: $size-18px;
+        color: $head-bg-color;
+        text-align: center;
+
+    }
+
+    &__view {
+
+        position: relative;
+        width: min(77vw, 591px);
+        height: min(38.5vw, 296px);
+        border-radius: $size-20px;
+        border: 1px solid $head-bg-color;
+        background-color: #434343;
+    }
+
+    &__red-line {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $red-color;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
+    &__zipper {
+        margin-top: auto;
+        padding: 1%;
+        width: $size-30px;
+        height: $size-30px;
+        border: 1px solid $head-bg-color;
+        border-radius: $size-5px;
+    }
+}

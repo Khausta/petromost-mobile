@@ -16,7 +16,7 @@
 
 Раздел Заказы Доставка и Раздел Заказы Самовывоз -- delivery-order-list.html и selfdelivery-order-list.html
 
-Каталог открывается во всплывающем окне с id="catalog-overlay" по клике на элемент с id="catalog".
+Каталог открывается во всплывающем окне с id="catalog" по клике на элемент с id="catalog".
 
 Каталог Витрина -- storefront-catalog.html
 

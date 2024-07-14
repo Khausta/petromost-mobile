@@ -39,7 +39,7 @@
                             <img class="object-fit-contain" src="./img/icons/search.svg" alt="Иконка поиска">
                         </button>
                     </div>
-                    <button class="button header__menu-btn menu-btn ">
+                    <button class="button header__menu-btn menu-btn" data-modal="menu">
 
                         <span class="menu-btn__line menu-btn__line_1"></span>
                         <span class="menu-btn__line menu-btn__line_2"></span>
@@ -62,10 +62,10 @@
                         <div class="main-card__footer flex-box">
                                
                             <div class="main-card__box ">
-                                <p class="main-card__bonus-count card__bonus-count">
-                                    567,01 б
+                                <p class="main-card__bonus-count ">
+                                    <span class="main-card__bonus-number">567,01 б</span>
                                 </p>
-                                <div class="card__to-hide main-card__to-hide">
+                                <div class=" main-card__to-hide">
                                     <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain">
                                 </div>
                             </div>
@@ -140,15 +140,15 @@
         <div class="menu-panel">
             <div class="container ">
                 <ul class="menu-panel__items flex-box">
-                    <li class="menu-panel__item" >
-                        <a class="menu-panel__link flex-box" href="#" id="catalog">
+                    <li class="menu-panel__item js-show-menu-panel-modal"  data-modal="catalog">
+                        <a class="menu-panel__link flex-box">
                             <div class="menu-panel__icon">
                                 <img class="object-fit-contain" src="./img/icons/menu-panel-catalog.svg" alt="Иконка каталога">
                             </div>
                             <p class="menu-panel__name">Каталог</p>
                         </a>
                     </li>
-                    <li class="menu-panel__item">
+                    <li class="menu-panel__item js-show-menu-panel-modal" data-modal="scanner">
                         <a class="menu-panel__link flex-box" href="#">
                             <div class="menu-panel__icon">
                                 <img class="object-fit-contain" src="./img/icons/menu-panel-scaner.svg" alt="Иконка сканера">
@@ -156,7 +156,7 @@
                             <p class="menu-panel__name">Сканер</p>
                         </a>
                     </li>
-                    <li class="menu-panel__item menu-panel_active">
+                    <li class="menu-panel__item js-show-menu-panel-modal" data-modal="orders">
                         <a class="menu-panel__link flex-box" href="#">
                             <div class="menu-panel__icon">
                                 <img class="object-fit-contain" src="./img/icons/menu-panel-orders.svg" alt="Иконка заказов">
@@ -164,7 +164,7 @@
                             <p class="menu-panel__name">Заказы</p>
                         </a>
                     </li>
-                    <li class="menu-panel__item">
+                    <li class="menu-panel__item js-show-menu-panel-modal" data-modal="favorites">
                         <a class="menu-panel__link flex-box" href="#">
                             <div class="menu-panel__icon-block flex-box">
                                 <div class="menu-panel__icon">
@@ -175,8 +175,8 @@
                             <p class="menu-panel__name">Любимое</p>
                         </a>
                     </li>
-                    <li class="menu-panel__item">
-                        <div class="menu-panel__link flex-box" id="login">
+                    <li class="menu-panel__item js-show-menu-panel-modal" data-modal="login">
+                        <div class="menu-panel__link flex-box js-show-menu-panel-modal" >
                             <div class="menu-panel__icon-block flex-box">
                                 <div class="menu-panel__icon">
                                     <img class="object-fit-contain" src="./img/icons/login.svg" alt="Иконка профиля">
@@ -240,11 +240,11 @@
         </div>
 
         <!-- меню -->
-        <div class="overlay" id="menu-overlay">
+        <div class="overlay" id="menu">
             <div class="popup menu" id="menu-popup">
                 <div class="menu__header flex-box">
                     <h2 class="title">Меню</h2>
-                    <button class="button menu__profile flex-box">
+                    <button class="button menu__profile flex-box js-show-modal" data-modal="profile">
                         Личный кабинет
                     </button>
                 </div>
@@ -392,7 +392,7 @@
         </div>
 
         <!-- личный кабинет -->
-        <div class="overlay" id="profile-overlay">
+        <div class="overlay" id="profile">
             <div class="popup profile" id="profile-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Личный кабинет</h2>
@@ -404,7 +404,7 @@
                 <!-- меню личного профиля-->
                 <ul class="menu__list">
                     <li class="menu__li">
-                        <a href="#" class="menu-link flex-box" id="profile-data">
+                        <a href="#" class="menu-link flex-box js-show-modal" data-modal="profile-data">
                             <div class="menu-link__title">
                                 <div class="menu-link__prefix">
                                     <img class="object-fit-contain" src="./img/profile/note.svg" alt="Иконка записи">
@@ -431,7 +431,7 @@
                         </a>
                     </li>
                     <li class="menu__li">
-                        <a href="#" class="menu-link flex-box" id="my-card">
+                        <a href="#" class="menu-link flex-box js-show-modal" data-modal="my-card">
                             <div class="menu-link__title">
                                 <div class="menu-link__prefix">
                                     <img class="object-fit-contain" src="./img/profile/card.svg" alt="Иконка записи">
@@ -474,7 +474,7 @@
         </div>
 
         <!-- Данные профиля -->
-        <div class="overlay" id="profile-data-overlay">
+        <div class="overlay" id="profile-data">
             <div class="popup profile-data" id="profile-data-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Данные профиля</h2>
@@ -486,7 +486,7 @@
                 <!-- меню Данных профиля-->
                 <ul class="menu__list">
                     <li class="menu__li ">
-                        <a href="#" class="menu__li-with-content menu-link flex-box" id="profile-data">
+                        <a href="#" class="menu__li-with-content menu-link flex-box">
                             <div class="menu-link__title">
                                 <h5>Персональные данные</h5>
                             </div>
@@ -558,7 +558,7 @@
         </div>
 
          <!-- Моя карта "Снигери" -->
-         <div class="overlay" id="my-card-overlay">
+         <div class="overlay" id="my-card">
             <div class="popup my-card" id="my-card-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Моя карта</h2>
@@ -991,7 +991,7 @@
 
 
          <!-- каталог -->
-         <div class="overlay" id="catalog-overlay">
+         <div class="overlay" id="catalog">
             <div class="popup catalog" id="catalog-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Каталог</h2>
@@ -1227,7 +1227,7 @@
         <!-- АВТОРИЗАЦИЯ -->
 
         <!-- Вход 1 Пароль-->
-        <div class="overlay" id="login-overlay_1">
+        <div class="overlay" id="login">
             <div class="popup login" id="login-popup">
                
                 <div class="login__block">
@@ -1749,6 +1749,199 @@
                         <button class="button login__btn red-bg login__btn_big-text">Получить новый код</button>
                         
                     </div>  
+                </div>
+            </div>
+        </div>
+
+        <!-- модальное окно сканера -->
+        <div class="overlay" id="scanner">
+            <div class="popup popup_scanner">
+
+                <div class="scanner__box">
+                    <p class="scanner__text">
+                        Наведите камеру телефона на штрих-код товара, чтобы узнать
+                        стоимость и наличие в магазинах
+                    </p>
+                    <div class="scanner__view">
+                        <div class="scanner__red-line"></div>
+                    </div>
+                    <button class="button scanner__zipper">
+                        <img class="object-fit-contain" src="./img/icons/scanner-zipper.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+         <!-- любимое -->
+         <div class="overlay" id="favorites">
+            <div class="popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Любимое</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>    
+                <div class="container">
+                    <div class="favorites__items good-cards__items">
+                        <!-- карточка товара -->
+                        <div class="good-cards__wrapper easy-border">
+                            <div class="good-cards__photo">
+                                <span class="like liked">
+                                    <img class="object-fit-contain like__no" src="./img/icons/no-like.svg" alt="">
+                                    <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
+                                </span>
+                                <!-- фото -->
+                                <img class="object-fit-cover" src="./img/drink.png" alt="">
+                            </div>
+                            <div class="good__info good-cards__info">
+                                <p class="good__name">Наименование товара</p>
+                                <p class="good__weight">1кг</p>
+                                <div class="good__price-box">
+                                    <span class="good__price">139,98 ₽</span>
+                                    <span class="good__discount">-34%</span>
+                                </div>
+                                <p class="good__small-text">
+                                    <img class="good__snegiri" src="./img/icons/snegiri.svg" alt="Акция по карте СНЕГИРИ">
+                                    <span>76,29 ₽ 1 шт./</span>
+                                    <span class="good__small-text_bold">до 28.03.23</span>
+                                </p>
+                                <button class="button good-cards__btn good-cards__btn_yellow">
+                                    В корзину
+                                </button>
+                                
+                                <p class="good-cards__quantity easy-border">
+                                    <span>Достаточно</span>
+                                    <span class="good-cards__watch"></span>
+                                    <span class="good-cards__time">13:00</span>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- карточка товара если нет в наличии--> 
+                         <!-- добавить good-cards__wrapper_missed -->
+                        <div class="good-cards__wrapper easy-border good-cards__wrapper_missed">
+                            <div class="good-cards__photo">
+                                <span class="like liked">
+                                    <img class="object-fit-contain like__no" src="./img/icons/no-like.svg" alt="">
+                                    <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
+                                </span>
+                                <!-- фото -->
+                                    <!-- <img src="./img/banners/banner-1.png" alt=""> -->
+                            </div>
+                            <div class="good__info good-cards__info">
+                                <p class="good__name">Наименование товара</p>
+                                <p class="good__weight">1кг</p>
+                                <div class="good__price-box">
+                                    <span class="good__price">139,98 ₽</span>
+                                
+                                </div>
+                                <p class="good__small-text">
+                                    <img class="good__snegiri" src="./img/icons/snegiri.svg" alt="Акция по карте СНЕГИРИ">
+                                    <span>76,29 ₽ 1 шт./</span>
+                                    <span class="good__small-text_bold">до 28.03.23</span>
+                                </p>
+                                <button class="button good-cards__btn light-sand-bg beige-border brown-color">
+                                    В корзину
+                                </button>
+                                <!-- стиль good-cards__quantity_miss-beige если товар отсутвует -->
+                                <p class="good-cards__quantity good-cards__quantity_miss-beige easy-border ">
+
+                                    <span>Отсутствует</span>
+                                    
+                                </p>
+                            </div>
+
+                        </div>
+
+                        
+
+                        <!-- карточка товара -->
+                        <div class="good-cards__wrapper easy-border">
+                            <div class="good-cards__photo">
+                                <span class="like liked">
+                                    <img class="object-fit-contain like__no" src="./img/icons/no-like.svg" alt="">
+                                    <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
+                                </span>
+                                <!-- фото -->
+                                    <img class="object-fit-cover" src="./img/drink.png" alt="">
+                            </div>
+                            <div class="good__info good-cards__info">
+                                <p class="good__name">Наименование товара</p>
+                                <p class="good__weight">1кг</p>
+                                <div class="good__price-box">
+                                    <span class="good__price">139,98 ₽</span>
+                                    <span class="good__discount">-34%</span>
+                                </div>
+                                <p class="good__small-text">
+                                    <img class="good__snegiri" src="./img/icons/snegiri.svg" alt="Акция по карте СНЕГИРИ">
+                                    <span>76,29 ₽ 1 шт./</span>
+                                    <span class="good__small-text_bold">до 28.03.23</span>
+                                </p>
+                                <button class="button good-cards__btn good-cards__btn_yellow">
+                                    В корзину
+                                </button>
+                                
+                                <p class="good-cards__quantity easy-border">
+                                    <span>Достаточно</span>
+                                    <span class="good-cards__watch"></span>
+                                    <span class="good-cards__time">13:00</span>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- карточка товара -->
+                        <div class="good-cards__wrapper easy-border">
+                            <div class="good-cards__photo">
+                                <span class="like liked">
+                                    <img class="object-fit-contain like__no" src="./img/icons/no-like.svg" alt="">
+                                    <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
+                                </span>
+                                <!-- фото -->
+                                <img class="object-fit-cover" src="./img/drink.png" alt="">
+                            </div>
+                            <div class="good__info good-cards__info">
+                                <p class="good__name">Наименование товара</p>
+                                <p class="good__weight">1кг</p>
+                                <div class="good__price-box">
+                                    <span class="good__price">139,98 ₽</span>
+                                    <span class="good__discount">-34%</span>
+                                </div>
+                                <p class="good__small-text">
+                                    <img class="good__snegiri" src="./img/icons/snegiri.svg" alt="Акция по карте СНЕГИРИ">
+                                    <span>76,29 ₽ 1 шт./</span>
+                                    <span class="good__small-text_bold">до 28.03.23</span>
+                                </p>
+                                <button class="button good-cards__btn good-cards__btn_yellow">
+                                    В корзину
+                                </button>
+                                
+                                <p class="good-cards__quantity easy-border">
+                                    <span>Достаточно</span>
+                                    <span class="good-cards__watch"></span>
+                                    <span class="good-cards__time">13:00</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+          <!-- заказы  -->
+          <div class="overlay" id="orders">
+            <div class="popup">
+                <div class="popup__total-header flex-box">
+                    <h2 class="title">Заказы</h2>
+                    <button class="button flex-box return-btn">
+                        Назад
+                    </button>
+                </div>    
+                <div class="container">
+                  заказы
                 </div>
             </div>
         </div>

@@ -160,6 +160,9 @@ button:focus {
   color: #240405;
   padding: 1vw min(5vw, 38px);
 }
+.popup_scanner {
+  background-color: #161616;
+}
 
 .overlay.__js-active {
   z-index: 10;
@@ -307,6 +310,10 @@ button:focus {
   display: block;
 }
 
+.__js-blur {
+  filter: blur(3px);
+}
+
 #show-card-overlay.__js-active {
   z-index: 101;
 }
@@ -422,6 +429,14 @@ button:focus {
 
 .easy-border {
   border-radius: min(5vw, 38px);
+  border: 1px solid #F5E6D6;
+}
+
+.light-sand-bg {
+  background-color: #FFFAF5;
+}
+
+.beige-border {
   border: 1px solid #F5E6D6;
 }
 
@@ -1825,6 +1840,7 @@ a._disabled {
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: 600;
   line-height: normal;
+  font-size: min(3.75vw, 29px);
   color: #F5E6D6;
 }
 .card__bonus-count.__js-blur {
@@ -1976,7 +1992,7 @@ a._disabled {
   background-size: contain;
 }
 .address__add-btn_with-plus::before {
-  background-image: url("../img/profile/cross.svg");
+  background-image: url("../img/icons/cross.svg");
 }
 .address__add-btn_map {
   background-color: #FFFAF5;

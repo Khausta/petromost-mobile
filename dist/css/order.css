@@ -160,6 +160,9 @@ button:focus {
   color: #240405;
   padding: 1vw min(5vw, 38px);
 }
+.popup_scanner {
+  background-color: #161616;
+}
 
 .overlay.__js-active {
   z-index: 10;
@@ -307,6 +310,10 @@ button:focus {
   display: block;
 }
 
+.__js-blur {
+  filter: blur(3px);
+}
+
 #show-card-overlay.__js-active {
   z-index: 101;
 }
@@ -422,6 +429,14 @@ button:focus {
 
 .easy-border {
   border-radius: min(5vw, 38px);
+  border: 1px solid #F5E6D6;
+}
+
+.light-sand-bg {
+  background-color: #FFFAF5;
+}
+
+.beige-border {
   border: 1px solid #F5E6D6;
 }
 
@@ -1384,7 +1399,7 @@ a._disabled {
   background-size: contain;
 }
 .address__add-btn_with-plus::before {
-  background-image: url("../img/profile/cross.svg");
+  background-image: url("../img/icons/cross.svg");
 }
 .address__add-btn_map {
   background-color: #FFFAF5;
@@ -1729,6 +1744,7 @@ a._disabled {
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: 600;
   line-height: normal;
+  font-size: min(3.75vw, 29px);
   color: #F5E6D6;
 }
 .card__bonus-count.__js-blur {
@@ -2624,6 +2640,9 @@ a._disabled {
   width: 48%;
   overflow: hidden;
 }
+.good-cards__wrapper_missed .good__name, .good-cards__wrapper_missed .good__weight, .good-cards__wrapper_missed .good__price {
+  color: #BE957D;
+}
 .good-cards__photo {
   position: relative;
   height: min(33vw, 256px);
@@ -2703,6 +2722,21 @@ a._disabled {
   color: #DC1E1E;
 }
 .good-cards__quantity_miss::before {
+  position: absolute;
+  left: min(2vw, 16px);
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  display: block;
+  width: 1vw;
+  height: 1vw;
+  background-color: #DC1E1E;
+  border-radius: 100%;
+}
+.good-cards__quantity_miss-beige {
+  color: #BE957D;
+}
+.good-cards__quantity_miss-beige::before {
   position: absolute;
   left: min(2vw, 16px);
   top: 50%;

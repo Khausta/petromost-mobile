@@ -29,7 +29,7 @@
                             <img class="object-fit-contain" src="./img/icons/search.svg" alt="Иконка поиска">
                         </button>
                     </div>
-                    <button class="button header__menu-btn menu-btn">
+                    <button class="button header__menu-btn menu-btn" data-modal="menu">
 
                         <span class="menu-btn__line menu-btn__line_1"></span>
                         <span class="menu-btn__line menu-btn__line_2"></span>
@@ -251,7 +251,7 @@
             <div class="container">
                 <ul class="menu-panel__items flex-box">
                     <li class="menu-panel__item">
-                        <div class="menu-panel__link flex-box" id="catalog">
+                        <div class="menu-panel__link flex-box js-show-menu-panel-modal" data-modal="catalog">
                             <div class="menu-panel__icon">
                                 <img class="object-fit-contain" src="./img/icons/menu-panel-catalog.svg" alt="Иконка каталога">
                             </div>
@@ -325,11 +325,11 @@
         </div>
 
         <!-- меню -->
-        <div class="overlay" id="menu-overlay">
+        <div class="overlay" id="menu">
             <div class="popup menu" id="menu-popup">
                 <div class="menu__header flex-box">
                     <h2 class="title">Меню</h2>
-                    <button class="button menu__profile flex-box">
+                    <button class="button menu__profile flex-box js-show-modal" data-modal="profile">
                         Личный кабинет
                     </button>
                 </div>
@@ -477,7 +477,7 @@
         </div>
 
         <!-- личный кабинет -->
-        <div class="overlay" id="profile-overlay">
+        <div class="overlay" id="profile">
             <div class="popup profile" id="profile-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Личный кабинет</h2>
@@ -489,7 +489,7 @@
                 <!-- меню личного профиля-->
                 <ul class="menu__list">
                     <li class="menu__li">
-                        <a href="#" class="menu-link flex-box" id="profile-data">
+                        <a href="#" class="menu-link flex-box js-show-modal" data-modal="profile-data">
                             <div class="menu-link__title">
                                 <div class="menu-link__prefix">
                                     <img class="object-fit-contain" src="./img/profile/note.svg" alt="Иконка записи">
@@ -516,7 +516,7 @@
                         </a>
                     </li>
                     <li class="menu__li">
-                        <a href="#" class="menu-link flex-box" id="my-card">
+                        <a href="#" class="menu-link flex-box js-show-modal" data-modal="my-card">
                             <div class="menu-link__title">
                                 <div class="menu-link__prefix">
                                     <img class="object-fit-contain" src="./img/profile/card.svg" alt="Иконка записи">
@@ -559,7 +559,7 @@
         </div>
 
         <!-- Данные профиля -->
-        <div class="overlay" id="profile-data-overlay">
+        <div class="overlay" id="profile-data">
             <div class="popup profile-data" id="profile-data-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Данные профиля</h2>
@@ -571,7 +571,7 @@
                 <!-- меню Данных профиля-->
                 <ul class="menu__list">
                     <li class="menu__li">
-                        <a href="#" class="menu__li-with-content menu-link flex-box" id="profile-data">
+                        <a href="#" class="menu__li-with-content menu-link flex-box">
                             <div class="menu-link__title">
                                 <h5>Персональные данные</h5>
                             </div>
@@ -643,7 +643,7 @@
         </div>
 
          <!-- Моя карта "Снигери" -->
-         <div class="overlay" id="my-card-overlay">
+         <div class="overlay" id="my-card">
             <div class="popup my-card" id="my-card-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Моя карта</h2>
@@ -1074,7 +1074,7 @@
         </div>
         
           <!-- каталог -->
-          <div class="overlay" id="catalog-overlay">
+          <div class="overlay" id="catalog">
             <div class="popup catalog" id="catalog-popup">
                 <div class="popup__total-header flex-box">
                     <h2 class="title">Каталог</h2>
