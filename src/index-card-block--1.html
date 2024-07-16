@@ -54,17 +54,30 @@
         <main class="main">            
             <section class="main-card">
                 <div class="container">
-                    <div class="main-card__card-banner main-card__login-banner">
-                        <p class="main-card__header-black ">Тут будет отображаться
-                            ваша карта «Снегири» 
-                            после авторизации </p> 
+                    <div class=" main-card__login-banner">
+                        <p class="main-card__header-brown "> Тут будет отображаться Ваша карта «Снегири», если вы 
+                            авторизируетесь в приложении </p> 
                       
-                            <button id="card-login-btn" class="button main-card__login-btn easy-border" type="button">
-                                <span class="main-card__btn-text-icon">
-                                    <img class="object-fit-contain" src="./img/icons/login.svg" alt="">
-                                </span>
-                                <p class="main-card__btn-text">Авторизация</p>
-                            </button>
+                            <div class="main-card__login-footer flex-box">
+                               
+                                <div class="main-card__box ">
+                                    <p class="main-card__login-bonus ">
+                                        Кол-во бонусов
+                                    </p>
+                                    <div class=" main-card__to-hide-login">
+                                        <img src="./img/icons/eye-sand.svg" alt="Иконка глаза" class="object-fit-contain">
+                                    </div>
+                                </div>
+                                <div class="main-card__box ">
+                                    <div class="main-card__scanner-img-login">
+                                        <img class="object-fit-contain" src="./img/card/main-scan.svg" alt="Штрихкод">
+                                    </div>
+                                    <div class="main-card__magnifier-login">
+                                        <img src="./img/card/magnifier.svg" alt="" class="object-fit-contain">
+                                    </div>
+                                </div>
+    
+                            </div>
                        
                     </div>
                 </div>

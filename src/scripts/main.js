@@ -618,12 +618,6 @@ if (filterRadioBtns) {
   })
 }
 
-const filterViewSelector = document.querySelector('.view-selector');
-if (filterViewSelector) {
-  filterViewSelector.addEventListener('click', () => {
-    filterViewSelector.classList.toggle('view-selector_to-grid');
-  })
-}
 
 const focusHendler = (element) => {
   element.classList.add('_active');

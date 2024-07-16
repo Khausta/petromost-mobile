@@ -550,12 +550,6 @@ if (filterRadioBtns) {
     });
   });
 }
-var filterViewSelector = document.querySelector('.view-selector');
-if (filterViewSelector) {
-  filterViewSelector.addEventListener('click', function () {
-    filterViewSelector.classList.toggle('view-selector_to-grid');
-  });
-}
 var focusHendler = function focusHendler(element) {
   element.classList.add('_active');
 };
