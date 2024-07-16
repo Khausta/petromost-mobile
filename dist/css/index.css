@@ -959,13 +959,21 @@ a._disabled {
   padding: min(2vw, 16px);
   width: min(7.7vw, 56px);
   height: min(7.7vw, 56px);
+  border-radius: min(2.5vw, 19px);
+}
+.view-selector__input {
+  display: none;
+}
+.view-selector__schema {
+  display: block;
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 50%;
-  border-radius: min(2.5vw, 19px);
+  background-size: contain;
   background-image: url("../img/icons/to-list.svg");
 }
-.view-selector_to-grid {
+.view-selector__input:checked + .view-selector__schema {
   background-image: url("../img/icons/to-grid.svg");
 }
 
