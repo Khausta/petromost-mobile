@@ -577,17 +577,18 @@ likes.forEach(function (el) {
 });
 var searchItems = document.querySelector('ul[data-temp');
 var viewSelector = document.querySelector('button[data-view]');
-viewSelector.addEventListener('click', function () {
-  var view = viewSelector.dataset.view;
-  // view == 'list' ? (viewSelector.dataset.view = 'grid') : (viewSelector.dataset.view = 'list');
-  // console.log(view); 
-  if (view == 'list') {
-    viewSelector.dataset.view = 'grid';
-    searchItems.dataset.temp = 'grid';
-  } else {
-    viewSelector.dataset.view = 'list';
-    searchItems.dataset.temp = 'list';
-  }
-  // searchItems.dataset.temp = viewSelector.dataset.view;
-});
+if (viewSelector) {
+  viewSelector.addEventListener('click', function () {
+    var view = viewSelector.dataset.view;
+    // view == 'list' ? (viewSelector.dataset.view = 'grid') : (viewSelector.dataset.view = 'list');
+    // console.log(view); 
+    if (view == 'list') {
+      viewSelector.dataset.view = 'grid';
+      searchItems.dataset.temp = 'list';
+    } else {
+      viewSelector.dataset.view = 'list';
+      searchItems.dataset.temp = 'grid';
+    }
+  });
+}
 //# sourceMappingURL=main.js.map

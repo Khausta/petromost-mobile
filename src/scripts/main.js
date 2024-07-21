@@ -651,18 +651,19 @@ likes.forEach(el => {
 
 const searchItems = document.querySelector('ul[data-temp');
 const viewSelector = document.querySelector('button[data-view]');
-viewSelector.addEventListener('click', () => {
-  let view =  viewSelector.dataset.view;
-  // view == 'list' ? (viewSelector.dataset.view = 'grid') : (viewSelector.dataset.view = 'list');
-  // console.log(view); 
-  if (view == 'list') {
-    viewSelector.dataset.view = 'grid';
-    searchItems.dataset.temp = 'grid';
-  } else {
-    viewSelector.dataset.view = 'list';
-    searchItems.dataset.temp = 'list';
-  }
-  // searchItems.dataset.temp = viewSelector.dataset.view;
-})
+if (viewSelector) {
+  viewSelector.addEventListener('click', () => {
+    let view =  viewSelector.dataset.view;
+    // view == 'list' ? (viewSelector.dataset.view = 'grid') : (viewSelector.dataset.view = 'list');
+    // console.log(view); 
+    if (view == 'list') {
+      viewSelector.dataset.view = 'grid';
+      searchItems.dataset.temp = 'list';
+    } else {
+      viewSelector.dataset.view = 'list';
+      searchItems.dataset.temp = 'grid';
+    }
+  })
+}
 
 

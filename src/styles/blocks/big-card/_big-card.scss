@@ -24,6 +24,23 @@
     
     }
 
+    &__own-production {
+        display: block;
+        position: absolute;
+        right: 1%;
+        bottom: -16%;
+        width: min(26.5vw, 165px);
+        height: min(26.5vw, 165px);
+
+        
+        img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            object-position: bottom;
+        }
+    }
+
     &__schema {
         margin-bottom: $gap-10;
         display: flex;
@@ -45,6 +62,7 @@
         @include gilroy-bold;
         font-size: $gap-10;
         color: $pink-color;
+        overflow: hidden;
 
         svg {
             width: $size-8px;
@@ -56,6 +74,7 @@
         background-color: #FFF5F4;
         height: 50%;
         border-bottom: 1px solid $pink-border;
+        
     }
 
     &__expire-date {
@@ -92,7 +111,7 @@
             top: 0;
             right: 0;
             display: block;
-            padding: $size-6and5;
+            padding: $size-12px;
             width: $s44px;
             height: $s44px;
             z-index: 3;
@@ -184,15 +203,17 @@
     }
 
     .good__price {
-        margin-right: $size-13px;
+        // margin-right: $size-13px;
         font-size: $size-32px;
     }
 
     .good__discount {
+        position: relative;
         border-radius: $gap-10;
         width: $size-62px;
         height: $size-32px;
         font-size: $size-16and25;
+        z-index: 3;
     }
     .good__small-text {
         font-size: $size-16and25;
@@ -231,6 +252,11 @@
             width: 100%;
             justify-content: center;
             gap: $size-6and5;
+            border-radius: $gap-10;
+
+            &.w48 {
+                width: 48%;
+            }
         }
 
         &__text {
@@ -260,6 +286,15 @@
                 background-color: #FFF0B6;
                 color: #A17C00;
             }
+        }
+
+        &__add-btn {
+            width: 48%;
+            background-color: #FAC71D;
+            border-radius: $gap-10;
+            @include gilroy-bold;
+            font-size: $size-14px;
+
         }
        
     }

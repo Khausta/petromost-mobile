@@ -203,11 +203,12 @@
         color: $white-bg-color;
         width: $size-11px;
         height: $size-11px;
-        // display: flex;
         justify-content: center;
         align-items: center;
         background-color: $red-color;
         border-radius: 100%;
+        text-align: center;
+        line-height: 100%;
     }
 
     &__note {
@@ -229,6 +230,7 @@
         gap: min(0.6vw, 8px);
         justify-content: center;
         align-items: center;
+        line-height: 100%;
 
         svg {
             width: $size-8px;
@@ -254,6 +256,11 @@
             &__item {
                 width: 100%;
             }
+
+            &__schema {
+                height: 50%;
+            }
+
             &__options {
                 position: relative;
                 padding-right: min(1.7vw, 13px);
@@ -298,6 +305,7 @@
             &__item {
                 border-radius: $size-16and25;
                 height: $s80px;
+                height: min(20.5vw, 157px);
             }
 
             &__cover {
@@ -311,11 +319,14 @@
                 max-width: $s193;
                 // margin-right: 2%;
                 // width: 57%;
-                padding: $size-8px $size-5px min(1.8vw, 14px) $gap-10;
+                // padding: $size-8px $size-5px min(1.8vw, 14px) $gap-10;
+                padding-top: min(1.4vw, 14px);
+                padding-left: $gap-10;
+                padding-bottom:  min(1.3vw, 14px);
                 display: flex;
                 flex-direction: column;
-                gap: 2%;
-                justify-content: space-between;
+                // gap: 2%;
+                // justify-content: space-between;
                 align-items: start;
             }
                 
@@ -335,12 +346,21 @@
                 }
             }
 
+            &__price-box {
+                height: 100%;
+            }
+
             &__price {
-                margin-bottom: min(1vw, 8px);
+                // margin-bottom: min(1vw, 8px);
                 // @include gilroy-bold;
                 font-size: $size-16and25;
                 // line-height: 1.2;
+                line-height: 100%;
 
+            }
+
+            &__old-price {
+                margin-top: auto;
             }
 
             &__stock-block {
@@ -352,7 +372,9 @@
             }
 
             &__note-sign {
-                display: flex;
+                display: block;
+                text-align: center;
+                line-height: 110%;
             }
 
             &__exist {
@@ -360,6 +382,11 @@
                 padding: $size-5px $size-5px;
 
                
+            }
+
+            &__missed {
+                justify-content: center;
+                gap: 3%;
             }
 
 
@@ -372,7 +399,7 @@
         }
 
         .good__name {
-            margin-bottom: min(1vw, 8px);
+            padding-bottom: min(1.1vw, 8px);
             line-height: 1.1;
         }
        
@@ -447,6 +474,10 @@
                 height: min(33.33vw, 256px);
             }
 
+            &__schema {
+                min-height: min(8.5vw, 65px);
+            }
+
             &__info {
                 padding: 0 $gap-10;
                 display: flex;
@@ -454,13 +485,9 @@
                 gap: $size-5px;
                 justify-content: space-between;
                 align-items: start;
+                
             }
-        
-            // // &__options {
-            // //     position: relative;
-            // //     width: 22%;
-            // // }
-        
+
             &__own-production {
                 display: block;
                 position: absolute;
@@ -533,7 +560,7 @@
                 width: 100%;
                 gap: min(1vw, 8px);
                 height: $size-20px;
-                padding: $size-5px $size-5px;
+                // padding: $size-5px $size-5px;
 
                 .green-circle {
                     margin-right: 1vw;
