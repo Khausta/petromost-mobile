@@ -64,7 +64,7 @@ openSearchPopup () {  //логика открытия поиска отличч�
   headerElements.makeBurgerActive();
 },
   'search': {
-    overlay: document.querySelector('#search-overlay'),
+    overlay: document.querySelector('#search-overlay_______2'),
     input: document.querySelector('.__js-searchInput'),
     open: function() {
       popups.closeAllPopups();
@@ -647,6 +647,22 @@ likes.forEach(el => {
   el.addEventListener('click', () => {   
     el.classList.toggle('liked');
   })
+})
+
+const searchItems = document.querySelector('ul[data-temp');
+const viewSelector = document.querySelector('button[data-view]');
+viewSelector.addEventListener('click', () => {
+  let view =  viewSelector.dataset.view;
+  // view == 'list' ? (viewSelector.dataset.view = 'grid') : (viewSelector.dataset.view = 'list');
+  // console.log(view); 
+  if (view == 'list') {
+    viewSelector.dataset.view = 'grid';
+    searchItems.dataset.temp = 'grid';
+  } else {
+    viewSelector.dataset.view = 'list';
+    searchItems.dataset.temp = 'list';
+  }
+  // searchItems.dataset.temp = viewSelector.dataset.view;
 })
 
 

@@ -451,6 +451,13 @@ button:focus {
     height: $size-16and25;
 }
 
+
+.round {
+    display: block;
+    border-radius: 100%;
+    width: min(1vw, 8px);
+    height: min(1vw, 8px);
+}
 .red-bg {
     background-color: $red-color;
     color: $white-bg-color;
@@ -540,8 +547,13 @@ button:focus {
   
 }
 
+.line-throw {
+    text-decoration: line-through;
+}
+
 .red-circle {
     display: block;
+    flex-shrink: 0;
     width: 1vw;
     height: 1vw;
     background-color: $red-color;

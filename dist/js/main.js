@@ -69,7 +69,7 @@ var popups = {
     headerElements.makeBurgerActive();
   },
   'search': {
-    overlay: document.querySelector('#search-overlay'),
+    overlay: document.querySelector('#search-overlay_______2'),
     input: document.querySelector('.__js-searchInput'),
     open: function open() {
       popups.closeAllPopups();
@@ -574,5 +574,20 @@ likes.forEach(function (el) {
   el.addEventListener('click', function () {
     el.classList.toggle('liked');
   });
+});
+var searchItems = document.querySelector('ul[data-temp');
+var viewSelector = document.querySelector('button[data-view]');
+viewSelector.addEventListener('click', function () {
+  var view = viewSelector.dataset.view;
+  // view == 'list' ? (viewSelector.dataset.view = 'grid') : (viewSelector.dataset.view = 'list');
+  // console.log(view); 
+  if (view == 'list') {
+    viewSelector.dataset.view = 'grid';
+    searchItems.dataset.temp = 'grid';
+  } else {
+    viewSelector.dataset.view = 'list';
+    searchItems.dataset.temp = 'list';
+  }
+  // searchItems.dataset.temp = viewSelector.dataset.view;
 });
 //# sourceMappingURL=main.js.map

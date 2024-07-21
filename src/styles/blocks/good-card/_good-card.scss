@@ -35,12 +35,17 @@
 
     &__photo {
         .like {
+            // top: $gap-10;
+            // right: $gap-10;
+            // width: $size-12px;
+            // height: $size-12px;
             position: absolute;
-            top: $gap-10;
-            right: $gap-10;
+            top: 0;
+            right: 0;
             display: block;
-            width: $size-12px;
-            height: $size-12px;
+            padding: $gap-10;
+            width: $s36px;
+            height: $s36px;
             z-index: 1;
 
             &__yes {
