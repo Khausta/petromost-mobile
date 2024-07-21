@@ -47,12 +47,21 @@
         align-items: center;
 
     }
+
+
     &__price {
         display: inline-block;
         margin-right: 1vw;
         @include gilroy-bold;
         font-size: $size-19-point-5-px;
         color: $black-color;
+    }
+
+    &__old-price {
+        @include gilroy-semibold;
+        font-size: $size-14px;
+        color: $brown-color;
+        text-align: left;
     }
 
     &__discount {

@@ -494,11 +494,20 @@ button:focus {
 .counter {
     margin-bottom: $size-6and5;
     gap: $size-5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFCC00;
+    border-radius: $gap-10;
+
+    .button {
+        border-radius: $size-8px;
+    }
 
     &__delete-btn {
         width: $size-32px;
         height: $size-32px;
-        border-radius: $size-8px;
+       
         flex-shrink: 0;
         
         
@@ -782,6 +791,15 @@ a._disabled {
             width: 100%;
         }
     }
+  }
+
+  .missed-filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.6;
+    z-index: 1;
   }
 
 

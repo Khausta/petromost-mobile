@@ -450,11 +450,18 @@ button:focus {
 .counter {
   margin-bottom: min(1.67vw, 13px);
   gap: min(1.3vw, 10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFCC00;
+  border-radius: min(2.5vw, 19px);
+}
+.counter .button {
+  border-radius: min(2vw, 16px);
 }
 .counter__delete-btn {
   width: min(8.2vw, 63px);
   height: min(8.2vw, 63px);
-  border-radius: min(2vw, 16px);
   flex-shrink: 0;
 }
 .counter__delete-icon {
@@ -707,6 +714,15 @@ a._disabled {
      object-fit: contain;
   height: 100%;
   width: 100%;
+}
+
+.missed-filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.6;
+  z-index: 1;
 }
 
 .save-btn {
@@ -3089,6 +3105,14 @@ a._disabled {
   font-size: min(5vw, 38px);
   color: #240405;
 }
+.good__old-price {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: min(3.75vw, 29px);
+  color: #BE957D;
+  text-align: left;
+}
 .good__discount {
   display: flex;
   align-items: center;
@@ -4204,7 +4228,47 @@ a._disabled {
   background-image: url("../img/cart/cart-bg.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 25%;
+}
+.big-card__schema {
+  margin-bottom: min(2.5vw, 19px);
+  display: flex;
+  justify-content: start;
+  gap: min(2.5vw, 19px);
+}
+.big-card__price-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.big-card__snegiri {
+  width: min(20vw, 154px);
+  height: 64px;
+  border: 1px solid #FECCCC;
+  border-radius: min(2.5vw, 19px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(2.5vw, 19px);
+  color: #ED7D7D;
+}
+.big-card__snegiri svg {
+  width: min(2vw, 16px);
+  height: min(4.2vw, 32px);
+}
+.big-card__snegiri-upper {
+  background-color: #FFF5F4;
+  height: 50%;
+  border-bottom: 1px solid #FECCCC;
+}
+.big-card__expire-date {
+  height: 50%;
+}
+.big-card__snegiri-upper, .big-card__expire-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: min(1.3vw, 10px);
 }
 .big-card .cashback {
   position: absolute;
@@ -4219,14 +4283,17 @@ a._disabled {
   padding: 0 min(3.3vw, 25px);
   border-radius: min(2.5vw, 19px);
   background-color: #FAC71D;
+  z-index: 3;
 }
 .big-card__photo .like {
   position: absolute;
-  width: min(4.6vw, 38px);
-  height: min(4.6vw, 38px);
-  top: min(3.75vw, 29px);
-  right: min(3.75vw, 29px);
-  z-index: 10;
+  top: 0;
+  right: 0;
+  display: block;
+  padding: min(1.67vw, 13px);
+  width: min(11vw, 86px);
+  height: min(11vw, 86px);
+  z-index: 3;
 }
 .big-card__photo .like__yes {
   display: none;
@@ -4236,25 +4303,6 @@ a._disabled {
 }
 .big-card__photo .like.liked .like__yes {
   display: block;
-}
-.big-card__photo::after {
-  padding: 0.6vw min(2.5vw, 19px);
-  position: absolute;
-  left: min(3.75vw, 29px);
-  display: block;
-  content: "СОБСТВЕННОЕ ПРОИЗВОДСТВО";
-  width: -moz-max-content;
-  width: max-content;
-  bottom: min(2.5vw, 19px);
-  font-family: "Gilroy", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  line-height: normal;
-  text-transform: uppercase;
-  font-size: min(2.5vw, 19px);
-  border-radius: min(2.5vw, 19px);
-  background-color: #F5E6D6;
-  color: #BE957D;
-  z-index: 10;
 }
 
 .data {
@@ -4266,11 +4314,13 @@ a._disabled {
   align-items: center;
 }
 .data__origin {
+  padding-right: min(2vw, 16px);
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: 600;
   line-height: normal;
   color: #BE957D;
   font-size: min(3.3vw, 25px);
+  width: 60%;
 }
 .data__stars {
   flex-shrink: 0;
@@ -4297,6 +4347,7 @@ a._disabled {
   font-size: min(8.2vw, 63px);
 }
 .data .good__discount {
+  border-radius: min(2.5vw, 19px);
   width: min(15.9vw, 122px);
   height: min(8.2vw, 63px);
   font-size: min(4.2vw, 32px);
@@ -4325,6 +4376,35 @@ a._disabled {
 }
 .data__tabs {
   background-color: #FFFAF5;
+}
+.data .counter-info__block {
+  width: 100%;
+  justify-content: center;
+  gap: min(1.67vw, 13px);
+}
+.data .counter-info__text {
+  color: #ED7D7D;
+}
+.data .counter-info__benefit {
+  padding: 0.6vw;
+  height: auto;
+}
+.data .counter-info__benefit span {
+  display: flex;
+  height: min(7.7vw, 55px);
+  justify-content: center;
+  align-items: center;
+}
+.data .counter-info .counter {
+  padding: 0.6vw;
+  align-items: center;
+  margin-bottom: 0;
+}
+.data .counter-info .counter .button {
+  width: min(7.7vw, 55px);
+  height: min(7.7vw, 55px);
+  background-color: #FFF0B6;
+  color: #A17C00;
 }
 
 .same__title {

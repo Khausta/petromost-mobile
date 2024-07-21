@@ -86,12 +86,14 @@
                         <div class="big-card__photo-box">
                             <!-- добавлен класс для img фото товара -->
                             <div class="big-card__photo">
+
                                 <span class="like liked">
                                     <img class="object-fit-contain like__no" src="./img/icons/no-like.svg" alt="">
                                     <img class="object-fit-contain like__yes" src="./img/icons/liked.svg" alt="">
                                 </span>
                                 <span class="cashback">КЭШБЭК 20%</span>
                                 <!-- фото -->
+                                 <span class="missed-filter"></span>
                                  <img class="object-fit-cover" src="./img/catalog/good-photo.png" alt="">
                             </div>
                         </div>
@@ -108,13 +110,14 @@
                         <div class="data__origin">
                             Артикул: 152825; Торговая марка: СП Петровский, ИП Бондин 
                         </div>
-                        <div class="data__stars">
-                            <span class="data__star data__star_full"> </span>
-                            <span class="data__star data__star_full"> </span>
-                            <span class="data__star data__star_full"> </span>
-                            <span class="data__star data__star_full"> </span>
-                            
-                            <span class="data__star data__star_empty"> </span>
+                        <div class="order-details__rating-panel">
+                            <div class="rating">
+                                <input type="radio" class="star-ratio" name="rt" value="1">
+                                <input type="radio" class="star-ratio" name="rt" value="2">
+                                <input type="radio" class="star-ratio" name="rt" value="3">
+                                <input type="radio" class="star-ratio" name="rt" value="4">
+                                <input type="radio" class="star-ratio" name="rt" value="5">
+                              </div>
                         </div>
                     </div>
 
@@ -122,16 +125,29 @@
                     <div class="title">
                         Морс Клюквенный 0,5л
                     </div>
-                    <div class="good__price-box">
-                        <span class="good__price">139,98 ₽</span>
-                        <span class="good__discount">-34%</span>
-                    </div>
+                    <div class="big-card__schema">
+                        <div class="good__price-box big-card__price-box">
+                            <span class="good__price">139,98 ₽</span>
+                            <span class="good__old-price">
+                                <span class="line-throw">76,29 ₽</span> 1 шт.</span>
+                            
+                        </div>
+                        <span class="big-card__snegiri">
+                            <div class="big-card__snegiri-upper">
+                                <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33333 2C3.33333 1.64638 3.19286 1.30724 2.94281 1.05719C2.69276 0.807142 2.35362 0.666667 2 0.666667C1.64638 0.666667 1.30724 0.807142 1.05719 1.05719C0.933379 1.181 0.835166 1.32799 0.76816 1.48976C0.701154 1.65152 0.666666 1.8249 0.666666 2L0.666666 3C0.666666 3.18409 0.517428 3.33333 0.333333 3.33333C0.149238 3.33333 -1.39181e-07 3.18409 -1.31134e-07 3L-8.74228e-08 2C-7.59423e-08 1.73736 0.0517314 1.47728 0.152241 1.23463C0.25275 0.991982 0.400069 0.771503 0.585786 0.585786C0.960859 0.210714 1.46957 -1.10609e-07 2 -8.74228e-08C2.53043 -6.42368e-08 3.03914 0.210714 3.41421 0.585786C3.78929 0.960859 4 1.46957 4 2L4 3C4 3.1841 3.85076 3.33333 3.66667 3.33333C3.48257 3.33333 3.33333 3.1841 3.33333 3L3.33333 2ZM3.66667 4.66667C3.85076 4.66667 4 4.8159 4 5L4 6C4 6.26264 3.94827 6.52272 3.84776 6.76537C3.74725 7.00802 3.59993 7.2285 3.41421 7.41421C3.2285 7.59993 3.00802 7.74725 2.76537 7.84776C2.52272 7.94827 2.26264 8 2 8C1.73736 8 1.47728 7.94827 1.23463 7.84776C0.991981 7.74725 0.771503 7.59993 0.585786 7.41421C0.400069 7.2285 0.25275 7.00802 0.15224 6.76537C0.0517311 6.52272 -2.73749e-07 6.26264 -2.62268e-07 6L-2.18557e-07 5C-2.1051e-07 4.8159 0.149238 4.66667 0.333333 4.66667C0.517428 4.66667 0.666666 4.8159 0.666666 5L0.666666 6C0.666666 6.1751 0.701154 6.34848 0.76816 6.51025C0.835166 6.67201 0.933379 6.819 1.05719 6.94281C1.181 7.06662 1.32799 7.16483 1.48976 7.23184C1.65152 7.29885 1.8249 7.33333 2 7.33333C2.1751 7.33333 2.34848 7.29885 2.51024 7.23184C2.67201 7.16483 2.819 7.06662 2.94281 6.94281C3.06662 6.819 3.16483 6.67201 3.23184 6.51025C3.29885 6.34848 3.33333 6.1751 3.33333 6L3.33333 5C3.33333 4.8159 3.48257 4.66667 3.66667 4.66667ZM2 2.33333C2.18409 2.33333 2.33333 2.48257 2.33333 2.66667L2.33333 5.33333C2.33333 5.51743 2.18409 5.66667 2 5.66667C1.8159 5.66667 1.66667 5.51743 1.66667 5.33333L1.66667 2.66667C1.66667 2.48257 1.8159 2.33333 2 2.33333Z" fill="#ED7D7D"/>
+                                </svg>
+                                    
+                                <span>ПО КАРТЕ <br> СНЕГИРИ</span>
+                            </div>
+                            <p class="big-card__expire-date">
+                                до&nbsp;28.03.24
+                            </p>
+                        </span>
 
-                    <p class="good__small-text">
-                        <img class="good__snegiri" src="./img/icons/snegiri.svg" alt="Акция по карте СНЕГИРИ">
-                        <span>76,29 ₽ 1 шт./</span>
-                        <span class="good__small-text_bold">до 28.03.23</span>
-                    </p>
+                        <span class="good__discount">-34%</span>
+
+                    </div>
                 </div>
  
                 <div class="counter-info">
@@ -147,9 +163,7 @@
                                 </span>
                             </p>
 
-                            <button class="button counter-info__btn ">
-                                В других магазинах
-                            </button>
+                           
                             
                            
 
