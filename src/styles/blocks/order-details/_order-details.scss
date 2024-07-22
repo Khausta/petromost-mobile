@@ -189,10 +189,10 @@
 
     &__rating-panel {
         position: relative;
-        width: min(26vw, 230px);
+        width: min(29vw, 230px);
      
         height: $s24px;
-        padding: $size-5px $size-8px;
+        // padding: $size-5px $size-8px;
     }
     
 }

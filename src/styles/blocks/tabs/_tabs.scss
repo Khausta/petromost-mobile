@@ -46,13 +46,14 @@
     }
 
     &__panel {
-        padding: $size-12px $size-16and25;
+        padding: min(5.5vw, 42px) $size-16and25;
         display: none;
         width: 100%;
         border-bottom: 1px solid $beige-color;
         @include gilroy-bold;
         font-size: $size-14px;
         color: $black-color;
+        line-height: 1.1;
 
         &_active {
             display: block;

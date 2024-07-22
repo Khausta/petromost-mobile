@@ -101,9 +101,10 @@
         }
 
         &__label {
-            padding: 2px 6px;
+            padding: 3px 6px;
             @include gilroy-bold;
             font-size: $gap-10;
+            line-height: 1;
             color: $white-bg-color;
             background-color: $red-color;
             border-radius: $gap-10;
