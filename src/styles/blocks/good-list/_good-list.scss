@@ -144,6 +144,10 @@
 
     &__cover {
         position: relative;
+        background-image: url('../img/cart/cart-bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
         flex-shrink: 0;
         overflow: hidden;
         z-index: 0;                
@@ -154,7 +158,6 @@
         display: none;
         justify-content: center;
         flex-wrap: wrap;
-        // gap: min(1vw, 8px);
         border-radius: $gap-10;
         border: 1px solid $beige-color;
         color: $green-color;

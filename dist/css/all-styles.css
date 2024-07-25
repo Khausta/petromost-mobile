@@ -2458,7 +2458,7 @@ a._disabled {
   background-image: url("../img/cart/cart-bg.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 50%;
   overflow: hidden;
 }
 .good__img {
@@ -4596,6 +4596,10 @@ a._disabled {
 }
 .goods-list__cover {
   position: relative;
+  background-image: url("../img/cart/cart-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
   flex-shrink: 0;
   overflow: hidden;
   z-index: 0;
