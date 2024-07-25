@@ -1,4 +1,4 @@
-.search-result {
+.goods-list {
     padding-top: $size-8px;
 
 
@@ -64,9 +64,8 @@
         line-height: 1.2;
         justify-content: center;
         align-items: center;
-        border-bottom: 1px solid $pink-border;
-        padding-top: 1.5px;
-        padding-bottom: 1.5px;
+    
+        padding:  min(0.5vw, 4px) min(1vw, 8px);
         background-color: #FFF5F4;
       
 
@@ -78,6 +77,7 @@
     }
 
     &__expire-date {
+        border-top: 1px solid $pink-border;
         @include gilroy-bold;
         font-size: $size-6and5;
         color: $pink-color;
@@ -250,7 +250,7 @@
             display: none;
         }
 
-        .search-result {
+        .goods-list {
 
 
             &__item {
@@ -415,7 +415,7 @@
             transform: translateX(0);
         }
 
-        .search-result {
+        .goods-list {
             &__item {
                 margin-bottom: 2%;
                 width: 48%;
@@ -702,7 +702,7 @@
 
 }
 
-.search-filter {
+.goods-filter,.search-filter  {
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -711,32 +711,6 @@
    
 }
 
-// .view-selector {
-//     display: inline-block;
-//     margin-right: $gap-10;
-//     padding: $size-8px;
-//     width: $size-30px;
-//     height: $size-30px;
-//     border-radius: $gap-10;
-   
-//     &__input {
-//         display: none;
-//     }
-
-//     &__schema  {
-//         display: block;
-//         width: 100%;
-//         height: 100%;
-//         background-position: center;
-//         background-repeat: no-repeat;
-//         background-size: contain; 
-//         background-image: url('../img/icons/to-list.svg');
-//     }
-//     &__input:checked + &__schema {
-//         background-image: url('../img/icons/to-grid.svg');
-//     }
-
-// }
 
 .view-selector {
     margin-right: $gap-10;
@@ -860,9 +834,7 @@
         
     }
 
-    // &__input:checked + &__block {
-    //     color: $red-color;
-    // }
+  
 
     &__input:checked + &__block::before {
         display: none; 

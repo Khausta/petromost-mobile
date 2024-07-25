@@ -498,7 +498,7 @@ button:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFCC00;
+    // background-color: #FFCC00;
     border-radius: $gap-10;
 
     .button {
@@ -545,6 +545,7 @@ button:focus {
         height: 100%;
         @include gilroy-bold;
         color: $brown-color;
+        flex-shrink: 0;
 
     }
 
@@ -552,6 +553,19 @@ button:focus {
         @include gilroy-bold;
         font-size: $size-12px;
         color: $black-color;
+    }
+
+    &__input-mini {
+        padding: 10% 1%;
+        width: 100%;
+        background: transparent;
+        text-align: center;
+        @include gilroy-bold;
+        font-size: $size-12px;
+
+        &::placeholder {
+            color: $black-color;
+        }
     }
 
   
@@ -776,6 +790,7 @@ a._disabled {
   }
 
   .button {
+    flex-shrink: 0;
     &__with-icon {
         display: flex;
         justify-content: center;
@@ -806,9 +821,10 @@ a._disabled {
 
 
 
+
+
 @import './components/save-btn';
 @import './components/input-box';
-@import './blocks/search-result/search-result';
 
 
 

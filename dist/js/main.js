@@ -69,7 +69,7 @@ var popups = {
     headerElements.makeBurgerActive();
   },
   'search': {
-    overlay: document.querySelector('#search-overlay'),
+    overlay: document.querySelector('#search-overlay_______2'),
     input: document.querySelector('.__js-searchInput'),
     open: function open() {
       popups.closeAllPopups();
@@ -575,19 +575,17 @@ likes.forEach(function (el) {
     el.classList.toggle('liked');
   });
 });
-var searchItems = document.querySelector('ul[data-temp');
+var goodItemsList = document.querySelector('ul[data-temp');
 var viewSelector = document.querySelector('button[data-view]');
 if (viewSelector) {
   viewSelector.addEventListener('click', function () {
     var view = viewSelector.dataset.view;
-    // view == 'list' ? (viewSelector.dataset.view = 'grid') : (viewSelector.dataset.view = 'list');
-    // console.log(view); 
     if (view == 'list') {
       viewSelector.dataset.view = 'grid';
-      searchItems.dataset.temp = 'list';
+      goodItemsList.dataset.temp = 'list';
     } else {
       viewSelector.dataset.view = 'list';
-      searchItems.dataset.temp = 'grid';
+      goodItemsList.dataset.temp = 'grid';
     }
   });
 }
