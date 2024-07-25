@@ -478,6 +478,18 @@ button:focus {
     color: $brown-color;
 }
 
+.white-color {
+    color: $white-bg-color;
+}
+
+.brown-color {
+    color: $brown-color;
+}
+
+.black-color {
+    color: $black-color;
+}
+
 .easy-border {
     border-radius: $size-19-point-5-px;
     border: 1px solid $beige-color;
@@ -590,6 +602,10 @@ button:focus {
     height: 1vw;
     background-color: #5EA636;
     border-radius: 100%;
+}
+
+.black-color {
+    color: $black-color;
 }
 
 .list-content, .list-header {

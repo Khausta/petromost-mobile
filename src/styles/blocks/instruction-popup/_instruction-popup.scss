@@ -1,0 +1,180 @@
+.instruction {
+    &__banner {
+        padding: clamp(20px, 6.4vw, 68px) clamp(23px, 7.2vw, 78px) clamp(22px, 6.9vw, 74px) clamp(23px, 7.2vw, 78px);
+        background-color: $head-bg-color;
+        border-bottom: 1px solid $beige-color;
+        background-image: url('../img/banners/big-sign.png');
+        background-position: 100% 100%;
+        background-size: 25%;
+        background-repeat: no-repeat;
+        
+    }
+
+    &__banner-content {
+        width: 71%;
+
+    }
+    
+    &__title {
+        @include gilroy-bold;
+        font-size: clamp(14px, 4.6vw, 50px);
+        line-height: 100%;
+        text-align: left;
+    }
+    
+    &__text {
+        @include gilroy-semibold;
+        font-size: clamp(11px, 3.3vw, 36px);
+        line-height: 100%;
+        text-align: left;
+    }
+
+    &__banner-title {
+        margin-bottom: clamp(14px, 4.4vw, 47px);
+    }
+
+    &__panel {
+        padding-top: clamp(20px, 6.3vw, 68px);
+        padding-bottom: clamp(10px, 3.2vw, 35px);
+
+    }
+}
+
+.panel {
+    display: flex;
+    overflow-x: hidden;
+    
+    &__left {
+        width: 53%;
+    }
+    &__right {
+        width: 47%;
+        padding-top: min(3vw, 32px);
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: min(3vw, 31px);
+
+        &::before {
+            content: "";
+            display: block;
+            width: clamp(14px, 4.4vw, 47px);
+            height: 1px;
+            background-color: $beige-color;
+        }
+
+        &:nth-child(1) {
+            margin-bottom: min(5.5vw, 59px);
+        }
+
+        &_2 {
+            margin-bottom: clamp(20px, 6.3vw, 68px);
+        }
+
+       
+    }
+
+
+
+    &__text {
+        padding-left: clamp(22px, 7.1vw, 77px);
+        width: 92%;
+        &_1{
+            margin-bottom: min(8.5vw, 92px);
+        }
+
+        &_2 {
+            margin-bottom: min(9.6vw, 104px);
+        }
+    }
+
+    &__arrow {
+        margin-left: auto;
+        margin-bottom: min(2.8vw, 30px);
+        display: block;
+        width: min(43vw, 468px);
+        height: min(4.5vw, 49px);
+    }
+
+    &__box {
+        position: relative;
+        padding-left: min(4vw, 44px);
+        position: relative;
+        height: min(26vw, 278px);
+        width: 100%;
+        border-top-left-radius: min(5vw, 54px);
+        border-bottom-left-radius: min(5vw, 54px);
+        &_beige {
+            margin-bottom: min(10vw, 109px);
+            border: 1px solid $beige-color;
+            padding-top: min(3.3vw, 36px);
+            padding-left: min(4.1vw, 44px);
+            background-image: url("../img/panel-box-bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+    
+        }
+
+        &_red {
+            padding-top: min(2.6vw, 28px);
+            padding-left: min(4.1vw, 44px);
+            background-color: $red-color;
+
+            &:nth-child(1) {
+                margin-bottom: min(3vw, 33px);
+            }
+        }
+    }
+
+    &__mini-btn {
+        margin-top: min(9.9vw, 107px);
+        display: block;
+        width: min(4.6vw, 50px);
+        height: min(4.6vw, 50px);
+    }
+
+   
+
+    &__box-title_1 {
+        margin-bottom: min(3.2vw, 35px);
+    }
+
+    &__box-text {
+        width: 80%;
+        font-size: min(2.8vw, 31px);
+    }
+
+    &__cart-img {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: -21%;
+        height: 118%;
+    }
+
+    &__car-img {
+        position: absolute;
+        display: block;
+        top: -42%;
+        right: -43%;
+        height: 184%;
+        transform: rotateZ(1deg);
+    }
+
+    &__shop-cart-img {
+        position: absolute;
+        display: block;
+        top: 14%;
+        right: -36%;
+        height: 163%;
+        transform: rotateZ(1deg);
+    
+    }
+
+
+    
+}
+

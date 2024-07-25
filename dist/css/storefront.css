@@ -434,6 +434,18 @@ button:focus {
   color: #BE957D;
 }
 
+.white-color {
+  color: #FFFFFF;
+}
+
+.brown-color {
+  color: #BE957D;
+}
+
+.black-color {
+  color: #240405;
+}
+
 .easy-border {
   border-radius: min(5vw, 38px);
   border: 1px solid #F5E6D6;
@@ -537,6 +549,10 @@ button:focus {
   height: 1vw;
   background-color: #5EA636;
   border-radius: 100%;
+}
+
+.black-color {
+  color: #240405;
 }
 
 .list-content, .list-header {
