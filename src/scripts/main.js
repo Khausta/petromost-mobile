@@ -651,6 +651,17 @@ if (viewSelector) {
 }
 
 
+const activeFullScreenOverlay = document.querySelector(".overlay-full-screen.__js-active");
+console.log(activeFullScreenOverlay);
+
+  const closeBlocks = activeFullScreenOverlay.querySelectorAll('.js_close-overlay-full-screen');
+  closeBlocks.forEach(block => {
+    block.addEventListener('click', () => {
+      activeFullScreenOverlay.classList.remove('__js-active');
+      document.body.style.overflow = 'auto';
+    })
+  })
+
 const openFullScreenModalBtns = document.querySelectorAll(".js-openFullScreenModal");
 openFullScreenModalBtns.forEach(b => {
   b.addEventListener('click', () => {
@@ -679,5 +690,6 @@ function addClosingListeners(id) {
     })
   })
 }
+
 
 

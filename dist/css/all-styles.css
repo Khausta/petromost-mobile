@@ -5277,10 +5277,11 @@ a._disabled {
 .instruction__shop-cart-img {
   position: absolute;
   display: block;
-  top: -222%;
-  right: -17%;
-  height: 325%;
+  top: -177%;
+  right: -18%;
+  height: 281%;
   transform: rotateZ(1deg);
+  pointer-events: none;
 }
 
 .panel {
@@ -5292,7 +5293,7 @@ a._disabled {
 }
 .panel__right {
   width: 47%;
-  padding-top: min(3vw, 32px);
+  padding-top: min(2vw, 32px);
 }
 .panel__title {
   display: flex;
@@ -5314,7 +5315,8 @@ a._disabled {
 }
 .panel__text {
   padding-left: clamp(22px, 7.1vw, 77px);
-  width: 92%;
+  width: 88%;
+  line-height: 1.2;
 }
 .panel__text_1 {
   margin-bottom: min(8.5vw, 92px);
@@ -5339,7 +5341,7 @@ a._disabled {
   border-bottom-left-radius: min(5vw, 54px);
 }
 .panel__box_beige {
-  margin-bottom: min(10vw, 109px);
+  margin-bottom: min(9vw, 109px);
   border: 1px solid #F5E6D6;
   padding-top: min(3.3vw, 36px);
   padding-left: min(4.1vw, 44px);
@@ -5375,6 +5377,7 @@ a._disabled {
   top: 0;
   right: -21%;
   height: 118%;
+  pointer-events: none;
 }
 .panel__car-img {
   position: absolute;
@@ -5383,6 +5386,7 @@ a._disabled {
   right: -43%;
   height: 184%;
   transform: rotateZ(1deg);
+  pointer-events: none;
 }
 
 .w100 {

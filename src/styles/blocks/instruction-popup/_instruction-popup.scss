@@ -85,9 +85,9 @@
     &__shop-cart-img {
         position: absolute;
         display: block;
-        top: -222%;
-        right: -17%;
-        height: 325%;    
+        top: -177%;
+        right: -18%;
+        height: 281%;  
         transform: rotateZ(1deg);
         pointer-events: none;
     
@@ -103,7 +103,7 @@
     }
     &__right {
         width: 47%;
-        padding-top: min(3vw, 32px);
+        padding-top: min(2vw, 32px);
     }
 
     &__title {
@@ -134,7 +134,8 @@
 
     &__text {
         padding-left: clamp(22px, 7.1vw, 77px);
-        width: 92%;
+        width: 88%;
+        line-height: 1.2;
         &_1{
             margin-bottom: min(8.5vw, 92px);
         }
@@ -161,7 +162,8 @@
         border-top-left-radius: min(5vw, 54px);
         border-bottom-left-radius: min(5vw, 54px);
         &_beige {
-            margin-bottom: min(10vw, 109px);
+            
+            margin-bottom: min(9vw, 109px);
             border: 1px solid $beige-color;
             padding-top: min(3.3vw, 36px);
             padding-left: min(4.1vw, 44px);

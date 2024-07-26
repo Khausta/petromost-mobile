@@ -580,6 +580,15 @@ if (viewSelector) {
     }
   });
 }
+var activeFullScreenOverlay = document.querySelector(".overlay-full-screen.__js-active");
+console.log(activeFullScreenOverlay);
+var closeBlocks = activeFullScreenOverlay.querySelectorAll('.js_close-overlay-full-screen');
+closeBlocks.forEach(function (block) {
+  block.addEventListener('click', function () {
+    activeFullScreenOverlay.classList.remove('__js-active');
+    document.body.style.overflow = 'auto';
+  });
+});
 var openFullScreenModalBtns = document.querySelectorAll(".js-openFullScreenModal");
 openFullScreenModalBtns.forEach(function (b) {
   b.addEventListener('click', function () {
