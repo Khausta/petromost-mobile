@@ -15,16 +15,16 @@ const bannerSwiper = new Swiper('.banner-swiper', {
     loopFillGroupWithBlank: true,
   });
 
-    
-  const pathSwiper = new Swiper('.path-swiper', {
-    spaceBetween: '1%',
-    slidesPerView: 'auto',
-    centeredSlides: false,
-  });
-
-  // Хлебные крошки показываются с последенего элемента
-  const slidersCount = pathSwiper.slides.length;
-  pathSwiper.slideTo(slidersCount);
+  if (document.querySelector('.path-swiper')) {
+    const pathSwiper = new Swiper('.path-swiper', {
+      spaceBetween: '1%',
+      slidesPerView: 'auto',
+      centeredSlides: false,
+    });
+    // Хлебные крошки показываются с последенего элемента
+    const slidersCount = pathSwiper.slides.length;
+    pathSwiper.slideTo(slidersCount);
+  }
   
   
   const chanceSwiper = new Swiper('.chance-swiper', {

@@ -259,15 +259,6 @@ function showOrderDetailsModal(orderBlock) {
   headerElements.makeBurgerActive();
 }
 
-// if (popups.login.trigger) {
-//   popups.login.trigger.addEventListener('click', () => {
-//     headerElements.toFixHeader();
-//     openAnyPopup('login');
-//     headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
-//     headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
-//   });
-// }
-
 // manage-card
 if (popups.manageCard.trigger) {
   popups.manageCard.trigger.addEventListener('click', function () {
@@ -587,6 +578,31 @@ if (viewSelector) {
       viewSelector.dataset.view = 'list';
       goodItemsList.dataset.temp = 'grid';
     }
+  });
+}
+var openFullScreenModalBtns = document.querySelectorAll(".js-openFullScreenModal");
+openFullScreenModalBtns.forEach(function (b) {
+  b.addEventListener('click', function () {
+    var id = b.dataset.fullscreenmodal;
+    openFullScreenModal(id);
+    addClosingListeners(id);
+  });
+});
+function openFullScreenModal(id) {
+  document.querySelector("#".concat(id)).classList.add('__js-active');
+  document.body.style.overflow = 'hidden';
+}
+function closeFullScreenModal(id) {
+  document.querySelector("#".concat(id)).classList.remove('__js-active');
+  document.body.style.overflow = 'auto';
+}
+function addClosingListeners(id) {
+  var parentBlock = document.querySelector("#".concat(id));
+  var allCloseBlocks = parentBlock.querySelectorAll('.js_close-overlay-full-screen');
+  allCloseBlocks.forEach(function (block) {
+    block.addEventListener('click', function () {
+      closeFullScreenModal(id);
+    });
   });
 }
 //# sourceMappingURL=main.js.map

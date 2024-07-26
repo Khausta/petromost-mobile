@@ -38,6 +38,60 @@
         padding-bottom: clamp(10px, 3.2vw, 35px);
 
     }
+
+    &__footer {
+        position: relative;
+        background-color: $head-bg-color;
+        border-top: 1px solid $beige-color;
+    }
+
+    &__footer-link {
+        padding: min(4.9vw, 53px) min(6.2vw, 67px);
+
+    }
+
+    &__footer-p {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: min(3.4vw, 37px);
+        @include gilroy-bold;
+        font-size: min(4.6vw, 50px);
+        
+        &::before {
+            content: '';
+            margin-left: min(6.2vw, 67px);
+            display: block;
+            width: min(5.5vw, 60px);
+            height: min(5.5vw, 60px);
+            background-image: url("../img/icons/box.svg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: min(3.9vw, 21px);
+            height: min(3.4vw, 37px);
+            background-image: url("../img/menu/arrow.svg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__shop-cart-img {
+        position: absolute;
+        display: block;
+        top: -222%;
+        right: -17%;
+        height: 325%;    
+        transform: rotateZ(1deg);
+        pointer-events: none;
+    
+    }
 }
 
 .panel {
@@ -153,6 +207,7 @@
         top: 0;
         right: -21%;
         height: 118%;
+        pointer-events: none;
     }
 
     &__car-img {
@@ -162,17 +217,10 @@
         right: -43%;
         height: 184%;
         transform: rotateZ(1deg);
+        pointer-events: none;
     }
 
-    &__shop-cart-img {
-        position: absolute;
-        display: block;
-        top: 14%;
-        right: -36%;
-        height: 163%;
-        transform: rotateZ(1deg);
-    
-    }
+
 
 
     

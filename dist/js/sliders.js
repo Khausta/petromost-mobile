@@ -15,15 +15,16 @@ var infoSwiper = new Swiper('.info-swiper', {
   loop: true,
   loopFillGroupWithBlank: true
 });
-var pathSwiper = new Swiper('.path-swiper', {
-  spaceBetween: '1%',
-  slidesPerView: 'auto',
-  centeredSlides: false
-});
-
-// Хлебные крошки показываются с последенего элемента
-var slidersCount = pathSwiper.slides.length;
-pathSwiper.slideTo(slidersCount);
+if (document.querySelector('.path-swiper')) {
+  var pathSwiper = new Swiper('.path-swiper', {
+    spaceBetween: '1%',
+    slidesPerView: 'auto',
+    centeredSlides: false
+  });
+  // Хлебные крошки показываются с последенего элемента
+  var slidersCount = pathSwiper.slides.length;
+  pathSwiper.slideTo(slidersCount);
+}
 var chanceSwiper = new Swiper('.chance-swiper', {
   loop: true,
   slidesPerView: 2,

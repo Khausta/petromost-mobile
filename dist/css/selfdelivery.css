@@ -232,6 +232,26 @@ button:focus {
   transform: rotate(180deg);
 }
 
+.overlay-full-screen {
+  left: -500px;
+  z-index: -100;
+  /* фон затемнения */
+  background-color: rgba(0, 0, 0, 0.65);
+  position: fixed; /* фиксированное поцизионирование */
+  cursor: default; /* тип курсара */
+}
+
+.overlay-full-screen.__js-active {
+  z-index: 11;
+  inset: 0;
+}
+.overlay-full-screen.__js-active .popup {
+  position: relative;
+  transform: translate(-50%, 0);
+  top: 0;
+  height: 100%;
+}
+
 .radio__input {
   display: none;
 }
@@ -760,6 +780,14 @@ a._disabled {
   z-index: 1;
 }
 
+.example-btn {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  background-color: green;
+  z-index: 20;
+}
+
 .save-btn {
   margin: auto auto 0 auto;
   position: relative;
@@ -1039,6 +1067,33 @@ a._disabled {
 }
 .menu-btn.__js_active .menu-btn__line_3 {
   transform: rotate(-45deg);
+}
+
+.overlay-full-screen .close-btn {
+  position: absolute;
+  top: min(2.7vw, 30px);
+  right: min(2.7vw, 30px);
+  width: min(8.2vw, 62px);
+  height: min(8.2vw, 62px);
+  border-radius: min(2.5vw, 19px);
+  background-color: #DC1E1E;
+  display: block;
+  z-index: 14;
+}
+.overlay-full-screen .close-btn__line {
+  display: block;
+  background-color: #FFFFFF;
+  border-radius: 1vw;
+  height: min(0.5vw, 4px);
+  width: min(4.2vw, 32px);
+  position: absolute;
+  left: 50%;
+}
+.overlay-full-screen .close-btn__line_1 {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.overlay-full-screen .close-btn__line_2 {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .header.__js-fixed {

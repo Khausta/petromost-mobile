@@ -51,7 +51,11 @@
             </div>
         </header>
       
-        <main class="main">            
+        <main class="main">     
+            
+            <button class="js-openFullScreenModal example-btn" data-fullscreenmodal="instruction">
+                кнопка
+            </button>
             <section class="main-card">
                 <div class="container">
                     <div class="main-card__banner">
@@ -2199,10 +2203,17 @@
         </div>
 
         <!-- модальное окно, дублирующее функционал сплит экрана -->
-        <div class="overlay __js-active" id="instruction">
+        <div class="overlay-full-screen" id="instruction">
             <div class="popup">
+                <button class="button close-btn js_close-overlay-full-screen">
+
+                    <span class="close-btn__line close-btn__line_1"></span>
+                    <span class="close-btn__line close-btn__line_2"></span>
+
+                    <!-- <img class="object-fit-contain" src="./img/icons/menu-burger.svg" alt="Орнамент"> -->
+                </button> 
                 <div class="instruction">
-                    <div class="close">btn</div>
+                    
                     <div class="instruction__banner">
                         <div class="instruction__banner-content">
                             <h2 class="instruction__title brown-color instruction__banner-title">
@@ -2243,7 +2254,7 @@
                         <div class="panel__right">
                             <img class="panel__arrow" src="./img/long-arrow.svg" alt="">
 
-                            <a href="./storefront-catalog.html">
+                            <a href="./storefront-catalog.html" class="js_close-overlay-full-screen">
                                 <div class="panel__box panel__box_beige">
                                     <img class="panel__cart-img" src="./img/red-cart-img.png" alt="">
                                     <h2 class="instruction__title black-color panel__box-title_1">
@@ -2258,7 +2269,7 @@
                             </a>
                             <img class="panel__arrow" src="./img/long-arrow.svg" alt="">
                             
-                            <a href="#">
+                            <a href="./delivery.html" class="js_close-overlay-full-screen">
                                 <div class="panel__box panel__box_red">
                                     <img class="panel__car-img" src="./img/car-img.png" alt="">
                                     <h2 class="instruction__title white-color">
@@ -2268,9 +2279,9 @@
                                 </div>
                             </a>
 
-                            <a href="#">
+                            <a href="./selfdelivery.html" class="js_close-overlay-full-screen">
                                 <div class="panel__box panel__box_red">
-                                    <img class="panel__shop-cart-img" src="./img/shop-cart-img.png" alt="">
+                                    
                                     <h2 class="instruction__title white-color">
                                         Самовывоз 
                                     </h2>
@@ -2281,6 +2292,15 @@
 
                         </div>
 
+                    </div>
+                    <div class="instruction__footer js_close-overlay-full-screen">
+                        <img class="instruction__shop-cart-img" src="./img/shop-cart-img.png" alt="">
+                        <a class="instruction__footer-link" href="">
+                            <p class="instruction__footer-p brown-color">
+                                Перейти к покупкам
+                            </p>
+                        
+                        </a>
                     </div>
 
                 </div>

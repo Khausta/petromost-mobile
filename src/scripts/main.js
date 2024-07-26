@@ -151,8 +151,6 @@ function openAnyPopup(popupName) {
   }
 }
 
-
-
 function toPrevModal() {
   state.path.pop();
   if(state.path.length) {
@@ -275,18 +273,6 @@ function showOrderDetailsModal(orderBlock) {   //отдельная функци
   openAnyModal(id);
   headerElements.makeBurgerActive();
 }
-
-
-
-
-// if (popups.login.trigger) {
-//   popups.login.trigger.addEventListener('click', () => {
-//     headerElements.toFixHeader();
-//     openAnyPopup('login');
-//     headerElements.openMenuOrCloseAllBtn.classList.add('__js_active');
-//     headerElements.openMenuOrCloseAllBtn.addEventListener('click', closePopup);
-//   });
-// }
 
 // manage-card
 if (popups.manageCard.trigger) {
@@ -661,6 +647,36 @@ if (viewSelector) {
       viewSelector.dataset.view = 'list';
       goodItemsList.dataset.temp = 'grid';
     }
+  })
+}
+
+
+const openFullScreenModalBtns = document.querySelectorAll(".js-openFullScreenModal");
+openFullScreenModalBtns.forEach(b => {
+  b.addEventListener('click', () => {
+    const id = b.dataset.fullscreenmodal;
+    openFullScreenModal(id);
+    addClosingListeners(id);
+  })
+})
+
+function openFullScreenModal(id) {
+  document.querySelector(`#${id}`).classList.add('__js-active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeFullScreenModal(id) {
+  document.querySelector(`#${id}`).classList.remove('__js-active');
+  document.body.style.overflow = 'auto';
+}
+
+function addClosingListeners(id) {
+  const parentBlock = document.querySelector(`#${id}`);
+  const allCloseBlocks = parentBlock.querySelectorAll('.js_close-overlay-full-screen');
+  allCloseBlocks.forEach(block => {
+    block.addEventListener('click', () => {
+      closeFullScreenModal(id);
+    })
   })
 }
 

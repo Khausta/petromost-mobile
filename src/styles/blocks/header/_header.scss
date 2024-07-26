@@ -165,6 +165,39 @@
     }
 }
 
+.overlay-full-screen {
+    .close-btn {
+        position: absolute;
+        top: min(2.7vw, 30px);
+        right: min(2.7vw, 30px);
+        width: min(8.2vw, 62px);
+        height: min(8.2vw, 62px);
+        border-radius: $gap-10;
+        background-color: $red-color;
+        display: block;
+        z-index: 14;
+
+        &__line {
+            display: block;
+            background-color: $white-bg-color;
+            border-radius: 1vw;
+            height: min(0.5vw, 4px);
+            width: min(4.2vw, 32px);
+            position: absolute;
+            left: 50%;
+
+    
+            &_1 {
+                transform: translate(-50%,-50%) rotate(45deg);
+            }
+
+            &_2 {
+                transform: translate(-50%,-50%) rotate(-45deg);
+            }
+        }
+    }
+}
+
 
 
 .header.__js-fixed {
