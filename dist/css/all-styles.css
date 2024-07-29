@@ -4584,14 +4584,13 @@ a._disabled {
 .goods-list__snegiri {
   display: flex;
   flex-direction: column;
-  border-radius: min(1.67vw, 13px);
-  border: 1px solid #FECCCC;
-  overflow: hidden;
+  flex-shrink: 0;
 }
 .goods-list__snegiri-upper {
   position: relative;
   display: flex;
   justify-content: space-between;
+  flex-shrink: 0;
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
   line-height: normal;
@@ -4602,14 +4601,20 @@ a._disabled {
   line-height: 1.2;
   justify-content: center;
   align-items: center;
+  border-top-right-radius: min(1.67vw, 13px);
+  border-top-left-radius: min(1.67vw, 13px);
   padding: min(0.5vw, 4px) min(1vw, 8px);
   background-color: #FFF5F4;
+  border: 1px solid #FECCCC;
+  overflow: hidden;
 }
 .goods-list__snegiri-upper svg {
+  flex-shrink: 0;
   width: min(1.3vw, 10px);
   height: min(2vw, 16px);
 }
 .goods-list__expire-date {
+  flex-shrink: 0;
   border-top: 1px solid #FECCCC;
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -4617,6 +4622,10 @@ a._disabled {
   font-size: min(1.67vw, 13px);
   color: #ED7D7D;
   padding: min(1vw, 8px);
+  border-bottom-right-radius: min(1.67vw, 13px);
+  border-bottom-left-radius: min(1.67vw, 13px);
+  border: 1px solid #FECCCC;
+  overflow: hidden;
 }
 .goods-list__schema {
   display: flex;
@@ -4874,7 +4883,7 @@ a._disabled {
 }
 .goods-list__wrapper[data-temp=grid] .goods-list__item {
   margin-bottom: 2%;
-  width: 48%;
+  width: 49%;
   border-radius: min(4.2vw, 32px);
   gap: 1vw;
   flex-wrap: wrap;
@@ -4920,6 +4929,7 @@ a._disabled {
 }
 .goods-list__wrapper[data-temp=grid] .goods-list__schema {
   min-height: min(8.5vw, 65px);
+  gap: min(1vw, 8px);
 }
 .goods-list__wrapper[data-temp=grid] .goods-list__info {
   padding: 0 min(2.5vw, 19px);
@@ -4928,6 +4938,9 @@ a._disabled {
   gap: min(1.3vw, 10px);
   justify-content: space-between;
   align-items: start;
+}
+.goods-list__wrapper[data-temp=grid] .goods-list__snegiri-upper {
+  height: min(4.1vw, 31px);
 }
 .goods-list__wrapper[data-temp=grid] .goods-list__own-production {
   display: block;
@@ -4951,9 +4964,9 @@ a._disabled {
   line-height: 1;
 }
 .goods-list__wrapper[data-temp=grid] .goods-list__discount {
-  width: min(5.6vw, 43px);
+  width: min(5.64vw, 43px);
+  height: min(4.1vw, 31px);
   font-size: min(1.8vw, 14px);
-  padding-left: 4px 0;
 }
 .goods-list__wrapper[data-temp=grid] .goods-list__stock-block {
   font-size: min(2.5vw, 19px);
@@ -4993,11 +5006,11 @@ a._disabled {
   display: flex;
 }
 .goods-list__price {
-  margin-right: min(1vw, 8px);
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: 600;
   line-height: normal;
   color: #240405;
+  margin-right: min(0.5vw, 4px);
 }
 .goods-list__price_list {
   font-size: min(3.1vw, 24px);

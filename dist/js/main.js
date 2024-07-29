@@ -69,6 +69,7 @@ var popups = {
     headerElements.makeBurgerActive();
   },
   'search': {
+    // overlay: document.querySelector('#search-overlay_______2'),
     overlay: document.querySelector('#search-overlay'),
     input: document.querySelector('.__js-searchInput'),
     open: function open() {
@@ -581,22 +582,25 @@ if (viewSelector) {
   });
 }
 var activeFullScreenOverlay = document.querySelector(".overlay-full-screen.__js-active");
-console.log(activeFullScreenOverlay);
-var closeBlocks = activeFullScreenOverlay.querySelectorAll('.js_close-overlay-full-screen');
-closeBlocks.forEach(function (block) {
-  block.addEventListener('click', function () {
-    activeFullScreenOverlay.classList.remove('__js-active');
-    document.body.style.overflow = 'auto';
+if (activeFullScreenOverlay) {
+  var closeBlocks = activeFullScreenOverlay.querySelectorAll('.js_close-overlay-full-screen');
+  closeBlocks.forEach(function (block) {
+    block.addEventListener('click', function () {
+      activeFullScreenOverlay.classList.remove('__js-active');
+      document.body.style.overflow = 'auto';
+    });
   });
-});
+}
 var openFullScreenModalBtns = document.querySelectorAll(".js-openFullScreenModal");
-openFullScreenModalBtns.forEach(function (b) {
-  b.addEventListener('click', function () {
-    var id = b.dataset.fullscreenmodal;
-    openFullScreenModal(id);
-    addClosingListeners(id);
+if (openFullScreenModalBtns) {
+  openFullScreenModalBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var id = b.dataset.fullscreenmodal;
+      openFullScreenModal(id);
+      addClosingListeners(id);
+    });
   });
-});
+}
 function openFullScreenModal(id) {
   document.querySelector("#".concat(id)).classList.add('__js-active');
   document.body.style.overflow = 'hidden';

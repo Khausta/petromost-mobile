@@ -47,15 +47,16 @@
      &__snegiri {
         display: flex;
         flex-direction: column;
-        border-radius: $size-6and5;
-        border: 1px solid $pink-border;
-        overflow: hidden;
+        flex-shrink: 0;
+        
+        
     }
 
     &__snegiri-upper {
         position: relative;
         display: flex;
         justify-content: space-between;
+        flex-shrink: 0;
         @include gilroy-bold;
         font-size: $size-5px;
         color: $pink-color;
@@ -64,12 +65,16 @@
         line-height: 1.2;
         justify-content: center;
         align-items: center;
-    
+        border-top-right-radius: $size-6and5;
+        border-top-left-radius: $size-6and5;
         padding:  min(0.5vw, 4px) min(1vw, 8px);
         background-color: #FFF5F4;
+        border: 1px solid $pink-border;
+        overflow: hidden;
       
 
         svg {
+            flex-shrink: 0;
             width: min(1.3vw, 10px);
             height: $size-8px;
         }
@@ -77,11 +82,16 @@
     }
 
     &__expire-date {
+        flex-shrink: 0;
         border-top: 1px solid $pink-border;
         @include gilroy-bold;
         font-size: $size-6and5;
         color: $pink-color;
         padding:  min(1vw, 8px);
+        border-bottom-right-radius: $size-6and5;
+        border-bottom-left-radius: $size-6and5;
+        border: 1px solid $pink-border;
+        overflow: hidden;
 
     }
 
@@ -97,9 +107,7 @@
     }
 
     &__price {
-        // margin-bottom: min(1vw, 8px);
         @include gilroy-bold;
-        // font-size: $size-16and25;
         line-height: 1.2;
 
     }
@@ -421,7 +429,7 @@
         .goods-list {
             &__item {
                 margin-bottom: 2%;
-                width: 48%;
+                width: 49%;
                 border-radius: $size-16and25;
                 gap: 1vw;
                 flex-wrap: wrap; 
@@ -479,6 +487,7 @@
 
             &__schema {
                 min-height: min(8.5vw, 65px);
+                gap: min(1vw, 8px);
             }
 
             &__info {
@@ -489,6 +498,10 @@
                 justify-content: space-between;
                 align-items: start;
                 
+            }
+
+            &__snegiri-upper {
+                height: $s16px;
             }
 
             &__own-production {
@@ -509,11 +522,10 @@
             }
 
             &__price {
-                // margin-bottom: min(1vw, 8px);
-                // @include gilroy-bold;
+                
                 font-size: $size-20px;
                 line-height: 1;
-                // line-height: 1.2;
+              
 
             }
 
@@ -522,9 +534,10 @@
             
 
             &__discount {
-                width: min(5.6vw, 43px);
+                width: $s22px;
+                height: $s16px;
                 font-size: min(1.8vw, 14px);
-                padding-left: 4px 0;
+               
             }
 
             &__stock-block {
@@ -585,9 +598,9 @@
    
 
     &__price {
-        margin-right: min(1vw, 8px);
         @include gilroy-semibold;
         color: $black-color;
+        margin-right: min(0.5vw, 4px);
 
         &_list {
             font-size: $size-12px;
@@ -595,24 +608,7 @@
 
     
 
-    }
-
-    // &__discount {
-    //     margin-right: min(1vw, 8px);
-    // }
-
-    // &__snegiri {
-    //     display: block;
-    //     width: $s40px;
-    //     height: $size-16and25;
-
-    // }
-
-   
-
-   
-
-    
+    } 
 
   
 

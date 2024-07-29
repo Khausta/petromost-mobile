@@ -64,6 +64,7 @@ openSearchPopup () {  //логика открытия поиска отличч�
   headerElements.makeBurgerActive();
 },
   'search': {
+    // overlay: document.querySelector('#search-overlay_______2'),
     overlay: document.querySelector('#search-overlay'),
     input: document.querySelector('.__js-searchInput'),
     open: function() {
@@ -652,17 +653,19 @@ if (viewSelector) {
 
 
 const activeFullScreenOverlay = document.querySelector(".overlay-full-screen.__js-active");
-console.log(activeFullScreenOverlay);
 
-  const closeBlocks = activeFullScreenOverlay.querySelectorAll('.js_close-overlay-full-screen');
-  closeBlocks.forEach(block => {
-    block.addEventListener('click', () => {
-      activeFullScreenOverlay.classList.remove('__js-active');
-      document.body.style.overflow = 'auto';
+  if (activeFullScreenOverlay) {
+    const closeBlocks = activeFullScreenOverlay.querySelectorAll('.js_close-overlay-full-screen');
+    closeBlocks.forEach(block => {
+      block.addEventListener('click', () => {
+        activeFullScreenOverlay.classList.remove('__js-active');
+        document.body.style.overflow = 'auto';
+      })
     })
-  })
-
+  }
+ 
 const openFullScreenModalBtns = document.querySelectorAll(".js-openFullScreenModal");
+if (openFullScreenModalBtns) {
 openFullScreenModalBtns.forEach(b => {
   b.addEventListener('click', () => {
     const id = b.dataset.fullscreenmodal;
@@ -670,6 +673,8 @@ openFullScreenModalBtns.forEach(b => {
     addClosingListeners(id);
   })
 })
+
+}
 
 function openFullScreenModal(id) {
   document.querySelector(`#${id}`).classList.add('__js-active');
