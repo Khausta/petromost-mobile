@@ -19,6 +19,12 @@
         background-size: 50%;
         overflow: hidden;
 
+        img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+
        
     }
 
