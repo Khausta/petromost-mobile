@@ -249,7 +249,14 @@
         }
     }
 
-   
+    &__num {
+        width: 100%;
+        @include gilroy-bold;
+        font-size: $size-12px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
 
 
 
@@ -263,6 +270,15 @@
 
         .goods-list {
 
+            &__box-1 {
+                display: flex;
+            }
+
+            &__num {
+                padding-left: min(0.5vw, 6px);
+                padding-right: min(0.5vw, 6px);
+                gap: min(0.4vw, 6px);
+            } 
 
             &__item {
                 width: 100%;
@@ -328,16 +344,11 @@
             &__info {
                 position: relative;
                 max-width: $s193;
-                // margin-right: 2%;
-                // width: 57%;
-                // padding: $size-8px $size-5px min(1.8vw, 14px) $gap-10;
                 padding-top: min(1.4vw, 14px);
                 padding-left: $gap-10;
                 padding-bottom:  min(1.3vw, 14px);
                 display: flex;
                 flex-direction: column;
-                // gap: 2%;
-                // justify-content: space-between;
                 align-items: start;
             }
                 
@@ -431,17 +442,27 @@
                 margin-bottom: 2%;
                 width: 49%;
                 border-radius: $size-16and25;
-                gap: 1vw;
+                // gap: 1vw;
                 flex-wrap: wrap; 
                  
             }
+
+            &__name {
+                margin-bottom: min(1vw, 8px);
+            }
+
+            &__num {
+                padding-left: min(0.5vw, 6px);
+                padding-right: min(0.5vw, 6px);
+                gap: min(0.6vw, 6px);
+            } 
 
             
 
             &__options {
                 position: relative;
                 padding: 0 $gap-10 $size-8px $gap-10;
-               
+                margin-top: auto;
                 width: 100%;
                 z-index: 3;
                 display: flex;
@@ -463,10 +484,12 @@
                 color: $black-color;
                 font-size: $size-12px;
                 width: 100%; 
-                height: $size-32px;
+                // height: $size-32px;
+                height: min(8vw, 60px);
             }
 
             &__add-btn {
+                height: min(8vw, 60px);
                 width: 100%;
             }
 
@@ -483,6 +506,7 @@
             &__cover {
                 width: 100%;
                 height: min(33.33vw, 256px);
+                margin-bottom: min(1vw, 8px);
             }
 
             &__schema {
@@ -494,7 +518,8 @@
                 padding: 0 $gap-10;
                 display: flex;
                 flex-direction: column;
-                gap: $size-5px;
+                // gap: $size-5px;
+                margin-bottom: min(1vw, 8px);
                 justify-content: space-between;
                 align-items: start;
                 
@@ -582,11 +607,15 @@
                     margin-right: 1vw;
                 }
             }
+
+          
         }
     }
 
     &__counter {
         display: none;
+        
+
 
         &.__js-active {
             display: flex;

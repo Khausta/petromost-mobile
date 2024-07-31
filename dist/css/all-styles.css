@@ -534,14 +534,15 @@ button:focus {
   color: #240405;
 }
 .counter__input-mini {
-  padding: 10% 1%;
-  width: 100%;
+  padding: 10% 0;
   background: transparent;
   text-align: center;
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: bold;
   line-height: normal;
   font-size: min(3.1vw, 24px);
+  width: 48%;
+  text-align: right;
 }
 .counter__input-mini::-moz-placeholder {
   color: #240405;
@@ -4761,11 +4762,29 @@ a._disabled {
   width: min(2vw, 16px);
   height: min(2vw, 16px);
 }
+.goods-list__num {
+  width: 100%;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(3.1vw, 24px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 .goods-list__wrapper[data-temp=list] {
   gap: min(2.5vw, 19px);
 }
 .goods-list__wrapper[data-temp=list] .like {
   display: none;
+}
+.goods-list__wrapper[data-temp=list] .goods-list__box-1 {
+  display: flex;
+}
+.goods-list__wrapper[data-temp=list] .goods-list__num {
+  padding-left: min(0.5vw, 6px);
+  padding-right: min(0.5vw, 6px);
+  gap: min(0.4vw, 6px);
 }
 .goods-list__wrapper[data-temp=list] .goods-list__item {
   width: 100%;
@@ -4891,12 +4910,20 @@ a._disabled {
   margin-bottom: 2%;
   width: 49%;
   border-radius: min(4.2vw, 32px);
-  gap: 1vw;
   flex-wrap: wrap;
+}
+.goods-list__wrapper[data-temp=grid] .goods-list__name {
+  margin-bottom: min(1vw, 8px);
+}
+.goods-list__wrapper[data-temp=grid] .goods-list__num {
+  padding-left: min(0.5vw, 6px);
+  padding-right: min(0.5vw, 6px);
+  gap: min(0.6vw, 6px);
 }
 .goods-list__wrapper[data-temp=grid] .goods-list__options {
   position: relative;
   padding: 0 min(2.5vw, 19px) min(2vw, 16px) min(2.5vw, 19px);
+  margin-top: auto;
   width: 100%;
   z-index: 3;
   display: flex;
@@ -4917,9 +4944,10 @@ a._disabled {
   color: #240405;
   font-size: min(3.1vw, 24px);
   width: 100%;
-  height: min(8.2vw, 63px);
+  height: min(8vw, 60px);
 }
 .goods-list__wrapper[data-temp=grid] .goods-list__add-btn {
+  height: min(8vw, 60px);
   width: 100%;
 }
 .goods-list__wrapper[data-temp=grid] .goods-list__btn {
@@ -4932,6 +4960,7 @@ a._disabled {
 .goods-list__wrapper[data-temp=grid] .goods-list__cover {
   width: 100%;
   height: min(33.33vw, 256px);
+  margin-bottom: min(1vw, 8px);
 }
 .goods-list__wrapper[data-temp=grid] .goods-list__schema {
   min-height: min(8.5vw, 65px);
@@ -4941,7 +4970,7 @@ a._disabled {
   padding: 0 min(2.5vw, 19px);
   display: flex;
   flex-direction: column;
-  gap: min(1.3vw, 10px);
+  margin-bottom: min(1vw, 8px);
   justify-content: space-between;
   align-items: start;
 }

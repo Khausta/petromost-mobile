@@ -589,12 +589,14 @@ button:focus {
     }
 
     &__input-mini {
-        padding: 10% 1%;
-        width: 100%;
+        padding: 10% 0;
+        // width: 100%;
         background: transparent;
         text-align: center;
         @include gilroy-bold;
         font-size: $size-12px;
+        width: 48%;
+        text-align: right;
 
         &::placeholder {
             color: $black-color;

@@ -64,8 +64,8 @@ openSearchPopup () {  //логика открытия поиска отличч�
   headerElements.makeBurgerActive();
 },
   'search': {
-    // overlay: document.querySelector('#search-overlay_______2'),
-    overlay: document.querySelector('#search-overlay'),
+    overlay: document.querySelector('#search-overlay_______2'),
+    // overlay: document.querySelector('#search-overlay'),
     input: document.querySelector('.__js-searchInput'),
     open: function() {
       popups.closeAllPopups();
