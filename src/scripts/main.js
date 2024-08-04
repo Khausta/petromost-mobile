@@ -702,7 +702,6 @@ const profilePassEls = {
   saveBtn: document.querySelector('#profile-data-save-btn'),
 }
 
-console.log(profilePassEls.newPassword, profilePassEls.repeatedNewPassword);
 function compareNewPasswords() {
   let pass1 =  profilePassEls.newPassword.value;
   let pass2 = profilePassEls.repeatedNewPassword.value;
@@ -717,7 +716,6 @@ function compareNewPasswords() {
 }
 
 function removeErr() {
-  console.log('works');
   profilePassEls.repeatedNewPassword.classList.remove('js-err');
     const parentBox = profilePassEls.repeatedNewPassword.parentElement;
     parentBox.nextElementSibling.classList.remove('js-err');
@@ -726,12 +724,13 @@ function removeErr() {
     profilePassEls.repeatedNewPassword.removeEventListener('input', removeErr);
 }
 
-profilePassEls.saveBtn.addEventListener('click', () => {
-  // console.log('works');
-  compareNewPasswords();
-})
+if (profilePassEls.saveBtn) {
+  profilePassEls.saveBtn.addEventListener('click', () => {
+    compareNewPasswords();
+  })
+}
 
-// profilePassEls.repeatedNewPassword.nextElementSibling.classList.add('js-err');
+
 
 
 

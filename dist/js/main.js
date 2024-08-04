@@ -625,7 +625,6 @@ var profilePassEls = {
   repeatedNewPassword: document.querySelector('input[name="repeated-new-password"]'),
   saveBtn: document.querySelector('#profile-data-save-btn')
 };
-console.log(profilePassEls.newPassword, profilePassEls.repeatedNewPassword);
 function compareNewPasswords() {
   var pass1 = profilePassEls.newPassword.value;
   var pass2 = profilePassEls.repeatedNewPassword.value;
@@ -639,7 +638,6 @@ function compareNewPasswords() {
   }
 }
 function removeErr() {
-  console.log('works');
   profilePassEls.repeatedNewPassword.classList.remove('js-err');
   var parentBox = profilePassEls.repeatedNewPassword.parentElement;
   parentBox.nextElementSibling.classList.remove('js-err');
@@ -647,10 +645,9 @@ function removeErr() {
   menuContent.style.maxHeight = menuContent.scrollHeight + 'px';
   profilePassEls.repeatedNewPassword.removeEventListener('input', removeErr);
 }
-profilePassEls.saveBtn.addEventListener('click', function () {
-  // console.log('works');
-  compareNewPasswords();
-});
-
-// profilePassEls.repeatedNewPassword.nextElementSibling.classList.add('js-err');
+if (profilePassEls.saveBtn) {
+  profilePassEls.saveBtn.addEventListener('click', function () {
+    compareNewPasswords();
+  });
+}
 //# sourceMappingURL=main.js.map
