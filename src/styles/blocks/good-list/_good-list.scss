@@ -1,6 +1,6 @@
 .goods-list {
     padding-top: $size-8px;
-
+    padding-bottom: min(18vw, 138px);
 
     .like {
         position: absolute;
@@ -373,12 +373,8 @@
             }
 
             &__price {
-                // margin-bottom: min(1vw, 8px);
-                // @include gilroy-bold;
                 font-size: $size-16and25;
-                // line-height: 1.2;
                 line-height: 100%;
-
             }
 
             &__old-price {
@@ -411,13 +407,9 @@
                 gap: 3%;
             }
 
-
-
-         
-
-            
-
-           
+            &__benefit {
+                padding: 1% 7%;
+            } 
         }
 
         .good__name {

@@ -867,6 +867,54 @@ a._disabled {
   }
 
 
+  .checkbox-wrapper {
+    padding: $gap-10;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(2) {
+        border-left: 1px solid $beige-color;
+        border-right: 1px solid $beige-color;
+    }
+
+    &__name {
+        @include gilroy-semibold;
+        font-size: $s16px;
+        color: $black-color;
+        padding-right: $gap-10;
+
+    }
+  }
+
+  .checkbox-input {
+
+    &__input {
+        display: none;
+    }
+
+    &__wrapper {
+        padding: 0 min(0.8vw, 7px);
+        display: flex;
+        align-items: center;
+        width: $s28px;
+        height: $s16px;
+        background-color: #E1C4AA;
+        border-radius: $gap-10; 
+        transition: all .2s ease-in-out;
+    }
+
+    &__round {
+       width: $gap-10; 
+       height: $gap-10; 
+       background-color: $white-bg-color;
+       border-radius: 100%;
+    }
+
+    &__input:checked + .checkbox-input__wrapper{
+        background-color: $red-color;
+        justify-content: end;
+    }
+  }
 
 
 @import './components/save-btn';

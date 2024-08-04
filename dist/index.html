@@ -1359,7 +1359,7 @@
                     </li>
                     
                     <li class="menu__li">
-                        <a href="#" class="menu-link flex-box">
+                        <a href="#" class="menu__li-with-content menu-link flex-box">
                             <div class="menu-link__title">
                                 <h5>Уведомления</h5>
                             </div>
@@ -1367,9 +1367,130 @@
                                 <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                             </span>
                         </a>
+                        <div class="menu__content">
+                            <div class="menu__container">
+                                <p class="message__text menu__subtitle-text">
+                                    Поступил товар
+                                </p>
+                                <div class="white-box white-box_profile-data">
+                                    <div class="checkbox-wrapper">
+                                        <p class="checkbox-wrapper__name">
+                                            Email
+                                        </p>
+                                        <label class="checkbox-input">
+                                            <input class="checkbox-input__input" type="checkbox" name="receipt-email">
+                                            <div class="checkbox-input__wrapper">
+                                                <div class="checkbox-input__round"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-wrapper">
+                                        <p class="checkbox-wrapper__name">
+                                            WhatsApps
+                                        </p>
+                                        <label class="checkbox-input">
+                                            <input class="checkbox-input__input" type="checkbox" name="receipt-whatsapps">
+                                            <div class="checkbox-input__wrapper">
+                                                <div class="checkbox-input__round"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-wrapper">
+                                        <p class="checkbox-wrapper__name">
+                                            СМС
+                                        </p>
+                                        <label class="checkbox-input">
+                                            <input class="checkbox-input__input" type="checkbox" name="receipt-sms">
+                                            <div class="checkbox-input__wrapper">
+                                                <div class="checkbox-input__round"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <p class="message__text menu__subtitle-text">
+                                    Заканчивается акция на товар в корзине
+                                </p>
+                                <div class="white-box white-box_profile-data">
+                                    <div class="checkbox-wrapper">
+                                        <p class="checkbox-wrapper__name">
+                                            Email
+                                        </p>
+                                        <label class="checkbox-input">
+                                            <input class="checkbox-input__input" type="checkbox" name="discount-end-email">
+                                            <div class="checkbox-input__wrapper">
+                                                <div class="checkbox-input__round"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-wrapper">
+                                        <p class="checkbox-wrapper__name">
+                                            WhatsApps
+                                        </p>
+                                        <label class="checkbox-input">
+                                            <input class="checkbox-input__input" type="checkbox" name="discount-end-whatsapps">
+                                            <div class="checkbox-input__wrapper">
+                                                <div class="checkbox-input__round"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-wrapper">
+                                        <p class="checkbox-wrapper__name">
+                                            СМС
+                                        </p>
+                                        <label class="checkbox-input">
+                                            <input class="checkbox-input__input" type="checkbox" name="discount-end-sms">
+                                            <div class="checkbox-input__wrapper">
+                                                <div class="checkbox-input__round"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <p class="message__text menu__subtitle-text">
+                                    Информирование о статусах заказа
+                                </p>
+                                <div class="white-box white-box_profile-data">
+                                    <div class="checkbox-wrapper">
+                                        <p class="checkbox-wrapper__name">
+                                            Email
+                                        </p>
+                                        <label class="checkbox-input">
+                                            <input class="checkbox-input__input" type="checkbox" name="status-info-email">
+                                            <div class="checkbox-input__wrapper">
+                                                <div class="checkbox-input__round"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-wrapper">
+                                        <p class="checkbox-wrapper__name">
+                                            WhatsApps
+                                        </p>
+                                        <label class="checkbox-input">
+                                            <input class="checkbox-input__input" type="checkbox" name="status-info-whatsapps">
+                                            <div class="checkbox-input__wrapper">
+                                                <div class="checkbox-input__round"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-wrapper">
+                                        <p class="checkbox-wrapper__name">
+                                            СМС
+                                        </p>
+                                        <label class="checkbox-input">
+                                            <input class="checkbox-input__input" type="checkbox" name="status-info-sms">
+                                            <div class="checkbox-input__wrapper">
+                                                <div class="checkbox-input__round"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                               
+
+
+                            </div>
+                        </div>
                     </li>
                     <li class="menu__li">
-                        <a href="#" class="menu-link flex-box">
+                        <a href="#" class="menu__li-with-content menu-link flex-box">
                             <div class="menu-link__title">
                                 <h5>Безопасность</h5>
                             </div>
@@ -1377,9 +1498,32 @@
                                 <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
                             </span>
                         </a>
+                        <div class="menu__content">
+                            <div class="menu__container">
+                                <p class="message__text menu__subtitle-text">
+                                    Сменить пароль
+                                </p>
+                                <div class="input-box">
+                                    <input class="input-box__input" type="password" name="new-password" placeholder="Новый пароль" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <input class="input-box__input" type="password" name="repeated-new-password" placeholder="Повторите новый пароль" value>
+                                    <div class="input-box__cross">
+                                        <img class="object-fit-contain" src="./img/icons/cross.svg" alt="Иконка удаления">
+                                    </div>
+                                   
+                                </div>
+                                <p class="input-box__err-text">
+                                    пароли не совпадают
+                                </p>
+                            </div>
+                        </div>
                     </li>
                 </ul>
-                <button class="button save-btn">Сохранить изменения</button>
+                <button id="profile-data-save-btn" class="button save-btn">Сохранить изменения</button>
             </div>
         </div>
 

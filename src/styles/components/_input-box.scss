@@ -28,6 +28,10 @@
         &#user-phone, &#user-email {
             background: none;
         }
+
+        &.js-err {
+            border: 1px solid $red-color;
+        }
     
     
     
@@ -47,4 +51,20 @@
             transform: translateY(-50%) rotate3d(0, 0, 2, 45deg);
         }
     }
+
+    &__err-text {
+        display: none;
+        padding-left: $size-8px;
+        @include gilroy-semibold;
+        font-size: $size-16and25; 
+        color: $red-color;
+
+        &.js-err {
+            display: block;
+        }
+    }
+
+
 }
+
+

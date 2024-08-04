@@ -96,6 +96,11 @@
     &__container {
         padding: $size-13px;
     }
+
+    &__subtitle-text {
+        margin-left: $size-8px;
+        margin-bottom: $size-13px;
+    }
 }
 
 .address {

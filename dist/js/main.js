@@ -618,4 +618,39 @@ function addClosingListeners(id) {
     });
   });
 }
+
+// проверка соответствия нового пароля
+var profilePassEls = {
+  newPassword: document.querySelector('input[name="new-password"]'),
+  repeatedNewPassword: document.querySelector('input[name="repeated-new-password"]'),
+  saveBtn: document.querySelector('#profile-data-save-btn')
+};
+console.log(profilePassEls.newPassword, profilePassEls.repeatedNewPassword);
+function compareNewPasswords() {
+  var pass1 = profilePassEls.newPassword.value;
+  var pass2 = profilePassEls.repeatedNewPassword.value;
+  if (pass1 !== pass2) {
+    profilePassEls.repeatedNewPassword.classList.add('js-err');
+    var parentBox = profilePassEls.repeatedNewPassword.parentElement;
+    parentBox.nextElementSibling.classList.add('js-err');
+    var menuContent = parentBox.closest('.menu__content');
+    menuContent.style.maxHeight = menuContent.scrollHeight + 'px';
+    profilePassEls.repeatedNewPassword.addEventListener('input', removeErr);
+  }
+}
+function removeErr() {
+  console.log('works');
+  profilePassEls.repeatedNewPassword.classList.remove('js-err');
+  var parentBox = profilePassEls.repeatedNewPassword.parentElement;
+  parentBox.nextElementSibling.classList.remove('js-err');
+  var menuContent = parentBox.closest('.menu__content');
+  menuContent.style.maxHeight = menuContent.scrollHeight + 'px';
+  profilePassEls.repeatedNewPassword.removeEventListener('input', removeErr);
+}
+profilePassEls.saveBtn.addEventListener('click', function () {
+  // console.log('works');
+  compareNewPasswords();
+});
+
+// profilePassEls.repeatedNewPassword.nextElementSibling.classList.add('js-err');
 //# sourceMappingURL=main.js.map

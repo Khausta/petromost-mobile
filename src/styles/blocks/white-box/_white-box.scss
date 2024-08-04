@@ -15,6 +15,14 @@
     color: $black-color;
     font-size: $size-14px;
 
+    &_profile-data {
+        padding: $size-8px;  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: $size-20px;
+    }
+
   
     
 

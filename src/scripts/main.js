@@ -54,15 +54,13 @@ const popups = {
       state.openedPopups[el] = false;
     }  
   },
-  
- 
-openSearchPopup () {  //логика открытия поиска отличчается, поэтому создана отдельная функция
-  popups.search.open();
-  headerElements.toFixHeader();
-  popups.search.input.classList.add('__js-searchInput_active');
-  popups.search.input.parentElement.classList.add('__js-headerSearch_active');
-  headerElements.makeBurgerActive();
-},
+  openSearchPopup () {  //логика открытия поиска отличчается, поэтому создана отдельная функция
+    popups.search.open();
+    headerElements.toFixHeader();
+    popups.search.input.classList.add('__js-searchInput_active');
+    popups.search.input.parentElement.classList.add('__js-headerSearch_active');
+    headerElements.makeBurgerActive();
+  },
   'search': {
     overlay: document.querySelector('#search-overlay_______2'),
     // overlay: document.querySelector('#search-overlay'),
@@ -695,6 +693,46 @@ function addClosingListeners(id) {
     })
   })
 }
+
+
+// проверка соответствия нового пароля
+const profilePassEls = {
+  newPassword: document.querySelector('input[name="new-password"]'),
+  repeatedNewPassword: document.querySelector('input[name="repeated-new-password"]'),
+  saveBtn: document.querySelector('#profile-data-save-btn'),
+}
+
+console.log(profilePassEls.newPassword, profilePassEls.repeatedNewPassword);
+function compareNewPasswords() {
+  let pass1 =  profilePassEls.newPassword.value;
+  let pass2 = profilePassEls.repeatedNewPassword.value;
+  if (pass1 !== pass2) {
+    profilePassEls.repeatedNewPassword.classList.add('js-err');
+    const parentBox = profilePassEls.repeatedNewPassword.parentElement;
+    parentBox.nextElementSibling.classList.add('js-err');
+    const menuContent = parentBox.closest('.menu__content');
+    menuContent.style.maxHeight = menuContent.scrollHeight + 'px';
+    profilePassEls.repeatedNewPassword.addEventListener('input', removeErr);
+  }
+}
+
+function removeErr() {
+  console.log('works');
+  profilePassEls.repeatedNewPassword.classList.remove('js-err');
+    const parentBox = profilePassEls.repeatedNewPassword.parentElement;
+    parentBox.nextElementSibling.classList.remove('js-err');
+    const menuContent = parentBox.closest('.menu__content');
+    menuContent.style.maxHeight = menuContent.scrollHeight + 'px';
+    profilePassEls.repeatedNewPassword.removeEventListener('input', removeErr);
+}
+
+profilePassEls.saveBtn.addEventListener('click', () => {
+  // console.log('works');
+  compareNewPasswords();
+})
+
+// profilePassEls.repeatedNewPassword.nextElementSibling.classList.add('js-err');
+
 
 
 
