@@ -316,10 +316,29 @@
             display: none;
         }
 
+        
+
         .goods-list {
 
             &__box-1 {
                 display: flex;
+            }
+
+            &__box-2 {
+                display: flex;
+            }
+
+            &__name {
+                max-height: min(7.4vw, 57px);
+                overflow: hidden;
+            }
+
+            &__name-list {
+                display: block;
+            }
+
+            &__name-grid {
+                display: none;
             }
 
             &__num {
@@ -341,7 +360,7 @@
                 padding-right: min(1.7vw, 13px);
                 padding-top: min(1.8vw, 14.2px);
                 padding-bottom: min(1.8vw, 14.2px);
-                width: 25.4%;
+                width: 33%;
                 z-index: 3;
                 display: flex;
                 flex-direction: column;
@@ -389,11 +408,19 @@
                 border-right: 1px solid $beige-color;
             }
 
+            &__info-schema {
+                padding-left: $gap-10;
+                padding-right: min(1vw, 8px);
+                max-width: $s193;
+                padding-top: min(1.4vw, 14px);
+                padding-bottom:  min(1.3vw, 14px);
+
+            }
+
             &__info {
                 position: relative;
                 max-width: $s193;
                 padding-top: min(1.4vw, 14px);
-                padding-left: $gap-10;
                 padding-bottom:  min(1.3vw, 14px);
                 display: flex;
                 flex-direction: column;
@@ -487,8 +514,27 @@
                  
             }
 
+            &__box-2 {
+                margin-top: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+            }
+
             &__name {
                 margin-bottom: min(1vw, 8px);
+                
+            }
+
+            &__name-list {
+                display: none;
+            }
+
+            &__name-grid {
+                display: block;
+                padding: 0 $gap-10;
+                width: 100%;
             }
 
             &__num {
@@ -556,6 +602,7 @@
 
             &__info {
                 padding: 0 $gap-10;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 // gap: $size-5px;
@@ -659,6 +706,16 @@
 
         &.__js-active {
             display: flex;
+        }
+    }   
+
+    &__add-btn {
+        display: none;
+        
+
+
+        &.__js-active {
+            display: block;
         }
     }   
 

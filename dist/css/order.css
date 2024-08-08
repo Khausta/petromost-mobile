@@ -2764,7 +2764,8 @@ a._disabled {
 }
 .big-card__snegiri {
   width: min(20vw, 154px);
-  height: min(16.4vw, 126px);
+  height: -moz-min-content;
+  height: min-content;
   border: 1px solid #FECCCC;
   border-radius: min(2.5vw, 19px);
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
@@ -2781,10 +2782,12 @@ a._disabled {
 .big-card__snegiri-upper {
   background-color: #FFF5F4;
   height: 50%;
-  border-bottom: 1px solid #FECCCC;
+  height: min(8.2vw, 63px);
 }
 .big-card__expire-date {
+  border-top: 1px solid #FECCCC;
   height: 50%;
+  height: min(8.2vw, 63px);
 }
 .big-card__snegiri-upper, .big-card__expire-date {
   display: flex;

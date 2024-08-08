@@ -81,12 +81,14 @@
 
     &__snegiri {
         width: $s78px;
-        height: min(16.4vw, 126px);
+        height: min-content;
+        // height: min(16.4vw, 126px);
         border: 1px solid $pink-border;
         border-radius: $gap-10;
         @include gilroy-bold;
         font-size: $gap-10;
         color: $pink-color;
+
         overflow: hidden;
 
         svg {
@@ -98,12 +100,15 @@
     &__snegiri-upper {
         background-color: #FFF5F4;
         height: 50%;
-        border-bottom: 1px solid $pink-border;
+        height: min(8.2vw, 63px);
+        // border-bottom: 1px solid $pink-border;
         
     }
 
     &__expire-date {
+        border-top: 1px solid $pink-border;
         height: 50%;
+        height: min(8.2vw, 63px);
     }
 
     &__snegiri-upper, &__expire-date {
