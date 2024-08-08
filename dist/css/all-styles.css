@@ -13,6 +13,13 @@
   font-weight: 600;
   font-style: normal;
 }
+@font-face {
+  font-family: "Gilroy";
+  src: url("Gilroy-Medium.eot");
+  src: local("../../Gilroy/Gilroy Medium"), local("../../Gilroy/Gilroy-Medium"), url("../fonts/Gilroy/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
 * {
   padding: 0;
   margin: 0;
@@ -3795,6 +3802,25 @@ a._disabled {
   margin-bottom: 0;
   justify-content: space-between;
 }
+.big-card__price {
+  display: flex;
+  gap: 1vw;
+}
+.big-card__price_basic {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(10.2vw, 79px);
+  line-height: 80%;
+}
+.big-card__price_pennies {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: normal;
+  font-size: min(5.8vw, 44px);
+  line-height: 80%;
+  vertical-align: top;
+}
 .big-card__snegiri {
   width: min(20vw, 154px);
   height: min(16.4vw, 126px);
@@ -4661,6 +4687,9 @@ a._disabled {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  border-radius: min(1.67vw, 13px);
+  border: 1px solid #FECCCC;
+  overflow: hidden;
 }
 .goods-list__snegiri-upper {
   position: relative;
@@ -4677,11 +4706,8 @@ a._disabled {
   line-height: 1.2;
   justify-content: center;
   align-items: center;
-  border-top-right-radius: min(1.67vw, 13px);
-  border-top-left-radius: min(1.67vw, 13px);
   padding: min(0.5vw, 4px) min(1vw, 8px);
   background-color: #FFF5F4;
-  border: 1px solid #FECCCC;
   overflow: hidden;
 }
 .goods-list__snegiri-upper svg {
@@ -4698,9 +4724,7 @@ a._disabled {
   font-size: min(1.67vw, 13px);
   color: #ED7D7D;
   padding: min(1vw, 8px);
-  border-bottom-right-radius: min(1.67vw, 13px);
-  border-bottom-left-radius: min(1.67vw, 13px);
-  border: 1px solid #FECCCC;
+  border-top: 1px solid #FECCCC;
   overflow: hidden;
 }
 .goods-list__schema {
@@ -4717,14 +4741,51 @@ a._disabled {
   font-weight: bold;
   line-height: normal;
   line-height: 1.2;
+  display: flex;
+  gap: 0.3vw;
+}
+.goods-list__price_basic {
+  line-height: 100%;
+  vertical-align: top;
+}
+.goods-list__price_pennies {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: normal;
+  line-height: 1.36;
+  font-size: min(2.5vw, 19px);
+  vertical-align: top;
 }
 .goods-list__old-price {
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
   font-size: min(2vw, 16px);
   line-height: 1.1;
   color: #BE957D;
+}
+.goods-list__old-price_basic {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  line-height: 100%;
+}
+.goods-list__old-price_pennies {
+  line-height: 100%;
+}
+.goods-list__old-price-throw {
+  position: relative;
+}
+.goods-list__old-price-throw::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #BE957D;
 }
 .goods-list__benefit {
   display: none;

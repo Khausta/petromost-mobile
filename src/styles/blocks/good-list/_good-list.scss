@@ -48,6 +48,9 @@
         display: flex;
         flex-direction: column;
         flex-shrink: 0;
+        border-radius: $size-6and5;
+        border: 1px solid $pink-border;
+        overflow: hidden;
         
         
     }
@@ -65,11 +68,11 @@
         line-height: 1.2;
         justify-content: center;
         align-items: center;
-        border-top-right-radius: $size-6and5;
-        border-top-left-radius: $size-6and5;
+        // border-top-right-radius: $size-6and5;
+        // border-top-left-radius: $size-6and5;
         padding:  min(0.5vw, 4px) min(1vw, 8px);
         background-color: #FFF5F4;
-        border: 1px solid $pink-border;
+        // border: 1px solid $pink-border;
         overflow: hidden;
       
 
@@ -88,9 +91,9 @@
         font-size: $size-6and5;
         color: $pink-color;
         padding:  min(1vw, 8px);
-        border-bottom-right-radius: $size-6and5;
-        border-bottom-left-radius: $size-6and5;
-        border: 1px solid $pink-border;
+        // border-bottom-right-radius: $size-6and5;
+        // border-bottom-left-radius: $size-6and5;
+        border-top: 1px solid $pink-border;
         overflow: hidden;
 
     }
@@ -109,14 +112,59 @@
     &__price {
         @include gilroy-bold;
         line-height: 1.2;
+        display: flex;
+        gap: 0.3vw;
+
+        &_basic {
+            line-height: 100%;
+            vertical-align: top;
+        }
+
+        &_pennies {
+            @include gilroy-medium;
+            line-height: 1.36;
+            font-size: $gap-10;
+            vertical-align: top;
+        }
 
     }
 
     &__old-price {
-        @include gilroy-semibold;
+      
+        @include gilroy-medium;
         font-size: $size-8px;
         line-height: 1.1;
         color: $brown-color;
+
+        &_basic {
+            @include gilroy-bold;
+            line-height: 100%;
+            // vertical-align: top;
+        }
+        
+        &_pennies {
+            // @include gilroy-medium;
+            line-height: 100%;
+            // line-height: 1.36;
+            // font-size: $gap-10;
+            // vertical-align: top;
+        }
+    }
+
+    &__old-price-throw {
+        position: relative;
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 0.6px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $brown-color;
+            
+        }
     }
 
     &__benefit {

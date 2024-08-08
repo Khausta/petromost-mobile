@@ -13,6 +13,13 @@
   font-weight: 600;
   font-style: normal;
 }
+@font-face {
+  font-family: "Gilroy";
+  src: url("Gilroy-Medium.eot");
+  src: local("../../Gilroy/Gilroy Medium"), local("../../Gilroy/Gilroy-Medium"), url("../fonts/Gilroy/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
 * {
   padding: 0;
   margin: 0;
@@ -2735,6 +2742,25 @@ a._disabled {
   align-items: flex-start;
   margin-bottom: 0;
   justify-content: space-between;
+}
+.big-card__price {
+  display: flex;
+  gap: 1vw;
+}
+.big-card__price_basic {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(10.2vw, 79px);
+  line-height: 80%;
+}
+.big-card__price_pennies {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: normal;
+  font-size: min(5.8vw, 44px);
+  line-height: 80%;
+  vertical-align: top;
 }
 .big-card__snegiri {
   width: min(20vw, 154px);

@@ -57,6 +57,26 @@
         align-items: flex-start;
         margin-bottom: 0;
         justify-content: space-between;
+        
+
+        
+    }
+
+    &__price {
+        display: flex;
+        gap: 1vw;
+        &_basic {
+            @include gilroy-bold;
+            font-size: min(10.2vw, 79px);
+            line-height: 80%;
+        }
+
+        &_pennies {
+            @include gilroy-medium;
+            font-size: min(5.8vw, 44px);
+            line-height: 80%;
+            vertical-align: top;
+        }
     }
 
     &__snegiri {
