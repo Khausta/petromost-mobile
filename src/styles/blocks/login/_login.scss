@@ -215,4 +215,19 @@
     &__policy-checkbox:checked +  &__checkbox-wrapper::after {
         display: block;
     }
+
+    button {
+       background-color: $red-color;
+       color: $white-bg-color; 
+    }
+
+    
+    button[disabled] {
+        color: $brown-color;
+        background-color: $beige-color;
+    }
+
+    
+    
+    
 }

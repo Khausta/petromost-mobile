@@ -174,6 +174,7 @@ function openAnyModal(modalName) {
   headerElements.toFixHeader();
   var modalOverlay = document.querySelector("#".concat(modalName));
   var modalContent = modalOverlay.querySelector('.popup');
+  console.log(modalContent);
   // const returnBtn = modalOverlay.querySelector('.return-btn');
   modalOverlay.classList.add('__js-active');
   modalContent.addEventListener('scroll', function () {
@@ -648,6 +649,55 @@ function removeErr() {
 if (profilePassEls.saveBtn) {
   profilePassEls.saveBtn.addEventListener('click', function () {
     compareNewPasswords();
+  });
+}
+
+// функции для добавления и удаления активности кнопки
+function ableBtn(btn) {
+  document.querySelector("".concat(btn)).removeAttribute('disabled');
+}
+function disableBtn(btn) {
+  document.querySelector("".concat(btn)).setAttribute('disabled', true);
+}
+
+// проверка инпутов при регистрации и добавление активности кнопке
+var registrationPopup = document.querySelector('#login-overlay-registration');
+console.log(registrationPopup);
+if (registrationPopup) {
+  var isValid = false;
+  var registrationInputs = registrationPopup.querySelectorAll('input');
+  console.log(registrationInputs);
+  var phoneInput = registrationPopup.querySelector('input[name="phone"]');
+  var userNameInput = registrationPopup.querySelector('input[name="user-name"]');
+  var checkbox = registrationPopup.querySelector('input[type="checkbox"]');
+  phoneInput.addEventListener('input', function () {
+    console.log(phoneInput.value);
+  });
+  registrationInputs.forEach(function (el) {
+    el.addEventListener('input', function () {
+      if (phoneInput.value !== "") {
+        isValid = true;
+      } else {
+        isValid = false;
+      }
+      if (userNameInput.value !== "") {
+        isValid = true;
+      } else {
+        isValid = false;
+      }
+      if (checkbox.checked) {
+        if (phoneInput.value == "" || userNameInput.value == "") {
+          isValid = false;
+        }
+      } else {
+        isValid = false;
+      }
+      if (isValid) {
+        ableBtn('#registrationBtn');
+      } else {
+        disableBtn('#registrationBtn');
+      }
+    });
   });
 }
 //# sourceMappingURL=main.js.map

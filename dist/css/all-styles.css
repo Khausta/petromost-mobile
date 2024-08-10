@@ -2394,6 +2394,14 @@ a._disabled {
 .login__policy-checkbox:checked + .login__checkbox-wrapper::after {
   display: block;
 }
+.login button {
+  background-color: #DC1E1E;
+  color: #FFFFFF;
+}
+.login button[disabled] {
+  color: #BE957D;
+  background-color: #F5E6D6;
+}
 
 .notification__content {
   position: relative;

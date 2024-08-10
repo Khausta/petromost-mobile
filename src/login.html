@@ -175,7 +175,7 @@
                             <p class="menu-panel__name">Любимое</p>
                         </a>
                     </li>
-                    <li class="menu-panel__item js-show-menu-panel-modal" data-modal="login">
+                    <li class="menu-panel__item js-show-menu-panel-modal" data-modal="login-overlay-registration">
                         <div class="menu-panel__link flex-box js-show-menu-panel-modal" >
                             <div class="menu-panel__icon-block flex-box">
                                 <div class="menu-panel__icon">
@@ -1633,7 +1633,7 @@
         <!-- Регистрация -->
 
         <!-- Вход 3 Регистрация Форма -->
-        <div class="overlay" id="login-overlay_12">
+        <div class="overlay" id="login-overlay-registration">
             <div class="popup login" id="login-popup">
                 
                 <div class="login__block">
@@ -1650,16 +1650,16 @@
                         <div class="login__inputs">
                             <!-- <p class="login__error-text">*неверно введен код</p> -->
                             <div class="login__input-wrapper">
-                                <input class="input login__input " type="text" name="phone" placeholder="Телефон">
+                                <input class="input login__input " type="text" name="phone" placeholder="Телефон" value>
                             </div>
                             <div class="login__input-wrapper">
-                                <input class="input login__input" type="text" name="user-name" placeholder="Ваше Имя">
+                                <input class="input login__input" type="text" name="user-name" placeholder="Ваше Имя" value>
                             </div>
-                            <button class="button login__btn brown-bg login__btn_big-text">Продолжить</button>
+                            <button class="button login__btn brown-bg login__btn_big-text" disabled="true" id="registrationBtn">Продолжить</button>
                             <div class="login__policy easy-border">
                            
                                     <label class="">
-                                        <input class="login__policy-checkbox" type="checkbox" class="input">
+                                        <input class="login__policy-checkbox" type="checkbox" class="input" value>
                                         <div class="login__checkbox-wrapper">
 
                                         </div>

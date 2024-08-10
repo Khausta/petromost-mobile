@@ -179,6 +179,7 @@ function openAnyModal(modalName) {
   headerElements.toFixHeader();
   const modalOverlay = document.querySelector(`#${modalName}`);
   const modalContent = modalOverlay.querySelector('.popup');
+  console.log(modalContent);
   // const returnBtn = modalOverlay.querySelector('.return-btn');
   modalOverlay.classList.add('__js-active');
   modalContent.addEventListener('scroll', () => {
@@ -730,8 +731,55 @@ if (profilePassEls.saveBtn) {
   })
 }
 
+// функции для добавления и удаления активности кнопки
+function ableBtn(btn) {
+  document.querySelector(`${btn}`).removeAttribute('disabled');
+}
+function disableBtn(btn) {
+  document.querySelector(`${btn}`).setAttribute('disabled', true);
+}
 
-
+// проверка инпутов при регистрации и добавление активности кнопке
+const registrationPopup = document.querySelector('#login-overlay-registration');
+console.log(registrationPopup);
+if (registrationPopup) {
+ let isValid = false;
+  const registrationInputs = registrationPopup.querySelectorAll('input');
+  console.log(registrationInputs);
+  const phoneInput = registrationPopup.querySelector('input[name="phone"]');
+  const userNameInput = registrationPopup.querySelector('input[name="user-name"]');
+  const checkbox = registrationPopup.querySelector('input[type="checkbox"]');
+  phoneInput.addEventListener('input', () => {
+    console.log(phoneInput.value);
+  })
+  registrationInputs.forEach(el => {
+    el.addEventListener('input', () => {
+      if (phoneInput.value !== "") {
+        isValid = true;
+      } else {
+        isValid = false;
+      }
+      if(userNameInput.value !== "") {
+        isValid = true;
+      } else {
+        isValid = false;
+      }
+      if (checkbox.checked) {
+        if (phoneInput.value == "" || userNameInput.value == "") {
+          isValid = false;
+        } 
+      }  else {
+        isValid = false;
+      }
+  
+      if (isValid) {
+        ableBtn('#registrationBtn');
+      } else {
+        disableBtn('#registrationBtn');
+      }
+    })
+  })
+}
 
 
 
