@@ -447,6 +447,10 @@ button:focus {
   color: #FFFFFF;
 }
 
+.orange-bg {
+  background-color: #FF8A00;
+}
+
 .beige-bg {
   background-color: #FFFAF5;
   border: 1px solid #F5E6D6;

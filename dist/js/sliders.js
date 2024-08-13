@@ -9,6 +9,18 @@ var bannerSwiper = new Swiper('.banner-swiper', {
     clickable: true
   }
 });
+var storyPopupSwiper = new Swiper('.story-swiper', {
+  spaceBetween: '4%',
+  slidesPerView: 'auto',
+  loop: true,
+  autoplay: {
+    delay: 5000
+  },
+  pagination: {
+    el: ".story-pagination",
+    clickable: true
+  }
+});
 var infoSwiper = new Swiper('.info-swiper', {
   spaceBetween: '2%',
   slidesPerView: 'auto',

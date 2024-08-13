@@ -447,6 +447,10 @@ button:focus {
   color: #FFFFFF;
 }
 
+.orange-bg {
+  background-color: #FF8A00;
+}
+
 .beige-bg {
   background-color: #FFFAF5;
   border: 1px solid #F5E6D6;
@@ -5652,4 +5656,166 @@ a._disabled {
 
 .w48 {
   width: 48%;
+}
+
+/* Базовые стили слоя затемнения и модального окна  */
+.story-overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  display: none;
+  /* фон затемнения */
+  background-color: rgba(0, 0, 0, 0.65);
+  position: fixed; /* фиксированное поцизионирование */
+  cursor: default; /* тип курсара */
+}
+
+/* активируем слой затемнения */
+.story-overlay:target {
+  display: block;
+}
+
+/* стили модального окна */
+.story-popup {
+  top: 0%;
+  left: 500%;
+  font-size: 14px;
+  height: 100vh;
+  width: 100%;
+  min-width: 320px;
+  max-width: 768px;
+  /* фиксированное позиционирование, окно стабильно при прокрутке */
+  position: fixed;
+  border: 1px solid #383838;
+  background: #240405;
+  transition: 0.3s ease-out;
+  z-index: 16;
+}
+.story-popup__header {
+  padding: min(5.1vw, 40px) min(17vw, 130px) min(2.82vw, 22px) min(4.6vw, 38px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(5.1vw, 40px);
+  color: #F5E6D6;
+  line-height: 100%;
+}
+
+/* активируем модальный блок */
+.story-overlay:target + .story-popup {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* формируем кнопку закрытия */
+.close {
+  top: min(3.1vw, 24px);
+  right: min(3.1vw, 24px);
+  width: min(8.2vw, 63px);
+  height: min(8.2vw, 63px);
+  position: absolute;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  transition: all ease 0.8s;
+}
+.close svg {
+  width: min(4.1vw, 31px);
+  height: min(4.1vw, 31px);
+}
+
+.story {
+  position: relative;
+  padding: min(3.3vw, 25px) min(3.3vw, 25px) 0 min(3.3vw, 25px);
+  height: min(181vw, 1400px);
+  overflow: hidden;
+}
+.story__slide {
+  width: min(93vw, 717px) !important;
+  height: min(167vw, 1283px) !important;
+  border-radius: min(7.7vw, 55px);
+  overflow: hidden;
+}
+.story .story-pagination {
+  position: relative;
+  margin-bottom: min(3.3vw, 25px);
+  display: flex;
+  justify-content: space-between;
+}
+.story .swiper-pagination-bullet {
+  width: min(22.8vw, 175px);
+  height: min(0.6vw, 5px);
+  border-radius: 1vw;
+  opacity: 1;
+  background-color: #F5E6D6;
+  background-color: #BE957D;
+}
+.story .swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #F5E6D6;
+}
+.story .story-pagination-custom-line {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  background-color: #F5E6D6;
+}
+
+.promotions {
+  margin-bottom: min(3.75vw, 29px);
+}
+.promotions__title-block {
+  display: flex;
+  padding: 0 min(5.64vw, 43px);
+  margin-bottom: min(4.2vw, 32px);
+}
+.promotions__title {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(4.1vw, 31px);
+  color: #240405;
+}
+.promotions__rounds {
+  margin-right: min(1.67vw, 13px);
+  width: min(4.6vw, 38px);
+  height: min(4.6vw, 38px);
+  border-radius: 100%;
+  border: 1px solid #FECCCC;
+  text-align: center;
+}
+.promotions__btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.promotions__btn {
+  position: relative;
+  padding: min(3.3vw, 25px) min(15.9vw, 122px) min(3.3vw, 25px) min(3.75vw, 29px);
+  display: inline-block;
+  width: min(46vw, 350px);
+  height: min(15vw, 114px);
+  border-radius: min(4.2vw, 32px);
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(4.1vw, 31px);
+  color: #FFFFFF;
+  line-height: 1;
+}
+.promotions__btn-icon {
+  position: absolute;
+  display: block;
+  width: 20%;
+  right: 11%;
+  top: 50%;
+  transform: translateY(-50%);
 }

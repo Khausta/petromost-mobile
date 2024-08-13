@@ -7,6 +7,19 @@ const bannerSwiper = new Swiper('.banner-swiper', {
       clickable: true,
     },
   });
+
+  const storyPopupSwiper = new Swiper('.story-swiper', {
+    spaceBetween: '4%',
+    slidesPerView: 'auto',
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    pagination: {
+      el: ".story-pagination",
+      clickable: true,
+    },
+  });
   
   const infoSwiper = new Swiper('.info-swiper', {
     spaceBetween: '2%',
