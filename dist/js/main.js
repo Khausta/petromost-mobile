@@ -296,6 +296,22 @@ if (popups.card.trigger) {
     popups.card.overlay.addEventListener('click', closeCard);
   });
 }
+var showCardBtns = document.querySelectorAll('.js-show-card');
+if (showCardBtns) {
+  showCardBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      openCardModal();
+    });
+  });
+}
+//Новая функция для открытия карт. Можно добавить класс js-show-card на кнопки для октрытия штрихкода в модальном окне 
+function openCardModal() {
+  if (document.body.style.overflow !== 'hidden') {
+    document.body.style.overflow = 'hidden';
+  }
+  popups.card.overlay.classList.add('__js-active');
+  popups.card.overlay.addEventListener('click', closeCard);
+}
 
 // для инпутов Данных профиля
 var profileDataInputs = document.querySelectorAll('.input-box__input');
@@ -320,10 +336,14 @@ if (cardBonus) {
     document.querySelector('.card__bonus-count').classList.toggle('__js-blur');
   });
 }
-var mainCardBonus = document.querySelector('.main-card__to-hide');
+
+// функция изменена
+var mainCardBonus = document.querySelectorAll('.main-card__to-hide');
 if (mainCardBonus) {
-  mainCardBonus.addEventListener('click', function () {
-    document.querySelector('.main-card__bonus-number').classList.toggle('__js-blur');
+  mainCardBonus.forEach(function (el) {
+    el.addEventListener('click', function () {
+      el.previousElementSibling.classList.toggle('__js-blur');
+    });
   });
 }
 

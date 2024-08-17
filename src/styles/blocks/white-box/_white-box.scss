@@ -32,6 +32,12 @@
         padding: 0;
         background-color: $head-bg-color;
     }
+    
+    &_history {
+        padding: $s16px $size-18px;
+        background-color: $head-bg-color;
+
+    }
 
     &__header {
       
@@ -40,6 +46,8 @@
             margin-bottom: $size-5px;
             font-size: $size-20px;
         }
+
+       
     }
 
     &__icon {

@@ -194,6 +194,8 @@ function openAnyModal(modalName) {
 }
 
 
+
+
 // навешивание события открытия модалок на кнопки
 popups.showModalBtns.forEach(btn => {
   btn.addEventListener('click', function () {
@@ -312,6 +314,25 @@ if (popups.card.trigger) {
   });
 }
 
+const showCardBtns = document.querySelectorAll('.js-show-card');
+if (showCardBtns) {
+  showCardBtns.forEach(b => {
+    b.addEventListener('click', () => {
+      openCardModal();
+    })
+  })
+}
+//Новая функция для открытия карт. Можно добавить класс js-show-card на кнопки для октрытия штрихкода в модальном окне 
+function openCardModal() {
+  if (document.body.style.overflow !== 'hidden') {
+    document.body.style.overflow = 'hidden';
+  }
+  popups.card.overlay.classList.add('__js-active');
+  popups.card.overlay.addEventListener('click', closeCard);
+}
+
+
+
 
 
 // для инпутов Данных профиля
@@ -340,11 +361,16 @@ if (cardBonus) {
   })
 }
 
-const mainCardBonus = document.querySelector('.main-card__to-hide');
+// функция изменена
+const mainCardBonus = document.querySelectorAll('.main-card__to-hide');
 if (mainCardBonus) {
-  mainCardBonus.addEventListener('click', () => {
-    document.querySelector('.main-card__bonus-number').classList.toggle('__js-blur');
+  mainCardBonus.forEach(el => {
+    el.addEventListener('click', () => {
+      el.previousElementSibling.classList.toggle('__js-blur');
+    })
   })
+  
+ 
 }
 
 

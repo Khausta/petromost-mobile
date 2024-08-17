@@ -75,3 +75,117 @@
     width: 48%;
 }
 
+
+.buy-history-subtitle {
+    padding: $s16px $s28px;
+}
+
+.buy-history-brown-subtitle {
+    @include gilroy-semibold;
+    font-size: $size-12px;
+    color: $brown-color;
+}
+
+.history-item {
+    border: 1px solid $beige-color;
+    border-radius: $size-19-point-5-px;
+    background-color: $head-bg-color;
+    overflow: hidden;
+
+    .white-box {
+        border-radius: $size-19-point-5-px;
+    }
+    &__front {
+        // padding: $gap-10;
+        display: flex;
+        align-items: center;
+    
+    }
+
+    &__info-box {
+        padding: 0 $gap-10;
+        max-width: min(50vw, 384px);
+    }
+
+    &__cover {
+        width: $s60px;
+        height: $s46px;
+        border: 1px solid $beige-color;
+        border-radius: $size-12px;
+    }
+
+    &__address, &__sum {
+        @include gilroy-bold;
+        font-size: $size-14px;
+        color: $black-color;
+        line-height: 100%;
+    }
+    &__date {
+        @include gilroy-bold;
+        font-size: $size-14px;
+        color: $brown-color;
+        line-height: 100%;
+    }
+
+    &__sum {
+        margin-left: auto;
+    }
+
+    &__additional-info {
+        padding-bottom: $size-8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $gap-10;
+    }
+
+    &__text-additional {
+        @include gilroy-bold;
+        font-size: $size-12px;
+        color: $brown-color;
+    }
+
+    &__table {
+        width: 100%;
+        border-spacing: 0px;
+        border-collapse: collapse;
+        @include gilroy-bold;
+        font-size: $size-12px;
+        color: $black-color;
+
+        &_footer {
+            @include gilroy-semibold;
+            color: $brown-color;
+        }
+
+        td {
+            padding: $size-8px $size-12px;
+            border: 1px solid $beige-color;
+        }
+    }
+
+    &__table-column-1 {
+        width: 50%;
+    }
+    &__table-column-2 {
+        width: 21%;
+    }
+    &__table-column-3 {
+        width: 12%;
+    }
+    &__table-column-4 {
+        width: 17%;
+    }
+
+    &__receipe {
+        padding: $size-8px 0;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        @include gilroy-semibold;
+        font-size: $size-12px;
+        color: #3CA1FF;
+        text-decoration: underline;
+    }
+}
+

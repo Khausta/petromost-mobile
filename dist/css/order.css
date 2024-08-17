@@ -1765,6 +1765,10 @@ a._disabled {
   padding: 0;
   background-color: #FFFAF5;
 }
+.white-box_history {
+  padding: min(4.1vw, 31px) min(4.6vw, 38px);
+  background-color: #FFFAF5;
+}
 .white-box__header h5 {
   margin-bottom: min(1.3vw, 10px);
   font-size: min(5.1vw, 40px);
