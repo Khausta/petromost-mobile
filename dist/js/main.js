@@ -662,7 +662,6 @@ function disableBtn(btn) {
 
 // проверка инпутов при регистрации и добавление активности кнопке
 var registrationPopup = document.querySelector('#login-overlay-registration');
-console.log(registrationPopup);
 if (registrationPopup) {
   var isValid = false;
   var registrationInputs = registrationPopup.querySelectorAll('input');

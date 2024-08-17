@@ -10,17 +10,18 @@ var bannerSwiper = new Swiper('.banner-swiper', {
   }
 });
 var closeWeeks = document.querySelector('.close-promotions-week');
-closeWeeks.addEventListener('click', function () {
-  storyPopupSwiper1.autoplay.stop();
-  // storyPopupSwiper1.slideTo(0);
-});
 var closeCashback = document.querySelector('.close-promotions-cashback');
-closeCashback.addEventListener('click', function () {
-  // storyPopupSwiper2.slideTo(0);
-  storyPopupSwiper2.autoplay.stop();
-});
+if (closeWeeks) {
+  closeWeeks.addEventListener('click', function () {
+    storyPopupSwiper1.autoplay.stop();
+  });
+}
+if (closeCashback) {
+  closeCashback.addEventListener('click', function () {
+    storyPopupSwiper2.autoplay.stop();
+  });
+}
 var storyPopupSwiper1 = new Swiper('.story-swiper-1', {
-  init: false,
   spaceBetween: '4%',
   slidesPerView: 'auto',
   autoplay: {
@@ -32,7 +33,6 @@ var storyPopupSwiper1 = new Swiper('.story-swiper-1', {
   }
 });
 var storyPopupSwiper2 = new Swiper('.story-swiper-2', {
-  init: false,
   spaceBetween: '4%',
   slidesPerView: 'auto',
   autoplay: {
@@ -44,27 +44,28 @@ var storyPopupSwiper2 = new Swiper('.story-swiper-2', {
   }
 });
 var weeksBtn = document.querySelector('.weeksBtn');
-weeksBtn.addEventListener('click', function () {
-  storyPopupSwiper1.init();
-  storyPopupSwiper1.slideTo(0);
-  storyPopupSwiper1.autoplay.start();
-  storyPopupSwiper1.on('slideChange', function () {
-    if (storyPopupSwiper1.isBeginning) {
-      closeWeeks.click();
-    }
+if (weeksBtn) {
+  weeksBtn.addEventListener('click', function () {
+    storyPopupSwiper1.autoplay.start();
+    storyPopupSwiper1.on('slideChange', function () {
+      if (storyPopupSwiper1.isBeginning) {
+        closeWeeks.click();
+      }
+    });
   });
-});
+}
 var cashbackBtn = document.querySelector('.cashbackBtn');
-cashbackBtn.addEventListener('click', function () {
-  storyPopupSwiper2.init();
-  storyPopupSwiper2.slideTo(0);
-  storyPopupSwiper2.autoplay.start();
-  storyPopupSwiper2.on('slideChange', function () {
-    if (storyPopupSwiper2.isBeginning) {
-      closeCashback.click();
-    }
+if (cashbackBtn) {
+  cashbackBtn.addEventListener('click', function () {
+    storyPopupSwiper2.slideTo(0);
+    storyPopupSwiper2.autoplay.start();
+    storyPopupSwiper2.on('slideChange', function () {
+      if (storyPopupSwiper2.isBeginning) {
+        closeCashback.click();
+      }
+    });
   });
-});
+}
 var infoSwiper = new Swiper('.info-swiper', {
   spaceBetween: '2%',
   slidesPerView: 'auto',
