@@ -1,0 +1,189 @@
+
+
+/* Базовые стили слоя затемнения и модального окна  */
+.story-overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: none;
+/* фон затемнения */
+    background-color: rgba(0, 0, 0, 0.65);
+    position: fixed; /* фиксированное поцизионирование */
+    cursor: default; /* тип курсара */
+
+    
+}
+/* активируем слой затемнения */
+.story-overlay:target {
+    display: block;
+}
+/* стили модального окна */
+.story-popup {
+    top: 0%;
+    left: 500%;
+    font-size: 14px;
+    height: 100vh;
+    width: 100%;
+    min-width: 320px;
+    max-width: 768px;
+/* фиксированное позиционирование, окно стабильно при прокрутке */
+    position: fixed;
+    // padding: 15px;
+    border: 1px solid #383838;
+    background: $black-color;
+    transition:  0.3s ease-out;
+    z-index: 16;
+
+
+    &__header {
+        padding: $size-20px $size-66px $size-11px $size-18px;
+        @include gilroy-bold;
+        font-size: $size-20px;
+        color: $beige-color;
+        line-height: 100%;
+    }
+}
+/* активируем модальный блок */
+.story-overlay:target + .story-popup {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+}
+
+/* формируем кнопку закрытия */
+.close-story {
+    top: $size-12px;
+    right: $size-12px;
+    width: $size-32px;
+    height: $size-32px;
+    position: absolute;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+   
+    transition: all ease .8s;
+
+    svg {
+        width: $s16px;
+        height: $s16px;
+    }
+}
+
+
+
+
+.story {
+    position: relative;
+    padding: $size-13px $size-13px 0 $size-13px;
+    height: min(181vw, 1400px);
+    overflow: hidden;
+
+    &__slide {
+        width: min(93vw, 717px) !important;
+        height: min(167vw, 1283px) !important;
+        border-radius: $s28px;
+        overflow: hidden;
+    }
+
+
+    .story-pagination {
+        position: relative;
+        margin-bottom: $size-13px;
+        display: flex;
+        justify-content: space-between;
+
+        .swiper-pagination-bullet {
+            width: 100%;
+        }
+
+        
+    }
+    
+    .swiper-pagination-bullet {
+        width: min(22.8vw, 175px);
+        height: min(0.6vw, 5px);
+        border-radius: 1vw;
+        opacity: 1;
+        background-color: $beige-color;
+        background-color: $brown-color;
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background-color: $beige-color;
+    }
+
+    .story-pagination-custom-line {
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        background-color: $beige-color;
+    }
+}
+
+.promotions {
+    margin-bottom: $size-14px;
+
+    &__title-block {
+        display: flex;
+        padding: 0 $s22px;
+        margin-bottom: $size-16and25;
+        
+        
+      
+    }
+
+    &__title {
+        @include gilroy-bold;
+        font-size: $s16px;
+        color: $black-color;
+    }
+    &__rounds {
+        margin-right: $size-6and5;
+        width: $size-18px;
+        height: $size-18px;
+        border-radius: 100%;
+        border: 1px solid $pink-border;
+        text-align: center;
+    }
+
+    &__btns {
+       
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+
+    &__btn {
+        position: relative;
+        padding: $size-13px $size-62px $size-13px $size-14px;
+        display: inline-block;
+        width: min(46vw, 350px);
+        height: min(15vw, 114px);
+        border-radius: $size-16and25;
+        @include gilroy-bold;
+        font-size: $s16px;
+        color: $white-bg-color;
+        line-height: 1;
+
+    }
+
+    &__btn-icon {
+        position: absolute;
+        display: block;
+        width: 20%;
+        right: 11%;
+        top: 50%;
+        transform: translateY(-50%);      
+    }
+
+}

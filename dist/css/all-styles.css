@@ -5625,39 +5625,6 @@ a._disabled {
   pointer-events: none;
 }
 
-.w100 {
-  width: 100% !important;
-}
-
-.sand-bg {
-  background-color: #F5E6D6;
-}
-
-.white-bg {
-  background-color: #FFFFFF;
-}
-
-.green-bg {
-  background-color: #5EA636;
-  color: #FFFFFF;
-}
-
-.black-color {
-  color: #240405;
-}
-
-.brown-color {
-  color: #BE957D;
-}
-
-.sand-border {
-  border: 1px solid #F6D6B4;
-}
-
-.w48 {
-  width: 48%;
-}
-
 /* Базовые стили слоя затемнения и модального окна  */
 .story-overlay {
   top: 0;
@@ -5711,7 +5678,7 @@ a._disabled {
 }
 
 /* формируем кнопку закрытия */
-.close {
+.close-story {
   top: min(3.1vw, 24px);
   right: min(3.1vw, 24px);
   width: min(8.2vw, 63px);
@@ -5725,7 +5692,7 @@ a._disabled {
   text-decoration: none;
   transition: all ease 0.8s;
 }
-.close svg {
+.close-story svg {
   width: min(4.1vw, 31px);
   height: min(4.1vw, 31px);
 }
@@ -5747,6 +5714,9 @@ a._disabled {
   margin-bottom: min(3.3vw, 25px);
   display: flex;
   justify-content: space-between;
+}
+.story .story-pagination .swiper-pagination-bullet {
+  width: 100%;
 }
 .story .swiper-pagination-bullet {
   width: min(22.8vw, 175px);
@@ -5818,4 +5788,37 @@ a._disabled {
   right: 11%;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.w100 {
+  width: 100% !important;
+}
+
+.sand-bg {
+  background-color: #F5E6D6;
+}
+
+.white-bg {
+  background-color: #FFFFFF;
+}
+
+.green-bg {
+  background-color: #5EA636;
+  color: #FFFFFF;
+}
+
+.black-color {
+  color: #240405;
+}
+
+.brown-color {
+  color: #BE957D;
+}
+
+.sand-border {
+  border: 1px solid #F6D6B4;
+}
+
+.w48 {
+  width: 48%;
 }

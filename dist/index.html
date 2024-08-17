@@ -90,8 +90,6 @@
 
 
             <section class="promotions">
-
-             
                 <div class="promotions__title-block">
                     <div class="promotions__rounds">
                        <img class="object-fit-contain" src="./img/icons/promotion-circle.png" alt="">
@@ -99,22 +97,19 @@
                     <h3 class="promotions__title">Актуальные акции</h3>
                 </div>
                 <div class="container promotions__btns">
-                    <!-- Ссылки на вызов модальных окон-->
+                    <!-- Ссылка на вызов модального окна "Только неделю"-->
                     <a href="#promotions-week" class="promotions__btn red-bg weeksBtn">
-                        
                             <p class="promotions__block">
                                 Только неделю
                             </p>
                             <img class="promotions__btn-icon" src="./img/icons/promotions-calendar.png" alt="">
-                       
                     </a>
+                    <!-- Ссылка на вызов модального окна "Кэшбек"-->
                     <a href="#promotions-cashback" class="promotions__btn orange-bg cashbackBtn">
-                        
                             <p class="promotions__block">
                                 Кэшбек
                             </p>
                             <img class="promotions__btn-icon" src="./img/icons/promotions-cashback.png" alt="">
-                        
                     </a>
                     
                 </div>
@@ -122,7 +117,7 @@
                 <!-- Модальное окно "Только неделю" -->
                 <a class="story-overlay" id="promotions-week"></a>
                 <div class="story-popup">
-                    <a class="close close-promotions-week" title="Закрыть" href="#close">
+                    <a class="close-story close-promotions-week" title="Закрыть" href="#close">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1623 0.838159C15.5793 1.25518 15.5793 1.93131 15.1623 2.34834L2.34797 15.1626C1.93095 15.5796 1.25482 15.5796 0.837793 15.1626C0.420768 14.7456 0.420768 14.0695 0.837793 13.6524L13.6521 0.838159C14.0691 0.421135 14.7452 0.421135 15.1623 0.838159Z" fill="#F5E6D6"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.837793 0.838159C1.25482 0.421135 1.93095 0.421135 2.34797 0.838159L15.1623 13.6524C15.5793 14.0695 15.5793 14.7456 15.1623 15.1626C14.7452 15.5796 14.0691 15.5796 13.6521 15.1626L0.837793 2.34834C0.420768 1.93131 0.420768 1.25518 0.837793 0.838159Z" fill="#F5E6D6"/>
@@ -162,12 +157,13 @@
                     </section>
 
                 </div>
+                 <!--Конец модального окна "Только неделю" -->
 
                 <!-- Модальное окно "Кэшбек" -->
                 <a class="story-overlay" id="promotions-cashback"></a>
                 <div class="story-popup">
                 
-                    <a class="close close-promotions-cashback" title="Закрыть" href="#close">
+                    <a class="close-story close-promotions-cashback" title="Закрыть" href="#close">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1623 0.838159C15.5793 1.25518 15.5793 1.93131 15.1623 2.34834L2.34797 15.1626C1.93095 15.5796 1.25482 15.5796 0.837793 15.1626C0.420768 14.7456 0.420768 14.0695 0.837793 13.6524L13.6521 0.838159C14.0691 0.421135 14.7452 0.421135 15.1623 0.838159Z" fill="#F5E6D6"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.837793 0.838159C1.25482 0.421135 1.93095 0.421135 2.34797 0.838159L15.1623 13.6524C15.5793 14.0695 15.5793 14.7456 15.1623 15.1626C14.7452 15.5796 14.0691 15.5796 13.6521 15.1626L0.837793 2.34834C0.420768 1.93131 0.420768 1.25518 0.837793 0.838159Z" fill="#F5E6D6"/>
@@ -187,13 +183,13 @@
                                 </div>
                                 <div class="story__slide swiper-slide">
                                     <img class="object-fit-cover" src="./img/slides/slide-2.png" alt="">
-                                </div>
-                               
+                                </div>                               
                             </div>
                             
                         </div>
                     </section>
                 </div>
+                 <!-- Конец модального окна "Кэшбек" -->
             </section>
 
             <!-- Витрина -->
