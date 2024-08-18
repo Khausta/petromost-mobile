@@ -1,16 +1,24 @@
 .main-card {
     margin-bottom: $size-14px;
-    &__banner {
+    &__banner,   &__blocked {
         margin-top: $size-13px;
         padding-top: $size-13px;
         border-radius: $size-19-point-5-px;
         color: $white-bg-color;
-        background-image: url('../img/card/bird.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;
         background-position: 0 0;
         overflow: hidden;
+    }
+    
+    &__banner {
+        background-image: url('../img/card/bird.png');
+    }
+
+    &__blocked {
+        background-image: url('../img/card/card-blocked-bg.png');
+        
     }
 
     &__header {
@@ -43,10 +51,25 @@
 
         @include gilroy-bold;
         font-size: $gap-10;
-        line-height: 110%;
         padding: 0 $gap-10;
         border: 1px solid #FFFAF5;
         border-radius: $size-6and5;
+        padding-bottom: 0.4%;
+        line-height: 50%;
+    }
+
+    &__label-blocked {
+        display: inline-block;
+        margin-left: $gap-10;
+        margin-bottom: min(6.7vw, 50px);
+        @include gilroy-bold;
+        font-size: $gap-10;
+        padding: 1% $gap-10;
+        padding-bottom: 1.2%;
+        background-color: #FFFAF5;
+        color: $brown-color;
+        border-radius: $size-6and5;
+        line-height: 50%;
     }
 
     &__card-banner {
@@ -160,11 +183,23 @@
         padding-left: min(3.1vw, 24px);
         @include gilroy-bold;
         font-size: $size-14px;
+
+        &_blocked {
+            width: auto;
+            margin-bottom: min(3.8vw, 27px);
+        }
     }
 
     &__footer {
         padding: min(3.1vw, 24px);
         background-color: $red-color;
+        border-radius: $size-19-point-5-px;
+    }
+
+    &__footer_blocked {
+        width: 100%;
+        padding: min(3.1vw, 24px);
+        background-color: $beige-color;
         border-radius: $size-19-point-5-px;
     }
 
@@ -176,6 +211,18 @@
         font-size: min(5.33vw, 50px);
         line-height:  min(8.7vw, 67px);
 
+    }
+
+    &__bonus-count_blocked {
+        padding-left: min(2.6vw, 20px);
+        width: min(28.3vw, 217px);
+        @include gilroy-semibold;
+        text-align: left;
+        font-size: min(5.33vw, 50px);
+        line-height:  min(8.7vw, 67px);
+        color: $white-bg-color;
+        border: 1px solid $white-bg-color;
+        border-radius: $gap-10;
     }
 
     &__login-bonus {
@@ -203,6 +250,33 @@
         height: min(8.7vw, 67px);
 
     } 
+
+  &__to-hide_blocked, &__scanner-img_blocked, &__magnifier_blocked {
+        border-radius: $gap-10; 
+        border: 1px solid $white-bg-color;
+        height: min(8.7vw, 67px);
+        
+
+    }
+    &__bonus-count_blocked, &__scanner-img_blocked {
+        width: min(32vw, 246px);
+    }
+
+    &__scanner-img_blocked {
+        padding: 1%;
+        background-color: #fff;
+    }
+   
+    &__scanner-img_blocked {
+        overflow: hidden;
+    }
+
+    &__to-hide_blocked, &__magnifier_blocked {
+        padding: 0 2.1vw;
+        width: min(8.7vw, 67px);
+    }
+
+
 
     &__bonus-count,  &__scanner-img  {
         width: min(32vw, 246px);

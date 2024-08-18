@@ -68,6 +68,10 @@ button:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &_reverse {
+        flex-direction: row-reverse;
+    }
 }
 
 .object-fit-contain {
@@ -360,9 +364,41 @@ button:focus {
 
 }
 
+.main-card__eye-show {
+    display: none;
+}
+
+.main-card__eye-hide {
+    display: inline-block;
+}
+
 .__js-blur {
     filter: blur(3px);
+
+    & + .main-card__to-hide {
+        .main-card__eye-show {
+            display: inline-block;
+        }
+
+        .main-card__eye-hide {
+            display: none;
+        }
+    }
+
+    & + .card__to-hide {
+        .main-card__eye-show {
+            display: inline-block;
+        }
+
+        .main-card__eye-hide {
+            display: none;
+        }
+    }
+
+    
 }
+
+
 
 #show-card-overlay.__js-active {
     z-index: 101;

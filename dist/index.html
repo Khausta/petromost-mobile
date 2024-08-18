@@ -71,7 +71,9 @@
                                     <span class="main-card__bonus-number">567,01 б</span>
                                 </p>
                                 <div class="main-card__to-hide">
-                                    <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain">
+                                    <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain main-card__eye-hide">
+                                    <img class="object-fit-contain main-card__eye-show" src="./img/icons/eye-white.svg" alt="">
+                                    <!-- <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain"> -->
                                 </div>
                             </div>
                             <div class="main-card__box" id="card-magnifier">
@@ -1589,7 +1591,8 @@
                                                     <span class="main-card__bonus-number">567,01 б</span>
                                                 </p>
                                                 <div class="main-card__to-hide">
-                                                    <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain">
+                                                    <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain main-card__eye-hide">
+                                                    <img class="object-fit-contain main-card__eye-show" src="./img/icons/eye-white.svg" alt="">
                                                 </div>
                                             <!-- </div>id="card-magnifier" -->
                                             <div class="main-card__box js-show-card">
@@ -1597,7 +1600,7 @@
                                                     <img class="object-fit-contain" src="./img/card/main-scan.svg" alt="Штрихкод">
                                                 </div>
                                                 <div class="main-card__magnifier">
-                                                    <img src="./img/card/magnifier.svg" alt="Иконка глаза" class="object-fit-contain">
+                                                    <img src="./img/card/magnifier.svg" alt="" class="object-fit-contain">
                                                 </div>
                                             </div>
                 
@@ -1606,36 +1609,33 @@
                                 
                             </div></section>
                           </div>
-                          <div class="swiper-slide main-card-swiper__slide">
+                          <div class="swiper-slide main-card-swiper__slide js-blocked-card">
                             <section class="main-card">
                                 
-                                <div class="main-card__banner">
+                                <div class="main-card__banner main-card__blocked">
                                         <p class="main-card__header main-card__header_history">Карта «Снегири»</p> 
-                                        <div class="main-card__history-card-num">
-                                            <p class="main-card__number">
-                                                *7409
-                                            </p>
-                                            <span class="main-card__label">Активна</span>
-                                        </div> 
+                                        
+                                           
+                                            <span class="main-card__label-blocked">Отсутствует</span>
+                                       
             
-                                        <p class="main-card__welcome">
-                                            <span class="main-card__user-name">Максим</span>, на&nbsp;Вашей&nbsp;карте
-                                        </p>
-                                        <div class="main-card__footer flex-box">
+                                        <p class="main-card__welcome main-card__welcome_blocked">
+                                            <span class="main-card__user-name">Имя пользователя
+                                        </span></p>
+                                        <div class="main-card__footer_blocked flex-box">
                                                
                                             <div class="main-card__box">
-                                                <p class="main-card__bonus-count">
+                                                <p class="main-card__bonus-count_blocked">
                                                     <span class="main-card__bonus-number">567,01 б</span>
                                                 </p>
-                                                <div class="main-card__to-hide">
-                                                    <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain">
+                                                <div class="main-card__to-hide_blocked">
+                                                    <img src="./img/card/white-eye-blocked.svg" alt="Иконка глаза" class="object-fit-contain">
                                                 </div>
-                                            <!-- </div>id="card-magnifier" -->
-                                            <div class="main-card__box js-show-card">
-                                                <div class="main-card__scanner-img">
-                                                    <img class="object-fit-contain" src="./img/card/main-scan.svg" alt="Штрихкод">
+                                            <div class="main-card__box">
+                                                <div class="main-card__scanner-img_blocked">
+                                                    <img class="object-fit-contain" src="./img/card/blocked-card-scanner.png" alt="Штрихкод">
                                                 </div>
-                                                <div class="main-card__magnifier">
+                                                <div class="main-card__magnifier_blocked">
                                                     <img src="./img/card/magnifier.svg" alt="Иконка глаза" class="object-fit-contain">
                                                 </div>
                                             </div>
@@ -1651,168 +1651,201 @@
                       </div>
                 </div>
                
-
-                <div class="container">
-                    <div class="white-box white-box_history">
-                        <div class="dnd">
-                            <div class="white-box__header flex-box">
-                                <p class="buy-history-header">
-                                    Фильтр покупок
-                                </p>
-                            
-                                <div class="dnd__icon order-sum__arrow">
-                                    <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                <div class="js-active-card-block">
+                    <div class="container">
+                        <div class="white-box white-box_history">
+                            <div class="dnd">
+                                <div class="white-box__header flex-box">
+                                    <p class="buy-history-header">
+                                        Фильтр покупок
+                                    </p>
+                                
+                                    <div class="dnd__icon order-sum__arrow">
+                                        <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="dnd__content">
-                            <div class="buy-history-hidden-block">
-                                <p class="buy-history-brown-subtitle">
-                                    За период 
-                                </p>
-    
-                                <input type="date" name="" id="" placeholder="Выберите дату">
-    
-                                <p class="buy-history-brown-subtitle">
-                                    Форматы магазинов
-                                </p>
-    
-                                <!-- инпуты -->
-                                <div class="white-box__history-items">
-                                <div class="white-box__item white-box__item_history">
-                                    <label class="white-box__time-label">
-                                        <input class="white-box__input" type="radio" name="time">
-                                        <p class="white-box__time-radio white-box__time-radio_history">
-                                            Все
-                                        </p>
-                                    </label>
-                                </div>
-                                <div class="white-box__item white-box__item_history">
-                                    <label class="white-box__time-label">
-                                        <input class="white-box__input" type="radio" name="time">
-                                        <p class="white-box__time-radio white-box__time-radio_history">
-                                            Петр&скй
-                                        </p>
-                                    </label>
-                                </div>
-                                <div class="white-box__item white-box__item_history">
-                                    <label class="white-box__time-label">
-                                        <input class="white-box__input" type="radio" name="time">
-                                        <p class="white-box__time-radio white-box__time-radio_history">
-                                            Вита Норд
-                                        </p>
-                                    </label>
-                                </div>
-                                </div>
-                              
-    
-                                <p class="buy-history-brown-subtitle">
-                                    Магазин
-                                </p>
-    
-                                <!-- инпут -->
-                                <div class="white-box">
-                                    <div class="history-address-list"> 
-                                        <div class="history-address-list__header">
-                                            <p class="history-address-list__text">
-                                                Архангельск, Ленинградский, 255, Гипермаркет
+                            <div class="dnd__content">
+                                <div class="buy-history-hidden-block">
+                                    <p class="buy-history-brown-subtitle">
+                                        За период 
+                                    </p>
+        
+                                    <input type="date" name="" id="" placeholder="Выберите дату">
+        
+                                    <p class="buy-history-brown-subtitle">
+                                        Форматы магазинов
+                                    </p>
+        
+                                    <!-- инпуты -->
+                                    <div class="white-box__history-items">
+                                    <div class="white-box__item white-box__item_history">
+                                        <label class="white-box__time-label">
+                                            <input class="white-box__input" type="radio" name="time">
+                                            <p class="white-box__time-radio white-box__time-radio_history">
+                                                Все
                                             </p>
-                                            <div class="history-address-list__icon">
-                                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                        </label>
+                                    </div>
+                                    <div class="white-box__item white-box__item_history">
+                                        <label class="white-box__time-label">
+                                            <input class="white-box__input" type="radio" name="time">
+                                            <p class="white-box__time-radio white-box__time-radio_history">
+                                                Петр&скй
+                                            </p>
+                                        </label>
+                                    </div>
+                                    <div class="white-box__item white-box__item_history">
+                                        <label class="white-box__time-label">
+                                            <input class="white-box__input" type="radio" name="time">
+                                            <p class="white-box__time-radio white-box__time-radio_history">
+                                                Вита Норд
+                                            </p>
+                                        </label>
+                                    </div>
+                                    </div>
+                                  
+        
+                                    <p class="buy-history-brown-subtitle">
+                                        Магазин
+                                    </p>
+        
+                                    <!-- инпут -->
+                                    <div class="white-box">
+                                        <div class="history-address-list"> 
+                                            <div class="history-address-list__header">
+                                                <p class="history-address-list__text">
+                                                    Архангельск, Ленинградский, 255, Гипермаркет
+                                                </p>
+                                                <div class="history-address-list__icon">
+                                                    <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                                </div>
+                                               
+                                                
                                             </div>
-                                           
-                                            
+                                        </div>
+                                        <div class="history-address-list__content">
+                                            <div class="history-address-list__inner-box">
+                                                список адресов
+    
+                                            </div>
+                                         
                                         </div>
                                     </div>
-                                    <div class="history-address-list__content">
-                                        <div class="history-address-list__inner-box">
-                                            список адресов
-
-                                        </div>
-                                     
-                                    </div>
+        
+                                    <button class="button red-bg buy-history-btn">Показать историю</button>
+                    
+        
                                 </div>
+                               
     
-                                <button class="button red-bg buy-history-btn">Показать историю</button>
-                
     
-                            </div>
-                           
-
-
-                             
-                        
-                        </div>
-                    </div>
-                </div>
-
-                <p class="message__text buy-history-subtitle">
-                    Ваши покупки
-                </p>
-
-                <div class="history-list container">
-                    <div class="history-item">
-                        <div class="white-box">
-                            <div class="history-item__front">
-                                <div class="history-item__cover">
-                                    <img class="object-fit-contain" src="./img/icons/logo.svg" alt="">
-                                </div>
-                                <div class="history-item__info-box">
-                                    <p class="history-item__address">пр. Троицкий, 1</p>
-                                    <p class="history-item__date">08.06.2024 09:55</p>
-                                </div>
-                                <p class="history-item__sum">
-                                    799,99 ₽
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="dnd">
-                            <div class="history-item__additional-info">
-                                <p class="history-item__text-additional">
-                                    Показать полную информацию
-                                </p>
+                                 
                             
-                                <div class="dnd__icon order-sum__arrow">
-                                    <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
-                                </div>
                             </div>
                         </div>
-                        <div class="dnd__content">
-                            <table class="history-item__table">
-                                <tr>
-                                    <td class="history-item__table-column-1">1. Пакет майка</td>
-                                    <td class="history-item__table-column-2">13 ₽</td>
-                                    <td class="history-item__table-column-3">1 ₽</td>
-                                    <td class="history-item__table-column-4">25 шт</td>
-                                </tr>
-                                <tr>
-                                    <td class="history-item__table-column-1">2. Палтус замороженный</td>
-                                    <td class="history-item__table-column-2">999 ₽</td>
-                                    <td class="history-item__table-column-3">3 ₽</td>
-                                    <td class="history-item__table-column-4">13 шт</td>
-                                </tr>
-                                <tr>
-                                    <td class="history-item__table-column-1">3. Зубочистки</td>
-                                    <td class="history-item__table-column-2">50 ₽</td>
-                                    <td class="history-item__table-column-3">3 ₽</td>
-                                    <td class="history-item__table-column-4">100 шт</td>
-                                </tr>
-                                <tr>
-                                    <td class="history-item__table_footer">Сумма чека: 1099,99 ₽</td>
-                                    <td colspan="3" class="history-item__table_footer">Скидка чека: 7 ₽</td>
-                                </tr>
-                                <tr>
-                                    <td class="history-item__table_footer">Бонусов списано: 100 бнс </td>
-                                    <td colspan="3" class="history-item__table_footer">Бонусов начислено: 1 бнс</td>
-                                </tr>
-                            </table>
-
-                            <a href="#" class="history-item__receipe">Ссылка на электронный чек</a>
-                        
+                    </div>
+    
+                    <p class="message__text buy-history-subtitle">
+                        Ваши покупки
+                    </p>
+    
+                    <div class="history-list container">
+                        <div class="history-item">
+                            <div class="white-box">
+                                <div class="history-item__front">
+                                    <div class="history-item__cover">
+                                        <img class="object-fit-contain" src="./img/icons/logo.svg" alt="">
+                                    </div>
+                                    <div class="history-item__info-box">
+                                        <p class="history-item__address">пр. Троицкий, 1</p>
+                                        <p class="history-item__date">08.06.2024 09:55</p>
+                                    </div>
+                                    <p class="history-item__sum">
+                                        799,99 ₽
+                                    </p>
+                                </div>
+                            </div>
+    
+                            <div class="dnd">
+                                <div class="history-item__additional-info">
+                                    <p class="history-item__text-additional">
+                                        Показать полную информацию
+                                    </p>
+                                
+                                    <div class="dnd__icon order-sum__arrow">
+                                        <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dnd__content">
+                                <table class="history-item__table">
+                                    <tr>
+                                        <td class="history-item__table-column-1">1. Пакет майка</td>
+                                        <td class="history-item__table-column-2">13 ₽</td>
+                                        <td class="history-item__table-column-3">1 ₽</td>
+                                        <td class="history-item__table-column-4">25 шт</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="history-item__table-column-1">2. Палтус замороженный</td>
+                                        <td class="history-item__table-column-2">999 ₽</td>
+                                        <td class="history-item__table-column-3">3 ₽</td>
+                                        <td class="history-item__table-column-4">13 шт</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="history-item__table-column-1">3. Зубочистки</td>
+                                        <td class="history-item__table-column-2">50 ₽</td>
+                                        <td class="history-item__table-column-3">3 ₽</td>
+                                        <td class="history-item__table-column-4">100 шт</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="history-item__table_footer">Сумма чека: 1099,99 ₽</td>
+                                        <td colspan="3" class="history-item__table_footer">Скидка чека: 7 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="history-item__table_footer">Бонусов списано: 100 бнс </td>
+                                        <td colspan="3" class="history-item__table_footer">Бонусов начислено: 1 бнс</td>
+                                    </tr>
+                                </table>
+    
+                                <a href="#" class="history-item__receipe">Ссылка на электронный чек</a>
+                            
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="js-disactive-card-info js-hide-block">
+                    <div class="container">
+                        <div class="white-box white-box_history">
+                           
+                                <div class="white-box__header flex-box">
+                                    <p class="buy-history-header">
+                                        Фильтр покупок
+                                    </p>
+                                
+                                    <div class="dnd__icon order-sum__arrow">
+                                        <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                    </div>
+                                </div>
+                            
+                            
+                        </div>
+    
+                        <p class="buy-history-brown-subtitle buy-history-brown-title">
+                            Покупок нет
+                        </p>
+    
+                        <div class="buy-history-notification easy-border">
+                            <img src="./img/brown-notification.png" alt="">
+                            <span>Выберите активированную карту лояльности “Снегири” для просмотра
+                                полной истории покупок </span>
+
+                        </div>
+                    </div>
+                   
+                </div>
+                
                 
                 
 
@@ -2071,12 +2104,15 @@
                                     <p class="card__welcome">
                                         <span class="card__user-name">Максим</span>, на Вашей карте «Снегири»  
                                     </p>
-                                    <div class="card__bonus flex-box">
-                                        <div class="card__to-hide">
-                                            <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain">
-                                        </div>
+                                    <div class="card__bonus flex-box flex-box_reverse">
+                                        
                                         <div class="card__bonus-count">
                                             567,01 б
+                                        </div>
+                                        <div class="card__to-hide">
+                                            <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain main-card__eye-hide">
+                                            <img class="object-fit-contain main-card__eye-show" src="./img/icons/eye-white.svg" alt="">
+                                            <!-- <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain"> -->
                                         </div>
                                     </div>
                                 </div>

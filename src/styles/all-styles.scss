@@ -105,6 +105,24 @@
     font-size: $size-14px;
 }
 
+.buy-history-brown-title {
+    padding-left: min(4.6vw, 38px);
+}
+
+.buy-history-notification {
+    padding: $size-19-point-5-px $size-19-point-5-px $size-19-point-5-px 0;
+    display: flex;
+    align-items: center;
+    @include gilroy-semibold;
+    font-size: $s16px;
+    color: $brown-color;
+
+    img {
+        display: inline-block;
+        width: $s56px;
+    }
+}
+
 .history-item {
     border: 1px solid $beige-color;
     border-radius: $size-19-point-5-px;
@@ -248,5 +266,14 @@
     &__inner-box {
         padding-top: $size-8px;
     }
+}
+
+
+.js-active-card-block.js-hide-block {
+    display: none;
+}
+    
+.js-disactive-card-info.js-hide-block {
+    display: none;
 }
 

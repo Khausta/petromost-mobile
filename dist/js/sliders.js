@@ -10,8 +10,20 @@ var bannerSwiper = new Swiper('.banner-swiper', {
   }
 });
 var mainCardSwiper = new Swiper('.main-card-swiper', {
-  spaceBetween: '1%',
+  spaceBetween: '2%',
   slidesPerView: 'auto'
+});
+var activeCardBlock = document.querySelector('.js-active-card-block');
+var disactiveCardInfo = document.querySelector('.js-disactive-card-info');
+//есди будет много карт, можно изменить слушатель
+mainCardSwiper.on('slideChange', function () {
+  if (mainCardSwiper.slides[mainCardSwiper.activeIndex].classList.contains('js-blocked-card')) {
+    activeCardBlock.classList.add('js-hide-block');
+    disactiveCardInfo.classList.remove('js-hide-block');
+  } else {
+    activeCardBlock.classList.remove('js-hide-block');
+    disactiveCardInfo.classList.add('js-hide-block');
+  }
 });
 var closeWeeks = document.querySelector('.close-promotions-week');
 var closeCashback = document.querySelector('.close-promotions-cashback');
