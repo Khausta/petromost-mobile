@@ -1769,6 +1769,11 @@ a._disabled {
   padding: min(4.1vw, 31px) min(4.6vw, 38px);
   background-color: #FFFAF5;
 }
+.white-box__history-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .white-box__header h5 {
   margin-bottom: min(1.3vw, 10px);
   font-size: min(5.1vw, 40px);
@@ -1829,6 +1834,10 @@ a._disabled {
 }
 .white-box__item_big {
   width: 100%;
+}
+.white-box__item_history {
+  width: auto;
+  background-color: #FFFFFF;
 }
 .white-box__express {
   display: flex;
@@ -1902,11 +1911,18 @@ a._disabled {
 .white-box__time-radio_express::after {
   background-image: url("../img/radio/orange-radio.svg");
 }
+.white-box__time-radio_history {
+  padding-left: min(9vw, 71px);
+  padding-right: min(2.82vw, 22px);
+}
 .white-box__input:checked + .white-box__time-radio {
   background-color: #FFFAF5;
 }
 .white-box__input:checked + .white-box__time-radio .white-box__express {
   color: #FF6D00;
+}
+.white-box__input:checked + .white-box__time-radio_history {
+  background-color: #FFFFFF;
 }
 .white-box__input:checked + .white-box__pay-radio {
   border: 1px solid #DC1E1E;

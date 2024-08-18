@@ -1564,50 +1564,102 @@
                 <p class="message__text buy-history-subtitle">
                     Выберите карту лояльности
                 </p>
+                <div class="container">
 
-                <section class="main-card">
-                    <div class="container">
-                        <div class="main-card__banner">
-                            <p class="main-card__header main-card__header_history">Карта «Снегири»</p> 
-                            <div class="main-card__history-card-num">
-                                <p class="main-card__number">
-                                    *7409
-                                </p>
-                                <span class="main-card__label">Активна</span>
-                            </div> 
-
-                            <p class="main-card__welcome">
-                                <span class="main-card__user-name">Максим</span>, на&nbsp;Вашей&nbsp;карте
-                            </p>
-                            <div class="main-card__footer flex-box">
-                                   
-                                <div class="main-card__box ">
-                                    <p class="main-card__bonus-count ">
-                                        <span class="main-card__bonus-number">567,01 б</span>
-                                    </p>
-                                    <div class=" main-card__to-hide">
-                                        <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain">
+                    <div class="main-card-swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper main-card-swiper__wrapper">
+                          <!-- Slides -->
+                          <div class="swiper-slide main-card-swiper__slide">
+                            <section class="main-card">
+                               
+                                <div class="main-card__banner">
+                                        <p class="main-card__header main-card__header_history">Карта «Снегири»</p> 
+                                        <div class="main-card__history-card-num">
+                                            <p class="main-card__number">
+                                                *7409
+                                            </p>
+                                            <span class="main-card__label">Активна</span>
+                                        </div> 
+            
+                                        <p class="main-card__welcome">
+                                            <span class="main-card__user-name">Максим</span>, на&nbsp;Вашей&nbsp;карте
+                                        </p>
+                                        <div class="main-card__footer flex-box">
+                                               
+                                            <div class="main-card__box ">
+                                                <p class="main-card__bonus-count ">
+                                                    <span class="main-card__bonus-number">567,01 б</span>
+                                                </p>
+                                                <div class=" main-card__to-hide">
+                                                    <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain">
+                                                </div>
+                                            <!-- </div>id="card-magnifier" -->
+                                            <div class="main-card__box js-show-card" >
+                                                <div class="main-card__scanner-img">
+                                                    <img class="object-fit-contain" src="./img/card/main-scan.svg" alt="Штрихкод">
+                                                </div>
+                                                <div class="main-card__magnifier">
+                                                    <img src="./img/card/magnifier.svg" alt="Иконка глаза" class="object-fit-contain">
+                                                </div>
+                                            </div>
+                
+                                        </div>
                                     </div>
-                                <!-- </div>id="card-magnifier" -->
-                                <div class="main-card__box js-show-card" >
-                                    <div class="main-card__scanner-img">
-                                        <img class="object-fit-contain" src="./img/card/main-scan.svg" alt="Штрихкод">
+                                
+                            </section>
+                          </div>
+                          <div class="swiper-slide main-card-swiper__slide">
+                            <section class="main-card">
+                                
+                                <div class="main-card__banner">
+                                        <p class="main-card__header main-card__header_history">Карта «Снегири»</p> 
+                                        <div class="main-card__history-card-num">
+                                            <p class="main-card__number">
+                                                *7409
+                                            </p>
+                                            <span class="main-card__label">Активна</span>
+                                        </div> 
+            
+                                        <p class="main-card__welcome">
+                                            <span class="main-card__user-name">Максим</span>, на&nbsp;Вашей&nbsp;карте
+                                        </p>
+                                        <div class="main-card__footer flex-box">
+                                               
+                                            <div class="main-card__box ">
+                                                <p class="main-card__bonus-count ">
+                                                    <span class="main-card__bonus-number">567,01 б</span>
+                                                </p>
+                                                <div class=" main-card__to-hide">
+                                                    <img src="./img/card/eye.svg" alt="Иконка глаза" class="object-fit-contain">
+                                                </div>
+                                            <!-- </div>id="card-magnifier" -->
+                                            <div class="main-card__box js-show-card" >
+                                                <div class="main-card__scanner-img">
+                                                    <img class="object-fit-contain" src="./img/card/main-scan.svg" alt="Штрихкод">
+                                                </div>
+                                                <div class="main-card__magnifier">
+                                                    <img src="./img/card/magnifier.svg" alt="Иконка глаза" class="object-fit-contain">
+                                                </div>
+                                            </div>
+                
+                                        </div>
                                     </div>
-                                    <div class="main-card__magnifier">
-                                        <img src="./img/card/magnifier.svg" alt="Иконка глаза" class="object-fit-contain">
-                                    </div>
-                                </div>
-    
-                            </div>
+                              
+                            </section>
+                          </div>
+                         
                         </div>
-                    </div>
-                </section>
+                        
+                      </div>
+                </div>
+               
 
                 <div class="container">
                     <div class="white-box white-box_history">
                         <div class="dnd">
                             <div class="white-box__header flex-box">
-                                <p class="history__text">
+                                <p class="buy-history-header">
                                     Фильтр покупок
                                 </p>
                             
@@ -1617,27 +1669,78 @@
                             </div>
                         </div>
                         <div class="dnd__content">
-                            <p class="buy-history-brown-subtitle ">
-                                За период 
-                            </p>
+                            <div class="buy-history-hidden-block">
+                                <p class="buy-history-brown-subtitle ">
+                                    За период 
+                                </p>
+    
+                                <input type="date" name="" id="" placeholder="Выберите дату">
+    
+                                <p class="buy-history-brown-subtitle ">
+                                    Форматы магазинов
+                                </p>
+    
+                                <!-- инпуты -->
+                                <div class="white-box__history-items">
+                                <div class="white-box__item white-box__item_history" >
+                                    <label class="white-box__time-label ">
+                                        <input class="white-box__input" type="radio" name="time">
+                                        <p class="white-box__time-radio white-box__time-radio_history">
+                                            Все
+                                        </p>
+                                    </label>
+                                </div>
+                                <div class="white-box__item white-box__item_history">
+                                    <label class="white-box__time-label">
+                                        <input class="white-box__input" type="radio" name="time">
+                                        <p class="white-box__time-radio white-box__time-radio_history">
+                                            Петр&скй
+                                        </p>
+                                    </label>
+                                </div>
+                                <div class="white-box__item white-box__item_history">
+                                    <label class="white-box__time-label">
+                                        <input class="white-box__input" type="radio" name="time">
+                                        <p class="white-box__time-radio white-box__time-radio_history">
+                                            Вита Норд
+                                        </p>
+                                    </label>
+                                </div>
+                                </div>
+                              
+    
+                                <p class="buy-history-brown-subtitle ">
+                                    Магазин
+                                </p>
+    
+                                <!-- инпут -->
+                                <div class="white-box">
+                                    <div class="history-address-list"> 
+                                        <div class="history-address-list__header">
+                                            <p class="history-address-list__text">
+                                                Архангельск, Ленинградский, 255, Гипермаркет
+                                            </p>
+                                            <div class="history-address-list__icon">
+                                                <img class="object-fit-contain" src="./img/menu/arrow.svg" alt="Иконка стрелки">
+                                            </div>
+                                           
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="history-address-list__content">
+                                        <div class="history-address-list__inner-box">
+                                            список адресов
 
-                            <input type="date" name="" id="" placeholder="Выберите дату">
-
-                            <p class="buy-history-brown-subtitle ">
-                                Форматы магазинов
-                            </p>
-
-                            инпуты
-
-                            <p class="buy-history-brown-subtitle ">
-                                Магазин
-                            </p>
-
-                            инпут
-
-                            <button class="button red-bg">Показать историю</button>
-            
-
+                                        </div>
+                                     
+                                    </div>
+                                </div>
+    
+                                <button class="button red-bg buy-history-btn">Показать историю</button>
+                
+    
+                            </div>
+                           
 
 
                              

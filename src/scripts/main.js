@@ -418,8 +418,43 @@ dnd('menu__li-with-content', 'menu-link__icon', 'menu__content');
 // Открытие списка магазинов
 dnd('dnd', 'dnd__icon', 'dnd__content');
 
+dnd2('history-address-list', "history-address-list__icon", "history-address-list__content", "dnd__content");
 
 
+// Обработка открытия контента dropdown способом если есть один вложенный дропдаун
+function dnd2(triggerElement, animatedIcon, hiddenContent, parentDDl) {
+  document.querySelectorAll(`.${triggerElement}`).forEach(el => {
+    el.addEventListener('click', () => {
+      const arrow = el.querySelector(`.${animatedIcon}`);
+      const content = el.nextElementSibling;
+      const parentDDLcontainer = document.querySelector(`.${parentDDl}`);
+  
+      if (content.style.maxHeight) {
+        document.querySelectorAll(`.${hiddenContent}`).forEach( item => {
+          item.style.maxHeight = null;
+          item.style.opacity = null;
+          }) 
+        document.querySelectorAll(`.${animatedIcon}`).forEach(item => {
+          item.classList.remove('__js-opened');
+        })
+      } else {
+        document.querySelectorAll(`.${hiddenContent}`).forEach( item => {
+          item.style.maxHeight = null;
+          item.style.opacity = null;  
+        })
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.opacity = 1;
+        parentDDLcontainer.style.maxHeight = parentDDLcontainer.scrollHeight +  content.scrollHeight + 'px';
+        
+        document.querySelectorAll(`.${animatedIcon}`).forEach(item => {
+          item.classList.remove('__js-opened');
+        })
+        arrow.classList.add('__js-opened');
+      }
+    })
+  });
+  
+}
 
 
 class Tab {

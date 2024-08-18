@@ -3035,6 +3035,11 @@ a._disabled {
   padding: min(4.1vw, 31px) min(4.6vw, 38px);
   background-color: #FFFAF5;
 }
+.white-box__history-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .white-box__header h5 {
   margin-bottom: min(1.3vw, 10px);
   font-size: min(5.1vw, 40px);
@@ -3095,6 +3100,10 @@ a._disabled {
 }
 .white-box__item_big {
   width: 100%;
+}
+.white-box__item_history {
+  width: auto;
+  background-color: #FFFFFF;
 }
 .white-box__express {
   display: flex;
@@ -3168,11 +3177,18 @@ a._disabled {
 .white-box__time-radio_express::after {
   background-image: url("../img/radio/orange-radio.svg");
 }
+.white-box__time-radio_history {
+  padding-left: min(9vw, 71px);
+  padding-right: min(2.82vw, 22px);
+}
 .white-box__input:checked + .white-box__time-radio {
   background-color: #FFFAF5;
 }
 .white-box__input:checked + .white-box__time-radio .white-box__express {
   color: #FF6D00;
+}
+.white-box__input:checked + .white-box__time-radio_history {
+  background-color: #FFFFFF;
 }
 .white-box__input:checked + .white-box__pay-radio {
   border: 1px solid #DC1E1E;
@@ -5859,12 +5875,35 @@ a._disabled {
   padding: min(4.1vw, 31px) min(7.7vw, 55px);
 }
 
+.buy-history-header {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(4.1vw, 31px);
+  color: #240405;
+}
+
 .buy-history-brown-subtitle {
+  margin-bottom: min(2.82vw, 22px);
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-weight: 600;
   line-height: normal;
   font-size: min(3.1vw, 24px);
   color: #BE957D;
+}
+
+.buy-history-hidden-block {
+  padding-top: min(5vw, 38px);
+}
+
+.buy-history-btn {
+  width: 100%;
+  border-radius: min(2.5vw, 19px);
+  padding: min(2.5vw, 19px) 0;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  font-size: min(3.75vw, 29px);
 }
 
 .history-item {
@@ -5966,4 +6005,38 @@ a._disabled {
   font-size: min(3.1vw, 24px);
   color: #3CA1FF;
   text-decoration: underline;
+}
+
+.history-address-list__text {
+  max-height: min(4.6vw, 38px);
+  overflow: hidden;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: min(3.75vw, 29px);
+}
+.history-address-list__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.history-address-list__icon {
+  width: min(3.3vw, 25px);
+  height: min(3.3vw, 25px);
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
+}
+.history-address-list__icon.__js-opened {
+  transform: rotate(-90deg);
+}
+.history-address-list__content {
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.history-address-list__content.__js-opened {
+  opacity: 1;
+}
+.history-address-list__inner-box {
+  padding-top: min(2vw, 16px);
 }

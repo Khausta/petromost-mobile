@@ -80,10 +80,29 @@
     padding: $s16px $s28px;
 }
 
+.buy-history-header {
+    @include gilroy-bold;
+    font-size: $s16px;
+    color: $black-color;
+}
+
 .buy-history-brown-subtitle {
+    margin-bottom: $size-11px;
     @include gilroy-semibold;
     font-size: $size-12px;
     color: $brown-color;
+}
+
+.buy-history-hidden-block {
+    padding-top: $size-19-point-5-px;
+}
+
+.buy-history-btn {
+    width: 100%;
+    border-radius: $gap-10;
+    padding: $gap-10 0;
+    @include gilroy-bold;
+    font-size: $size-14px;
 }
 
 .history-item {
@@ -186,6 +205,48 @@
         font-size: $size-12px;
         color: #3CA1FF;
         text-decoration: underline;
+    }
+}
+
+.history-address-list {
+
+    &__text {
+        max-height: $size-18px;
+        overflow: hidden;
+        @include gilroy-semibold;
+        font-size: $size-14px;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__icon {
+        width: min(3.3vw, 25px);
+        height: min(3.3vw, 25px);
+        transform: rotate(90deg);
+        transition: all .3s ease-in-out;
+
+        &.__js-opened {
+            transform: rotate(-90deg);
+        }
+    }
+
+    &__content {
+        max-height: 0;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+
+        &.__js-opened {
+           opacity: 1;
+        }
+
+
+    }
+
+    &__inner-box {
+        padding-top: $size-8px;
     }
 }
 

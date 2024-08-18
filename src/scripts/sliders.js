@@ -8,6 +8,14 @@ const bannerSwiper = new Swiper('.banner-swiper', {
     },
   });
 
+  const mainCardSwiper = new Swiper('.main-card-swiper', {
+    spaceBetween: '1%',
+    slidesPerView: 'auto',
+    
+   
+  });
+
+
 
   const closeWeeks = document.querySelector('.close-promotions-week');
   const closeCashback = document.querySelector('.close-promotions-cashback');

@@ -39,6 +39,14 @@
 
     }
 
+    &__history-items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+
     &__header {
       
 
@@ -115,6 +123,11 @@
 
         &_big {
             width: 100%;
+        }
+
+        &_history {
+            width: auto;
+            background-color: $white-bg-color;
         }
     }
 
@@ -206,6 +219,11 @@
         &_express::after {
             background-image: url('../img/radio/orange-radio.svg');
         }
+
+        &_history {
+            padding-left: $s36px;
+            padding-right: $size-11px;
+        }
     }
 
     &__input:checked + &__time-radio {
@@ -215,6 +233,12 @@
             color: #FF6D00;
         }
     
+    }
+
+    &__input:checked + &__time-radio_history {
+        background-color: $white-bg-color;
+
+        
     }
 
     &__input:checked + &__pay-radio {

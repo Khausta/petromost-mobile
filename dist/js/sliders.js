@@ -9,6 +9,10 @@ var bannerSwiper = new Swiper('.banner-swiper', {
     clickable: true
   }
 });
+var mainCardSwiper = new Swiper('.main-card-swiper', {
+  spaceBetween: '1%',
+  slidesPerView: 'auto'
+});
 var closeWeeks = document.querySelector('.close-promotions-week');
 var closeCashback = document.querySelector('.close-promotions-cashback');
 if (closeWeeks) {

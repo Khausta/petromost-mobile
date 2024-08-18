@@ -381,6 +381,39 @@ function dnd(triggerElement, animatedIcon, hiddenContent) {
 dnd('menu__li-with-content', 'menu-link__icon', 'menu__content');
 // Открытие списка магазинов
 dnd('dnd', 'dnd__icon', 'dnd__content');
+dnd2('history-address-list', "history-address-list__icon", "history-address-list__content", "dnd__content");
+
+// Обработка открытия контента dropdown способом если есть один вложенный дропдаун
+function dnd2(triggerElement, animatedIcon, hiddenContent, parentDDl) {
+  document.querySelectorAll(".".concat(triggerElement)).forEach(function (el) {
+    el.addEventListener('click', function () {
+      var arrow = el.querySelector(".".concat(animatedIcon));
+      var content = el.nextElementSibling;
+      var parentDDLcontainer = document.querySelector(".".concat(parentDDl));
+      if (content.style.maxHeight) {
+        document.querySelectorAll(".".concat(hiddenContent)).forEach(function (item) {
+          item.style.maxHeight = null;
+          item.style.opacity = null;
+        });
+        document.querySelectorAll(".".concat(animatedIcon)).forEach(function (item) {
+          item.classList.remove('__js-opened');
+        });
+      } else {
+        document.querySelectorAll(".".concat(hiddenContent)).forEach(function (item) {
+          item.style.maxHeight = null;
+          item.style.opacity = null;
+        });
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.opacity = 1;
+        parentDDLcontainer.style.maxHeight = parentDDLcontainer.scrollHeight + content.scrollHeight + 'px';
+        document.querySelectorAll(".".concat(animatedIcon)).forEach(function (item) {
+          item.classList.remove('__js-opened');
+        });
+        arrow.classList.add('__js-opened');
+      }
+    });
+  });
+}
 var Tab = /*#__PURE__*/function () {
   function Tab(selector, options) {
     _classCallCheck(this, Tab);
