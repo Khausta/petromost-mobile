@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Петромост</title>
-    <!-- <link rel="stylesheet" href="./css/index.css"> -->
     <link rel="stylesheet" href="./css/all-styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+    <!-- <link rel="stylesheet" href="./css/libs/datepicker.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer="defer"></script>
-      <script src="./js/sliders.js" defer="defer"></script>
+<script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js" defer="defer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer="defer"></script>
+    <script src="./js/sliders.js" defer="defer"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script> -->
+      <!-- <script src="./js/datepicker.min.js" defer></script> -->
+      <!-- <script src="https://unpkg.com/js-datepicker" defer></script> -->
     <script src="./js/main.js" defer="defer"></script>
 </head>
 <body>
@@ -1670,9 +1676,10 @@
                                     <p class="buy-history-brown-subtitle">
                                         За период 
                                     </p>
-        
-                                    <input type="date" name="" id="" placeholder="Выберите дату">
-        
+                               
+                         
+                                    <input class="buy-calendar" type="text" placeholder="Выберать дату" value>
+       
                                     <p class="buy-history-brown-subtitle">
                                         Форматы магазинов
                                     </p>

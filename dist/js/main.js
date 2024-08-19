@@ -752,4 +752,28 @@ if (registrationPopup) {
     });
   });
 }
+flatpickr(".buy-calendar", {
+  mode: 'range',
+  "locale": "ru",
+  monthSelectorType: "static",
+  "static": true,
+  inline: true,
+  dateFormat: "d.m.Y"
+});
+var calendarInput = document.querySelector('.buy-calendar');
+var calendarWrapper = document.querySelector('.flatpickr-wrapper');
+var calendarCalendar = document.querySelector('.flatpickr-calendar');
+var dndParent = document.querySelector('.dnd__content');
+calendarCalendar.classList.add('__js-closed');
+calendarInput.addEventListener('click', function () {
+  if (calendarCalendar.classList.contains('__js-closed')) {
+    calendarWrapper.classList.add('__js-dateIsChoosed');
+    calendarCalendar.classList.remove('__js-closed');
+    dndParent.style.maxHeight = dndParent.scrollHeight + calendarCalendar.scrollHeight + "px";
+  } else {
+    calendarCalendar.classList.add('__js-closed');
+    dndParent.style.maxHeight = dndParent.scrollHeight + "px";
+    calendarWrapper.classList.remove('__js-dateIsChoosed');
+  }
+});
 //# sourceMappingURL=main.js.map

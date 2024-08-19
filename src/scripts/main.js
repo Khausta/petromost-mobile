@@ -1,3 +1,4 @@
+
 const state = {
   path: [],
   openedPopups: {
@@ -843,3 +844,31 @@ if (registrationPopup) {
 
 
 
+flatpickr(".buy-calendar", {
+  mode: 'range',
+  "locale": "ru",
+  monthSelectorType: "static",
+  static: true,
+  inline: true,  
+  dateFormat: "d.m.Y",
+});
+
+const calendarInput = document.querySelector('.buy-calendar');
+const calendarWrapper = document.querySelector('.flatpickr-wrapper');
+const calendarCalendar = document.querySelector('.flatpickr-calendar');
+const dndParent = document.querySelector('.dnd__content');
+calendarCalendar.classList.add('__js-closed');
+
+
+calendarInput.addEventListener('click', () => {
+  if(calendarCalendar.classList.contains('__js-closed')) {
+    calendarWrapper.classList.add('__js-dateIsChoosed');
+    calendarCalendar.classList.remove('__js-closed');
+    dndParent.style.maxHeight = dndParent.scrollHeight + calendarCalendar.scrollHeight +  "px";
+  } else {
+    calendarCalendar.classList.add('__js-closed');
+    dndParent.style.maxHeight = dndParent.scrollHeight +  "px";
+    calendarWrapper.classList.remove('__js-dateIsChoosed');
+  }
+  
+});
