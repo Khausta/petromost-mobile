@@ -5853,16 +5853,38 @@ a._disabled {
   width: 100%;
 }
 .story .swiper-pagination-bullet {
-  width: min(22.8vw, 175px);
+  width: 100%;
   height: min(0.6vw, 5px);
   border-radius: 1vw;
   opacity: 1;
-  background-color: #F5E6D6;
   background-color: #BE957D;
+  position: relative;
+  transition: translate 5s ease;
+  overflow: hidden;
 }
 .story .swiper-pagination-bullet-active {
-  opacity: 1;
   background-color: #F5E6D6;
+  opacity: 1;
+  position: relative;
+}
+.story .swiper-pagination-bullet-active::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  right: 0;
+  background-color: #BE957D;
+  animation-name: widthBullet;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  z-index: 100;
+}
+@keyframes widthBullet {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
 }
 .story .story-pagination-custom-line {
   width: 100%;
@@ -5870,6 +5892,10 @@ a._disabled {
   position: absolute;
   top: 50%;
   background-color: #F5E6D6;
+}
+
+.story-viewed {
+  background-color: #F5E6D6 !important;
 }
 
 .promotions {

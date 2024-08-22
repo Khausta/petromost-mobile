@@ -98,6 +98,7 @@
         display: flex;
         justify-content: space-between;
 
+
         .swiper-pagination-bullet {
             width: 100%;
         }
@@ -106,18 +107,50 @@
     }
     
     .swiper-pagination-bullet {
-        width: min(22.8vw, 175px);
+        width: 100%;
         height: min(0.6vw, 5px);
         border-radius: 1vw;
         opacity: 1;
-        background-color: $beige-color;
+        // background-color: $beige-color;
         background-color: $brown-color;
+        position: relative;
+        transition: translate 5s ease;
+        overflow: hidden;
     }
 
     .swiper-pagination-bullet-active {
-        opacity: 1;
         background-color: $beige-color;
+        opacity: 1;
+        position: relative;
+       
+        
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            right: 0;
+            background-color: $brown-color;
+            animation-name: widthBullet;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            // animation-play-state: paused;
+            z-index: 100;
+        }
+        
+
     }
+
+    
+
+    @keyframes widthBullet {
+        from {
+          width: 100%;  
+        }
+        to {
+          width: 0%;
+          
+        }
+      }
 
     .story-pagination-custom-line {
         width: 100%;
@@ -127,6 +160,12 @@
         background-color: $beige-color;
     }
 }
+
+.story-viewed {
+    background-color: $beige-color !important;
+}
+
+
 
 .promotions {
     margin-bottom: $size-14px;
